@@ -2,10 +2,12 @@
 
 from nltk.corpus import wordnet as wn
 from nltk.stem import PorterStemmer
+from itertools import chain
 
 porter = PorterStemmer()
 
-def lesk(context_sentence, ambiguous_word, pos=None, stem=True, hyperhypo=True):
+def simple_lesk(context_sentence, ambiguous_word, \
+                pos=None, stem=True, hyperhypo=True):
   max_overlaps = 0; lesk_sense = None
   context_sentence = context_sentence.split()
   
