@@ -8,7 +8,7 @@ def random_sense(ambiguous_word):
   """ Returns a ramdom sense. """
   return random.choice(wn.synsets(ambiguous_word))
 
-def first_sense(ambigous_word):
+def first_sense(ambiguous_word):
   """ Returns the first sense."""
   return wn.synsets(ambiguous_word)[0]
 
