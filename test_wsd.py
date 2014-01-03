@@ -8,6 +8,7 @@ bank_sents = ['I went to the bank to deposit my money',
 plant_sents = ['The workers at the industrial plant were overworked',
 'The plant was no longer bearing flowers']
 
+print "======== TESTING simple_lesk ===========\n"
 print "Context:", bank_sents[0]
 answer = simple_lesk(bank_sents[0],'bank')
 print "Sense:", answer
@@ -25,3 +26,4 @@ answer = simple_lesk(plant_sents[0],'plant','n', True)
 print "Sense:", answer
 print "Definition:",answer.definition
 print
+
