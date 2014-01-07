@@ -2,14 +2,20 @@
 
 from nltk.corpus import wordnet as wn
 from nltk.stem import PorterStemmer
+from nltk.corpus import stopwords
 from itertools import chain
+import string
 
 porter = PorterStemmer()
 
-def compare_overlaps(context, synset_signature):
+def compare_overlaps(context, synsets_signatures):
+  """
+  Calculate overlaps between the context sentence and the synset_signature
+  and returns the synset with the highest overlap.
+  """
   max_overlaps = 0; lesk_sense = None
-  for ss in synset_signature:
-    overlaps = set(synset_signature[ss]).intersection(context)
+  for ss in synsets_signatures:
+    overlaps = set(synsets_signatures[ss]).intersection(context)
     if len(overlaps) > max_overlaps:
       lesk_sense = ss
       max_overlaps = len(overlaps)    
@@ -26,15 +32,16 @@ def original_lesk (context_sentence, ambiguous_word, dictionary=None):
   best_sense = compare_overlaps(context_sentence.split(), dictionary)
   return best_sense    
 
-def simple_signature(ambiguous_word, pos=None, stem=True, hyperhypo=True):
+def simple_signature(ambiguous_word, pos=None, stem=True, \
+                     hyperhypo=True, stop=True):
   """ 
-  Returns a synset_signature dictionary that includes signature words of a 
+  Returns a synsets_signatures dictionary that includes signature words of a 
   sense from its:
   (i)   definition
   (ii)  example sentences
   (iii) hypernyms and hyponyms
   """
-  synset_signature = {}
+  synsets_signatures = {}
   for ss in wn.synsets(ambiguous_word):
     # If POS is specified.
     if pos and ss.pos is not pos:
@@ -49,12 +56,15 @@ def simple_signature(ambiguous_word, pos=None, stem=True, hyperhypo=True):
     # Optional: includes lemma_names of hypernyms and hyponyms.
     if hyperhypo == True:
       signature+= list(chain(*[i.lemma_names for i \
-                               in ss.hypernyms()+ss.hyponyms()]))    
+                               in ss.hypernyms()+ss.hyponyms()]))
+    # Optional: removes stopwords.
+    if stop == True:
+      signature = [i for i in signature if i not in stopwords.words('english')]    
     # Matching exact words causes sparsity, so optional matching for stems.
     if stem == True: 
       signature = [porter.stem(i) for i in signature]
-    synset_signature[ss] = signature
-  return synset_signature
+    synsets_signatures[ss] = signature
+  return synsets_signatures
 
 def simple_lesk(context_sentence, ambiguous_word, \
                 pos=None, stem=True, hyperhypo=True):
@@ -71,7 +81,7 @@ def simple_lesk(context_sentence, ambiguous_word, \
   return best_sense
 
 def adapted_lesk(context_sentence, ambiguous_word, \
-                pos=None, stem=True, hyperhypo=True):
+                pos=None, stem=True, hyperhypo=True, stop=True):
   """
   This function is the implementation of the Adapted Lesk algorithm, 
   described in Banerjee and Pederson (2002). It makes use of the lexical 
@@ -86,7 +96,9 @@ def adapted_lesk(context_sentence, ambiguous_word, \
                              ss.part_meronyms() + ss.part_holonyms() + 
                              ss.similar_tos() + ss.substance_holonyms() + 
                              ss.substance_meronyms()))
-    signature = list(chain(*[i.lemma_names for i in related_senses]))
+    
+    signature = list([j for j in chain(*[i.lemma_names for i in \
+                      related_senses]) if j not in stopwords.words('english')])    
     # Matching exact words causes sparsity, so optional matching for stems.
     if stem == True: 
       signature = [porter.stem(i) for i in signature]
@@ -97,3 +109,36 @@ def adapted_lesk(context_sentence, ambiguous_word, \
   best_sense = compare_overlaps(context_sentence, ss_sign)
   return best_sense
 
+def cosine_lesk(context_sentence, ambiguous_word, stem=False, stop=True, \
+                nbest=False):
+  """ 
+  In line with vector space models, we can use cosine to calculate overlaps
+  instead of using raw overlap counts. Essentially, the idea of using 
+  signatures (aka 'sense paraphrases') is lesk-like.
+  
+  """
+  from nltk.tokenize import word_tokenize
+  from cosine import cosine_similarity as cos_sim
+  synsets_signatures = simple_signature(ambiguous_word, stem=stem, stop=stop)
+  
+  scores = []
+  for ss, signature in synsets_signatures.items():
+    # Lowercase and replace "_" with spaces.
+    signature = " ".join(map(str, signature)).lower().replace("_", " ")
+    # Removes punctuation.
+    signature = [i for i in word_tokenize(signature) \
+                 if i not in string.punctuation]
+    # Optional: remove stopwords.
+    if stop:
+      signature = [i for i in signature if i not in stopwords.words('english')]
+    # Optional: stem the tokens.
+    if stem:
+      signature = [porter.stem(i) for i in signature]
+    scores.append((cos_sim(context_sentence, " ".join(signature)), ss))
+
+  if not nbest:
+    return sorted(scores, reverse=True)[0][1]
+  else:
+    return [(j,i) for i,j in sorted(scores, reverse=True)]
+    
+    

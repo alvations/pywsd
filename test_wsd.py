@@ -29,6 +29,26 @@ print "Sense:", answer
 print "Definition:",answer.definition
 print
 
+print "======== TESTING adapted_lesk ===========\n"
+from lesk import adapted_lesk
+
+print "#TESTING adapted_lesk() ..."
+print "Context:", bank_sents[0]
+answer = adapted_lesk(bank_sents[0],'bank')
+print "Sense:", answer
+print "Definition:",answer.definition
+print
+
+print "======== TESTING cosine_lesk ===========\n"
+from lesk import cosine_lesk
+
+print "#TESTING adapted_lesk() ..."
+print "Context:", bank_sents[0]
+answer = cosine_lesk(bank_sents[0],'bank')
+print "Sense:", answer
+print "Definition:",answer.definition
+print
+
 print "======== TESTING baseline ===========\n"
 from baseline import random_sense, first_sense
 from baseline import max_lemma_count as most_frequent_sense
