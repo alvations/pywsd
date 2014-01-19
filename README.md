@@ -3,12 +3,12 @@ pywsd
 
 Python Implementations of Word Sense Disambiguation (WSD) technologies:
 
-* Lesk algorithms
+* **Lesk algorithms**
   * Original Lesk (Lesk, 1986)
   * Adapted Lesk (Banerjee and Pederson, 2002)
   * Simple Lesk (with definition, example(s) and hyper+hyponyms)
   * Cosine Lesk (use cosines to calculate overlaps instead of using raw counts)
-* Vector Space Models (in progress)
+* **Vector Space Models** (in progress)
   * LSI/LSA
   * Topic Models, LDA (Li et al. 2012)
   * NMF
