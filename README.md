@@ -12,6 +12,9 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
   * LSI/LSA
   * Topic Models, LDA (Li et al. 2012)
   * NMF
+* **Baselines** (in progress)
+  * Most Frequent Sense
+  * Most Frequent Lemma
 
 (**NOTE**: requires `NLTK`, goto http://nltk.org/install.html)
 
