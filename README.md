@@ -13,8 +13,32 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
   * LDA
   * NMF
 
+(NOTE: requires `NLTK`, goto http://nltk.org/install.html)
 
-Reference
+***
+Usage
+=====
+
+```
+$ cd pywsd/
+$ ls
+baseline.py   cosine.py   lesk.py   README.md   test_wsd.py
+$ python
+>>> from lesk import simple_lesk
+>>> sent = 'I went to the bank to deposit my money'
+>>> ambiguous = 'bank'
+>>> answer = simple_lesk(sent, ambiguous)
+>>> print answer
+Synset('depository_financial_institution.n.01')
+>>> print answer.definition
+a financial institution that accepts deposits and channels the money into lending activities
+
+```
+
+
+
+***
+References
 =========
 
 * Michael Lesk. 1986. Automatic sense disambiguation using machine readable dictionaries: how to tell a pine cone from an ice cream cone. In Proceedings of the 5th annual international conference on Systems documentation (SIGDOC '86), Virginia DeBuys (Ed.). ACM, New York, NY, USA, 24-26. DOI=10.1145/318723.318728 http://doi.acm.org/10.1145/318723.318728
