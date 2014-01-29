@@ -21,7 +21,7 @@ def compare_overlaps(context, synsets_signatures):
       max_overlaps = len(overlaps)    
   return lesk_sense
 
-def original_lesk (context_sentence, ambiguous_word, dictionary=None):
+def original_lesk(context_sentence, ambiguous_word, dictionary=None):
   """
   This function is the implementation of the original Lesk algorithm (1986).
   It requires a dictionary which contains the definition of the different
@@ -140,5 +140,3 @@ def cosine_lesk(context_sentence, ambiguous_word, stem=False, stop=True, \
     return sorted(scores, reverse=True)[0][1]
   else:
     return [(j,i) for i,j in sorted(scores, reverse=True)]
-    
-    
