@@ -3,7 +3,7 @@
 import re, math
 from collections import Counter
 
-def cosine_similarity(sent1, sent2):
+def cosine_similarity(sent1, sent2): # Thanks to @vpekar, see http://goo.gl/ykibJY
   """ Calculates cosine between 2 sentences/documents. """
   WORD = re.compile(r'\w+')
   def get_cosine(vec1, vec2):
