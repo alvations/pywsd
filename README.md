@@ -1,7 +1,7 @@
 pywsd
 =====
 
- **NEW!!!**: WSD by maximizing sense similarity with various similarity measures.
+ **NEW!!!** (03.04.14): WSD by maximizing sense similarity with various similarity measures.
 
 Python Implementations of Word Sense Disambiguation (WSD) technologies:
 
