@@ -8,6 +8,9 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
   * Adapted/Extended Lesk (Banerjee and Pederson, 2002/2003)
   * Simple Lesk (with definition, example(s) and hyper+hyponyms)
   * Cosine Lesk (use cosines to calculate overlaps instead of using raw counts)
+* **Maximizing Similarity** (see http://goo.gl/MG8ZpE)
+  * Path similarity (Wu-Palmer, 1994; Leacock and Chodorow, 1998)
+  * Information Content (Resnik, 1995; Jiang and Corath, 1997; Lin, 1998)
 * **Vector Space Models** (in progress)
   * LSI/LSA
   * Topic Models, LDA (Li et al. 2012)
@@ -51,6 +54,12 @@ References
 
 * Satanjeev Banerjee and Ted Pedersen. 2003. Extended gloss overlaps as a measure of semantic relatedness. In Proceedings of the Eighteenth International
 Joint Conference on Artificial Intelligence, pages 805–810, Acapulco.
+
+* Jay J. Jiang and David W. Conrath. 1997. Semantic similarity based on corpus statistics and lexical taxonomy. In Proceedings of International Conference on Research in Computational Linguistics, Taiwan.
+
+* Claudia Leacock and Martin Chodorow. 1998. Combining local context and WordNet similarity for word sense identification. In Fellbaum 1998, pp. 265–283.
+
+* Dekang Lin. 1998. An information-theoretic definition of similarity. In Proceedings of the 15th International Conference on Machine Learning, Madison, WI.
 
 * Linlin Li, Benjamin Roth and Caroline Sporleder. 2010. Topic Models for Word Sense Disambiguation and Token-based Idiom Detection. The 48th Annual Meeting of the Association for Computational Linguistics (ACL). Uppsala, Sweden.
 

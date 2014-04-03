@@ -74,3 +74,13 @@ print "Sense:", answer
 print "Definition:",answer.definition
 print
 
+print "======== TESTING similarity ===========\n"
+from similarity import max_similarity
+
+for sim_choice in ["path", "lch", "wup", "res", "jcn", "lin"]:
+  print "Context:", bank_sents[0]
+  print "Similarity:", sim_choice 
+  answer = max_similarity(bank_sents[0], 'bank')
+  print "Sense:", answer
+  print "Definition", answer.definition
+  print
