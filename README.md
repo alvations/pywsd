@@ -1,6 +1,8 @@
 pywsd
 =====
 
+ **NEW!!!**: added WSD by maximizing sense similarity with various similarity measures.
+
 Python Implementations of Word Sense Disambiguation (WSD) technologies:
 
 * **Lesk algorithms**
