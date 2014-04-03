@@ -80,7 +80,7 @@ from similarity import max_similarity
 for sim_choice in ["path", "lch", "wup", "res", "jcn", "lin"]:
   print "Context:", bank_sents[0]
   print "Similarity:", sim_choice 
-  answer = max_similarity(bank_sents[0], 'bank')
+  answer = max_similarity(bank_sents[0], 'bank', sim_choice)
   print "Sense:", answer
   print "Definition", answer.definition
   print
