@@ -30,8 +30,8 @@ Change Log
 
 **15.04.14**: 
 
-* Changed Synset properties to methods adhering to new NLTK version (see see http://goo.gl/hO79KO)
-* Added N-best results, library now outputs ranked list of synsets (possible with normalized scores too), see test_wsd.py
+* Changed `Synset` properties to methods adhering to new `NLTK` version (see see http://goo.gl/hO79KO)
+* Added N-best results, `pywsd` now outputs ranked list of synsets (possible with normalized scores too), see test_wsd.py
 
 
 ***
