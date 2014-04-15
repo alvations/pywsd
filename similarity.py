@@ -66,14 +66,14 @@ def sim(sense1, sense2, option="path"):
 def max_similarity(context_sentence, ambiguous_word, option="path", 
                    pos=None, best=True):
   """
-  Perform WSD by maximizing the sum of maximum Wu-Palmer score between possible 
+  Perform WSD by maximizing the sum of maximum similarity between possible 
   synsets of all words in the context sentence and the possible synsets of the 
   ambiguous words (see http://goo.gl/XMq2BI):
   {argmax}_{synset(a)}(\sum_{i}^{n}{{max}_{synset(i)}(sim(i,a))}
   """
   result = {}
   for i in wn.synsets(ambiguous_word):
-    if pos and pos != i.pos:
+    if pos and pos != str(i.pos()):
       continue
     result[i] = sum(max([sim(i,k,option) for k in wn.synsets(j)]+[0]) \
                     for j in word_tokenize(context_sentence))
@@ -82,7 +82,7 @@ def max_similarity(context_sentence, ambiguous_word, option="path",
     result = sorted([(v,k) for k,v in result.items()])
   else: # higher score = more similar
     result = sorted([(v,k) for k,v in result.items()],reverse=True)
-  
+  print result
   if best: return result[0][1];
   return result
 
