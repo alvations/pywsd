@@ -22,7 +22,7 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
   * First NLTK sense
   * Highest lemma counts 
 
-(**NOTE**: requires `NLTK`, goto http://nltk.org/install.html)
+(**NOTE**: requires `NLTK`, goto http://nltk.org/install.html. Also, note that as of 30.10.13, NLTK has changed `Synset` object properties to methods, see http://goo.gl/hO79KO)
 
 ***
 Usage
@@ -39,7 +39,7 @@ $ python
 >>> answer = simple_lesk(sent, ambiguous)
 >>> print answer
 Synset('depository_financial_institution.n.01')
->>> print answer.definition
+>>> print answer.definition()
 a financial institution that accepts deposits and channels the money into lending activities
 
 ```
