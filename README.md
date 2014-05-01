@@ -13,6 +13,8 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
 * **Maximizing Similarity** (see also, http://goo.gl/MG8ZpE)
   * Path similarity (Wu-Palmer, 1994; Leacock and Chodorow, 1998)
   * Information Content (Resnik, 1995; Jiang and Corath, 1997; Lin, 1998)
+* **Supervised WSD**
+  * Support Vector Machine (Li, Ng and Chia 2004)
 * **Vector Space Models** (in progress)
   * LSI/LSA
   * Topic Models, LDA (Li et al. 2012)
@@ -70,6 +72,8 @@ Joint Conference on Artificial Intelligence, pages 805–810, Acapulco.
 * Jay J. Jiang and David W. Conrath. 1997. Semantic similarity based on corpus statistics and lexical taxonomy. In Proceedings of International Conference on Research in Computational Linguistics, Taiwan.
 
 * Claudia Leacock and Martin Chodorow. 1998. Combining local context and WordNet similarity for word sense identification. In Fellbaum 1998, pp. 265–283.
+
+* Lee, Yoong Keok, Hwee Tou Ng, and Tee Kiah Chia. "Supervised word sense disambiguation with support vector machines and multiple knowledge sources." Senseval-3: Third International Workshop on the Evaluation of Systems for the Semantic Analysis of Text. 2004.
 
 * Dekang Lin. 1998. An information-theoretic definition of similarity. In Proceedings of the 15th International Conference on Machine Learning, Madison, WI.
 
