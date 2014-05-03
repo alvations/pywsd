@@ -61,7 +61,7 @@ Cite
 
 To cite `pywsd`:
 
-Liling Tan (2014) Pywsd: Python Implementations of Word Sense Disambiguation (WSD) Technologies [software]. Retrieved 20 April 2014 from  https://github.com/alvations/pywsd
+Liling Tan. 2014. Pywsd: Python Implementations of Word Sense Disambiguation (WSD) Technologies [software]. Retrieved from  https://github.com/alvations/pywsd
 
 In `bibtex`:
 
