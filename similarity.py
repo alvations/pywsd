@@ -1,7 +1,7 @@
 #!/usr/bin/env python -*- coding: utf-8 -*-
 
 """
-User requested feature, still work in progress...
+User requested feature. WSD by maximizing similarity. 
 """
 
 from nltk.corpus import wordnet as wn
@@ -9,6 +9,7 @@ from nltk.corpus import wordnet_ic as wnic
 from nltk.tokenize import word_tokenize
 
 def similarity_by_path(sense1, sense2, option="path"):
+  """ Returns maximum path similarity between two senses. """
   if option.lower() in ["path", "path_similarity"]: # Path similaritys
     return max(wn.path_similarity(sense1,sense2), 
                wn.path_similarity(sense1,sense2))
@@ -20,6 +21,7 @@ def similarity_by_path(sense1, sense2, option="path"):
     return wn.lch_similarity(sense1, sense2)
 
 def similarity_by_infocontent(sense1, sense2, option):
+  """ Returns similarity scores by information content. """
   if sense1.pos != sense2.pos: # infocontent sim can't do diff POS.
       return 0
   
@@ -52,7 +54,7 @@ def similarity_by_infocontent(sense1, sense2, option):
     return wn.lin_similarity(sense1, sense2, wnic.ic('ic-bnc-add1.dat'))
 
 def sim(sense1, sense2, option="path"):
-  """ Calculates sim based on user's choice. """
+  """ Calculates similarity based on user's choice. """
   option = option.lower()
   if option.lower() in ["path", "path_similarity", 
                         "wup", "wupa", "wu-palmer", "wu-palmer",
