@@ -55,6 +55,22 @@ Synset('depository_financial_institution.n.01')
 a financial institution that accepts deposits and channels the money into lending activities
 
 ```
+***
+Cite
+====
+
+To cite `pywsd`:
+
+Liling Tan (2014) Pywsd: Python Implementations of Word Sense Disambiguation (WSD) Technologies [software]. Retrieved 20 April 2014 from  https://github.com/alvations/pywsd
+
+```
+@misc{pywsd14,
+author =   {Liling Tan},
+title =    {Pywsd: Python Implementations of Word Sense Disambiguation (WSD) Technologies},
+howpublished = {https://github.com/alvations/pywsd}},
+year = {2014}
+}
+```
 
 
 
