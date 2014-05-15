@@ -96,18 +96,27 @@ def simple_signature(ambiguous_word, pos=None, stem=True, \
   synsets_signatures = {}
   for ss in wn.synsets(ambiguous_word):
     # If POS is specified.
-    if pos and str(ss.pos()) is not pos:
-      continue
+    try:
+      if pos and str(ss.pos()) is not pos:
+        continue
+    except:
+      if pos and str(ss.pos) is not pos:
+        continue
     signature = []
     # Includes definition.
-    signature+= ss.definition().split()
+    try: signature+= ss.definition().split()
+    except: signature+= ss.definition.split()
     # Includes examples
-    signature+= list(chain(*[i.split() for i in ss.examples()]))
+    try: signature+= list(chain(*[i.split() for i in ss.examples()]))
+    except: signature+= list(chain(*[i.split() for i in ss.examples]))
     # Includes lemma_names.
-    signature+= ss.lemma_names()
+    try: signature+= ss.lemma_names()
+    except: signature+= ss.lemma_names
     # Optional: includes lemma_names of hypernyms and hyponyms.
     if hyperhypo == True:
-      signature+= list(chain(*[i.lemma_names() for i \
+      try: signature+= list(chain(*[i.lemma_names() for i \
+                               in ss.hypernyms()+ss.hyponyms()]))
+      except: signature+= list(chain(*[i.lemma_names for i \
                                in ss.hypernyms()+ss.hyponyms()]))
     # Optional: removes stopwords.
     if stop == True:
@@ -153,8 +162,12 @@ def adapted_lesk(context_sentence, ambiguous_word, \
                              ss.similar_tos() + ss.substance_holonyms() + 
                              ss.substance_meronyms()))
     
-    signature = list([j for j in chain(*[i.lemma_names() for i in \
-                      related_senses]) if j not in stopwords.words('english')])    
+    try:
+      signature = list([j for j in chain(*[i.lemma_names() for i in \
+                      related_senses]) if j not in stopwords.words('english')])
+    except:
+      signature = list([j for j in chain(*[i.lemma_names for i in \
+                      related_senses]) if j not in stopwords.words('english')])
     # Matching exact words causes sparsity, so optional matching for stems.
     if stem == True: 
       signature = [porter.stem(i) for i in signature]

@@ -75,8 +75,12 @@ def max_similarity(context_sentence, ambiguous_word, option="path",
   """
   result = {}
   for i in wn.synsets(ambiguous_word):
-    if pos and pos != str(i.pos()):
-      continue
+    try:
+      if pos and pos != str(i.pos()):
+        continue
+    except:
+      if pos and pos != str(i.pos):
+        continue
     result[i] = sum(max([sim(i,k,option) for k in wn.synsets(j)]+[0]) \
                     for j in word_tokenize(context_sentence))
   

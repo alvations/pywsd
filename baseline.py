@@ -19,7 +19,9 @@ def max_lemma_count(ambiguous_word):
   Most Frequent Sense (MFS), if no other sense annotated corpus is available.
   NOTE: The lemma counts are from the Brown Corpus 
   """
-  sense2lemmacounts = {i:sum(j.count() for j in i.lemmas()) \
+  try: sense2lemmacounts = {i:sum(j.count() for j in i.lemmas()) \
+                       for i in wn.synsets(ambiguous_word)}
+  except: sense2lemmacounts = {i:sum(j.count() for j in i.lemmas) \
                        for i in wn.synsets(ambiguous_word)}
   return max(sense2lemmacounts, key=sense2lemmacounts.get)
   
