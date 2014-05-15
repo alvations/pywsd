@@ -12,8 +12,8 @@ print "#TESTING simple_lesk() ..."
 print "Context:", bank_sents[0]
 answer = simple_lesk(bank_sents[0],'bank')
 print "Sense:", answer
-try: definition = answer.definition() # Using older version of NLTK.
-except: definition = answer.definition
+try: definition = answer.definition() 
+except: definition = answer.definition # Using older version of NLTK.
 print "Definition:", definition
 print
 
@@ -21,8 +21,8 @@ print "#TESTING simple_lesk() with POS ..."
 print "Context:", bank_sents[1]
 answer = simple_lesk(bank_sents[1],'bank','n')
 print "Sense:", answer
-try: definition = answer.definition() # Using older version of NLTK.
-except: definition = answer.definition
+try: definition = answer.definition() 
+except: definition = answer.definition # Using older version of NLTK.
 print "Definition:", definition
 print
 
@@ -30,7 +30,7 @@ print "#TESTING simple_lesk() with POS and stems ..."
 print "Context:", plant_sents[0]
 answer = simple_lesk(plant_sents[0],'plant','n', True)
 print "Sense:", answer
-try: definition = answer.definition() # Using older version of NLTK.
+try: definition = answer.definition()
 except: definition = answer.definition
 print "Definition:", definition
 print
@@ -40,7 +40,7 @@ print "Context:", plant_sents[0]
 answer = simple_lesk(plant_sents[0],'plant','n', True, nbest=True)
 print "Senses ranked by #overlaps:", answer
 best_sense = answer[0]
-try: definition = best_sense.definition() # Using older version of NLTK.
+try: definition = best_sense.definition() 
 except: definition = best_sense.definition
 print "Definition:", definition
 print
@@ -51,7 +51,7 @@ answer = simple_lesk(plant_sents[0],'plant','n', True, \
                      nbest=True, keepscore=True)
 print "Senses ranked by #overlaps:", answer
 best_sense = answer[0][1]
-try: definition = best_sense.definition() # Using older version of NLTK.
+try: definition = best_sense.definition()
 except: definition = best_sense.definition
 print "Definition:", definition
 print
@@ -62,7 +62,7 @@ answer = simple_lesk(plant_sents[0],'plant','n', True, \
                      nbest=True, keepscore=True, normalizescore=True)
 print "Senses ranked by #overlaps:", answer
 best_sense = answer[0][1]
-try: definition = best_sense.definition() # Using older version of NLTK.
+try: definition = best_sense.definition() 
 except: definition = best_sense.definition
 print "Definition:", definition
 print
@@ -74,7 +74,7 @@ print "#TESTING adapted_lesk() ..."
 print "Context:", bank_sents[0]
 answer = adapted_lesk(bank_sents[0],'bank')
 print "Sense:", answer
-try: definition = answer.definition() # Using older version of NLTK.
+try: definition = answer.definition()
 except: definition = answer.definition
 print "Definition:", definition
 print
@@ -85,7 +85,7 @@ answer = adapted_lesk(bank_sents[0],'bank','n', True, \
                      nbest=True, keepscore=True)
 print "Senses ranked by #overlaps:", answer
 best_sense = answer[0][1]
-try: definition = best_sense.definition() # Using older version of NLTK.
+try: definition = best_sense.definition() 
 except: definition = best_sense.definition
 print "Definition:", definition
 print
@@ -97,7 +97,7 @@ print "#TESTING cosine_lesk() ..."
 print "Context:", bank_sents[0]
 answer = cosine_lesk(bank_sents[0],'bank')
 print "Sense:", answer
-try: definition = answer.definition() # Using older version of NLTK.
+try: definition = answer.definition() 
 except: definition = answer.definition
 print "Definition:", definition
 print
@@ -107,7 +107,7 @@ print "Context:", bank_sents[0]
 answer = cosine_lesk(bank_sents[0],'bank', nbest=True)
 print "Senses ranked by #overlaps:", answer
 best_sense = answer[0][0]
-try: definition = best_sense.definition() # Using older version of NLTK.
+try: definition = best_sense.definition() 
 except: definition = best_sense.definition
 print "Definition:", definition
 print
@@ -120,7 +120,7 @@ print "#TESTING random_sense() ..."
 print "Context:", bank_sents[0]
 answer = random_sense('bank')
 print "Sense:", answer
-try: definition = answer.definition() # Using older version of NLTK.
+try: definition = answer.definition() 
 except: definition = answer.definition
 print "Definition:", definition
 print
@@ -129,7 +129,7 @@ print "#TESTING first_sense() ..."
 print "Context:", bank_sents[0]
 answer = first_sense('bank')
 print "Sense:", answer
-try: definition = answer.definition() # Using older version of NLTK.
+try: definition = answer.definition() 
 except: definition = answer.definition
 print "Definition:", definition
 print
@@ -138,7 +138,7 @@ print "#TESTING most_frequent_sense() ..."
 print "Context:", bank_sents[0]
 answer = most_frequent_sense('bank')
 print "Sense:", answer
-try: definition = answer.definition() # Using older version of NLTK.
+try: definition = answer.definition() 
 except: definition = answer.definition
 print "Definition:", definition
 print
@@ -151,7 +151,7 @@ for sim_choice in ["path", "lch", "wup", "res", "jcn", "lin"]:
   print "Similarity:", sim_choice 
   answer = max_similarity(bank_sents[0], 'bank', sim_choice, pos="n")
   print "Sense:", answer
-  try: definition = answer.definition() # Using older version of NLTK.
+  try: definition = answer.definition() 
   except: definition = answer.definition
   print "Definition:", definition
   print
