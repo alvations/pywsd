@@ -26,21 +26,6 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
 
 (**NOTE**: requires `NLTK`, goto http://nltk.org/install.html. Also, note that as of 30.10.13, NLTK has changed `Synset` object properties to methods, see http://goo.gl/hO79KO)
 
-***
-Change Log
-=====
-
-**15.05.14** (bugfix):
-* Added try-excepts to allow old NLTK Synset properties.
-
-**15.04.14**: 
-
-* Changed `Synset` properties to methods adhering to new `NLTK` version (see see http://goo.gl/hO79KO)
-* Added N-best results, `pywsd` now outputs ranked list of synsets (possible with normalized scores too), see test_wsd.py
-
-
-**03.04.14**:
-* Added similarity based WSD methods.
 
 ***
 Usage
@@ -61,6 +46,24 @@ Synset('depository_financial_institution.n.01')
 a financial institution that accepts deposits and channels the money into lending activities
 
 ```
+
+***
+Change Log
+=====
+
+**15.05.14** (bugfix):
+* Added try-excepts to allow old NLTK Synset properties.
+
+**15.04.14**: 
+
+* Changed `Synset` properties to methods adhering to new `NLTK` version (see see http://goo.gl/hO79KO)
+* Added N-best results, `pywsd` now outputs ranked list of synsets (possible with normalized scores too), see test_wsd.py
+
+
+**03.04.14**:
+* Added similarity based WSD methods.
+
+
 ***
 Cite
 ====
