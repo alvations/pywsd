@@ -30,11 +30,17 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
 Change Log
 =====
 
+**15.05.14** (bugfix):
+* Added try-excepts to allow old NLTK Synset properties.
+
 **15.04.14**: 
 
 * Changed `Synset` properties to methods adhering to new `NLTK` version (see see http://goo.gl/hO79KO)
 * Added N-best results, `pywsd` now outputs ranked list of synsets (possible with normalized scores too), see test_wsd.py
 
+
+**03.04.14**:
+* Added similarity based WSD methods.
 
 ***
 Usage
