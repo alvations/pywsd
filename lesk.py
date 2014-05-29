@@ -1,13 +1,14 @@
 #!/usr/bin/env python -*- coding: utf-8 -*-
 
 import string
-
-from nltk.corpus import wordnet as wn
-from nltk.stem import PorterStemmer
-from nltk.corpus import stopwords
 from itertools import chain
 
+from nltk.corpus import wordnet as wn
+from nltk.stem import PorterStemmer, WordNetLemmatizer
+from nltk.corpus import stopwords
+
 porter = PorterStemmer()
+wnl = WordNetLemmatizer()
 
 '''
 #TODO: various tokenizers.
@@ -29,6 +30,26 @@ def stem(word, option="wnlemma")
   if option == "porter":
     return porter.stem(word)
 '''
+
+def lemmatize(ambiguous_word):
+  """
+  Tries to convert a surface word into lemma, and if lemmatize word is not in
+  wordnet then try and convert surface word into its stem.
+  
+  This is to handle the case where users input a surface word as an ambiguous 
+  word and the surface word is a not a lemma.
+  """
+  lemma = wnl.lemmatize(ambiguous_word)
+  stem = porter.stem(ambiguous_word)
+  # Ensure that ambiguous word is a lemma.
+  if not wn.synsets(lemma):
+    if not wn.synsets(stem):
+      return ambiguous_word
+    else:
+      return stem
+  else:
+    return lemma
+     
 
 def compare_overlaps_greedy(context, synsets_signatures):
   """
@@ -77,8 +98,9 @@ def original_lesk(context_sentence, ambiguous_word, dictionary=None):
   """
   This function is the implementation of the original Lesk algorithm (1986).
   It requires a dictionary which contains the definition of the different
-  sense of each word. See http://goo.gl/8TB15w
+  sense of each word. See http://goo.gl/8TB15wb
   """
+  ambiguous_word = lemmatize(ambiguous_word)
   if not dictionary:
     dictionary = {ss:ss.definition.split() for ss in wn.synsets(ambiguous_word)}
   best_sense = compare_overlaps_greedy(context_sentence.split(), dictionary)
@@ -135,6 +157,8 @@ def simple_lesk(context_sentence, ambiguous_word, \
   original Lesk algorithm (1986) and using less signature 
   words than adapted Lesk (Banerjee and Pederson, 2002)
   """
+  # Ensure that ambiguous word is a lemma.
+  ambiguous_word = lemmatize(ambiguous_word) 
   # Get the signatures for each synset.
   ss_sign = simple_signature(ambiguous_word, pos, stem, hyperhypo)
   # Disambiguate the sense in context.
@@ -154,6 +178,8 @@ def adapted_lesk(context_sentence, ambiguous_word, \
   hierarchies and to generate more lexical items for each sense. 
   see www.d.umn.edu/~tpederse/Pubs/cicling2002-b.pdf‎
   """
+  # Ensure that ambiguous word is a lemma.
+  ambiguous_word = lemmatize(ambiguous_word)
   # Get the signatures for each synset.
   ss_sign = simple_signature(ambiguous_word, pos, stem, hyperhypo)
   for ss in ss_sign:
@@ -182,6 +208,8 @@ def adapted_lesk(context_sentence, ambiguous_word, \
 
 def cosine_lesk(context_sentence, ambiguous_word, stem=False, stop=True, \
                 nbest=False):
+  # Ensure that ambiguous word is a lemma.
+  ambiguous_word = lemmatize(ambiguous_word)
   """ 
   In line with vector space models, we can use cosine to calculate overlaps
   instead of using raw overlap counts. Essentially, the idea of using 
