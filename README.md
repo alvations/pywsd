@@ -19,6 +19,8 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
   * LSI/LSA
   * Topic Models, LDA (Li et al. 2012)
   * NMF
+* **Graph based Models** (in wishlist)
+  * Babelfly (Moro et al. 2014)
 * **Baselines**
   * Random sense
   * First NLTK sense
@@ -108,5 +110,7 @@ Joint Conference on Artificial Intelligence, pages 805–810, Acapulco.
 * Dekang Lin. 1998. An information-theoretic definition of similarity. In Proceedings of the 15th International Conference on Machine Learning, Madison, WI.
 
 * Linlin Li, Benjamin Roth and Caroline Sporleder. 2010. Topic Models for Word Sense Disambiguation and Token-based Idiom Detection. The 48th Annual Meeting of the Association for Computational Linguistics (ACL). Uppsala, Sweden.
+
+* Andrea Moro, Roberto Navigli, Francesco Maria Tucci and Rebecca J. Passonneau. 2014. Annotating the MASC Corpus with BabelNet. In Proceedings of the Ninth International Conference on Language Resources and Evaluation (LREC'14). Reykjavik, Iceland.
 
 * Steven Bird, Ewan Klein, and Edward Loper. 2009. Natural Language Processing with Python (1st ed.). O'Reilly Media, Inc..
