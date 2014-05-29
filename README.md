@@ -51,6 +51,9 @@ a financial institution that accepts deposits and channels the money into lendin
 Change Log
 =====
 
+**29.05.14** (user request):
+* Automatically lemmatize `ambiguous_word` parameter because without it being a lemma, `wn.synsets(ambiguous_word)` breaks the system.
+
 **15.05.14** (bugfix):
 * Added try-excepts to allow old NLTK Synset properties.
 
