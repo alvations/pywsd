@@ -14,7 +14,7 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
   * Path similarity (Wu-Palmer, 1994; Leacock and Chodorow, 1998)
   * Information Content (Resnik, 1995; Jiang and Corath, 1997; Lin, 1998)
 * **Supervised WSD** (in progress)
-  * Support Vector Machine (Li, Ng and Chia 2004)
+  * Support Vector Machine (Lee, Ng and Chia 2004)
 * **Vector Space Models** (in progress)
   * LSI/LSA
   * Topic Models, LDA (Li et al. 2012)
