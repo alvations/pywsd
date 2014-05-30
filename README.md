@@ -82,7 +82,7 @@ In `bibtex`:
 ```
 @misc{pywsd14,
 author =   {Liling Tan},
-title =    {Pywsd: Python Implementations of Word Sense Disambiguation (WSD) Technologies},
+title =    {Pywsd: Python Implementations of Word Sense Disambiguation (WSD) Technologies [software]},
 howpublished = {https://github.com/alvations/pywsd}},
 year = {2014}
 }
