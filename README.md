@@ -53,6 +53,9 @@ a financial institution that accepts deposits and channels the money into lendin
 Change Log
 =====
 
+**14.07.14** (deep2shallow semantics experiment)
+* Added Minimal Recursion Semantics (MRS) based lesk algorithm use ACE parser (http://sweaglesw.org/linguistics/ace/)
+
 **29.05.14** (user request):
 * Automatically lemmatize `ambiguous_word` parameter because without it being a lemma, `wn.synsets(ambiguous_word)` breaks the system.
 
