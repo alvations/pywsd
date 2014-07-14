@@ -50,6 +50,10 @@ def lemmatize(ambiguous_word):
     else:
      return lemma
 
+def get_pos_of_ambiguous_word(context_sentence, ambiguous_word):
+    from nltk import word_tokenize, pos_tag
+    return {tok.lower():pos for tok, pos in 
+            pos_tag(word_tokenize(context_sentence))}[ambiguous_word][0].lower()
 
 def compare_overlaps_greedy(context, synsets_signatures):
     """
@@ -242,3 +246,52 @@ def cosine_lesk(context_sentence, ambiguous_word, stem=False, stop=True, \
             return sorted(scores, reverse=True)[0][1]
         else:
             return [(j,i) for i,j in sorted(scores, reverse=True)]
+
+def mrs_lesk(context_sentence, ambiguous_word, nbest=False):
+    """
+    This is a novel function that uses deep parsing (Head-driven Phrase 
+    Structure Grammar) to generate lexical vectors from Minimal Recursion 
+    Semantics (MRS) structures.
+    
+    NOTE: 1. Currently only using the definition of the senses as signature !!!
+          2. Also, if ACE don't parse the sentence, the sense will not be 
+             represented in the inventory.
+          3. Be patient, ACE might take some time to install and 
+             parse the sentences.  
+    """
+    from pyace import ace_parse, ace_rels
+    
+    # Ensure that ambiguous word is a lemma.
+    ambiguous_word = lemmatize(ambiguous_word)
+    
+    # Get POS of ambiguous in the context sentence.
+    pos = get_pos_of_ambiguous_word(context_sentence, ambiguous_word)
+    
+    # Getting the MRS signatures from synset definition.
+    ss_sign = {}
+    for ss in wn.synsets(ambiguous_word):
+        # Skips if the synset POS is not the pos_tag() POS.
+        try: sspos = ss.pos()
+        except: sspos = ss.pos
+        if sspos != pos:
+            continue
+        # Get the definition for this synset.
+        try: definition = ss.definition() + '.'
+        except: definition = ss.definition + '.'
+        definition = "".join([ch for ch in definition if ch \
+                              not in ["(", ")", ";"]])
+        
+        try:
+            signature = ace_rels(ace_parse(definition, bestparse=True), 
+                                 flatten=True)
+            ss_sign[ss] = signature
+        except: # ace parser don't like the sentence.
+            pass
+    
+    # Disambiguating the sense from the context sentence.
+    context_sentence = context_sentences if context_sentence.endswith('.') else\
+                        context_sentence+"."
+    context_sent_signature = ace_rels(ace_parse(context_sentence, 
+                                                bestparse=True), flatten=True)
+    best_sense = compare_overlaps(context_sent_signature, ss_sign)  
+    return best_sense

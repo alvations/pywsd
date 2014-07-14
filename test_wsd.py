@@ -147,11 +147,22 @@ print "======== TESTING similarity ===========\n"
 from similarity import max_similarity
 
 for sim_choice in ["path", "lch", "wup", "res", "jcn", "lin"]:
-  print "Context:", bank_sents[0]
-  print "Similarity:", sim_choice 
-  answer = max_similarity(bank_sents[0], 'bank', sim_choice, pos="n")
-  print "Sense:", answer
-  try: definition = answer.definition() 
-  except: definition = answer.definition
-  print "Definition:", definition
-  print
+    print "Context:", bank_sents[0]
+    print "Similarity:", sim_choice 
+    answer = max_similarity(bank_sents[0], 'bank', sim_choice, pos="n")
+    print "Sense:", answer
+    try: definition = answer.definition() 
+    except: definition = answer.definition
+    print "Definition:", definition
+    print
+    
+print "======== TESTING mrs_lesk() ===========\n"
+from lesk import mrs_lesk
+print "#TESTING mrs_lesk() ..."
+print "Context:", bank_sents[0]
+answer = mrs_lesk(bank_sents[0],'bank')
+print "Sense:", answer
+try: definition = answer.definition() 
+except: definition = answer.definition # Using older version of NLTK.
+print "Definition:", definition
+print
