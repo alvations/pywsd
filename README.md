@@ -10,7 +10,6 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
   * Adapted/Extended Lesk (Banerjee and Pederson, 2002/2003)
   * Simple Lesk (with definition, example(s) and hyper+hyponyms)
   * Cosine Lesk (use cosines to calculate overlaps instead of using raw counts)
-  * MRS Lesk (use Minimal Recursion Semantics RELS features as signatures)
 * **Maximizing Similarity** (see also, http://goo.gl/MG8ZpE)
   * Path similarity (Wu-Palmer, 1994; Leacock and Chodorow, 1998)
   * Information Content (Resnik, 1995; Jiang and Corath, 1997; Lin, 1998)
@@ -53,9 +52,6 @@ a financial institution that accepts deposits and channels the money into lendin
 ***
 Change Log
 =====
-
-**14.07.14** (deep2shallow semantics experiment)
-* Added Minimal Recursion Semantics (MRS) based lesk algorithm use ACE parser (http://sweaglesw.org/linguistics/ace/)
 
 **29.05.14** (user request):
 * Automatically lemmatize `ambiguous_word` parameter because without it being a lemma, `wn.synsets(ambiguous_word)` breaks the system.

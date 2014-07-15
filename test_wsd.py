@@ -165,4 +165,3 @@ print "Sense:", answer
 try: definition = answer.definition() 
 except: definition = answer.definition # Using older version of NLTK.
 print "Definition:", definition
-print
