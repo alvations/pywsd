@@ -147,10 +147,10 @@ def ace_rels(parse_output, flatten=False):
             idx_lemma[i] = list(idx_lemma[i])
     if flatten:
         flat_rels = []
-        
-        for rel in idx_lemma.values():
-            print rel 
-               
+        #for rel in idx_lemma.values():
+        #    print rel 
+        flat_rels = list(chain(*idx_lemma.values()))
+        return flat_rels
     else:
         return idx_lemma
 
@@ -201,15 +201,11 @@ def ace_lemmatize(sentence, debugging=False, onlylemma=True):
 install_ace()
 
 #ace_chunk('the geese ate a ratatta with two bottles of wine.', debugging=True)
-
 #ace_chunk('the geese ate a ratatta with two bottles of wine.', onlylemma=True)
-
 #ace_chunk('the geese ate a ratatta with two bigger bottles of wine that are larger than life and the sentence went on and on.', debugging=True)
-
 #ace_lemmatize('the geese ate a ratatta with two bigger bottles of wine that are larger than life and the sentence went on and on.')
 
-
-
+##ace_lemmatize('John is facebooking Mary on the net.', onlylemma=True, debugging=True)
 
 ##############################################################################
 
@@ -250,9 +246,9 @@ def mrs_lesk(context_sentence, ambiguous_word, nbest=False):
         try:
             parse_output = ace_parse(definition, bestparse=True)
             signature = ace_rels(parse_output, flatten=True)
-            print parse_output
-            print definition
-            print signature
+            #print parse_output
+            #print definition
+            #print signature
             ss_sign[ss] = signature
         except: # ace parser don't like the sentence.
             pass
@@ -275,7 +271,8 @@ def mrs_lesk(context_sentence, ambiguous_word, nbest=False):
 
 
 from nltk.corpus import wordnet as wn
-from lesk import lemmatize, get_pos_of_ambiguous_word, compare_overlaps
+from lesk import lemmatize, get_pos_of_ambiguous_word, \
+compare_overlaps, simple_lesk
 
 
 bank_sents = ['I went to the bank to deposit my money',
@@ -289,6 +286,7 @@ print "#TESTING mrs_lesk() ..."
 print "Context:", bank_sents[1]
 answer = mrs_lesk(bank_sents[1],'bank')
 
+print answer
 
 '''
 print "Sense:", answer
