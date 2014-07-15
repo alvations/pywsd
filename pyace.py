@@ -77,7 +77,7 @@ def ace_parse(sent, onlyMRS=False, parameters="", bestparse=False):
     if onlyMRS == True:
             parameters+=" -T"
     pipe_sent_in = "echo " +sent+" | "
-    cmd = pipe_sent_in + ace_cmd +" -vvvv"
+    cmd = pipe_sent_in + ace_cmd +" -f"
     ace_output = [p.strip() for p in os.popen(pipe_sent_in + ace_cmd) 
                   if p.strip() != ""]
     if bestparse:
@@ -123,8 +123,8 @@ def erg_lexicon(lextdl=erg_lextdl):
     return lexkey_name
 
 unwanted_rels = ['_a_q_rel', 'appos_rel', '_the_q_rel', '_udef_q_rel',
-                 '_and_c_rel', 'unkown_rel', '_or_c_rel', '_in_p_rel',
-                 '_object_n_1_rel']
+                 '_and_c_rel', 'unknown_rel', '_or_c_rel', '_in_p_rel',
+                 '_object_n_1_rel', 'udef_q_rel', ]
 
 def ace_rels(parse_output, flatten=False):
     """ Returns RELS from ACE parse output. """
@@ -146,15 +146,16 @@ def ace_rels(parse_output, flatten=False):
             i = map(int, i)
             idx_lemma[i] = list(idx_lemma[i])
     if flatten:
-        return [rel for rel in list(chain(*idx_lemma.values())) 
-                if rel not in unwanted_rels and '_c_rel' not in rel and
-                '_p_rel' not in rel] 
+        flat_rels = []
+        
+        for rel in idx_lemma.values():
+            print rel 
                
     else:
         return idx_lemma
 
-def ace_chunk(sentence, lexicon = erg_lexicon()):
-    print ace_parse(sentence)
+def ace_chunk(sentence, lexicon = erg_lexicon(), 
+              onlylemma=False, debugging=False):
     best_parse_output = ace_parse(sentence)[1:][0]
     idx_lemma = ace_rels(best_parse_output)
     
@@ -165,20 +166,50 @@ def ace_chunk(sentence, lexicon = erg_lexicon()):
         if lemma_chunks:
             for lc in lemma_chunks:
                 idx_chunk[i].add(lc)
-                
-                
+
+    lemmas = []                
     for fromto, token in tokens_fromto(sentence):
         ergtoken = ""
+        surfacetoken = remove_punct(token.lower())
         if fromto in idx_chunk:
             ergtoken = idx_chunk[fromto]
             if len(ergtoken) == 1:
                 ergtoken = list(ergtoken)[0]
         else:
-            ergtoken = remove_punct(token.lower())
-        print fromto, ergtoken
-    print idx_chunk
+            ergtoken = surfacetoken
         
-    return
+        if onlylemma and isinstance(ergtoken, set):
+            ergtoken = surfacetoken if surfacetoken in ergtoken else ergtoken
+        lemmas.append(ergtoken)
+        if debugging:
+            print fromto, surfacetoken, ergtoken
+    
+    if debugging:
+        ##print ace_parse(sentence)
+        print idx_chunk
+    elif onlylemma:
+        print lemmas
+    else:
+        return idx_chunk
+    
+def ace_lemmatize(sentence, debugging=False, onlylemma=True):
+    return ace_chunk(sentence, debugging=debugging, onlylemma=onlylemma)
+    
+
+##############################################################################
+
+install_ace()
+
+#ace_chunk('the geese ate a ratatta with two bottles of wine.', debugging=True)
+
+#ace_chunk('the geese ate a ratatta with two bottles of wine.', onlylemma=True)
+
+#ace_chunk('the geese ate a ratatta with two bigger bottles of wine that are larger than life and the sentence went on and on.', debugging=True)
+
+#ace_lemmatize('the geese ate a ratatta with two bigger bottles of wine that are larger than life and the sentence went on and on.')
+
+
+
 
 ##############################################################################
 
@@ -195,7 +226,6 @@ def mrs_lesk(context_sentence, ambiguous_word, nbest=False):
              parse the sentences.
           4. Falls back on simple_lesk() if no overlaps found in RELS.
     """
-    from pyace import ace_parse, ace_rels
     
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word)
@@ -218,8 +248,11 @@ def mrs_lesk(context_sentence, ambiguous_word, nbest=False):
                               not in ["(", ")", ";"]])
         
         try:
-            signature = ace_rels(ace_parse(definition, bestparse=True), 
-                                 flatten=True)
+            parse_output = ace_parse(definition, bestparse=True)
+            signature = ace_rels(parse_output, flatten=True)
+            print parse_output
+            print definition
+            print signature
             ss_sign[ss] = signature
         except: # ace parser don't like the sentence.
             pass
@@ -240,7 +273,10 @@ def mrs_lesk(context_sentence, ambiguous_word, nbest=False):
 
 ##############################################################################
 
-install_ace()
+
+from nltk.corpus import wordnet as wn
+from lesk import lemmatize, get_pos_of_ambiguous_word, compare_overlaps
+
 
 bank_sents = ['I went to the bank to deposit my money',
 'The river bank was full of dead fishes']
@@ -252,11 +288,16 @@ print "======== TESTING mrs_lesk() ===========\n"
 print "#TESTING mrs_lesk() ..."
 print "Context:", bank_sents[1]
 answer = mrs_lesk(bank_sents[1],'bank')
+
+
+'''
 print "Sense:", answer
 try: definition = answer.definition() 
 except: definition = answer.definition # Using older version of NLTK.
 print "Definition:", definition
+'''
 
+'''
 print "Context:", plant_sents[0]
 answer = mrs_lesk(plant_sents[0],'plant')
 print "Sense:", answer
@@ -270,3 +311,4 @@ print "Sense:", answer
 try: definition = answer.definition() 
 except: definition = answer.definition # Using older version of NLTK.
 print "Definition:", definition
+'''
