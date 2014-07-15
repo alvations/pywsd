@@ -77,8 +77,8 @@ def ace_parse(sent, onlyMRS=False, parameters="", bestparse=False):
     if onlyMRS == True:
             parameters+=" -T"
     pipe_sent_in = "echo " +sent+" | "
-    cmd = pipe_sent_in + ace_cmd +" -f"
-    ace_output = [p.strip() for p in os.popen(pipe_sent_in + ace_cmd) 
+    cmd = pipe_sent_in + ace_cmd +" 2> silence"
+    ace_output = [p.strip() for p in os.popen(cmd) 
                   if p.strip() != ""]
     if bestparse:
         return ace_output[1]
@@ -147,9 +147,14 @@ def ace_rels(parse_output, flatten=False):
             idx_lemma[i] = list(idx_lemma[i])
     if flatten:
         flat_rels = []
-        #for rel in idx_lemma.values():
-        #    print rel 
-        flat_rels = list(chain(*idx_lemma.values()))
+        for rel in idx_lemma.values():
+            if not isinstance(rel, str):
+                flat_rels.append("|".join([rl for rl in rel if rl 
+                                           not in unwanted_rels]))
+            elif rel not in unwanted_rel:
+                flat_rels.apennd("|".join(rel))
+        flat_rels = [frl for frl in flat_rels if frl]
+        #print flat_rels
         return flat_rels
     else:
         return idx_lemma
@@ -209,7 +214,7 @@ install_ace()
 
 ##############################################################################
 
-def mrs_lesk(context_sentence, ambiguous_word, nbest=False):
+def mrs_lesk(context_sentence, ambiguous_word, usepostag=True, nbest=False):
     """
     This is a novel function that uses deep parsing (Head-driven Phrase 
     Structure Grammar) to generate lexical vectors from Minimal Recursion 
@@ -227,16 +232,18 @@ def mrs_lesk(context_sentence, ambiguous_word, nbest=False):
     ambiguous_word = lemmatize(ambiguous_word)
     
     # Get POS of ambiguous in the context sentence.
-    pos = get_pos_of_ambiguous_word(context_sentence, ambiguous_word)
+    if usepostag:
+        pos = get_pos_of_ambiguous_word(context_sentence, ambiguous_word)
     
     # Getting the MRS signatures from synset definition.
     ss_sign = {}
     for ss in wn.synsets(ambiguous_word):
         # Skips if the synset POS is not the pos_tag() POS.
-        try: sspos = ss.pos()
-        except: sspos = ss.pos
-        if sspos != pos:
-            continue
+        if usepostag:
+            try: sspos = ss.pos()
+            except: sspos = ss.pos
+            if sspos != pos:
+                continue
         # Get the definition for this synset.
         try: definition = ss.definition() + '.'
         except: definition = ss.definition + '.'
@@ -247,8 +254,8 @@ def mrs_lesk(context_sentence, ambiguous_word, nbest=False):
             parse_output = ace_parse(definition, bestparse=True)
             signature = ace_rels(parse_output, flatten=True)
             #print parse_output
-            #print definition
-            #print signature
+            print definition
+            print signature
             ss_sign[ss] = signature
         except: # ace parser don't like the sentence.
             pass
@@ -283,30 +290,50 @@ plant_sents = ['The workers at the industrial plant were overworked',
 
 print "======== TESTING mrs_lesk() ===========\n"
 print "#TESTING mrs_lesk() ..."
+print "Context:", bank_sents[0]
+print
+answer = mrs_lesk(bank_sents[0],'bank')
+print
+print "Sense:", answer
+try: definition = answer.definition() 
+except: definition = answer.definition # Using older version of NLTK.
+print "Definition:", definition
+print
+print "Simple Lesk", simple_lesk(bank_sents[0],'bank')
+print
+print "======== TESTING mrs_lesk() ===========\n"
+print "#TESTING mrs_lesk() ..."
 print "Context:", bank_sents[1]
+print
 answer = mrs_lesk(bank_sents[1],'bank')
-
-print answer
-
-'''
+print
 print "Sense:", answer
 try: definition = answer.definition() 
 except: definition = answer.definition # Using older version of NLTK.
 print "Definition:", definition
-'''
-
-'''
+print
+print "Simple Lesk", simple_lesk(bank_sents[1],'bank')
+print
+print "======== TESTING mrs_lesk() ===========\n"
 print "Context:", plant_sents[0]
+print
 answer = mrs_lesk(plant_sents[0],'plant')
+print
 print "Sense:", answer
 try: definition = answer.definition() 
 except: definition = answer.definition # Using older version of NLTK.
 print "Definition:", definition
-
+print
+print "Simple Lesk", simple_lesk(plant_sents[0],'plant')
+print
+print "======== TESTING mrs_lesk() ===========\n"
 print "Context:", plant_sents[1]
+print
 answer = mrs_lesk(plant_sents[1],'plant')
+print
 print "Sense:", answer
 try: definition = answer.definition() 
 except: definition = answer.definition # Using older version of NLTK.
 print "Definition:", definition
-'''
+print
+print "Simple Lesk", simple_lesk(plant_sents[1],'plant')
