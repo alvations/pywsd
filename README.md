@@ -14,7 +14,8 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
   * Path similarity (Wu-Palmer, 1994; Leacock and Chodorow, 1998)
   * Information Content (Resnik, 1995; Jiang and Corath, 1997; Lin, 1998)
 * **Supervised WSD** (in progress)
-  * Support Vector Machine (Lee, Ng and Chia 2004)
+  * SVM WSD (Lee, Ng and Chia 2004)
+  * It Makes Sense (IMS) (Zhong and Ng, 2010) 
 * **Vector Space Models** (in progress)
   * LSI/LSA
   * Topic Models, LDA (Li et al. 2012)
@@ -113,4 +114,7 @@ Joint Conference on Artificial Intelligence, pages 805–810, Acapulco.
 
 * Andrea Moro, Roberto Navigli, Francesco Maria Tucci and Rebecca J. Passonneau. 2014. Annotating the MASC Corpus with BabelNet. In Proceedings of the Ninth International Conference on Language Resources and Evaluation (LREC'14). Reykjavik, Iceland.
 
+* Zhi Zhong and Hwee Tou Ng. 2010. It makes sense: a wide-coverage word sense disambiguation system for free text. In Proceedings of the ACL 2010 System Demonstrations (ACLDemos '10). Association for Computational Linguistics, Stroudsburg, PA, USA, 78-83.
+
 * Steven Bird, Ewan Klein, and Edward Loper. 2009. Natural Language Processing with Python (1st ed.). O'Reilly Media, Inc..
+
