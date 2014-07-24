@@ -7,7 +7,7 @@ plant_sents = ['The workers at the industrial plant were overworked',
 'The plant was no longer bearing flowers']
 
 print "======== TESTING simple_lesk ===========\n"
-from lesk import simple_lesk
+from pywsd.lesk import simple_lesk
 print "#TESTING simple_lesk() ..."
 print "Context:", bank_sents[0]
 answer = simple_lesk(bank_sents[0],'bank')
@@ -68,7 +68,7 @@ print "Definition:", definition
 print
 
 print "======== TESTING adapted_lesk ===========\n"
-from lesk import adapted_lesk
+from pywsd.lesk import adapted_lesk
 
 print "#TESTING adapted_lesk() ..."
 print "Context:", bank_sents[0]
@@ -91,7 +91,7 @@ print "Definition:", definition
 print
 
 print "======== TESTING cosine_lesk ===========\n"
-from lesk import cosine_lesk
+from pywsd.lesk import cosine_lesk
 
 print "#TESTING cosine_lesk() ..."
 print "Context:", bank_sents[0]
@@ -113,8 +113,8 @@ print "Definition:", definition
 print
 
 print "======== TESTING baseline ===========\n"
-from baseline import random_sense, first_sense
-from baseline import max_lemma_count as most_frequent_sense
+from pywsd.baseline import random_sense, first_sense
+from pywsd.baseline import max_lemma_count as most_frequent_sense
 
 print "#TESTING random_sense() ..."
 print "Context:", bank_sents[0]
@@ -144,7 +144,7 @@ print "Definition:", definition
 print
 
 print "======== TESTING similarity ===========\n"
-from similarity import max_similarity
+from pywsd.similarity import max_similarity
 
 for sim_choice in ["path", "lch", "wup", "res", "jcn", "lin"]:
     print "Context:", bank_sents[0]

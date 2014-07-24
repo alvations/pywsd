@@ -200,15 +200,18 @@ def ace_chunk(sentence, lexicon = erg_lexicon(),
 def ace_lemmatize(sentence, debugging=False, onlylemma=True):
     return ace_chunk(sentence, debugging=debugging, onlylemma=onlylemma)
     
+    
+print ace_parse('this is a foo bar sentence.')[1]
 
 ##############################################################################
 
 install_ace()
 
-#ace_chunk('the geese ate a ratatta with two bottles of wine.', debugging=True)
+#ace_chunk("the geese ate a ratatta with two bottles of wine and kicked the bucket.", debugging=True)
+#print "########################################################################"
 #ace_chunk('the geese ate a ratatta with two bottles of wine.', onlylemma=True)
 #ace_chunk('the geese ate a ratatta with two bigger bottles of wine that are larger than life and the sentence went on and on.', debugging=True)
-#ace_lemmatize('the geese ate a ratatta with two bigger bottles of wine that are larger than life and the sentence went on and on.')
+##ace_lemmatize('the geese ate a ratatta with two bigger bottles of wine that are larger than life and the sentence went on and on.', debugging=True)
 
 ##ace_lemmatize('John is facebooking Mary on the net.', onlylemma=True, debugging=True)
 
@@ -269,7 +272,7 @@ def mrs_lesk(context_sentence, ambiguous_word, usepostag=True, nbest=False):
                                   nbest=True, keepscore=True)[0]
     
     if best_sense[0] == 0:
-        print "falling back on simple_lesk()"
+        ##print "falling back on simple_lesk()"
         return simple_lesk(context_sentence, ambiguous_word)
     else:
         return best_sense[1]
@@ -277,6 +280,8 @@ def mrs_lesk(context_sentence, ambiguous_word, usepostag=True, nbest=False):
 ##############################################################################
 
 
+
+'''
 from nltk.corpus import wordnet as wn
 from lesk import lemmatize, get_pos_of_ambiguous_word, \
 compare_overlaps, simple_lesk
@@ -337,3 +342,5 @@ except: definition = answer.definition # Using older version of NLTK.
 print "Definition:", definition
 print
 print "Simple Lesk", simple_lesk(plant_sents[1],'plant')
+
+'''
