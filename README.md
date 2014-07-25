@@ -39,7 +39,7 @@ $ cd pywsd/
 $ ls
 baseline.py   cosine.py   lesk.py   README.md   test_wsd.py
 $ python
->>> from lesk import simple_lesk
+>>> from pywsd.lesk import simple_lesk
 >>> sent = 'I went to the bank to deposit my money'
 >>> ambiguous = 'bank'
 >>> answer = simple_lesk(sent, ambiguous)
