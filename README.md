@@ -33,8 +33,9 @@ Usage
 =====
 
 ```
-$ cd pywsd/
 $ ls
+pywsd
+$ ls pwsd/
 baseline.py   cosine.py   lesk.py   README.md   test_wsd.py
 $ python
 >>> from pywsd.lesk import simple_lesk
