@@ -1,8 +1,6 @@
 pywsd
 =====
 
- **NEW!!!** (03.04.14): WSD by maximizing sense similarity with various similarity measures.
-
 Python Implementations of Word Sense Disambiguation (WSD) technologies:
 
 * **Lesk algorithms**
@@ -35,9 +33,10 @@ Usage
 =====
 
 ```
-$ cd pywsd/
+$ git clone https://github.com/alvations/pywsd.git 
+$ cd pywsd
 $ ls
-baseline.py   cosine.py   lesk.py   README.md   test_wsd.py
+pywsd  README.md  test_wsd.py
 $ python
 >>> from pywsd.lesk import simple_lesk
 >>> sent = 'I went to the bank to deposit my money'
