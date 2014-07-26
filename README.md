@@ -33,10 +33,10 @@ Usage
 =====
 
 ```
+$ git clone https://github.com/alvations/pywsd.git 
+$ cd pywsd
 $ ls
-pywsd
-$ ls pwsd/
-baseline.py   cosine.py   lesk.py   README.md   test_wsd.py
+pywsd  README.md  test_wsd.py
 $ python
 >>> from pywsd.lesk import simple_lesk
 >>> sent = 'I went to the bank to deposit my money'
