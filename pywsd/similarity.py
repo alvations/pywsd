@@ -88,7 +88,7 @@ def max_similarity(context_sentence, ambiguous_word, option="path",
         result = sorted([(v,k) for k,v in result.items()])
     else: # higher score = more similar
         result = sorted([(v,k) for k,v in result.items()],reverse=True)
-    print result
+    ##print result
     if best: return result[0][1];
     return result
 
