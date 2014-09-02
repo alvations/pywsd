@@ -8,6 +8,7 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
   * Adapted/Extended Lesk (Banerjee and Pederson, 2002/2003)
   * Simple Lesk (with definition, example(s) and hyper+hyponyms)
   * Cosine Lesk (use cosines to calculate overlaps instead of using raw counts)
+  * Enhanced Lesk (Basile et al. 2014) (in progress...)
 * **Maximizing Similarity** (see also, http://goo.gl/MG8ZpE)
   * Path similarity (Wu-Palmer, 1994; Leacock and Chodorow, 1998)
   * Information Content (Resnik, 1995; Jiang and Corath, 1997; Lin, 1998)
@@ -67,6 +68,15 @@ Change Log
 
 **03.04.14**:
 * Added similarity based WSD methods.
+
+
+***
+Contributors
+====
+
+The following people have contributed to `pywsd`:
+
+  * peterdm (https://github.com/peterdm): tiebreaker + `setup.py`
 
 
 ***
