@@ -76,7 +76,7 @@ Contributors
 
 The following people have contributed to `pywsd`:
 
-  * peterdm (https://github.com/peterdm): tiebreaker + `setup.py`
+  * peterdm (https://github.com/peterdm): `setup.py`
 
 
 ***
