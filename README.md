@@ -76,7 +76,7 @@ Contributors
 
 The following people have contributed to `pywsd`:
 
-  * @peterdm
+  * peterdm (https://github.com/peterdm)
 
 
 ***
