@@ -71,6 +71,15 @@ Change Log
 
 
 ***
+Contributors
+====
+
+The following people have contributed to `pywsd`:
+
+  * @peterdm
+
+
+***
 Cite
 ====
 
