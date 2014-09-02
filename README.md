@@ -69,16 +69,6 @@ Change Log
 **03.04.14**:
 * Added similarity based WSD methods.
 
-
-***
-Contributors
-====
-
-The following people have contributed to `pywsd`:
-
-  * peterdm (https://github.com/peterdm): `setup.py`
-
-
 ***
 Cite
 ====
