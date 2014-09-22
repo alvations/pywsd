@@ -1,11 +1,17 @@
 #!/usr/bin/env python -*- coding: utf-8 -*-
 
+"""
+"""
+
 import string
 from itertools import chain
 
 from nltk.corpus import wordnet as wn
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 from nltk.corpus import stopwords
+from nltk import word_tokenize, pos_tag
+
+from cosine import cosine_similarity as cos_sim
 
 porter = PorterStemmer()
 wnl = WordNetLemmatizer()
@@ -51,7 +57,6 @@ def lemmatize(ambiguous_word):
      return lemma
 
 def get_pos_of_ambiguous_word(context_sentence, ambiguous_word):
-    from nltk import word_tokenize, pos_tag
     return {tok.lower():pos for tok, pos in 
             pos_tag(word_tokenize(context_sentence))}[ambiguous_word][0].lower()
 
@@ -216,15 +221,15 @@ def adapted_lesk(context_sentence, ambiguous_word, \
 
 def cosine_lesk(context_sentence, ambiguous_word, stem=False, stop=True, \
                 nbest=False):
-    # Ensure that ambiguous word is a lemma.
-    ambiguous_word = lemmatize(ambiguous_word)
     """ 
     In line with vector space models, we can use cosine to calculate overlaps
     instead of using raw overlap counts. Essentially, the idea of using 
     signatures (aka 'sense paraphrases') is lesk-like.
     """
-    from nltk.tokenize import word_tokenize
-    from cosine import cosine_similarity as cos_sim
+    
+    
+    # Ensure that ambiguous word is a lemma.
+    ambiguous_word = lemmatize(ambiguous_word)
     synsets_signatures = simple_signature(ambiguous_word, stem=stem, stop=stop)
     
     scores = []

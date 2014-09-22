@@ -1,7 +1,7 @@
 #!/usr/bin/env python -*- coding: utf-8 -*-
 
 """
-User requested feature. WSD by maximizing similarity. 
+WSD by maximizing similarity. 
 """
 
 from nltk.corpus import wordnet as wn

@@ -22,7 +22,7 @@ class SemEval2007_Coarse_WSD:
     """
     def __init__(self):
         self.path = 'corpus/semeval2007_coarse_grain_wsd/'
-        self.test_file = self.path + 'coarse_all_word.xml'
+        self.test_file = self.path + 'eng-coarse-all-words.xml'
         
     def fileids(self):
         """ Returns files from SemEval2007 Coarse-grain All-words WSD task. """
