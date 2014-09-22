@@ -1,0 +1,6140 @@
+<?xml version="1.0" encoding="utf8" ?>
+<!DOCTYPE corpus SYSTEM "coarse-all-words.dtd">
+<corpus lang="en">
+<text id="d001">
+<sentence id="d001.s001">
+Your
+Oct
+.
+6
+<instance id="d001.s001.t001" lemma="editorial" pos="n">editorial</instance>
+``
+The
+<instance id="d001.s001.t002" lemma="Ill" pos="a">Ill</instance>
+<instance id="d001.s001.t003" lemma="Homeless" pos="n">Homeless</instance>
+''
+<instance id="d001.s001.t004" lemma="refer" pos="v">referred</instance>
+to
+<instance id="d001.s001.t005" lemma="research" pos="n">research</instance>
+by
+us
+and
+<instance id="d001.s001.t006" lemma="six" pos="a">six</instance>
+of
+our
+<instance id="d001.s001.t007" lemma="colleague" pos="n">colleagues</instance>
+that
+was
+<instance id="d001.s001.t008" lemma="report" pos="v">reported</instance>
+in
+the
+Sept
+.
+8
+<instance id="d001.s001.t009" lemma="issue" pos="n">issue</instance>
+of
+the
+Journal
+of
+the
+American
+Medical
+Association
+.
+</sentence>
+<sentence id="d001.s002">
+Your
+<instance id="d001.s002.t001" lemma="comment" pos="n">comments</instance>
+<instance id="d001.s002.t002" lemma="imply" pos="v">implied</instance>
+we
+had
+<instance id="d001.s002.t003" lemma="discover" pos="v">discovered</instance>
+that
+the
+``
+<instance id="d001.s002.t004" lemma="principal" pos="a">principal</instance>
+<instance id="d001.s002.t005" lemma="cause" pos="n">cause</instance>
+''
+of
+<instance id="d001.s002.t006" lemma="homelessness" pos="n">homelessness</instance>
+<instance id="d001.s002.t007" lemma="be" pos="v">is</instance>
+to
+be
+<instance id="d001.s002.t008" lemma="find" pos="v">found</instance>
+in
+the
+<instance id="d001.s002.t009" lemma="large" pos="a">large</instance>
+<instance id="d001.s002.t010" lemma="number" pos="n">numbers</instance>
+of
+<instance id="d001.s002.t011" lemma="mentally" pos="r">mentally</instance>
+<instance id="d001.s002.t012" lemma="ill" pos="a">ill</instance>
+and
+substance-abusing
+<instance id="d001.s002.t013" lemma="people" pos="n">people</instance>
+in
+the
+<instance id="d001.s002.t014" lemma="homeless" pos="a">homeless</instance>
+<instance id="d001.s002.t015" lemma="population" pos="n">population</instance>
+.
+</sentence>
+<sentence id="d001.s003">
+We
+have
+<instance id="d001.s003.t001" lemma="make" pos="v">made</instance>
+no
+such
+<instance id="d001.s003.t002" lemma="statement" pos="n">statement</instance>
+.
+</sentence>
+<sentence id="d001.s004">
+It
+is
+<instance id="d001.s004.t001" lemma="clear" pos="a">clear</instance>
+that
+most
+<instance id="d001.s004.t002" lemma="mentally" pos="r">mentally</instance>
+<instance id="d001.s004.t003" lemma="ill" pos="a">ill</instance>
+<instance id="d001.s004.t004" lemma="people" pos="n">people</instance>
+and
+most
+<instance id="d001.s004.t005" lemma="alcoholic" pos="n">alcoholics</instance>
+do
+not
+<instance id="d001.s004.t006" lemma="become" pos="v">become</instance>
+<instance id="d001.s004.t007" lemma="homeless" pos="a">homeless</instance>
+.
+</sentence>
+<sentence id="d001.s005">
+The
+``
+<instance id="d001.s005.t001" lemma="cause" pos="n">causes</instance>
+''
+of
+<instance id="d001.s005.t002" lemma="homelessness" pos="n">homelessness</instance>
+are
+<instance id="d001.s005.t003" lemma="poorly" pos="r">poorly</instance>
+<instance id="d001.s005.t004" lemma="understand" pos="v">understood</instance>
+and
+<instance id="d001.s005.t005" lemma="complex" pos="a">complex</instance>
+in
+any
+<instance id="d001.s005.t006" lemma="individual" pos="a">individual</instance>
+<instance id="d001.s005.t007" lemma="case" pos="n">case</instance>
+.
+</sentence>
+<sentence id="d001.s006">
+In
+<instance id="d001.s006.t001" lemma="quote" pos="v">quoting</instance>
+from
+our
+<instance id="d001.s006.t002" lemma="research" pos="n">research</instance>
+you
+<instance id="d001.s006.t003" lemma="emphasize" pos="v">emphasized</instance>
+the
+<instance id="d001.s006.t004" lemma="high" pos="a">high</instance>
+<instance id="d001.s006.t005" lemma="prevalence" pos="n">prevalence</instance>
+of
+<instance id="d001.s006.t006" lemma="mental" pos="a">mental</instance>
+<instance id="d001.s006.t007" lemma="illness" pos="n">illness</instance>
+and
+<instance id="d001.s006.t008" lemma="alcoholism" pos="n">alcoholism</instance>
+.
+</sentence>
+<sentence id="d001.s007">
+You
+did
+not
+<instance id="d001.s007.t001" lemma="note" pos="v">note</instance>
+that
+the
+<instance id="d001.s007.t002" lemma="homeless" pos="a">homeless</instance>
+<instance id="d001.s007.t003" lemma="people" pos="n">people</instance>
+we
+<instance id="d001.s007.t004" lemma="examine" pos="v">examined</instance>
+<instance id="d001.s007.t005" lemma="have" pos="v">had</instance>
+a
+<instance id="d001.s007.t006" lemma="multitude" pos="n">multitude</instance>
+of
+<instance id="d001.s007.t007" lemma="physical" pos="a">physical</instance>
+<instance id="d001.s007.t008" lemma="disorder" pos="n">disorders</instance>
+<instance id="d001.s007.t009" lemma="in_addition" pos="r">in addition</instance>
+to
+their
+<instance id="d001.s007.t010" lemma="psychiatric" pos="a">psychiatric</instance>
+<instance id="d001.s007.t011" lemma="problem" pos="n">problems</instance>
+and
+<instance id="d001.s007.t012" lemma="substance_abuse" pos="n">substance abuse</instance>
+.
+</sentence>
+<sentence id="d001.s008">
+They
+<instance id="d001.s008.t001" lemma="suffer" pos="v">suffered</instance>
+from
+<instance id="d001.s008.t002" lemma="malnutrition" pos="n">malnutrition</instance>
+,
+<instance id="d001.s008.t003" lemma="chest" pos="n">chest</instance>
+<instance id="d001.s008.t004" lemma="disease" pos="n">diseases</instance>
+,
+<instance id="d001.s008.t005" lemma="cardiovascular" pos="a">cardiovascular</instance>
+<instance id="d001.s008.t006" lemma="disorder" pos="n">disorders</instance>
+,
+<instance id="d001.s008.t007" lemma="skin" pos="n">skin</instance>
+<instance id="d001.s008.t008" lemma="problem" pos="n">problems</instance>
+,
+<instance id="d001.s008.t009" lemma="infectious" pos="a">infectious</instance>
+<instance id="d001.s008.t010" lemma="disease" pos="n">diseases</instance>
+and
+the
+<instance id="d001.s008.t011" lemma="aftereffect" pos="n">aftereffects</instance>
+of
+<instance id="d001.s008.t012" lemma="assault" pos="n">assaults</instance>
+and
+<instance id="d001.s008.t013" lemma="rape" pos="n">rape</instance>
+.
+</sentence>
+<sentence id="d001.s009">
+<instance id="d001.s009.t001" lemma="Homeless" pos="a">Homeless</instance>
+<instance id="d001.s009.t002" lemma="people" pos="n">people</instance>
+not
+only
+<instance id="d001.s009.t003" lemma="lack" pos="v">lack</instance>
+<instance id="d001.s009.t004" lemma="safety" pos="n">safety</instance>
+,
+<instance id="d001.s009.t005" lemma="privacy" pos="n">privacy</instance>
+and
+<instance id="d001.s009.t006" lemma="shelter" pos="n">shelter</instance>
+,
+they
+<instance id="d001.s009.t007" lemma="also" pos="r">also</instance>
+<instance id="d001.s009.t008" lemma="lack" pos="v">lack</instance>
+the
+<instance id="d001.s009.t009" lemma="elementary" pos="a">elementary</instance>
+<instance id="d001.s009.t010" lemma="necessity" pos="n">necessities</instance>
+of
+<instance id="d001.s009.t011" lemma="nutrition" pos="n">nutrition</instance>
+,
+cleanliness
+and
+<instance id="d001.s009.t012" lemma="basic" pos="a">basic</instance>
+<instance id="d001.s009.t013" lemma="health_care" pos="n">health care</instance>
+.
+</sentence>
+<sentence id="d001.s010">
+In
+a
+<instance id="d001.s010.t001" lemma="recent" pos="a">recent</instance>
+<instance id="d001.s010.t002" lemma="report" pos="n">report</instance>
+,
+the
+Institute
+of
+Medicine
+<instance id="d001.s010.t003" lemma="point_out" pos="v">pointed out</instance>
+that
+<instance id="d001.s010.t004" lemma="certain" pos="a">certain</instance>
+<instance id="d001.s010.t005" lemma="health" pos="n">health</instance>
+<instance id="d001.s010.t006" lemma="problem" pos="n">problems</instance>
+may
+<instance id="d001.s010.t007" lemma="predispose" pos="v">predispose</instance>
+a
+<instance id="d001.s010.t008" lemma="person" pos="n">person</instance>
+to
+<instance id="d001.s010.t009" lemma="homelessness" pos="n">homelessness</instance>
+,
+others
+may
+<instance id="d001.s010.t010" lemma="be" pos="v">be</instance>
+a
+<instance id="d001.s010.t011" lemma="consequence" pos="n">consequence</instance>
+of
+it
+,
+and
+a
+<instance id="d001.s010.t012" lemma="third" pos="a">third</instance>
+<instance id="d001.s010.t013" lemma="category" pos="n">category</instance>
+is
+<instance id="d001.s010.t014" lemma="compose" pos="v">composed</instance>
+of
+<instance id="d001.s010.t015" lemma="disorder" pos="n">disorders</instance>
+whose
+<instance id="d001.s010.t016" lemma="treatment" pos="n">treatment</instance>
+<instance id="d001.s010.t017" lemma="be" pos="v">is</instance>
+<instance id="d001.s010.t018" lemma="difficult" pos="a">difficult</instance>
+or
+<instance id="d001.s010.t019" lemma="impossible" pos="a">impossible</instance>
+if
+a
+<instance id="d001.s010.t020" lemma="person" pos="n">person</instance>
+<instance id="d001.s010.t021" lemma="lack" pos="v">lacks</instance>
+<instance id="d001.s010.t022" lemma="adequate" pos="a">adequate</instance>
+<instance id="d001.s010.t023" lemma="shelter" pos="n">shelter</instance>
+.
+</sentence>
+<sentence id="d001.s011">
+The
+<instance id="d001.s011.t001" lemma="interaction" pos="n">interactions</instance>
+between
+<instance id="d001.s011.t002" lemma="health" pos="n">health</instance>
+and
+<instance id="d001.s011.t003" lemma="homelessness" pos="n">homelessness</instance>
+<instance id="d001.s011.t004" lemma="be" pos="v">are</instance>
+<instance id="d001.s011.t005" lemma="complex" pos="a">complex</instance>
+,
+<instance id="d001.s011.t006" lemma="defy" pos="v">defying</instance>
+<instance id="d001.s011.t007" lemma="sweeping" pos="a">sweeping</instance>
+<instance id="d001.s011.t008" lemma="generalization" pos="n">generalizations</instance>
+as
+to
+``
+<instance id="d001.s011.t009" lemma="cause" pos="n">cause</instance>
+''
+or
+``
+<instance id="d001.s011.t010" lemma="effect" pos="n">effect</instance>
+.
+''
+</sentence>
+<sentence id="d001.s012">
+If
+we
+<instance id="d001.s012.t001" lemma="look" pos="v">look</instance>
+to
+the
+<instance id="d001.s012.t002" lemma="future" pos="n">future</instance>
+,
+<instance id="d001.s012.t003" lemma="prevent" pos="v">preventing</instance>
+<instance id="d001.s012.t004" lemma="homelessness" pos="n">homelessness</instance>
+<instance id="d001.s012.t005" lemma="be" pos="v">is</instance>
+an
+<instance id="d001.s012.t006" lemma="important" pos="a">important</instance>
+<instance id="d001.s012.t007" lemma="objective" pos="n">objective</instance>
+.
+</sentence>
+<sentence id="d001.s013">
+This
+will
+<instance id="d001.s013.t001" lemma="require" pos="v">require</instance>
+us
+to
+<instance id="d001.s013.t002" lemma="develop" pos="v">develop</instance>
+a
+much
+more
+<instance id="d001.s013.t003" lemma="sophisticated" pos="a">sophisticated</instance>
+<instance id="d001.s013.t004" lemma="understanding" pos="n">understanding</instance>
+of
+the
+<instance id="d001.s013.t005" lemma="dynamic" pos="n">dynamics</instance>
+of
+<instance id="d001.s013.t006" lemma="homelessness" pos="n">homelessness</instance>
+than
+we
+<instance id="d001.s013.t007" lemma="currently" pos="r">currently</instance>
+<instance id="d001.s013.t008" lemma="possess" pos="v">possess</instance>
+,
+an
+<instance id="d001.s013.t009" lemma="understanding" pos="n">understanding</instance>
+that
+can
+be
+<instance id="d001.s013.t010" lemma="develop" pos="v">developed</instance>
+<instance id="d001.s013.t011" lemma="only" pos="r">only</instance>
+through
+<instance id="d001.s013.t012" lemma="careful" pos="a">careful</instance>
+<instance id="d001.s013.t013" lemma="study" pos="n">study</instance>
+and
+<instance id="d001.s013.t014" lemma="research" pos="n">research</instance>
+.
+</sentence>
+<sentence id="d001.s014">
+William
+R
+.
+Breakey
+M
+.
+D
+.
+Pamela
+J
+.
+Fischer
+M
+.
+D
+.
+Department
+of
+Psychiatry
+Johns
+Hopkins
+University
+School
+of
+Medicine
+Baltimore
+</sentence>
+<sentence id="d001.s015">
+A
+<instance id="d001.s015.t001" lemma="study" pos="n">study</instance>
+by
+Tulane
+Prof
+.
+James
+Wright
+<instance id="d001.s015.t002" lemma="say" pos="v">says</instance>
+<instance id="d001.s015.t003" lemma="homelessness" pos="n">homelessness</instance>
+<instance id="d001.s015.t004" lemma="be" pos="v">is</instance>
+due
+to
+a
+<instance id="d001.s015.t005" lemma="complex" pos="a">complex</instance>
+<instance id="d001.s015.t006" lemma="array" pos="n">array</instance>
+of
+<instance id="d001.s015.t007" lemma="problem" pos="n">problems</instance>
+,
+with
+the
+<instance id="d001.s015.t008" lemma="common" pos="a">common</instance>
+<instance id="d001.s015.t009" lemma="thread" pos="n">thread</instance>
+of
+<instance id="d001.s015.t010" lemma="poverty" pos="n">poverty</instance>
+.
+</sentence>
+<sentence id="d001.s016">
+The
+<instance id="d001.s016.t001" lemma="study" pos="n">study</instance>
+<instance id="d001.s016.t002" lemma="show" pos="v">shows</instance>
+that
+<instance id="d001.s016.t003" lemma="nearly" pos="r">nearly</instance>
+40
+%
+of
+the
+<instance id="d001.s016.t004" lemma="homeless" pos="a">homeless</instance>
+<instance id="d001.s016.t005" lemma="population" pos="n">population</instance>
+is
+<instance id="d001.s016.t006" lemma="make_up" pos="v">made up</instance>
+of
+<instance id="d001.s016.t007" lemma="woman" pos="n">women</instance>
+and
+<instance id="d001.s016.t008" lemma="child" pos="n">children</instance>
+and
+that
+<instance id="d001.s016.t009" lemma="only" pos="r">only</instance>
+25
+%
+of
+the
+<instance id="d001.s016.t010" lemma="homeless" pos="n">homeless</instance>
+<instance id="d001.s016.t011" lemma="exhibit" pos="v">exhibits</instance>
+some
+<instance id="d001.s016.t012" lemma="combination" pos="n">combination</instance>
+of
+<instance id="d001.s016.t013" lemma="drug" pos="n">drug</instance>
+,
+<instance id="d001.s016.t014" lemma="alcohol" pos="n">alcohol</instance>
+and
+<instance id="d001.s016.t015" lemma="mental" pos="a">mental</instance>
+<instance id="d001.s016.t016" lemma="problem" pos="n">problems</instance>
+.
+</sentence>
+<sentence id="d001.s017">
+<instance id="d001.s017.t001" lemma="according" pos="a">According</instance>
+to
+Dr
+.
+Wright
+,
+<instance id="d001.s017.t002" lemma="homelessness" pos="n">homelessness</instance>
+<instance id="d001.s017.t003" lemma="be" pos="v">is</instance>
+``
+<instance id="d001.s017.t004" lemma="simultaneously" pos="r">simultaneously</instance>
+a
+<instance id="d001.s017.t005" lemma="housing" pos="n">housing</instance>
+<instance id="d001.s017.t006" lemma="problem" pos="n">problem</instance>
+,
+an
+<instance id="d001.s017.t007" lemma="employment" pos="n">employment</instance>
+<instance id="d001.s017.t008" lemma="problem" pos="n">problem</instance>
+,
+a
+<instance id="d001.s017.t009" lemma="demographic" pos="a">demographic</instance>
+<instance id="d001.s017.t010" lemma="problem" pos="n">problem</instance>
+,
+a
+<instance id="d001.s017.t011" lemma="problem" pos="n">problem</instance>
+of
+<instance id="d001.s017.t012" lemma="social" pos="a">social</instance>
+disaffiliation
+,
+a
+<instance id="d001.s017.t013" lemma="mental" pos="a">mental</instance>
+<instance id="d001.s017.t014" lemma="health" pos="n">health</instance>
+<instance id="d001.s017.t015" lemma="problem" pos="n">problem</instance>
+,
+a
+<instance id="d001.s017.t016" lemma="family" pos="n">family</instance>
+<instance id="d001.s017.t017" lemma="violence" pos="n">violence</instance>
+<instance id="d001.s017.t018" lemma="problem" pos="n">problem</instance>
+,
+a
+<instance id="d001.s017.t019" lemma="problem" pos="n">problem</instance>
+<instance id="d001.s017.t020" lemma="create" pos="v">created</instance>
+by
+the
+<instance id="d001.s017.t021" lemma="cutback" pos="n">cutbacks</instance>
+in
+<instance id="d001.s017.t022" lemma="social" pos="a">social</instance>
+<instance id="d001.s017.t023" lemma="welfare" pos="n">welfare</instance>
+<instance id="d001.s017.t024" lemma="spending" pos="n">spending</instance>
+,
+a
+<instance id="d001.s017.t025" lemma="problem" pos="n">problem</instance>
+<instance id="d001.s017.t026" lemma="result" pos="v">resulting</instance>
+from
+the
+<instance id="d001.s017.t027" lemma="decay" pos="n">decay</instance>
+of
+the
+<instance id="d001.s017.t028" lemma="traditional" pos="a">traditional</instance>
+<instance id="d001.s017.t029" lemma="nuclear_family" pos="n">nuclear family</instance>
+,
+and
+a
+<instance id="d001.s017.t030" lemma="problem" pos="n">problem</instance>
+<instance id="d001.s017.t031" lemma="intimately" pos="r">intimately</instance>
+<instance id="d001.s017.t032" lemma="connected" pos="a">connected</instance>
+to
+the
+<instance id="d001.s017.t033" lemma="recent" pos="a">recent</instance>
+<instance id="d001.s017.t034" lemma="increase" pos="n">increase</instance>
+in
+the
+<instance id="d001.s017.t035" lemma="number" pos="n">number</instance>
+of
+<instance id="d001.s017.t036" lemma="person" pos="n">persons</instance>
+<instance id="d001.s017.t037" lemma="live" pos="v">living</instance>
+below
+the
+<instance id="d001.s017.t038" lemma="poverty" pos="n">poverty</instance>
+<instance id="d001.s017.t039" lemma="level" pos="n">level</instance>
+.
+''
+</sentence>
+<sentence id="d001.s018">
+Leighton
+E
+.
+Cluff
+M
+.
+D
+.
+President
+Robert
+Wood
+Johnson
+Foundation
+Princeton
+,
+N
+.
+J
+.
+</sentence>
+<sentence id="d001.s019">
+To
+<instance id="d001.s019.t001" lemma="quote" pos="v">quote</instance>
+the
+<instance id="d001.s019.t002" lemma="highly" pos="r">highly</instance>
+<instance id="d001.s019.t003" lemma="regard" pos="v">regarded</instance>
+<instance id="d001.s019.t004" lemma="director" pos="n">director</instance>
+of
+a
+<instance id="d001.s019.t005" lemma="privately" pos="r">privately</instance>
+<instance id="d001.s019.t006" lemma="funded" pos="a">funded</instance>
+drop-in
+<instance id="d001.s019.t007" lemma="center" pos="n">center</instance>
+for
+the
+<instance id="d001.s019.t008" lemma="homeless" pos="n">homeless</instance>
+in
+New
+York
+:
+``
+If
+you
+'re
+<instance id="d001.s019.t009" lemma="homeless" pos="a">homeless</instance>
+,
+you
+do
+n't
+<instance id="d001.s019.t010" lemma="sleep" pos="v">sleep</instance>
+for
+<instance id="d001.s019.t011" lemma="fear" pos="n">fear</instance>
+of
+being
+<instance id="d001.s019.t012" lemma="rob" pos="v">robbed</instance>
+or
+<instance id="d001.s019.t013" lemma="murder" pos="v">murdered</instance>
+.
+</sentence>
+<sentence id="d001.s020">
+After
+your
+<instance id="d001.s020.t001" lemma="first" pos="a">first</instance>
+<instance id="d001.s020.t002" lemma="three" pos="a">three</instance>
+<instance id="d001.s020.t003" lemma="week" pos="n">weeks</instance>
+of
+<instance id="d001.s020.t004" lemma="sleep" pos="n">sleep</instance>
+<instance id="d001.s020.t005" lemma="deprivation" pos="n">deprivation</instance>
+,
+you
+'re
+<instance id="d001.s020.t006" lemma="scarcely" pos="r">scarcely</instance>
+in
+touch
+with
+<instance id="d001.s020.t007" lemma="reality" pos="n">reality</instance>
+any
+more
+;
+without
+<instance id="d001.s020.t008" lemma="psychiatric" pos="a">psychiatric</instance>
+<instance id="d001.s020.t009" lemma="treatment" pos="n">treatment</instance>
+,
+you
+may
+<instance id="d001.s020.t010" lemma="well" pos="r">well</instance>
+<instance id="d001.s020.t011" lemma="be" pos="v">be</instance>
+<instance id="d001.s020.t012" lemma="unable" pos="a">unable</instance>
+to
+<instance id="d001.s020.t013" lemma="fend" pos="v">fend</instance>
+for
+yourself
+<instance id="d001.s020.t014" lemma="ever" pos="r">ever</instance>
+<instance id="d001.s020.t015" lemma="again" pos="r">again</instance>
+.
+''
+</sentence>
+<sentence id="d001.s021">
+Some
+of
+the
+<instance id="d001.s021.t001" lemma="homeless" pos="n">homeless</instance>
+,
+<instance id="d001.s021.t002" lemma="obviously" pos="r">obviously</instance>
+,
+<instance id="d001.s021.t003" lemma="have" pos="v">had</instance>
+<instance id="d001.s021.t004" lemma="pre-existing" pos="a">pre-existing</instance>
+<instance id="d001.s021.t005" lemma="mental" pos="a">mental</instance>
+<instance id="d001.s021.t006" lemma="illness" pos="n">illness</instance>
+or
+<instance id="d001.s021.t007" lemma="addiction" pos="n">addiction</instance>
+.
+</sentence>
+<sentence id="d001.s022">
+But
+many
+others
+have
+<instance id="d001.s022.t001" lemma="fall" pos="v">fallen</instance>
+through
+cracks
+in
+the
+<instance id="d001.s022.t002" lemma="economy" pos="n">economy</instance>
+into
+the
+<instance id="d001.s022.t003" lemma="grim" pos="a">grim</instance>
+,
+<instance id="d001.s022.t004" lemma="brutal" pos="a">brutal</instance>
+<instance id="d001.s022.t005" lemma="world" pos="n">world</instance>
+of
+our
+<instance id="d001.s022.t006" lemma="city" pos="n">city</instance>
+<instance id="d001.s022.t007" lemma="street" pos="n">streets</instance>
+.
+</sentence>
+<sentence id="d001.s023">
+<instance id="d001.s023.t001" lemma="Once" pos="r">Once</instance>
+<instance id="d001.s023.t002" lemma="there" pos="r">there</instance>
+,
+what
+<instance id="d001.s023.t003" lemma="way" pos="n">ways</instance>
+of
+<instance id="d001.s023.t004" lemma="escape" pos="n">escape</instance>
+<instance id="d001.s023.t005" lemma="be" pos="v">are</instance>
+<instance id="d001.s023.t006" lemma="open" pos="a">open</instance>
+to
+them
+other
+than
+<instance id="d001.s023.t007" lemma="drink" pos="n">drink</instance>
+,
+<instance id="d001.s023.t008" lemma="drug" pos="n">drugs</instance>
+or
+<instance id="d001.s023.t009" lemma="insanity" pos="n">insanity</instance>
+?
+</sentence>
+<sentence id="d001.s024">
+Maxwell
+R
+.
+D
+.
+Vos
+Brooklyn
+,
+N
+.
+Y
+.
+</sentence>
+<sentence id="d001.s025">
+You
+<instance id="d001.s025.t001" lemma="dismiss" pos="v">dismiss</instance>
+as
+``
+<instance id="d001.s025.t002" lemma="sentimental" pos="a">sentimental</instance>
+''
+the
+<instance id="d001.s025.t003" lemma="view" pos="n">view</instance>
+that
+the
+<instance id="d001.s025.t004" lemma="reduction" pos="n">reduction</instance>
+of
+<instance id="d001.s025.t005" lemma="federal" pos="a">federal</instance>
+housing-assistance
+<instance id="d001.s025.t006" lemma="program" pos="n">programs</instance>
+by
+77
+%
+might
+have
+<instance id="d001.s025.t007" lemma="play" pos="v">played</instance>
+a
+<instance id="d001.s025.t008" lemma="significant" pos="a">significant</instance>
+<instance id="d001.s025.t009" lemma="role" pos="n">role</instance>
+in
+the
+<instance id="d001.s025.t010" lemma="increased" pos="a">increased</instance>
+<instance id="d001.s025.t011" lemma="number" pos="n">number</instance>
+of
+<instance id="d001.s025.t012" lemma="man" pos="n">men</instance>
+and
+<instance id="d001.s025.t013" lemma="woman" pos="n">women</instance>
+<instance id="d001.s025.t014" lemma="sleep" pos="v">sleeping</instance>
+on
+our
+<instance id="d001.s025.t015" lemma="city" pos="n">city</instance>
+<instance id="d001.s025.t016" lemma="street" pos="n">streets</instance>
+during
+the
+Reagan-Bush
+<instance id="d001.s025.t017" lemma="year" pos="n">years</instance>
+.
+</sentence>
+<sentence id="d001.s026">
+There
+<instance id="d001.s026.t001" lemma="be" pos="v">is</instance>
+no
+<instance id="d001.s026.t002" lemma="sign" pos="n">sign</instance>
+that
+you
+<instance id="d001.s026.t003" lemma="bother" pos="v">bothered</instance>
+to
+<instance id="d001.s026.t004" lemma="consider" pos="v">consider</instance>
+the
+<instance id="d001.s026.t005" lemma="inverse" pos="n">inverse</instance>
+of
+your
+<instance id="d001.s026.t006" lemma="logic" pos="n">logic</instance>
+:
+<instance id="d001.s026.t007" lemma="namely" pos="r">namely</instance>
+,
+that
+<instance id="d001.s026.t008" lemma="mental" pos="a">mental</instance>
+<instance id="d001.s026.t009" lemma="illness" pos="n">illness</instance>
+and
+<instance id="d001.s026.t010" lemma="substance_abuse" pos="n">substance abuse</instance>
+might
+<instance id="d001.s026.t011" lemma="be" pos="v">be</instance>
+to
+some
+<instance id="d001.s026.t012" lemma="degree" pos="n">degree</instance>
+<instance id="d001.s026.t013" lemma="consequence" pos="n">consequences</instance>
+<instance id="d001.s026.t014" lemma="rather" pos="r">rather</instance>
+than
+<instance id="d001.s026.t015" lemma="cause" pos="n">causes</instance>
+of
+<instance id="d001.s026.t016" lemma="homelessness" pos="n">homelessness</instance>
+.
+</sentence>
+<sentence id="d001.s027">
+Your
+<instance id="d001.s027.t001" lemma="research" pos="n">research</instance>
+<instance id="d001.s027.t002" lemma="stop" pos="v">stopped</instance>
+when
+a
+<instance id="d001.s027.t003" lemma="convenient" pos="a">convenient</instance>
+<instance id="d001.s027.t004" lemma="assertion" pos="n">assertion</instance>
+could
+be
+<instance id="d001.s027.t005" lemma="make" pos="v">made</instance>
+.
+</sentence>
+<sentence id="d001.s028">
+Robert
+S
+.
+Jenkins
+Cambridge
+,
+Mass
+.
+</sentence>
+<sentence id="d001.s029">
+Of
+the
+<instance id="d001.s029.t001" lemma="approximately" pos="r">approximately</instance>
+200
+<instance id="d001.s029.t002" lemma="sponsor" pos="n">sponsors</instance>
+of
+the
+<instance id="d001.s029.t003" lemma="recent" pos="a">recent</instance>
+<instance id="d001.s029.t004" lemma="march" pos="n">march</instance>
+in
+Washington
+for
+the
+<instance id="d001.s029.t005" lemma="homeless" pos="n">homeless</instance>
+,
+you
+<instance id="d001.s029.t006" lemma="choose" pos="v">chose</instance>
+to
+<instance id="d001.s029.t007" lemma="cite" pos="v">cite</instance>
+such
+<instance id="d001.s029.t008" lemma="group" pos="n">groups</instance>
+as
+the
+National
+Association
+of
+Home
+Builders
+and
+the
+International
+Union
+of
+Bricklayers
+and
+Allied
+Craftsmen
+,
+<instance id="d001.s029.t009" lemma="insinuate" pos="v">insinuating</instance>
+that
+the
+<instance id="d001.s029.t010" lemma="march" pos="n">march</instance>
+<instance id="d001.s029.t011" lemma="get" pos="v">got</instance>
+its
+<instance id="d001.s029.t012" lemma="major" pos="a">major</instance>
+<instance id="d001.s029.t013" lemma="support" pos="n">support</instance>
+from
+<instance id="d001.s029.t014" lemma="self-serving" pos="a">self-serving</instance>
+<instance id="d001.s029.t015" lemma="group" pos="n">groups</instance>
+that
+``
+<instance id="d001.s029.t016" lemma="know" pos="v">know</instance>
+a
+<instance id="d001.s029.t017" lemma="good" pos="a">good</instance>
+<instance id="d001.s029.t018" lemma="thing" pos="n">thing</instance>
+when
+they
+<instance id="d001.s029.t019" lemma="see" pos="v">see</instance>
+it
+,
+''
+and
+that
+the
+<instance id="d001.s029.t020" lemma="crusade" pos="n">crusade</instance>
+was
+<instance id="d001.s029.t021" lemma="base" pos="v">based</instance>
+on
+<instance id="d001.s029.t022" lemma="greed" pos="n">greed</instance>
+or
+the
+<instance id="d001.s029.t023" lemma="profit" pos="n">profit</instance>
+<instance id="d001.s029.t024" lemma="motive" pos="n">motive</instance>
+.
+</sentence>
+<sentence id="d001.s030">
+But
+<instance id="d001.s030.t001" lemma="be" pos="v">is</instance>
+n't
+the
+<instance id="d001.s030.t002" lemma="desire" pos="n">desire</instance>
+for
+<instance id="d001.s030.t003" lemma="profit" pos="n">profit</instance>
+the
+<instance id="d001.s030.t004" lemma="driving" pos="a">driving</instance>
+<instance id="d001.s030.t005" lemma="force" pos="n">force</instance>
+behind
+those
+who
+<instance id="d001.s030.t006" lemma="subscribe" pos="v">subscribe</instance>
+to
+,
+and
+<instance id="d001.s030.t007" lemma="advertise" pos="v">advertise</instance>
+in
+,
+your
+<instance id="d001.s030.t008" lemma="paper" pos="n">paper</instance>
+?
+</sentence>
+<sentence id="d001.s031">
+Why
+did
+n't
+you
+<instance id="d001.s031.t001" lemma="mention" pos="v">mention</instance>
+the
+YMCA
+or
+the
+YWCA
+or
+Catholic
+Charities
+USA
+or
+a
+hundred
+<instance id="d001.s031.t002" lemma="other" pos="a">other</instance>
+<instance id="d001.s031.t003" lemma="nonprofit" pos="a">nonprofit</instance>
+<instance id="d001.s031.t004" lemma="organization" pos="n">organizations</instance>
+that
+<instance id="d001.s031.t005" lemma="participate" pos="v">participated</instance>
+in
+the
+<instance id="d001.s031.t006" lemma="march" pos="n">march</instance>
+?
+</sentence>
+<sentence id="d001.s032">
+As
+for
+the
+<instance id="d001.s032.t001" lemma="finding" pos="n">findings</instance>
+on
+the
+203
+Baltimore
+<instance id="d001.s032.t002" lemma="homeless" pos="n">homeless</instance>
+who
+<instance id="d001.s032.t003" lemma="undergo" pos="v">underwent</instance>
+<instance id="d001.s032.t004" lemma="psychiatric" pos="a">psychiatric</instance>
+<instance id="d001.s032.t005" lemma="examination" pos="n">examinations</instance>
+,
+I
+<instance id="d001.s032.t006" lemma="suggest" pos="v">suggest</instance>
+you
+<instance id="d001.s032.t007" lemma="conduct" pos="v">conduct</instance>
+your
+<instance id="d001.s032.t008" lemma="own" pos="a">own</instance>
+<instance id="d001.s032.t009" lemma="survey" pos="n">survey</instance>
+.
+</sentence>
+<sentence id="d001.s033">
+<instance id="d001.s033.t001" lemma="Choose" pos="v">Choose</instance>
+203
+<instance id="d001.s033.t002" lemma="business" pos="n">business</instance>
+<instance id="d001.s033.t003" lemma="executive" pos="n">executives</instance>
+,
+including
+,
+<instance id="d001.s033.t004" lemma="perhaps" pos="r">perhaps</instance>
+,
+someone
+from
+your
+<instance id="d001.s033.t005" lemma="own" pos="a">own</instance>
+<instance id="d001.s033.t006" lemma="staff" pos="n">staff</instance>
+,
+and
+<instance id="d001.s033.t007" lemma="put" pos="v">put</instance>
+them
+out
+on
+the
+<instance id="d001.s033.t008" lemma="street" pos="n">streets</instance>
+,
+to
+be
+<instance id="d001.s033.t009" lemma="deprive" pos="v">deprived</instance>
+for
+<instance id="d001.s033.t010" lemma="one" pos="a">one</instance>
+<instance id="d001.s033.t011" lemma="month" pos="n">month</instance>
+of
+their
+<instance id="d001.s033.t012" lemma="home" pos="n">homes</instance>
+,
+<instance id="d001.s033.t013" lemma="family" pos="n">families</instance>
+and
+<instance id="d001.s033.t014" lemma="income" pos="n">income</instance>
+.
+</sentence>
+<sentence id="d001.s034">
+I
+would
+<instance id="d001.s034.t001" lemma="predict" pos="v">predict</instance>
+that
+within
+a
+<instance id="d001.s034.t002" lemma="short" pos="a">short</instance>
+<instance id="d001.s034.t003" lemma="time" pos="n">time</instance>
+most
+of
+them
+would
+<instance id="d001.s034.t004" lemma="find" pos="v">find</instance>
+Thunderbird
+a
+<instance id="d001.s034.t005" lemma="satisfactory" pos="a">satisfactory</instance>
+<instance id="d001.s034.t006" lemma="substitute" pos="n">substitute</instance>
+for
+Chivas
+Regal
+and
+that
+their
+``
+<instance id="d001.s034.t007" lemma="normal" pos="a">normal</instance>
+''
+<instance id="d001.s034.t008" lemma="phobia" pos="n">phobias</instance>
+,
+<instance id="d001.s034.t009" lemma="anxiety" pos="n">anxieties</instance>
+,
+<instance id="d001.s034.t010" lemma="depression" pos="n">depressions</instance>
+and
+<instance id="d001.s034.t011" lemma="substance_abuse" pos="n">substance abuse</instance>
+would
+<instance id="d001.s034.t012" lemma="increase" pos="v">increase</instance>
+<instance id="d001.s034.t013" lemma="dramatically" pos="r">dramatically</instance>
+.
+</sentence>
+<sentence id="d001.s035">
+Ruth
+K
+.
+Nelson
+Cullowhee
+,
+N
+.
+C
+.
+</sentence>
+</text>
+<text id="d002">
+<sentence id="d002.s001">
+``
+Feeding
+Frenzy
+''
+-LRB-
+Henry
+Holt
+,
+326
+<instance id="d002.s001.t001" lemma="page" pos="n">pages</instance>
+,
+$
+19
+.
+95
+-RRB-
+,
+a
+<instance id="d002.s001.t002" lemma="highly" pos="r">highly</instance>
+<instance id="d002.s001.t003" lemma="detailed" pos="a">detailed</instance>
+<instance id="d002.s001.t004" lemma="account" pos="n">account</instance>
+of
+the
+Wedtech
+<instance id="d002.s001.t005" lemma="scandal" pos="n">scandal</instance>
+,
+<instance id="d002.s001.t006" lemma="begin" pos="v">begins</instance>
+on
+a
+<instance id="d002.s001.t007" lemma="reassuring" pos="a">reassuring</instance>
+<instance id="d002.s001.t008" lemma="note" pos="n">note</instance>
+.
+</sentence>
+<sentence id="d002.s002">
+<instance id="d002.s002.t001" lemma="Right" pos="r">Right</instance>
+up
+front
+in
+the
+<instance id="d002.s002.t002" lemma="preface" pos="n">preface</instance>
+,
+<instance id="d002.s002.t003" lemma="coauthor" pos="n">co-author</instance>
+William
+Sternberg
+<instance id="d002.s002.t004" lemma="give" pos="v">gives</instance>
+us
+an
+<instance id="d002.s002.t005" lemma="example" pos="n">example</instance>
+of
+his
+<instance id="d002.s002.t006" lemma="own" pos="a">own</instance>
+<instance id="d002.s002.t007" lemma="integrity" pos="n">integrity</instance>
+.
+</sentence>
+<sentence id="d002.s003">
+When
+<instance id="d002.s003.t001" lemma="offer" pos="v">offered</instance>
+a
+<instance id="d002.s003.t002" lemma="free" pos="a">free</instance>
+<instance id="d002.s003.t003" lemma="trip" pos="n">trip</instance>
+from
+the
+Bronx
+,
+Wedtech
+'s
+<instance id="d002.s003.t004" lemma="home" pos="n">home</instance>
+,
+to
+Washington
+,
+D
+.
+C
+.
+,
+by
+<instance id="d002.s003.t005" lemma="one" pos="a">one</instance>
+of
+Wedtech
+'s
+<instance id="d002.s003.t006" lemma="principal" pos="n">principals</instance>
+,
+he
+<instance id="d002.s003.t007" lemma="tell" pos="v">tells</instance>
+the
+<instance id="d002.s003.t008" lemma="reader" pos="n">reader</instance>
+,
+``
+<instance id="d002.s003.t009" lemma="mindful" pos="a">mindful</instance>
+of
+<instance id="d002.s003.t010" lemma="accept" pos="v">accepting</instance>
+anything
+of
+<instance id="d002.s003.t011" lemma="value" pos="n">value</instance>
+from
+those
+I
+was
+<instance id="d002.s003.t012" lemma="write" pos="v">writing</instance>
+about
+,
+I
+<instance id="d002.s003.t013" lemma="decline" pos="v">declined</instance>
+.
+''
+</sentence>
+<sentence id="d002.s004">
+Any
+<instance id="d002.s004.t001" lemma="question" pos="n">question</instance>
+as
+to
+why
+an
+<instance id="d002.s004.t002" lemma="author" pos="n">author</instance>
+would
+<instance id="d002.s004.t003" lemma="believe" pos="v">believe</instance>
+this
+plaintive
+,
+<instance id="d002.s004.t004" lemma="high-minded" pos="a">high-minded</instance>
+<instance id="d002.s004.t005" lemma="note" pos="n">note</instance>
+of
+<instance id="d002.s004.t006" lemma="assurance" pos="n">assurance</instance>
+<instance id="d002.s004.t007" lemma="be" pos="v">is</instance>
+<instance id="d002.s004.t008" lemma="necessary" pos="a">necessary</instance>
+is
+<instance id="d002.s004.t009" lemma="answer" pos="v">answered</instance>
+by
+<instance id="d002.s004.t010" lemma="read" pos="v">reading</instance>
+this
+<instance id="d002.s004.t011" lemma="book" pos="n">book</instance>
+about
+sticky
+fingers
+and
+sweaty
+<instance id="d002.s004.t012" lemma="scammer" pos="n">scammers</instance>
+.
+</sentence>
+<sentence id="d002.s005">
+<instance id="d002.s005.t001" lemma="Bribe" pos="n">Bribe</instance>
+by
+<instance id="d002.s005.t002" lemma="bribe" pos="n">bribe</instance>
+,
+Mr
+.
+Sternberg
+and
+his
+<instance id="d002.s005.t003" lemma="coauthor" pos="n">co-author</instance>
+,
+Matthew
+C
+.
+Harrison
+Jr
+.
+,
+<instance id="d002.s005.t004" lemma="lead" pos="v">lead</instance>
+us
+along
+the
+<instance id="d002.s005.t005" lemma="path" pos="n">path</instance>
+Wedtech
+<instance id="d002.s005.t006" lemma="travel" pos="v">traveled</instance>
+,
+from
+its
+<instance id="d002.s005.t007" lemma="inception" pos="n">inception</instance>
+as
+a
+<instance id="d002.s005.t008" lemma="small" pos="a">small</instance>
+<instance id="d002.s005.t009" lemma="manufacture" pos="v">manufacturing</instance>
+<instance id="d002.s005.t010" lemma="company" pos="n">company</instance>
+to
+the
+<instance id="d002.s005.t011" lemma="status" pos="n">status</instance>
+of
+<instance id="d002.s005.t012" lemma="full-fledged" pos="a">full-fledged</instance>
+<instance id="d002.s005.t013" lemma="defense" pos="n">defense</instance>
+<instance id="d002.s005.t014" lemma="contractor" pos="n">contractor</instance>
+,
+<instance id="d002.s005.t015" lemma="entrust" pos="v">entrusted</instance>
+with
+the
+<instance id="d002.s005.t016" lemma="task" pos="n">task</instance>
+of
+<instance id="d002.s005.t017" lemma="produce" pos="v">producing</instance>
+<instance id="d002.s005.t018" lemma="vital" pos="a">vital</instance>
+<instance id="d002.s005.t019" lemma="equipment" pos="n">equipment</instance>
+for
+the
+Army
+and
+Navy
+.
+</sentence>
+<sentence id="d002.s006">
+The
+<instance id="d002.s006.t001" lemma="book" pos="n">book</instance>
+<instance id="d002.s006.t002" lemma="revolve" pos="v">revolves</instance>
+around
+John
+Mariotta
+,
+the
+<instance id="d002.s006.t003" lemma="founder" pos="n">founder</instance>
+of
+the
+<instance id="d002.s006.t004" lemma="company" pos="n">company</instance>
+,
+and
+Fred
+Neuberger
+,
+who
+<instance id="d002.s006.t005" lemma="become" pos="v">became</instance>
+his
+<instance id="d002.s006.t006" lemma="partner" pos="n">partner</instance>
+<instance id="d002.s006.t007" lemma="soon" pos="r">soon</instance>
+after
+Wedtech
+'s
+<instance id="d002.s006.t008" lemma="creation" pos="n">creation</instance>
+.
+</sentence>
+<sentence id="d002.s007">
+Although
+<instance id="d002.s007.t001" lemma="start" pos="v">started</instance>
+in
+1965
+,
+Wedtech
+did
+n't
+<instance id="d002.s007.t002" lemma="really" pos="r">really</instance>
+<instance id="d002.s007.t003" lemma="get_rolling" pos="v">get rolling</instance>
+until
+1975
+,
+when
+Mr
+.
+Neuberger
+<instance id="d002.s007.t004" lemma="discover" pos="v">discovered</instance>
+the
+<instance id="d002.s007.t005" lemma="federal" pos="a">federal</instance>
+<instance id="d002.s007.t006" lemma="government" pos="n">government</instance>
+'s
+<instance id="d002.s007.t007" lemma="Section" pos="n">Section</instance>
+8
+-LRB-
+A
+-RRB-
+<instance id="d002.s007.t008" lemma="minority" pos="n">minority</instance>
+<instance id="d002.s007.t009" lemma="business" pos="n">business</instance>
+<instance id="d002.s007.t010" lemma="program" pos="n">program</instance>
+.
+</sentence>
+<sentence id="d002.s008">
+This
+<instance id="d002.s008.t001" lemma="be" pos="v">is</instance>
+a
+Johnson-
+<instance id="d002.s008.t002" lemma="era" pos="n">era</instance>
+,
+Great
+Society
+<instance id="d002.s008.t003" lemma="creation" pos="n">creation</instance>
+that
+<instance id="d002.s008.t004" lemma="mandate" pos="v">mandates</instance>
+<instance id="d002.s008.t005" lemma="certain" pos="a">certain</instance>
+<instance id="d002.s008.t006" lemma="government" pos="n">government</instance>
+<instance id="d002.s008.t007" lemma="contract" pos="n">contracts</instance>
+be
+<instance id="d002.s008.t008" lemma="award" pos="v">awarded</instance>
+<instance id="d002.s008.t009" lemma="noncompetitively" pos="r">noncompetitively</instance>
+to
+<instance id="d002.s008.t010" lemma="minority" pos="n">minority</instance>
+<instance id="d002.s008.t011" lemma="business" pos="n">businesses</instance>
+.
+</sentence>
+<sentence id="d002.s009">
+Mr
+.
+Neuberger
+<instance id="d002.s009.t001" lemma="realize" pos="v">realized</instance>
+that
+,
+although
+of
+<instance id="d002.s009.t002" lemma="Italian" pos="a">Italian</instance>
+<instance id="d002.s009.t003" lemma="ancestry" pos="n">ancestry</instance>
+,
+Mr
+.
+Mariotta
+<instance id="d002.s009.t004" lemma="still" pos="r">still</instance>
+could
+<instance id="d002.s009.t005" lemma="qualify" pos="v">qualify</instance>
+as
+a
+<instance id="d002.s009.t006" lemma="minority" pos="n">minority</instance>
+<instance id="d002.s009.t007" lemma="person" pos="n">person</instance>
+since
+he
+was
+<instance id="d002.s009.t008" lemma="bear" pos="v">born</instance>
+in
+Puerto
+Rico
+.
+</sentence>
+<sentence id="d002.s010">
+The
+<instance id="d002.s010.t001" lemma="two" pos="a">two</instance>
+<instance id="d002.s010.t002" lemma="partner" pos="n">partners</instance>
+<instance id="d002.s010.t003" lemma="merely" pos="r">merely</instance>
+had
+to
+<instance id="d002.s010.t004" lemma="falsify" pos="v">falsify</instance>
+the
+<instance id="d002.s010.t005" lemma="true" pos="a">true</instance>
+<instance id="d002.s010.t006" lemma="ownership" pos="n">ownership</instance>
+of
+the
+<instance id="d002.s010.t007" lemma="corporation" pos="n">corporation</instance>
+.
+</sentence>
+<sentence id="d002.s011">
+<instance id="d002.s011.t001" lemma="Instead" pos="r">Instead</instance>
+of
+50/50
+it
+<instance id="d002.s011.t002" lemma="become" pos="v">became</instance>
+,
+on
+<instance id="d002.s011.t003" lemma="paper" pos="n">paper</instance>
+<instance id="d002.s011.t004" lemma="only" pos="r">only</instance>
+,
+two-thirds
+Mariotta
+,
+one-third
+Neuberger
+,
+and
+they
+<instance id="d002.s011.t005" lemma="be" pos="v">were</instance>
+in
+the
+<instance id="d002.s011.t006" lemma="program" pos="n">program</instance>
+and
+off
+to
+the
+races
+.
+</sentence>
+<sentence id="d002.s012">
+<instance id="d002.s012.t001" lemma="Besides" pos="r">Besides</instance>
+<instance id="d002.s012.t002" lemma="be" pos="v">being</instance>
+a
+``
+minority-owned
+<instance id="d002.s012.t003" lemma="company" pos="n">company</instance>
+''
+Wedtech
+was
+<instance id="d002.s012.t004" lemma="locate" pos="v">located</instance>
+in
+the
+South
+Bronx
+,
+a
+<instance id="d002.s012.t005" lemma="blighted" pos="a">blighted</instance>
+<instance id="d002.s012.t006" lemma="area" pos="n">area</instance>
+,
+<instance id="d002.s012.t007" lemma="make" pos="v">made</instance>
+<instance id="d002.s012.t008" lemma="famous" pos="a">famous</instance>
+by
+Jimmy
+Carter
+in
+his
+1976
+<instance id="d002.s012.t009" lemma="presidential" pos="a">presidential</instance>
+<instance id="d002.s012.t010" lemma="campaign" pos="n">campaign</instance>
+.
+</sentence>
+<sentence id="d002.s013">
+The
+<instance id="d002.s013.t001" lemma="company" pos="n">company</instance>
+plugged
+itself
+<instance id="d002.s013.t002" lemma="right" pos="r">right</instance>
+into
+Carter
+<instance id="d002.s013.t003" lemma="campaign" pos="n">campaign</instance>
+<instance id="d002.s013.t004" lemma="rhetoric" pos="n">rhetoric</instance>
+about
+<instance id="d002.s013.t005" lemma="rebuild" pos="v">rebuilding</instance>
+the
+South
+Bronx
+and
+<instance id="d002.s013.t006" lemma="keep" pos="v">kept</instance>
+<instance id="d002.s013.t007" lemma="use" pos="v">using</instance>
+the
+<instance id="d002.s013.t008" lemma="minority" pos="n">minority</instance>
+--
+South
+Bronx
+<instance id="d002.s013.t009" lemma="angle" pos="n">angle</instance>
+through
+the
+Reagan
+'80s
+.
+</sentence>
+<sentence id="d002.s014">
+<instance id="d002.s014.t001" lemma="Start" pos="v">Starting</instance>
+with
+Congressman
+Mario
+Biaggi
+-LRB-
+<instance id="d002.s014.t002" lemma="now" pos="r">now</instance>
+<instance id="d002.s014.t003" lemma="serve" pos="v">serving</instance>
+a
+<instance id="d002.s014.t004" lemma="jail" pos="n">jail</instance>
+<instance id="d002.s014.t005" lemma="sentence" pos="n">sentence</instance>
+-RRB-
+,
+the
+<instance id="d002.s014.t006" lemma="company" pos="n">company</instance>
+<instance id="d002.s014.t007" lemma="begin" pos="v">began</instance>
+a
+<instance id="d002.s014.t008" lemma="career" pos="n">career</instance>
+of
+<instance id="d002.s014.t009" lemma="bribe" pos="v">bribing</instance>
+<instance id="d002.s014.t010" lemma="federal" pos="a">federal</instance>
+,
+<instance id="d002.s014.t011" lemma="state" pos="n">state</instance>
+and
+<instance id="d002.s014.t012" lemma="local" pos="a">local</instance>
+<instance id="d002.s014.t013" lemma="public" pos="a">public</instance>
+<instance id="d002.s014.t014" lemma="official" pos="n">officials</instance>
+and
+those
+<instance id="d002.s014.t015" lemma="close" pos="a">close</instance>
+to
+<instance id="d002.s014.t016" lemma="public" pos="a">public</instance>
+<instance id="d002.s014.t017" lemma="official" pos="n">officials</instance>
+,
+<instance id="d002.s014.t018" lemma="right" pos="r">right</instance>
+up
+to
+and
+including
+E
+.
+Robert
+Wallach
+,
+<instance id="d002.s014.t019" lemma="close" pos="a">close</instance>
+<instance id="d002.s014.t020" lemma="friend" pos="n">friend</instance>
+and
+<instance id="d002.s014.t021" lemma="adviser" pos="n">adviser</instance>
+to
+<instance id="d002.s014.t022" lemma="former" pos="a">former</instance>
+<instance id="d002.s014.t023" lemma="Attorney_General" pos="n">Attorney General</instance>
+Ed
+Meese
+.
+</sentence>
+<sentence id="d002.s015">
+Wedtech
+did
+n't
+<instance id="d002.s015.t001" lemma="just" pos="r">just</instance>
+<instance id="d002.s015.t002" lemma="use" pos="v">use</instance>
+old
+fashioned
+<instance id="d002.s015.t003" lemma="bribery" pos="n">bribery</instance>
+.
+</sentence>
+<sentence id="d002.s016">
+It
+<instance id="d002.s016.t001" lemma="make" pos="v">made</instance>
+<instance id="d002.s016.t002" lemma="ample" pos="a">ample</instance>
+<instance id="d002.s016.t003" lemma="use" pos="n">use</instance>
+of
+the
+<instance id="d002.s016.t004" lemma="modern" pos="a">modern</instance>
+<instance id="d002.s016.t005" lemma="technique" pos="n">techniques</instance>
+of
+<instance id="d002.s016.t006" lemma="influence" pos="n">influence</instance>
+<instance id="d002.s016.t007" lemma="peddling" pos="n">peddling</instance>
+,
+<instance id="d002.s016.t008" lemma="retain" pos="v">retaining</instance>
+<instance id="d002.s016.t009" lemma="politically" pos="r">politically</instance>
+<instance id="d002.s016.t010" lemma="connected" pos="a">connected</instance>
+``
+<instance id="d002.s016.t011" lemma="respectable" pos="a">respectable</instance>
+''
+<instance id="d002.s016.t012" lemma="law" pos="n">law</instance>
+<instance id="d002.s016.t013" lemma="firm" pos="n">firms</instance>
+,
+<instance id="d002.s016.t014" lemma="investment" pos="n">investment</instance>
+<instance id="d002.s016.t015" lemma="banker" pos="n">bankers</instance>
+and
+<instance id="d002.s016.t016" lemma="political" pos="a">political</instance>
+<instance id="d002.s016.t017" lemma="consultant" pos="n">consultants</instance>
+,
+including
+Reagan
+<instance id="d002.s016.t018" lemma="confidant" pos="n">confidant</instance>
+Lyn
+Nofzinger
+.
+</sentence>
+<sentence id="d002.s017">
+When
+<instance id="d002.s017.t001" lemma="necessary" pos="a">necessary</instance>
+,
+it
+<instance id="d002.s017.t002" lemma="seek" pos="v">sought</instance>
+and
+<instance id="d002.s017.t003" lemma="receive" pos="v">received</instance>
+<instance id="d002.s017.t004" lemma="assistance" pos="n">assistance</instance>
+from
+<instance id="d002.s017.t005" lemma="organized" pos="a">organized</instance>
+<instance id="d002.s017.t006" lemma="crime" pos="n">crime</instance>
+.
+</sentence>
+<sentence id="d002.s018">
+<instance id="d002.s018.t001" lemma="Sometimes" pos="r">Sometimes</instance>
+the
+bribed
+<instance id="d002.s018.t002" lemma="become" pos="v">became</instance>
+<instance id="d002.s018.t003" lemma="partner" pos="n">partners</instance>
+in
+the
+<instance id="d002.s018.t004" lemma="company" pos="n">company</instance>
+.
+</sentence>
+<sentence id="d002.s019">
+Wedtech
+<instance id="d002.s019.t001" lemma="management" pos="n">management</instance>
+<instance id="d002.s019.t002" lemma="use" pos="v">used</instance>
+the
+<instance id="d002.s019.t003" lemma="merit" pos="n">merit</instance>
+<instance id="d002.s019.t004" lemma="system" pos="n">system</instance>
+.
+</sentence>
+<sentence id="d002.s020">
+If
+you
+<instance id="d002.s020.t001" lemma="be" pos="v">were</instance>
+<instance id="d002.s020.t002" lemma="especially" pos="r">especially</instance>
+<instance id="d002.s020.t003" lemma="helpful" pos="a">helpful</instance>
+in
+a
+<instance id="d002.s020.t004" lemma="corrupt" pos="a">corrupt</instance>
+<instance id="d002.s020.t005" lemma="scheme" pos="n">scheme</instance>
+you
+<instance id="d002.s020.t006" lemma="receive" pos="v">received</instance>
+not
+<instance id="d002.s020.t007" lemma="just" pos="r">just</instance>
+<instance id="d002.s020.t008" lemma="cash" pos="n">cash</instance>
+in
+a
+<instance id="d002.s020.t009" lemma="bag" pos="n">bag</instance>
+,
+but
+<instance id="d002.s020.t010" lemma="equity" pos="n">equity</instance>
+.
+</sentence>
+<sentence id="d002.s021">
+If
+you
+<instance id="d002.s021.t001" lemma="be" pos="v">were</instance>
+not
+an
+<instance id="d002.s021.t002" lemma="effective" pos="a">effective</instance>
+<instance id="d002.s021.t003" lemma="crook" pos="n">crook</instance>
+,
+you
+<instance id="d002.s021.t004" lemma="find" pos="v">found</instance>
+yourself
+out
+in
+the
+cold
+,
+a
+<instance id="d002.s021.t005" lemma="fate" pos="n">fate</instance>
+that
+<instance id="d002.s021.t006" lemma="eventually" pos="r">eventually</instance>
+<instance id="d002.s021.t007" lemma="befall" pos="v">befell</instance>
+Mr
+.
+Mariotta
+,
+the
+<instance id="d002.s021.t008" lemma="firm" pos="n">firm</instance>
+'s
+<instance id="d002.s021.t009" lemma="semiliterate" pos="a">semiliterate</instance>
+``
+<instance id="d002.s021.t010" lemma="minority" pos="n">minority</instance>
+''
+<instance id="d002.s021.t011" lemma="person" pos="n">person</instance>
+.
+</sentence>
+<sentence id="d002.s022">
+But
+despite
+the
+<instance id="d002.s022.t001" lemma="sensational" pos="a">sensational</instance>
+<instance id="d002.s022.t002" lemma="nature" pos="n">nature</instance>
+of
+the
+<instance id="d002.s022.t003" lemma="revelation" pos="n">revelations</instance>
+and
+the
+<instance id="d002.s022.t004" lemma="breezy" pos="a">breezy</instance>
+,
+easy-to-read
+<instance id="d002.s022.t005" lemma="tabloid" pos="n">tabloid</instance>
+<instance id="d002.s022.t006" lemma="writing" pos="n">writing</instance>
+<instance id="d002.s022.t007" lemma="style" pos="n">style</instance>
+,
+``
+Feeding
+Frenzy
+''
+<instance id="d002.s022.t008" lemma="often" pos="r">often</instance>
+<instance id="d002.s022.t009" lemma="fall_short_of" pos="v">falls short of</instance>
+<instance id="d002.s022.t010" lemma="gripping" pos="a">gripping</instance>
+<instance id="d002.s022.t011" lemma="reading" pos="n">reading</instance>
+.
+</sentence>
+<sentence id="d002.s023">
+None
+of
+the
+<instance id="d002.s023.t001" lemma="scam" pos="n">scams</instance>
+<instance id="d002.s023.t002" lemma="show" pos="v">show</instance>
+much
+<instance id="d002.s023.t003" lemma="ingenuity" pos="n">ingenuity</instance>
+:
+<instance id="d002.s023.t004" lemma="Auditor" pos="n">Auditors</instance>
+<instance id="d002.s023.t005" lemma="find" pos="v">found</instance>
+crookery
+the
+<instance id="d002.s023.t006" lemma="first" pos="a">first</instance>
+<instance id="d002.s023.t007" lemma="day" pos="n">day</instance>
+on
+the
+<instance id="d002.s023.t008" lemma="job" pos="n">job</instance>
+.
+</sentence>
+<sentence id="d002.s024">
+Wedtech
+'s
+<instance id="d002.s024.t001" lemma="scammer" pos="n">scammers</instance>
+<instance id="d002.s024.t002" lemma="simply" pos="r">simply</instance>
+<instance id="d002.s024.t003" lemma="bribe" pos="v">bribed</instance>
+them
+to
+<instance id="d002.s024.t004" lemma="shut_up" pos="v">shut up</instance>
+.
+</sentence>
+<sentence id="d002.s025">
+The
+<instance id="d002.s025.t001" lemma="scammer" pos="n">scammers</instance>
+themselves
+<instance id="d002.s025.t002" lemma="be" pos="v">were</instance>
+garden-variety
+<instance id="d002.s025.t003" lemma="lowlife" pos="n">low lifes</instance>
+,
+<instance id="d002.s025.t004" lemma="conspicuous" pos="a">conspicuous</instance>
+<instance id="d002.s025.t005" lemma="consumer" pos="n">consumers</instance>
+who
+<instance id="d002.s025.t006" lemma="want" pos="v">wanted</instance>
+<instance id="d002.s025.t007" lemma="big" pos="a">big</instance>
+<instance id="d002.s025.t008" lemma="house" pos="n">houses</instance>
+,
+Mercedes
+<instance id="d002.s025.t009" lemma="car" pos="n">cars</instance>
+,
+<instance id="d002.s025.t010" lemma="beautiful" pos="a">beautiful</instance>
+<instance id="d002.s025.t011" lemma="woman" pos="n">women</instance>
+,
+<instance id="d002.s025.t012" lemma="expensive" pos="a">expensive</instance>
+<instance id="d002.s025.t013" lemma="clothes" pos="n">clothes</instance>
+.
+</sentence>
+<sentence id="d002.s026">
+Among
+the
+<instance id="d002.s026.t001" lemma="lot" pos="n">lot</instance>
+of
+them
+,
+not
+one
+is
+<instance id="d002.s026.t002" lemma="wrestle" pos="v">wrestling</instance>
+with
+<instance id="d002.s026.t003" lemma="good" pos="n">good</instance>
+and
+<instance id="d002.s026.t004" lemma="evil" pos="n">evil</instance>
+,
+or
+<instance id="d002.s026.t005" lemma="especially" pos="r">especially</instance>
+<instance id="d002.s026.t006" lemma="intelligent" pos="a">intelligent</instance>
+or
+<instance id="d002.s026.t007" lemma="even" pos="r">even</instance>
+<instance id="d002.s026.t008" lemma="temporarily" pos="r">temporarily</instance>
+<instance id="d002.s026.t009" lemma="insane" pos="a">insane</instance>
+.
+</sentence>
+<sentence id="d002.s027">
+The
+<instance id="d002.s027.t001" lemma="one" pos="a">one</instance>
+<instance id="d002.s027.t002" lemma="character" pos="n">character</instance>
+<instance id="d002.s027.t003" lemma="at_least" pos="r">at least</instance>
+<instance id="d002.s027.t004" lemma="somewhat" pos="r">somewhat</instance>
+<instance id="d002.s027.t005" lemma="interesting" pos="a">interesting</instance>
+<instance id="d002.s027.t006" lemma="be" pos="v">was</instance>
+Irving
+Louis
+Lobsenz
+,
+a
+<instance id="d002.s027.t007" lemma="pediatrician" pos="n">pediatrician</instance>
+who
+<instance id="d002.s027.t008" lemma="change" pos="v">changed</instance>
+his
+<instance id="d002.s027.t009" lemma="name" pos="n">name</instance>
+to
+Rusty
+Kent
+London
+and
+<instance id="d002.s027.t010" lemma="become" pos="v">became</instance>
+a
+<instance id="d002.s027.t011" lemma="master" pos="n">master</instance>
+<instance id="d002.s027.t012" lemma="gambler" pos="n">gambler</instance>
+and
+<instance id="d002.s027.t013" lemma="author" pos="n">author</instance>
+of
+a
+<instance id="d002.s027.t014" lemma="book" pos="n">book</instance>
+on
+<instance id="d002.s027.t015" lemma="blackjack" pos="n">blackjack</instance>
+.
+</sentence>
+<sentence id="d002.s028">
+He
+<instance id="d002.s028.t001" lemma="enter" pos="v">enters</instance>
+the
+<instance id="d002.s028.t002" lemma="story" pos="n">story</instance>
+toward
+the
+<instance id="d002.s028.t003" lemma="end" pos="n">end</instance>
+,
+<instance id="d002.s028.t004" lemma="just" pos="r">just</instance>
+<instance id="d002.s028.t005" lemma="in_time" pos="r">in time</instance>
+to
+<instance id="d002.s028.t006" lemma="get" pos="v">get</instance>
+<instance id="d002.s028.t007" lemma="arrest" pos="v">arrested</instance>
+.
+</sentence>
+<sentence id="d002.s029">
+<instance id="d002.s029.t001" lemma="Absorb" pos="v">Absorbed</instance>
+in
+<instance id="d002.s029.t002" lemma="dole_out" pos="v">doling out</instance>
+``
+Feeding
+Frenzy
+'s
+''
+<instance id="d002.s029.t003" lemma="tidbit" pos="n">tidbits</instance>
+,
+the
+<instance id="d002.s029.t004" lemma="author" pos="n">authors</instance>
+<instance id="d002.s029.t005" lemma="gloss_over" pos="v">gloss over</instance>
+the
+<instance id="d002.s029.t006" lemma="root" pos="n">root</instance>
+<instance id="d002.s029.t007" lemma="cause" pos="n">causes</instance>
+of
+Wedtech
+,
+<instance id="d002.s029.t008" lemma="namely" pos="r">namely</instance>
+the
+<instance id="d002.s029.t009" lemma="Section" pos="n">Section</instance>
+8
+-LRB-
+A
+-RRB-
+<instance id="d002.s029.t010" lemma="federal" pos="a">federal</instance>
+<instance id="d002.s029.t011" lemma="program" pos="n">program</instance>
+under
+whose
+<instance id="d002.s029.t012" lemma="auspices" pos="n">auspices</instance>
+the
+<instance id="d002.s029.t013" lemma="scandal" pos="n">scandal</instance>
+<instance id="d002.s029.t014" lemma="take_place" pos="v">took place</instance>
+.
+</sentence>
+<sentence id="d002.s030">
+They
+do
+<instance id="d002.s030.t001" lemma="at_least" pos="r">at least</instance>
+<instance id="d002.s030.t002" lemma="come_around" pos="v">come around</instance>
+to
+<instance id="d002.s030.t003" lemma="say" pos="v">saying</instance>
+that
+the
+<instance id="d002.s030.t004" lemma="court" pos="n">courts</instance>
+might
+<instance id="d002.s030.t005" lemma="want" pos="v">want</instance>
+to
+<instance id="d002.s030.t006" lemma="end" pos="v">end</instance>
+``
+<instance id="d002.s030.t007" lemma="rigid" pos="a">rigid</instance>
+<instance id="d002.s030.t008" lemma="affirmative_action" pos="n">affirmative action</instance>
+<instance id="d002.s030.t009" lemma="program" pos="n">programs</instance>
+.
+''
+</sentence>
+<sentence id="d002.s031">
+<instance id="d002.s031.t001" lemma="Program" pos="n">Programs</instance>
+like
+<instance id="d002.s031.t002" lemma="Section" pos="n">Section</instance>
+8
+-LRB-
+A
+-RRB-
+<instance id="d002.s031.t003" lemma="be" pos="v">are</instance>
+<instance id="d002.s031.t004" lemma="a_little" pos="r">a little</instance>
+like
+<instance id="d002.s031.t005" lemma="leave" pos="v">leaving</instance>
+<instance id="d002.s031.t006" lemma="gold" pos="n">gold</instance>
+in
+the
+<instance id="d002.s031.t007" lemma="street" pos="n">street</instance>
+and
+<instance id="d002.s031.t008" lemma="then" pos="r">then</instance>
+<instance id="d002.s031.t009" lemma="express" pos="v">expressing</instance>
+<instance id="d002.s031.t010" lemma="surprise" pos="n">surprise</instance>
+when
+<instance id="d002.s031.t011" lemma="thief" pos="n">thieves</instance>
+<instance id="d002.s031.t012" lemma="walk" pos="v">walk</instance>
+by
+to
+<instance id="d002.s031.t013" lemma="scoop" pos="v">scoop</instance>
+it
+up
+.
+</sentence>
+<sentence id="d002.s032">
+<instance id="d002.s032.t001" lemma="Numerous" pos="a">Numerous</instance>
+<instance id="d002.s032.t002" lemma="other" pos="a">other</instance>
+<instance id="d002.s032.t003" lemma="scandal" pos="n">scandals</instance>
+,
+among
+them
+the
+ones
+at
+HUD
+,
+<instance id="d002.s032.t004" lemma="have" pos="v">have</instance>
+the
+same
+<instance id="d002.s032.t005" lemma="characteristic" pos="n">characteristics</instance>
+as
+Wedtech
+.
+</sentence>
+<sentence id="d002.s033">
+They
+<instance id="d002.s033.t001" lemma="take_place" pos="v">take place</instance>
+in
+<instance id="d002.s033.t002" lemma="government" pos="n">government</instance>
+<instance id="d002.s033.t003" lemma="program" pos="n">programs</instance>
+that
+<instance id="d002.s033.t004" lemma="seem" pos="v">seem</instance>
+tailor-made
+for
+<instance id="d002.s033.t005" lemma="corruption" pos="n">corruption</instance>
+.
+</sentence>
+<sentence id="d002.s034">
+Why
+are
+<instance id="d002.s034.t001" lemma="program" pos="n">programs</instance>
+like
+this
+not
+<instance id="d002.s034.t002" lemma="eliminate" pos="v">eliminated</instance>
+?
+</sentence>
+<sentence id="d002.s035">
+``
+Feeding
+Frenzy
+''
+does
+<instance id="d002.s035.t001" lemma="provide" pos="v">provide</instance>
+a
+few
+<instance id="d002.s035.t002" lemma="clue" pos="n">clues</instance>
+.
+</sentence>
+<sentence id="d002.s036">
+In
+and
+around
+all
+<instance id="d002.s036.t001" lemma="level" pos="n">levels</instance>
+of
+<instance id="d002.s036.t002" lemma="government" pos="n">government</instance>
+in
+the
+U
+.
+S
+.
+<instance id="d002.s036.t003" lemma="be" pos="v">are</instance>
+<instance id="d002.s036.t004" lemma="group" pos="n">groups</instance>
+of
+<instance id="d002.s036.t005" lemma="people" pos="n">people</instance>
+who
+can
+best
+be
+<instance id="d002.s036.t006" lemma="describe" pos="v">described</instance>
+as
+<instance id="d002.s036.t007" lemma="belong_to" pos="v">belonging to</instance>
+a
+<instance id="d002.s036.t008" lemma="political" pos="a">political</instance>
+<instance id="d002.s036.t009" lemma="insider" pos="n">insider</instance>
+<instance id="d002.s036.t010" lemma="commercial" pos="a">commercial</instance>
+<instance id="d002.s036.t011" lemma="party" pos="n">party</instance>
+.
+</sentence>
+<sentence id="d002.s037">
+They
+<instance id="d002.s037.t001" lemma="know" pos="v">know</instance>
+that
+whenever
+<instance id="d002.s037.t002" lemma="government" pos="n">government</instance>
+is
+<instance id="d002.s037.t003" lemma="redistribute" pos="v">redistributing</instance>
+<instance id="d002.s037.t004" lemma="wealth" pos="n">wealth</instance>
+,
+<instance id="d002.s037.t005" lemma="regulate" pos="v">regulating</instance>
+<instance id="d002.s037.t006" lemma="commerce" pos="n">commerce</instance>
+or
+<instance id="d002.s037.t007" lemma="maintain" pos="v">maintaining</instance>
+a
+<instance id="d002.s037.t008" lemma="large" pos="a">large</instance>
+<instance id="d002.s037.t009" lemma="defense" pos="n">defense</instance>
+<instance id="d002.s037.t010" lemma="establishment" pos="n">establishment</instance>
+,
+there
+<instance id="d002.s037.t011" lemma="be" pos="v">is</instance>
+<instance id="d002.s037.t012" lemma="big" pos="a">big</instance>
+<instance id="d002.s037.t013" lemma="money" pos="n">money</instance>
+to
+be
+<instance id="d002.s037.t014" lemma="make" pos="v">made</instance>
+in
+<instance id="d002.s037.t015" lemma="influence" pos="v">influencing</instance>
+,
+<instance id="d002.s037.t016" lemma="broker" pos="v">brokering</instance>
+or
+<instance id="d002.s037.t017" lemma="sell" pos="v">selling</instance>
+the
+<instance id="d002.s037.t018" lemma="process" pos="n">processes</instance>
+and
+<instance id="d002.s037.t019" lemma="decision" pos="n">decisions</instance>
+of
+<instance id="d002.s037.t020" lemma="government" pos="n">government</instance>
+.
+</sentence>
+<sentence id="d002.s038">
+They
+<instance id="d002.s038.t001" lemma="be" pos="v">are</instance>
+our
+<instance id="d002.s038.t002" lemma="version" pos="n">version</instance>
+of
+the
+East
+<instance id="d002.s038.t003" lemma="bloc" pos="n">bloc</instance>
+'s
+<instance id="d002.s038.t004" lemma="Nomenklatura" pos="n">Nomenklatura</instance>
+and
+they
+<instance id="d002.s038.t005" lemma="have" pos="v">have</instance>
+<instance id="d002.s038.t006" lemma="absolutely" pos="r">absolutely</instance>
+no
+<instance id="d002.s038.t007" lemma="wish" pos="n">wish</instance>
+to
+<instance id="d002.s038.t008" lemma="see" pos="v">see</instance>
+anything
+<instance id="d002.s038.t009" lemma="change" pos="v">change</instance>
+.
+</sentence>
+<sentence id="d002.s039">
+How
+many
+<instance id="d002.s039.t001" lemma="government" pos="n">government</instance>
+<instance id="d002.s039.t002" lemma="program" pos="n">programs</instance>
+and
+<instance id="d002.s039.t003" lemma="policy" pos="n">policies</instance>
+<instance id="d002.s039.t004" lemma="exist" pos="v">exist</instance>
+because
+they
+<instance id="d002.s039.t005" lemma="line" pos="v">line</instance>
+the
+<instance id="d002.s039.t006" lemma="pocket" pos="n">pockets</instance>
+of
+<instance id="d002.s039.t007" lemma="political" pos="a">political</instance>
+<instance id="d002.s039.t008" lemma="insider" pos="n">insiders</instance>
+?
+</sentence>
+<sentence id="d002.s040">
+This
+is
+the
+<instance id="d002.s040.t001" lemma="real" pos="a">real</instance>
+<instance id="d002.s040.t002" lemma="issue" pos="n">issue</instance>
+<instance id="d002.s040.t003" lemma="raise" pos="v">raised</instance>
+by
+the
+Wedtech
+<instance id="d002.s040.t004" lemma="scandal" pos="n">scandal</instance>
+.
+</sentence>
+<sentence id="d002.s041">
+Mr
+.
+Stern
+<instance id="d002.s041.t001" lemma="be" pos="v">was</instance>
+<instance id="d002.s041.t002" lemma="chairman" pos="n">chairman</instance>
+and
+<instance id="d002.s041.t003" lemma="chief_executive_officer" pos="n">chief executive officer</instance>
+of
+the
+New
+York
+State
+Urban
+Development
+Corp
+.
+,
+1983-85
+.
+</sentence>
+</text>
+<text id="d003">
+<sentence id="d003.s001">
+I
+had
+to
+<instance id="d003.s001.t001" lemma="reach" pos="v">reach</instance>
+<instance id="d003.s001.t002" lemma="back" pos="r">back</instance>
+to
+<instance id="d003.s001.t003" lemma="French" pos="a">French</instance>
+101
+when
+the
+<instance id="d003.s001.t004" lemma="monsieur" pos="n">monsieur</instance>
+avec
+<instance id="d003.s001.t005" lemma="clipboard" pos="n">clipboard</instance>
+<instance id="d003.s001.t006" lemma="lean" pos="v">leaned</instance>
+over
+my
+<instance id="d003.s001.t007" lemma="shoulder" pos="n">shoulder</instance>
+during
+the
+<instance id="d003.s001.t008" lemma="coffee" pos="n">coffee</instance>
+<instance id="d003.s001.t009" lemma="phase" pos="n">phase</instance>
+of
+<instance id="d003.s001.t010" lemma="dinner" pos="n">dinner</instance>
+and
+<instance id="d003.s001.t011" lemma="ask" pos="v">asked</instance>
+whether
+I
+<instance id="d003.s001.t012" lemma="want" pos="v">wanted</instance>
+to
+<instance id="d003.s001.t013" lemma="ride" pos="v">ride</instance>
+in
+a
+montgolfiere
+.
+</sentence>
+<sentence id="d003.s002">
+I
+<instance id="d003.s002.t001" lemma="be" pos="v">was</instance>
+a
+<instance id="d003.s002.t002" lemma="last-minute" pos="a">last-minute</instance>
+-LRB-
+<instance id="d003.s002.t003" lemma="read" pos="v">read</instance>
+interloping
+-RRB-
+<instance id="d003.s002.t004" lemma="attendee" pos="n">attendee</instance>
+at
+a
+<instance id="d003.s002.t005" lemma="French" pos="a">French</instance>
+<instance id="d003.s002.t006" lemma="journalism" pos="n">journalism</instance>
+<instance id="d003.s002.t007" lemma="convention" pos="n">convention</instance>
+and
+<instance id="d003.s002.t008" lemma="so_far" pos="r">so far</instance>
+the
+<instance id="d003.s002.t009" lemma="festivity" pos="n">festivities</instance>
+had
+been
+<instance id="d003.s002.t010" lemma="take_up" pos="v">taken up</instance>
+<instance id="d003.s002.t011" lemma="entirely" pos="r">entirely</instance>
+by
+<instance id="d003.s002.t012" lemma="eating" pos="n">eating</instance>
+,
+<instance id="d003.s002.t013" lemma="drinking" pos="n">drinking</instance>
+,
+<instance id="d003.s002.t014" lemma="smoking" pos="n">smoking</instance>
+,
+<instance id="d003.s002.t015" lemma="sleeping" pos="n">sleeping</instance>
+and
+<instance id="d003.s002.t016" lemma="drinking" pos="n">drinking</instance>
+.
+</sentence>
+<sentence id="d003.s003">
+The
+<instance id="d003.s003.t001" lemma="man" pos="n">man</instance>
+with
+the
+<instance id="d003.s003.t002" lemma="clipboard" pos="n">clipboard</instance>
+<instance id="d003.s003.t003" lemma="represent" pos="v">represented</instance>
+a
+<instance id="d003.s003.t004" lemma="halfhearted" pos="a">halfhearted</instance>
+<instance id="d003.s003.t005" lemma="attempt" pos="n">attempt</instance>
+to
+<instance id="d003.s003.t006" lemma="introduce" pos="v">introduce</instance>
+a
+<instance id="d003.s003.t007" lemma="bit" pos="n">bit</instance>
+of
+les
+sportif
+into
+our
+itinerary
+.
+</sentence>
+<sentence id="d003.s004">
+But
+as
+the
+<instance id="d003.s004.t001" lemma="French" pos="n">French</instance>
+<instance id="d003.s004.t002" lemma="embody" pos="v">embody</instance>
+a
+Zen-like
+<instance id="d003.s004.t003" lemma="state" pos="n">state</instance>
+of
+blase
+when
+it
+<instance id="d003.s004.t004" lemma="come_to" pos="v">comes to</instance>
+<instance id="d003.s004.t005" lemma="athletics" pos="n">athletics</instance>
+-LRB-
+<instance id="d003.s004.t006" lemma="try" pos="v">try</instance>
+<instance id="d003.s004.t007" lemma="find" pos="v">finding</instance>
+a
+Nautilus
+<instance id="d003.s004.t008" lemma="machine" pos="n">machine</instance>
+in
+Paris
+-RRB-
+,
+my
+fellow
+conventioners
+were
+<instance id="d003.s004.t009" lemma="have" pos="v">having</instance>
+none
+of
+it
+.
+</sentence>
+<sentence id="d003.s005">
+The
+<instance id="d003.s005.t001" lemma="diner" pos="n">diners</instance>
+at
+my
+<instance id="d003.s005.t002" lemma="table" pos="n">table</instance>
+<instance id="d003.s005.t003" lemma="simply" pos="r">simply</instance>
+<instance id="d003.s005.t004" lemma="light" pos="v">lit</instance>
+more
+Gauloises
+and
+<instance id="d003.s005.t005" lemma="scoff" pos="v">scoffed</instance>
+at
+the
+<instance id="d003.s005.t006" lemma="suggestion" pos="n">suggestion</instance>
+of
+<instance id="d003.s005.t007" lemma="interrupt" pos="v">interrupting</instance>
+a
+<instance id="d003.s005.t008" lemma="perfectly" pos="r">perfectly</instance>
+<instance id="d003.s005.t009" lemma="good" pos="a">good</instance>
+<instance id="d003.s005.t010" lemma="Saturday" pos="n">Saturday</instance>
+<instance id="d003.s005.t011" lemma="morning" pos="n">morning</instance>
+to
+<instance id="d003.s005.t012" lemma="go" pos="v">go</instance>
+<instance id="d003.s005.t013" lemma="golf" pos="v">golfing</instance>
+or
+<instance id="d003.s005.t014" lemma="even" pos="r">even</instance>
+montgolfing
+-LRB-
+<instance id="d003.s005.t015" lemma="ballooning" pos="n">ballooning</instance>
+to
+you
+;
+the
+<instance id="d003.s005.t016" lemma="brother" pos="n">brothers</instance>
+Montgolfier
+,
+<instance id="d003.s005.t017" lemma="French" pos="a">French</instance>
+<instance id="d003.s005.t018" lemma="of_course" pos="r">of course</instance>
+,
+<instance id="d003.s005.t019" lemma="be" pos="v">were</instance>
+the
+<instance id="d003.s005.t020" lemma="world" pos="n">world</instance>
+'s
+<instance id="d003.s005.t021" lemma="first" pos="a">first</instance>
+hot-air
+<instance id="d003.s005.t022" lemma="balloonist" pos="n">balloonists</instance>
+-RRB-
+.
+</sentence>
+<sentence id="d003.s006">
+<instance id="d003.s006.t001" lemma="Back" pos="r">Back</instance>
+in
+the
+U
+.
+S
+.
+A
+.
+this
+<instance id="d003.s006.t002" lemma="kind" pos="n">kind</instance>
+of
+<instance id="d003.s006.t003" lemma="chichi" pos="a">chi-chi</instance>
+<instance id="d003.s006.t004" lemma="airborne" pos="a">airborne</instance>
+<instance id="d003.s006.t005" lemma="activity" pos="n">activity</instance>
+<instance id="d003.s006.t006" lemma="win" pos="v">wins</instance>
+heartwarmingly
+<instance id="d003.s006.t007" lemma="covetous" pos="a">covetous</instance>
+<instance id="d003.s006.t008" lemma="response" pos="n">responses</instance>
+.
+</sentence>
+<sentence id="d003.s007">
+As
+in
+:
+``
+You
+<instance id="d003.s007.t001" lemma="go" pos="v">went</instance>
+ballooning
+?
+?
+!
+!
+</sentence>
+<sentence id="d003.s008">
+In
+France
+?
+?
+!
+!
+''
+</sentence>
+<sentence id="d003.s009">
+<instance id="d003.s009.t001" lemma="American" pos="n">Americans</instance>
+it
+<instance id="d003.s009.t002" lemma="seem" pos="v">seems</instance>
+have
+<instance id="d003.s009.t003" lemma="follow" pos="v">followed</instance>
+Malcolm
+Forbes
+'s
+hot-air
+<instance id="d003.s009.t004" lemma="lead" pos="n">lead</instance>
+and
+<instance id="d003.s009.t005" lemma="take_to" pos="v">taken to</instance>
+<instance id="d003.s009.t006" lemma="ballooning" pos="n">ballooning</instance>
+in
+a
+<instance id="d003.s009.t007" lemma="heady" pos="a">heady</instance>
+<instance id="d003.s009.t008" lemma="way" pos="n">way</instance>
+.
+</sentence>
+<sentence id="d003.s010">
+During
+the
+<instance id="d003.s010.t001" lemma="past" pos="a">past</instance>
+25
+<instance id="d003.s010.t002" lemma="year" pos="n">years</instance>
+,
+the
+<instance id="d003.s010.t003" lemma="number" pos="n">number</instance>
+of
+<instance id="d003.s010.t004" lemma="balloonist" pos="n">balloonists</instance>
+-LRB-
+those
+who
+have
+<instance id="d003.s010.t005" lemma="pass" pos="v">passed</instance>
+a
+Federal
+Aviation
+Authority
+<instance id="d003.s010.t006" lemma="lighter-than-air" pos="a">lighter-than-air</instance>
+<instance id="d003.s010.t007" lemma="test" pos="n">test</instance>
+-RRB-
+have
+<instance id="d003.s010.t008" lemma="swell" pos="v">swelled</instance>
+from
+a
+<instance id="d003.s010.t009" lemma="couple" pos="n">couple</instance>
+hundred
+to
+several
+<instance id="d003.s010.t010" lemma="thousand" pos="n">thousand</instance>
+,
+with
+some
+<instance id="d003.s010.t011" lemma="estimate" pos="n">estimates</instance>
+<instance id="d003.s010.t012" lemma="run" pos="v">running</instance>
+as
+<instance id="d003.s010.t013" lemma="high" pos="a">high</instance>
+as
+10
+,
+000
+.
+</sentence>
+<sentence id="d003.s011">
+Some
+30
+<instance id="d003.s011.t001" lemma="balloon" pos="n">balloon</instance>
+<instance id="d003.s011.t002" lemma="show" pos="n">shows</instance>
+are
+<instance id="d003.s011.t003" lemma="hold" pos="v">held</instance>
+<instance id="d003.s011.t004" lemma="annually" pos="r">annually</instance>
+in
+the
+U
+.
+S
+.
+,
+including
+the
+<instance id="d003.s011.t005" lemma="world" pos="n">world</instance>
+'s
+<instance id="d003.s011.t006" lemma="large" pos="a">largest</instance>
+<instance id="d003.s011.t007" lemma="convocation" pos="n">convocation</instance>
+of
+<instance id="d003.s011.t008" lemma="ersatz" pos="a">ersatz</instance>
+Phineas
+Foggs
+--
+the
+nine-day
+Albuquerque
+International
+Balloon
+Fiesta
+that
+<instance id="d003.s011.t009" lemma="attract" pos="v">attracts</instance>
+some
+800
+,
+000
+<instance id="d003.s011.t010" lemma="enthusiast" pos="n">enthusiasts</instance>
+and
+more
+than
+500
+<instance id="d003.s011.t011" lemma="balloon" pos="n">balloons</instance>
+,
+some
+of
+which
+are
+fetchingly
+<instance id="d003.s011.t012" lemma="shape" pos="v">shaped</instance>
+to
+<instance id="d003.s011.t013" lemma="resemble" pos="v">resemble</instance>
+Carmen
+Miranda
+,
+Garfield
+or
+a
+12-story-high
+<instance id="d003.s011.t014" lemma="condom" pos="n">condom</instance>
+.
+</sentence>
+<sentence id="d003.s012">
+-LRB-
+The
+<instance id="d003.s012.t001" lemma="condom" pos="n">condom</instance>
+<instance id="d003.s012.t002" lemma="balloon" pos="n">balloon</instance>
+was
+<instance id="d003.s012.t003" lemma="deny" pos="v">denied</instance>
+<instance id="d003.s012.t004" lemma="official" pos="a">official</instance>
+<instance id="d003.s012.t005" lemma="entry" pos="n">entry</instance>
+<instance id="d003.s012.t006" lemma="status" pos="n">status</instance>
+this
+<instance id="d003.s012.t007" lemma="year" pos="n">year</instance>
+.
+-RRB-
+</sentence>
+<sentence id="d003.s013">
+But
+in
+Epinal
+,
+a
+<instance id="d003.s013.t001" lemma="gray" pos="a">gray</instance>
+16th-century
+<instance id="d003.s013.t002" lemma="river" pos="n">river</instance>
+<instance id="d003.s013.t003" lemma="town" pos="n">town</instance>
+<instance id="d003.s013.t004" lemma="adjacent" pos="a">adjacent</instance>
+to
+France
+'s
+Vosges
+<instance id="d003.s013.t005" lemma="mountain" pos="n">mountain</instance>
+<instance id="d003.s013.t006" lemma="region" pos="n">region</instance>
+,
+none
+of
+these
+Yankee-come-lately
+<instance id="d003.s013.t007" lemma="enthusiasm" pos="n">enthusiasms</instance>
+for
+<instance id="d003.s013.t008" lemma="thing" pos="n">things</instance>
+aloft
+<instance id="d003.s013.t009" lemma="be" pos="v">was</instance>
+<instance id="d003.s013.t010" lemma="evident" pos="a">evident</instance>
+.
+</sentence>
+<sentence id="d003.s014">
+<instance id="d003.s014.t001" lemma="Ballooning" pos="n">Ballooning</instance>
+at
+the
+<instance id="d003.s014.t002" lemma="de_rigueur" pos="a">de rigueur</instance>
+<instance id="d003.s014.t003" lemma="hour" pos="n">hour</instance>
+of
+6
+a
+.
+m
+.
+<instance id="d003.s014.t004" lemma="hold" pos="v">held</instance>
+all
+the
+<instance id="d003.s014.t005" lemma="attraction" pos="n">attraction</instance>
+for
+most
+<instance id="d003.s014.t006" lemma="people" pos="n">people</instance>
+of
+<instance id="d003.s014.t007" lemma="sunrise" pos="n">sunrise</instance>
+root-canal
+<instance id="d003.s014.t008" lemma="work" pos="n">work</instance>
+.
+</sentence>
+<sentence id="d003.s015">
+<instance id="d003.s015.t001" lemma="Feel" pos="v">Feeling</instance>
+the
+naggings
+of
+a
+<instance id="d003.s015.t002" lemma="culture" pos="n">culture</instance>
+<instance id="d003.s015.t003" lemma="imperative" pos="n">imperative</instance>
+,
+I
+<instance id="d003.s015.t004" lemma="promptly" pos="r">promptly</instance>
+<instance id="d003.s015.t005" lemma="sign_up" pos="v">signed up</instance>
+.
+</sentence>
+<sentence id="d003.s016">
+The
+<instance id="d003.s016.t001" lemma="first" pos="a">first</instance>
+<instance id="d003.s016.t002" lemma="thing" pos="n">thing</instance>
+anybody
+will
+<instance id="d003.s016.t003" lemma="tell" pos="v">tell</instance>
+you
+about
+<instance id="d003.s016.t004" lemma="ballooning" pos="n">ballooning</instance>
+<instance id="d003.s016.t005" lemma="be" pos="v">is</instance>
+that
+it
+<instance id="d003.s016.t006" lemma="require" pos="v">requires</instance>
+<instance id="d003.s016.t007" lemma="zip" pos="n">zip</instance>
+in
+the
+<instance id="d003.s016.t008" lemma="way" pos="n">way</instance>
+of
+<instance id="d003.s016.t009" lemma="athletic" pos="a">athletic</instance>
+<instance id="d003.s016.t010" lemma="prowess" pos="n">prowess</instance>
+,
+or
+<instance id="d003.s016.t011" lemma="even" pos="r">even</instance>
+a
+<instance id="d003.s016.t012" lemma="measure" pos="n">measure</instance>
+of
+<instance id="d003.s016.t013" lemma="derring-do" pos="n">derring-do</instance>
+.
+</sentence>
+<sentence id="d003.s017">
+-LRB-
+So
+long
+as
+you
+do
+n't
+<instance id="d003.s017.t001" lemma="look" pos="v">look</instance>
+<instance id="d003.s017.t002" lemma="down" pos="r">down</instance>
+.
+-RRB-
+</sentence>
+<sentence id="d003.s018">
+They
+will
+<instance id="d003.s018.t001" lemma="also" pos="r">also</instance>
+<instance id="d003.s018.t002" lemma="tell" pos="v">tell</instance>
+you
+that
+<instance id="d003.s018.t003" lemma="even" pos="r">even</instance>
+if
+you
+<instance id="d003.s018.t004" lemma="hate" pos="v">hate</instance>
+<instance id="d003.s018.t005" lemma="heights" pos="n">heights</instance>
+,
+you
+can
+<instance id="d003.s018.t006" lemma="still" pos="r">still</instance>
+<instance id="d003.s018.t007" lemma="balloon" pos="v">balloon</instance>
+.
+</sentence>
+<sentence id="d003.s019">
+-LRB-
+I
+<instance id="d003.s019.t001" lemma="still" pos="r">still</instance>
+<instance id="d003.s019.t002" lemma="say" pos="v">say</instance>
+do
+n't
+<instance id="d003.s019.t003" lemma="look" pos="v">look</instance>
+<instance id="d003.s019.t004" lemma="down" pos="r">down</instance>
+.
+</sentence>
+<sentence id="d003.s020">
+<instance id="d003.s020.t001" lemma="at_least" pos="r">At least</instance>
+not
+when
+you
+are
+<instance id="d003.s020.t002" lemma="ascend" pos="v">ascending</instance>
+.
+-RRB-
+</sentence>
+<sentence id="d003.s021">
+What
+they
+wo
+n't
+<instance id="d003.s021.t001" lemma="tell" pos="v">tell</instance>
+you
+<instance id="d003.s021.t002" lemma="be" pos="v">is</instance>
+not
+to
+<instance id="d003.s021.t003" lemma="go" pos="v">go</instance>
+<instance id="d003.s021.t004" lemma="aloft" pos="r">aloft</instance>
+in
+anything
+you
+do
+n't
+<instance id="d003.s021.t005" lemma="want" pos="v">want</instance>
+to
+<instance id="d003.s021.t006" lemma="get" pos="v">get</instance>
+<instance id="d003.s021.t007" lemma="wet" pos="a">wet</instance>
+.
+</sentence>
+<sentence id="d003.s022">
+I
+'m
+not
+<instance id="d003.s022.t001" lemma="refer" pos="v">referring</instance>
+to
+the
+<instance id="d003.s022.t002" lemma="traditional" pos="a">traditional</instance>
+<instance id="d003.s022.t003" lemma="champagne" pos="n">champagne</instance>
+drenching
+during
+the
+back-on-terra-firma
+<instance id="d003.s022.t004" lemma="toast" pos="n">toast</instance>
+.
+</sentence>
+<sentence id="d003.s023">
+I
+'m
+<instance id="d003.s023.t001" lemma="talk" pos="v">talking</instance>
+about
+<instance id="d003.s023.t002" lemma="landing" pos="n">landing</instance>
+in
+a
+<instance id="d003.s023.t003" lemma="canal" pos="n">canal</instance>
+.
+</sentence>
+<sentence id="d003.s024">
+In
+a
+<instance id="d003.s024.t001" lemma="porous" pos="a">porous</instance>
+<instance id="d003.s024.t002" lemma="wicker" pos="n">wicker</instance>
+<instance id="d003.s024.t003" lemma="basket" pos="n">basket</instance>
+.
+</sentence>
+<sentence id="d003.s025">
+With
+a
+<instance id="d003.s025.t001" lemma="pilot" pos="n">pilot</instance>
+who
+<instance id="d003.s025.t002" lemma="speak" pos="v">speaks</instance>
+no
+<instance id="d003.s025.t003" lemma="English" pos="n">English</instance>
+.
+</sentence>
+<sentence id="d003.s026">
+To
+wit
+,
+my
+<instance id="d003.s026.t001" lemma="maiden" pos="a">maiden</instance>
+<instance id="d003.s026.t002" lemma="voyage" pos="n">voyage</instance>
+-LRB-
+and
+<instance id="d003.s026.t003" lemma="novitiate" pos="n">novitiates</instance>
+are
+referred
+to
+as
+virgins
+-RRB-
+<instance id="d003.s026.t004" lemma="begin" pos="v">began</instance>
+at
+<instance id="d003.s026.t005" lemma="dawn" pos="n">dawn</instance>
+on
+a
+dew-sodden
+<instance id="d003.s026.t006" lemma="fairway" pos="n">fairway</instance>
+and
+<instance id="d003.s026.t007" lemma="end" pos="v">ended</instance>
+at
+<instance id="d003.s026.t008" lemma="noon" pos="n">noon</instance>
+in
+a
+<instance id="d003.s026.t009" lemma="soggy" pos="a">soggy</instance>
+<instance id="d003.s026.t010" lemma="field" pos="n">field</instance>
+.
+</sentence>
+<sentence id="d003.s027">
+-LRB-
+<instance id="d003.s027.t001" lemma="balloon" pos="n">Balloon</instance>
+<instance id="d003.s027.t002" lemma="flight" pos="n">flights</instance>
+<instance id="d003.s027.t003" lemma="almost" pos="r">almost</instance>
+<instance id="d003.s027.t004" lemma="always" pos="r">always</instance>
+<instance id="d003.s027.t005" lemma="occur" pos="v">occur</instance>
+at
+<instance id="d003.s027.t006" lemma="dawn" pos="n">dawn</instance>
+or
+<instance id="d003.s027.t007" lemma="dusk" pos="n">dusk</instance>
+,
+when
+the
+<instance id="d003.s027.t008" lemma="wind" pos="n">winds</instance>
+<instance id="d003.s027.t009" lemma="be" pos="v">are</instance>
+<instance id="d003.s027.t010" lemma="light" pos="a">lightest</instance>
+.
+-RRB-
+</sentence>
+<sentence id="d003.s028">
+In
+<instance id="d003.s028.t001" lemma="between" pos="r">between</instance>
+<instance id="d003.s028.t002" lemma="come" pos="v">came</instance>
+<instance id="d003.s028.t003" lemma="lots" pos="n">lots</instance>
+of
+<instance id="d003.s028.t004" lemma="coffee" pos="n">coffee</instance>
+<instance id="d003.s028.t005" lemma="drinking" pos="n">drinking</instance>
+while
+<instance id="d003.s028.t006" lemma="watch" pos="v">watching</instance>
+the
+<instance id="d003.s028.t007" lemma="balloon" pos="n">balloons</instance>
+<instance id="d003.s028.t008" lemma="inflate" pos="v">inflate</instance>
+and
+<instance id="d003.s028.t009" lemma="lots" pos="n">lots</instance>
+of
+<instance id="d003.s028.t010" lemma="standing" pos="n">standing</instance>
+around
+<instance id="d003.s028.t011" lemma="deciding" pos="n">deciding</instance>
+who
+would
+<instance id="d003.s028.t012" lemma="fly" pos="v">fly</instance>
+in
+what
+<instance id="d003.s028.t013" lemma="balloon" pos="n">balloon</instance>
+and
+in
+what
+<instance id="d003.s028.t014" lemma="order" pos="n">order</instance>
+-LRB-
+the
+<instance id="d003.s028.t015" lemma="basket" pos="n">baskets</instance>
+<instance id="d003.s028.t016" lemma="hold" pos="v">hold</instance>
+no
+more
+than
+<instance id="d003.s028.t017" lemma="four" pos="a">four</instance>
+<instance id="d003.s028.t018" lemma="passenger" pos="n">passengers</instance>
+-RRB-
+.
+</sentence>
+<sentence id="d003.s029">
+When
+it
+was
+n't
+my
+<instance id="d003.s029.t001" lemma="turn" pos="n">turn</instance>
+in
+the
+<instance id="d003.s029.t002" lemma="balloon" pos="n">balloon</instance>
+I
+<instance id="d003.s029.t003" lemma="follow" pos="v">followed</instance>
+its
+<instance id="d003.s029.t004" lemma="progress" pos="n">progress</instance>
+from
+the
+``
+chase
+<instance id="d003.s029.t005" lemma="car" pos="n">car</instance>
+,
+''
+<instance id="d003.s029.t006" lemma="listen" pos="v">listening</instance>
+to
+the
+<instance id="d003.s029.t007" lemma="driver" pos="n">driver</instance>
+<instance id="d003.s029.t008" lemma="holler" pos="v">holler</instance>
+into
+a
+<instance id="d003.s029.t009" lemma="walkie-talkie" pos="n">walkie-talkie</instance>
+.
+</sentence>
+<sentence id="d003.s030">
+After
+<instance id="d003.s030.t001" lemma="long" pos="a">long</instance>
+<instance id="d003.s030.t002" lemma="stretch" pos="n">stretches</instance>
+of
+this
+<instance id="d003.s030.t003" lemma="attendant" pos="a">attendant</instance>
+ground
+<instance id="d003.s030.t004" lemma="activity" pos="n">activity</instance>
+<instance id="d003.s030.t005" lemma="come" pos="v">came</instance>
+20
+or
+so
+<instance id="d003.s030.t006" lemma="lovely" pos="a">lovely</instance>
+<instance id="d003.s030.t007" lemma="minute" pos="n">minutes</instance>
+of
+<instance id="d003.s030.t008" lemma="drifting" pos="n">drifting</instance>
+above
+the
+Vosges
+<instance id="d003.s030.t009" lemma="watch" pos="v">watching</instance>
+the
+<instance id="d003.s030.t010" lemma="silver" pos="a">silver</instance>
+<instance id="d003.s030.t011" lemma="mist" pos="n">mists</instance>
+<instance id="d003.s030.t012" lemma="rise" pos="v">rise</instance>
+off
+the
+<instance id="d003.s030.t013" lemma="river" pos="n">river</instance>
+and
+the
+<instance id="d003.s030.t014" lemma="French" pos="a">French</instance>
+<instance id="d003.s030.t015" lemma="cow" pos="n">cows</instance>
+<instance id="d003.s030.t016" lemma="amble" pos="v">amble</instance>
+about
+the
+<instance id="d003.s030.t017" lemma="field" pos="n">fields</instance>
+.
+</sentence>
+<sentence id="d003.s031">
+It
+'s
+<instance id="d003.s031.t001" lemma="hard" pos="a">hard</instance>
+not
+to
+<instance id="d003.s031.t002" lemma="feel" pos="v">feel</instance>
+that
+<instance id="d003.s031.t003" lemma="God" pos="n">God</instance>
+'s
+in
+his
+<instance id="d003.s031.t004" lemma="heaven" pos="n">heaven</instance>
+with
+this
+<instance id="d003.s031.t005" lemma="kind" pos="n">kind</instance>
+of
+<instance id="d003.s031.t006" lemma="bird's-eye" pos="a">bird's-eye</instance>
+<instance id="d003.s031.t007" lemma="view" pos="n">view</instance>
+of
+the
+<instance id="d003.s031.t008" lemma="world" pos="n">world</instance>
+,
+<instance id="d003.s031.t009" lemma="even" pos="r">even</instance>
+if
+your
+pilote
+in
+<instance id="d003.s031.t010" lemma="silly" pos="a">silly</instance>
+<instance id="d003.s031.t011" lemma="plaid" pos="n">plaid</instance>
+<instance id="d003.s031.t012" lemma="beret" pos="n">beret</instance>
+<instance id="d003.s031.t013" lemma="keep" pos="v">kept</instance>
+<instance id="d003.s031.t014" lemma="point_out" pos="v">pointing out</instance>
+how
+``
+belle
+''
+it
+all
+<instance id="d003.s031.t015" lemma="be" pos="v">was</instance>
+.
+</sentence>
+<sentence id="d003.s032">
+<instance id="d003.s032.t001" lemma="Eventually" pos="r">Eventually</instance>
+<instance id="d003.s032.t002" lemma="little" pos="a">little</instance>
+<instance id="d003.s032.t003" lemma="French" pos="a">French</instance>
+<instance id="d003.s032.t004" lemma="farmer" pos="n">farmers</instance>
+and
+their
+<instance id="d003.s032.t005" lemma="little" pos="a">little</instance>
+<instance id="d003.s032.t006" lemma="French" pos="a">French</instance>
+farmwives
+<instance id="d003.s032.t007" lemma="come" pos="v">came</instance>
+out
+of
+their
+<instance id="d003.s032.t008" lemma="stone" pos="n">stone</instance>
+<instance id="d003.s032.t009" lemma="house" pos="n">houses</instance>
+and
+<instance id="d003.s032.t010" lemma="put" pos="v">put</instance>
+their
+<instance id="d003.s032.t011" lemma="hand" pos="n">hands</instance>
+above
+their
+<instance id="d003.s032.t012" lemma="tiny" pos="a">tiny</instance>
+<instance id="d003.s032.t013" lemma="eye" pos="n">eyes</instance>
+and
+<instance id="d003.s032.t014" lemma="squint" pos="v">squinted</instance>
+at
+us
+.
+</sentence>
+<sentence id="d003.s033">
+No
+<instance id="d003.s033.t001" lemma="wonder" pos="n">wonder</instance>
+.
+</sentence>
+<sentence id="d003.s034">
+We
+were
+<instance id="d003.s034.t001" lemma="come_down" pos="v">coming down</instance>
+<instance id="d003.s034.t002" lemma="straight" pos="r">straight</instance>
+into
+their
+<instance id="d003.s034.t003" lemma="canal" pos="n">canal</instance>
+.
+</sentence>
+<sentence id="d003.s035">
+<instance id="d003.s035.t001" lemma="See" pos="v">See</instance>
+,
+the
+<instance id="d003.s035.t002" lemma="other" pos="a">other</instance>
+<instance id="d003.s035.t003" lemma="rule_of_thumb" pos="n">rule of thumb</instance>
+about
+<instance id="d003.s035.t004" lemma="ballooning" pos="n">ballooning</instance>
+<instance id="d003.s035.t005" lemma="be" pos="v">is</instance>
+that
+you
+ca
+n't
+<instance id="d003.s035.t006" lemma="steer" pos="v">steer</instance>
+.
+</sentence>
+<sentence id="d003.s036">
+And
+neither
+can
+your
+<instance id="d003.s036.t001" lemma="pilot" pos="n">pilot</instance>
+.
+</sentence>
+<sentence id="d003.s037">
+You
+can
+<instance id="d003.s037.t001" lemma="go" pos="v">go</instance>
+<instance id="d003.s037.t002" lemma="only" pos="r">only</instance>
+up
+or
+down
+-LRB-
+by
+<instance id="d003.s037.t003" lemma="heat" pos="v">heating</instance>
+the
+<instance id="d003.s037.t004" lemma="balloon" pos="n">balloon</instance>
+'s
+<instance id="d003.s037.t005" lemma="air" pos="n">air</instance>
+with
+a
+<instance id="d003.s037.t006" lemma="propane" pos="n">propane</instance>
+<instance id="d003.s037.t007" lemma="burner" pos="n">burner</instance>
+,
+which
+does
+<instance id="d003.s037.t008" lemma="make" pos="v">make</instance>
+the
+<instance id="d003.s037.t009" lemma="top" pos="n">top</instance>
+of
+your
+<instance id="d003.s037.t010" lemma="head" pos="n">head</instance>
+<instance id="d003.s037.t011" lemma="feel" pos="v">feel</instance>
+<instance id="d003.s037.t012" lemma="hot" pos="a">hot</instance>
+-RRB-
+and
+<instance id="d003.s037.t013" lemma="ride" pos="v">ride</instance>
+the
+<instance id="d003.s037.t014" lemma="air" pos="n">air</instance>
+<instance id="d003.s037.t015" lemma="current" pos="n">currents</instance>
+.
+</sentence>
+<sentence id="d003.s038">
+Which
+<instance id="d003.s038.t001" lemma="make" pos="v">makes</instance>
+the
+chase
+<instance id="d003.s038.t002" lemma="car" pos="n">car</instance>
+<instance id="d003.s038.t003" lemma="necessary" pos="a">necessary</instance>
+.
+</sentence>
+<sentence id="d003.s039">
+Most
+<instance id="d003.s039.t001" lemma="balloonist" pos="n">balloonists</instance>
+<instance id="d003.s039.t002" lemma="seldom" pos="r">seldom</instance>
+<instance id="d003.s039.t003" lemma="go" pos="v">go</instance>
+<instance id="d003.s039.t004" lemma="high" pos="a">higher</instance>
+than
+2
+,
+000
+<instance id="d003.s039.t005" lemma="foot" pos="n">feet</instance>
+and
+most
+<instance id="d003.s039.t006" lemma="average" pos="v">average</instance>
+a
+<instance id="d003.s039.t007" lemma="leisurely" pos="a">leisurely</instance>
+5-10
+<instance id="d003.s039.t008" lemma="mile" pos="n">miles</instance>
+an
+<instance id="d003.s039.t009" lemma="hour" pos="n">hour</instance>
+.
+</sentence>
+<sentence id="d003.s040">
+When
+the
+<instance id="d003.s040.t001" lemma="balloon" pos="n">balloon</instance>
+is
+<instance id="d003.s040.t002" lemma="cruise" pos="v">cruising</instance>
+<instance id="d003.s040.t003" lemma="along" pos="r">along</instance>
+at
+a
+<instance id="d003.s040.t004" lemma="steady" pos="a">steady</instance>
+<instance id="d003.s040.t005" lemma="altitude" pos="n">altitude</instance>
+there
+<instance id="d003.s040.t006" lemma="be" pos="v">is</instance>
+<instance id="d003.s040.t007" lemma="little" pos="a">little</instance>
+<instance id="d003.s040.t008" lemma="sense" pos="n">sense</instance>
+of
+<instance id="d003.s040.t009" lemma="motion" pos="n">motion</instance>
+.
+</sentence>
+<sentence id="d003.s041">
+<instance id="d003.s041.t001" lemma="Only" pos="r">Only</instance>
+when
+one
+is
+<instance id="d003.s041.t002" lemma="ascend" pos="v">ascending</instance>
+--
+or
+in
+our
+<instance id="d003.s041.t003" lemma="case" pos="n">case</instance>
+<instance id="d003.s041.t004" lemma="descend" pos="v">descending</instance>
+a
+tad
+trop
+rapidement
+--
+does
+one
+<instance id="d003.s041.t005" lemma="feel" pos="v">feel</instance>
+,
+well
+,
+<instance id="d003.s041.t006" lemma="airborne" pos="a">airborne</instance>
+in
+a
+<instance id="d003.s041.t007" lemma="picnic" pos="n">picnic</instance>
+<instance id="d003.s041.t008" lemma="basket" pos="n">basket</instance>
+.
+</sentence>
+<sentence id="d003.s042">
+``
+What
+'s
+he
+doing
+?
+''
+<instance id="d003.s042.t001" lemma="hiss" pos="v">hissed</instance>
+my
+<instance id="d003.s042.t002" lemma="companion" pos="n">companion</instance>
+,
+who
+<instance id="d003.s042.t003" lemma="be" pos="v">was</instance>
+the
+<instance id="d003.s042.t004" lemma="only" pos="r">only</instance>
+other
+<instance id="d003.s042.t005" lemma="English-speaking" pos="a">English-speaking</instance>
+<instance id="d003.s042.t006" lemma="member" pos="n">member</instance>
+of
+the
+<instance id="d003.s042.t007" lemma="convention" pos="n">convention</instance>
+and
+whose
+<instance id="d003.s042.t008" lemma="knuckle" pos="n">knuckles</instance>
+<instance id="d003.s042.t009" lemma="be" pos="v">were</instance>
+<instance id="d003.s042.t010" lemma="white" pos="a">white</instance>
+.
+</sentence>
+<sentence id="d003.s043">
+``
+Attention
+,
+''
+<instance id="d003.s043.t001" lemma="yell" pos="v">yelled</instance>
+our
+<instance id="d003.s043.t002" lemma="pilot" pos="n">pilot</instance>
+as
+our
+<instance id="d003.s043.t003" lemma="basket" pos="n">basket</instance>
+<instance id="d003.s043.t004" lemma="plunge" pos="v">plunged</instance>
+into
+the
+<instance id="d003.s043.t005" lemma="canal" pos="n">canal</instance>
+.
+</sentence>
+<sentence id="d003.s044">
+``
+You
+bet
+attention
+,
+''
+I
+<instance id="d003.s044.t001" lemma="yell" pos="v">yelled</instance>
+<instance id="d003.s044.t002" lemma="back" pos="r">back</instance>
+,
+<instance id="d003.s044.t003" lemma="leap" pos="v">leaping</instance>
+<instance id="d003.s044.t004" lemma="atop" pos="r">atop</instance>
+the
+<instance id="d003.s044.t005" lemma="propane" pos="n">propane</instance>
+<instance id="d003.s044.t006" lemma="tank" pos="n">tanks</instance>
+,
+``
+I
+'m
+<instance id="d003.s044.t007" lemma="wear" pos="v">wearing</instance>
+<instance id="d003.s044.t008" lemma="alligator" pos="n">alligator</instance>
+<instance id="d003.s044.t009" lemma="loafer" pos="n">loafers</instance>
+!
+''
+</sentence>
+<sentence id="d003.s045">
+Our
+<instance id="d003.s045.t001" lemma="pilot" pos="n">pilot</instance>
+<instance id="d003.s045.t002" lemma="simply" pos="r">simply</instance>
+<instance id="d003.s045.t003" lemma="laugh" pos="v">laughed</instance>
+,
+fired up
+the
+<instance id="d003.s045.t004" lemma="burner" pos="n">burner</instance>
+and
+with
+another
+<instance id="d003.s045.t005" lemma="blast" pos="n">blast</instance>
+of
+<instance id="d003.s045.t006" lemma="flame" pos="n">flame</instance>
+<instance id="d003.s045.t007" lemma="lift" pos="v">lifted</instance>
+us
+,
+oh
+,
+a
+<instance id="d003.s045.t008" lemma="good" pos="a">good</instance>
+12-inches
+above
+the
+<instance id="d003.s045.t009" lemma="water" pos="n">water</instance>
+<instance id="d003.s045.t010" lemma="level" pos="n">level</instance>
+.
+</sentence>
+<sentence id="d003.s046">
+We
+<instance id="d003.s046.t001" lemma="scuttle" pos="v">scuttled</instance>
+<instance id="d003.s046.t002" lemma="along" pos="r">along</instance>
+for
+a
+few
+<instance id="d003.s046.t003" lemma="foot" pos="n">feet</instance>
+before
+he
+<instance id="d003.s046.t004" lemma="plunge" pos="v">plunged</instance>
+us
+into
+the
+<instance id="d003.s046.t005" lemma="drink" pos="n">drink</instance>
+<instance id="d003.s046.t006" lemma="again" pos="r">again</instance>
+.
+</sentence>
+<sentence id="d003.s047">
+<instance id="d003.s047.t001" lemma="Eventually" pos="r">Eventually</instance>
+we
+<instance id="d003.s047.t002" lemma="come" pos="v">came</instance>
+to
+<instance id="d003.s047.t003" lemma="rest" pos="v">rest</instance>
+in
+a
+<instance id="d003.s047.t004" lemma="soggy" pos="a">soggy</instance>
+<instance id="d003.s047.t005" lemma="patch" pos="n">patch</instance>
+of
+<instance id="d003.s047.t006" lemma="field" pos="n">field</instance>
+where
+we
+<instance id="d003.s047.t007" lemma="have" pos="v">had</instance>
+the
+<instance id="d003.s047.t008" lemma="exquisite" pos="a">exquisite</instance>
+<instance id="d003.s047.t009" lemma="pleasure" pos="n">pleasure</instance>
+of
+<instance id="d003.s047.t010" lemma="scramble" pos="v">scrambling</instance>
+out
+of
+the
+<instance id="d003.s047.t011" lemma="basket" pos="n">basket</instance>
+into
+the
+<instance id="d003.s047.t012" lemma="mud" pos="n">mud</instance>
+while
+the
+<instance id="d003.s047.t013" lemma="French" pos="a">French</instance>
+<instance id="d003.s047.t014" lemma="half" pos="n">half</instance>
+of
+our
+<instance id="d003.s047.t015" lemma="ballooning" pos="n">ballooning</instance>
+<instance id="d003.s047.t016" lemma="tag" pos="n">tag</instance>
+<instance id="d003.s047.t017" lemma="team" pos="n">team</instance>
+<instance id="d003.s047.t018" lemma="scramble" pos="v">scrambled</instance>
+in
+.
+</sentence>
+<sentence id="d003.s048">
+I
+<instance id="d003.s048.t001" lemma="look" pos="v">looked</instance>
+at
+my
+<instance id="d003.s048.t002" lemma="watch" pos="n">watch</instance>
+.
+</sentence>
+<sentence id="d003.s049">
+<instance id="d003.s049.t001" lemma="Barely" pos="r">Barely</instance>
+half-an-hour
+<instance id="d003.s049.t002" lemma="aloft" pos="r">aloft</instance>
+.
+</sentence>
+<sentence id="d003.s050">
+<instance id="d003.s050.t001" lemma="Back" pos="r">Back</instance>
+in
+the
+chase
+<instance id="d003.s050.t002" lemma="car" pos="n">car</instance>
+,
+we
+<instance id="d003.s050.t003" lemma="drive" pos="v">drove</instance>
+around
+some
+more
+,
+<instance id="d003.s050.t004" lemma="get" pos="v">got</instance>
+<instance id="d003.s050.t005" lemma="stick" pos="v">stuck</instance>
+in
+a
+<instance id="d003.s050.t006" lemma="ditch" pos="n">ditch</instance>
+,
+<instance id="d003.s050.t007" lemma="enlist" pos="v">enlisted</instance>
+the
+<instance id="d003.s050.t008" lemma="aid" pos="n">aid</instance>
+of
+a
+<instance id="d003.s050.t009" lemma="local" pos="a">local</instance>
+<instance id="d003.s050.t010" lemma="farmer" pos="n">farmer</instance>
+to
+<instance id="d003.s050.t011" lemma="get_out" pos="v">get out</instance>
+the
+<instance id="d003.s050.t012" lemma="trailer" pos="n">trailer</instance>
+<instance id="d003.s050.t013" lemma="hitch" pos="n">hitch</instance>
+and
+<instance id="d003.s050.t014" lemma="pull" pos="v">pull</instance>
+us
+out
+of
+the
+<instance id="d003.s050.t015" lemma="ditch" pos="n">ditch</instance>
+.
+</sentence>
+<sentence id="d003.s051">
+We
+<instance id="d003.s051.t001" lemma="finally" pos="r">finally</instance>
+<instance id="d003.s051.t002" lemma="rendezvous" pos="v">rendezvoused</instance>
+with
+our
+<instance id="d003.s051.t003" lemma="balloon" pos="n">balloon</instance>
+,
+which
+had
+<instance id="d003.s051.t004" lemma="come" pos="v">come</instance>
+to
+<instance id="d003.s051.t005" lemma="rest" pos="v">rest</instance>
+on
+a
+<instance id="d003.s051.t006" lemma="dirt" pos="n">dirt</instance>
+<instance id="d003.s051.t007" lemma="road" pos="n">road</instance>
+amid
+a
+<instance id="d003.s051.t008" lemma="clutch" pos="n">clutch</instance>
+of
+Epinalers
+who
+<instance id="d003.s051.t009" lemma="watch" pos="v">watched</instance>
+us
+<instance id="d003.s051.t010" lemma="disassemble" pos="v">disassemble</instance>
+our
+<instance id="d003.s051.t011" lemma="craft" pos="n">craft</instance>
+--
+another
+half-an-hour
+of
+non-flight
+<instance id="d003.s051.t012" lemma="activity" pos="n">activity</instance>
+--
+that
+<instance id="d003.s051.t013" lemma="include" pos="v">included</instance>
+the
+<instance id="d003.s051.t014" lemma="precision" pos="n">precision</instance>
+<instance id="d003.s051.t015" lemma="routine" pos="n">routine</instance>
+of
+<instance id="d003.s051.t016" lemma="yank" pos="v">yanking</instance>
+the
+<instance id="d003.s051.t017" lemma="balloon" pos="n">balloon</instance>
+to
+the
+<instance id="d003.s051.t018" lemma="ground" pos="n">ground</instance>
+,
+<instance id="d003.s051.t019" lemma="punch" pos="v">punching</instance>
+all
+the
+<instance id="d003.s051.t020" lemma="air" pos="n">air</instance>
+out
+of
+it
+,
+<instance id="d003.s051.t021" lemma="roll" pos="v">rolling</instance>
+it
+up
+and
+<instance id="d003.s051.t022" lemma="cram" pos="v">cramming</instance>
+it
+and
+the
+<instance id="d003.s051.t023" lemma="basket" pos="n">basket</instance>
+into
+the
+<instance id="d003.s051.t024" lemma="trailer" pos="n">trailer</instance>
+.
+</sentence>
+<sentence id="d003.s052">
+It
+<instance id="d003.s052.t001" lemma="be" pos="v">was</instance>
+the
+most
+<instance id="d003.s052.t002" lemma="exercise" pos="n">exercise</instance>
+we
+'d
+<instance id="d003.s052.t003" lemma="have" pos="v">had</instance>
+all
+<instance id="d003.s052.t004" lemma="morning" pos="n">morning</instance>
+and
+it
+was
+<instance id="d003.s052.t005" lemma="follow" pos="v">followed</instance>
+by
+our
+<instance id="d003.s052.t006" lemma="driving" pos="n">driving</instance>
+<instance id="d003.s052.t007" lemma="immediately" pos="r">immediately</instance>
+to
+the
+<instance id="d003.s052.t008" lemma="near" pos="a">nearest</instance>
+<instance id="d003.s052.t009" lemma="watering_hole" pos="n">watering hole</instance>
+.
+</sentence>
+<sentence id="d003.s053">
+This
+<instance id="d003.s053.t001" lemma="mean" pos="v">meant</instance>
+<instance id="d003.s053.t002" lemma="return" pos="v">returning</instance>
+to
+the
+<instance id="d003.s053.t003" lemma="golf_course" pos="n">golf course</instance>
+,
+where
+we
+<instance id="d003.s053.t004" lemma="watch" pos="v">watched</instance>
+a
+few
+<instance id="d003.s053.t005" lemma="French" pos="a">French</instance>
+<instance id="d003.s053.t006" lemma="duffer" pos="n">duffers</instance>
+<instance id="d003.s053.t007" lemma="maul" pos="v">maul</instance>
+the
+<instance id="d003.s053.t008" lemma="first" pos="a">first</instance>
+<instance id="d003.s053.t009" lemma="tee" pos="n">tee</instance>
+while
+we
+<instance id="d003.s053.t010" lemma="sit" pos="v">sat</instance>
+under
+Cinzano
+<instance id="d003.s053.t011" lemma="umbrella" pos="n">umbrellas</instance>
+,
+me
+<instance id="d003.s053.t012" lemma="nurse" pos="v">nursing</instance>
+an
+<instance id="d003.s053.t013" lemma="espresso" pos="n">espresso</instance>
+and
+my
+<instance id="d003.s053.t014" lemma="ego" pos="n">ego</instance>
+.
+</sentence>
+<sentence id="d003.s054">
+A
+<instance id="d003.s054.t001" lemma="whole" pos="a">whole</instance>
+<instance id="d003.s054.t002" lemma="morning" pos="n">morning</instance>
+of
+<instance id="d003.s054.t003" lemma="ballooning" pos="n">ballooning</instance>
+and
+I
+had
+been
+off
+the
+<instance id="d003.s054.t004" lemma="ground" pos="n">ground</instance>
+<instance id="d003.s054.t005" lemma="barely" pos="r">barely</instance>
+30
+<instance id="d003.s054.t006" lemma="minute" pos="n">minutes</instance>
+.
+</sentence>
+<sentence id="d003.s055">
+<instance id="d003.s055.t001" lemma="Still" pos="r">Still</instance>
+,
+I
+<instance id="d003.s055.t002" lemma="figure" pos="v">figured</instance>
+the
+<instance id="d003.s055.t003" lemma="event" pos="n">event</instance>
+'s
+envy-quotient
+<instance id="d003.s055.t004" lemma="back" pos="r">back</instance>
+in
+the
+U
+.
+S
+.
+A
+.
+<instance id="d003.s055.t005" lemma="be" pos="v">was</instance>
+<instance id="d003.s055.t006" lemma="near" pos="r">near</instance>
+<instance id="d003.s055.t007" lemma="peerless" pos="a">peerless</instance>
+.
+</sentence>
+<sentence id="d003.s056">
+As
+for
+the
+<instance id="d003.s056.t001" lemma="ride" pos="n">ride</instance>
+<instance id="d003.s056.t002" lemma="back" pos="r">back</instance>
+to
+<instance id="d003.s056.t003" lemma="camp" pos="n">camp</instance>
+,
+our
+<instance id="d003.s056.t004" lemma="pilot" pos="n">pilot</instance>
+and
+all
+the
+<instance id="d003.s056.t005" lemma="other" pos="a">other</instance>
+<instance id="d003.s056.t006" lemma="French-speaking" pos="a">French-speaking</instance>
+<instance id="d003.s056.t007" lemma="passenger" pos="n">passengers</instance>
+<instance id="d003.s056.t008" lemma="clamber" pos="v">clambered</instance>
+into
+the
+chase
+<instance id="d003.s056.t009" lemma="car" pos="n">car</instance>
+.
+</sentence>
+<sentence id="d003.s057">
+My
+<instance id="d003.s057.t001" lemma="American" pos="a">American</instance>
+<instance id="d003.s057.t002" lemma="companion" pos="n">companion</instance>
+and
+I
+were
+<instance id="d003.s057.t003" lemma="leave" pos="v">left</instance>
+to
+<instance id="d003.s057.t004" lemma="ride" pos="v">ride</instance>
+<instance id="d003.s057.t005" lemma="alfresco" pos="r">alfresco</instance>
+in
+the
+<instance id="d003.s057.t006" lemma="wicker" pos="n">wicker</instance>
+<instance id="d003.s057.t007" lemma="basket" pos="n">basket</instance>
+.
+</sentence>
+<sentence id="d003.s058">
+As
+we
+<instance id="d003.s058.t001" lemma="streak" pos="v">streaked</instance>
+by
+a
+blase
+<instance id="d003.s058.t002" lemma="gendarme" pos="n">gendarme</instance>
+,
+I
+could
+n't
+<instance id="d003.s058.t003" lemma="resist" pos="v">resist</instance>
+<instance id="d003.s058.t004" lemma="rear" pos="v">rearing</instance>
+up
+on
+my
+<instance id="d003.s058.t005" lemma="soggy" pos="a">soggy</instance>
+<instance id="d003.s058.t006" lemma="loafer" pos="n">loafers</instance>
+and
+<instance id="d003.s058.t007" lemma="salute" pos="v">saluting</instance>
+.
+</sentence>
+<sentence id="d003.s059">
+Ms
+.
+de
+Vries
+<instance id="d003.s059.t001" lemma="be" pos="v">is</instance>
+a
+<instance id="d003.s059.t002" lemma="freelance" pos="a">free-lance</instance>
+<instance id="d003.s059.t003" lemma="writer" pos="n">writer</instance>
+.
+</sentence>
+</text>
+<text id="d004">
+<sentence id="d004.s001">
+<instance id="d004.s001.t001" lemma="Computer" pos="n">Computer</instance>
+<instance id="d004.s001.t002" lemma="programming" pos="n">programming</instance>
+</sentence>
+<sentence id="d004.s002">
+<instance id="d004.s002.t001" lemma="Computer" pos="n">Computer</instance>
+<instance id="d004.s002.t002" lemma="programming" pos="n">programming</instance>
+(
+<instance id="d004.s002.t003" lemma="often" pos="r">often</instance>
+<instance id="d004.s002.t004" lemma="shorten" pos="v">shortened</instance>
+to
+<instance id="d004.s002.t005" lemma="programming" pos="n">programming</instance>
+or
+coding
+)
+<instance id="d004.s002.t006" lemma="be" pos="v">is</instance>
+the
+<instance id="d004.s002.t007" lemma="process" pos="n">process</instance>
+of
+<instance id="d004.s002.t008" lemma="writing" pos="n">writing</instance>
+,
+<instance id="d004.s002.t009" lemma="testing" pos="n">testing</instance>
+,
+and
+maintaining
+the
+<instance id="d004.s002.t010" lemma="source_code" pos="n">source code</instance>
+of
+<instance id="d004.s002.t011" lemma="computer" pos="n">computer</instance>
+<instance id="d004.s002.t012" lemma="program" pos="n">programs</instance>
+.
+</sentence>
+<sentence id="d004.s003">
+The
+<instance id="d004.s003.t001" lemma="source_code" pos="n">source code</instance>
+is
+<instance id="d004.s003.t002" lemma="write" pos="v">written</instance>
+in
+a
+<instance id="d004.s003.t003" lemma="programming" pos="n">programming</instance>
+<instance id="d004.s003.t004" lemma="language" pos="n">language</instance>
+.
+</sentence>
+<sentence id="d004.s004">
+This
+<instance id="d004.s004.t001" lemma="code" pos="n">code</instance>
+may
+<instance id="d004.s004.t002" lemma="be" pos="v">be</instance>
+a
+<instance id="d004.s004.t003" lemma="modification" pos="n">modification</instance>
+of
+<instance id="d004.s004.t004" lemma="existing" pos="a">existing</instance>
+source
+or
+something
+<instance id="d004.s004.t005" lemma="completely" pos="r">completely</instance>
+<instance id="d004.s004.t006" lemma="new" pos="a">new</instance>
+.
+</sentence>
+<sentence id="d004.s005">
+The
+<instance id="d004.s005.t001" lemma="process" pos="n">process</instance>
+of
+<instance id="d004.s005.t002" lemma="write" pos="v">writing</instance>
+<instance id="d004.s005.t003" lemma="source_code" pos="n">source code</instance>
+<instance id="d004.s005.t004" lemma="require" pos="v">requires</instance>
+<instance id="d004.s005.t005" lemma="expertise" pos="n">expertise</instance>
+in
+many
+<instance id="d004.s005.t006" lemma="different" pos="a">different</instance>
+<instance id="d004.s005.t007" lemma="subject" pos="n">subjects</instance>
+,
+including
+<instance id="d004.s005.t008" lemma="knowledge" pos="n">knowledge</instance>
+of
+the
+<instance id="d004.s005.t009" lemma="application" pos="n">application</instance>
+<instance id="d004.s005.t010" lemma="domain" pos="n">domain</instance>
+and
+<instance id="d004.s005.t011" lemma="algorithm" pos="n">algorithms</instance>
+to
+<instance id="d004.s005.t012" lemma="implement" pos="v">implement</instance>
+the
+<instance id="d004.s005.t013" lemma="desired" pos="a">desired</instance>
+<instance id="d004.s005.t014" lemma="behavior" pos="n">behavior</instance>
+.
+</sentence>
+<sentence id="d004.s006">
+Within
+<instance id="d004.s006.t001" lemma="software" pos="n">software</instance>
+<instance id="d004.s006.t002" lemma="engineering" pos="n">engineering</instance>
+,
+<instance id="d004.s006.t003" lemma="programming" pos="n">programming</instance>
+(
+the
+<instance id="d004.s006.t004" lemma="implementation" pos="n">implementation</instance>
+)
+is
+<instance id="d004.s006.t005" lemma="regard_as" pos="v">regarded as</instance>
+<instance id="d004.s006.t006" lemma="one" pos="a">one</instance>
+<instance id="d004.s006.t007" lemma="phase" pos="n">phase</instance>
+in
+a
+<instance id="d004.s006.t008" lemma="software" pos="n">software</instance>
+<instance id="d004.s006.t009" lemma="development" pos="n">development</instance>
+<instance id="d004.s006.t010" lemma="process" pos="n">process</instance>
+.
+</sentence>
+<sentence id="d004.s007">
+In
+some
+specialist
+<instance id="d004.s007.t001" lemma="application" pos="n">applications</instance>
+or
+<instance id="d004.s007.t002" lemma="extreme" pos="a">extreme</instance>
+<instance id="d004.s007.t003" lemma="situation" pos="n">situations</instance>
+a
+<instance id="d004.s007.t004" lemma="program" pos="n">program</instance>
+may
+be
+<instance id="d004.s007.t005" lemma="write" pos="v">written</instance>
+or
+<instance id="d004.s007.t006" lemma="modify" pos="v">modified</instance>
+(
+<instance id="d004.s007.t007" lemma="known_as" pos="a">known as</instance>
+patching
+)
+by
+<instance id="d004.s007.t008" lemma="directly" pos="r">directly</instance>
+<instance id="d004.s007.t009" lemma="store" pos="v">storing</instance>
+the
+<instance id="d004.s007.t010" lemma="numeric" pos="a">numeric</instance>
+<instance id="d004.s007.t011" lemma="value" pos="n">values</instance>
+of
+the
+<instance id="d004.s007.t012" lemma="machine_code" pos="n">machine code</instance>
+<instance id="d004.s007.t013" lemma="instruction" pos="n">instructions</instance>
+to
+be
+<instance id="d004.s007.t014" lemma="execute" pos="v">executed</instance>
+into
+<instance id="d004.s007.t015" lemma="memory" pos="n">memory</instance>
+.
+</sentence>
+<sentence id="d004.s008">
+There
+<instance id="d004.s008.t001" lemma="be" pos="v">is</instance>
+an
+<instance id="d004.s008.t002" lemma="ongoing" pos="a">ongoing</instance>
+<instance id="d004.s008.t003" lemma="debate" pos="n">debate</instance>
+on
+the
+<instance id="d004.s008.t004" lemma="extent" pos="n">extent</instance>
+to
+which
+the
+<instance id="d004.s008.t005" lemma="writing" pos="n">writing</instance>
+of
+<instance id="d004.s008.t006" lemma="program" pos="n">programs</instance>
+<instance id="d004.s008.t007" lemma="be" pos="v">is</instance>
+an
+<instance id="d004.s008.t008" lemma="art" pos="n">art</instance>
+,
+a
+<instance id="d004.s008.t009" lemma="craft" pos="n">craft</instance>
+or
+an
+<instance id="d004.s008.t010" lemma="engineering" pos="n">engineering</instance>
+<instance id="d004.s008.t011" lemma="discipline" pos="n">discipline</instance>
+.
+[1]
+</sentence>
+<sentence id="d004.s009">
+Another
+<instance id="d004.s009.t001" lemma="ongoing" pos="a">ongoing</instance>
+<instance id="d004.s009.t002" lemma="debate" pos="n">debate</instance>
+<instance id="d004.s009.t003" lemma="be" pos="v">is</instance>
+the
+<instance id="d004.s009.t004" lemma="extent" pos="n">extent</instance>
+to
+which
+the
+<instance id="d004.s009.t005" lemma="programming" pos="n">programming</instance>
+<instance id="d004.s009.t006" lemma="language" pos="n">language</instance>
+<instance id="d004.s009.t007" lemma="use" pos="v">used</instance>
+in
+<instance id="d004.s009.t008" lemma="write" pos="v">writing</instance>
+<instance id="d004.s009.t009" lemma="program" pos="n">programs</instance>
+<instance id="d004.s009.t010" lemma="affect" pos="v">affects</instance>
+the
+<instance id="d004.s009.t011" lemma="form" pos="n">form</instance>
+that
+the
+<instance id="d004.s009.t012" lemma="final" pos="a">final</instance>
+<instance id="d004.s009.t013" lemma="program" pos="n">program</instance>
+<instance id="d004.s009.t014" lemma="take" pos="v">takes</instance>
+.
+</sentence>
+<sentence id="d004.s010">
+This
+<instance id="d004.s010.t001" lemma="debate" pos="n">debate</instance>
+<instance id="d004.s010.t002" lemma="be" pos="v">is</instance>
+<instance id="d004.s010.t003" lemma="analogous" pos="a">analogous</instance>
+to
+that
+<instance id="d004.s010.t004" lemma="surround" pos="v">surrounding</instance>
+the
+Sapir
+Whorf
+<instance id="d004.s010.t005" lemma="hypothesis" pos="n">hypothesis</instance>
+in
+<instance id="d004.s010.t006" lemma="linguistics" pos="n">linguistics</instance>
+.
+</sentence>
+<sentence id="d004.s011">
+<instance id="d004.s011.t001" lemma="Programmer" pos="n">Programmers</instance>
+</sentence>
+<sentence id="d004.s012">
+<instance id="d004.s012.t001" lemma="Computer" pos="n">Computer</instance>
+<instance id="d004.s012.t002" lemma="programmer" pos="n">programmers</instance>
+<instance id="d004.s012.t003" lemma="be" pos="v">are</instance>
+those
+who
+<instance id="d004.s012.t004" lemma="write" pos="v">write</instance>
+<instance id="d004.s012.t005" lemma="computer_software" pos="n">computer software</instance>
+.
+</sentence>
+<sentence id="d004.s013">
+Their
+<instance id="d004.s013.t001" lemma="job" pos="n">job</instance>
+<instance id="d004.s013.t002" lemma="usually" pos="r">usually</instance>
+<instance id="d004.s013.t003" lemma="involve" pos="v">involves</instance>
+:
+<instance id="d004.s013.t004" lemma="Requirement" pos="n">Requirements</instance>
+<instance id="d004.s013.t005" lemma="analysis" pos="n">analysis</instance>
+,
+<instance id="d004.s013.t006" lemma="Specification" pos="n">Specification</instance>
+,
+<instance id="d004.s013.t007" lemma="Software" pos="n">Software</instance>
+<instance id="d004.s013.t008" lemma="architecture" pos="n">architecture</instance>
+,
+Coding
+,
+<instance id="d004.s013.t009" lemma="Compilation" pos="n">Compilation</instance>
+,
+<instance id="d004.s013.t010" lemma="Software" pos="n">Software</instance>
+<instance id="d004.s013.t011" lemma="testing" pos="n">testing</instance>
+,
+<instance id="d004.s013.t012" lemma="Documentation" pos="n">Documentation</instance>
+,
+<instance id="d004.s013.t013" lemma="Integration" pos="n">Integration</instance>
+,
+<instance id="d004.s013.t014" lemma="Maintenance" pos="n">Maintenance</instance>
+.
+</sentence>
+<sentence id="d004.s014">
+<instance id="d004.s014.t001" lemma="Programming" pos="n">Programming</instance>
+<instance id="d004.s014.t002" lemma="language" pos="n">languages</instance>
+</sentence>
+<sentence id="d004.s015">
+<instance id="d004.s015.t001" lemma="Different" pos="a">Different</instance>
+<instance id="d004.s015.t002" lemma="programming" pos="n">programming</instance>
+<instance id="d004.s015.t003" lemma="language" pos="n">languages</instance>
+support
+<instance id="d004.s015.t004" lemma="different" pos="a">different</instance>
+<instance id="d004.s015.t005" lemma="style" pos="n">styles</instance>
+of
+<instance id="d004.s015.t006" lemma="programming" pos="n">programming</instance>
+(
+<instance id="d004.s015.t007" lemma="call" pos="v">called</instance>
+<instance id="d004.s015.t008" lemma="programming" pos="n">programming</instance>
+<instance id="d004.s015.t009" lemma="paradigm" pos="n">paradigms</instance>
+)
+.
+</sentence>
+<sentence id="d004.s016">
+The
+<instance id="d004.s016.t001" lemma="choice" pos="n">choice</instance>
+of
+<instance id="d004.s016.t002" lemma="language" pos="n">language</instance>
+<instance id="d004.s016.t003" lemma="use" pos="v">used</instance>
+may
+<instance id="d004.s016.t004" lemma="be" pos="v">be</instance>
+an
+<instance id="d004.s016.t005" lemma="individual" pos="n">individual</instance>
+'s
+<instance id="d004.s016.t006" lemma="choice" pos="n">choice</instance>
+or
+may
+be
+<instance id="d004.s016.t007" lemma="dictate" pos="v">dictated</instance>
+by
+<instance id="d004.s016.t008" lemma="company" pos="n">company</instance>
+<instance id="d004.s016.t009" lemma="policy" pos="n">policy</instance>
+.
+</sentence>
+<sentence id="d004.s017">
+<instance id="d004.s017.t001" lemma="Ideally" pos="r">Ideally</instance>
+the
+<instance id="d004.s017.t002" lemma="programming" pos="n">programming</instance>
+<instance id="d004.s017.t003" lemma="language" pos="n">language</instance>
+<instance id="d004.s017.t004" lemma="best" pos="r">best</instance>
+<instance id="d004.s017.t005" lemma="suited" pos="a">suited</instance>
+for
+the
+<instance id="d004.s017.t006" lemma="task" pos="n">task</instance>
+<instance id="d004.s017.t007" lemma="at_hand" pos="a">at hand</instance>
+will
+be
+<instance id="d004.s017.t008" lemma="select" pos="v">selected</instance>
+.
+</sentence>
+<sentence id="d004.s018">
+<instance id="d004.s018.t001" lemma="Trade-off" pos="n">Trade-offs</instance>
+from
+this
+<instance id="d004.s018.t002" lemma="ideal" pos="n">ideal</instance>
+<instance id="d004.s018.t003" lemma="involve" pos="v">involve</instance>
+<instance id="d004.s018.t004" lemma="find" pos="v">finding</instance>
+enough
+<instance id="d004.s018.t005" lemma="programmer" pos="n">programmers</instance>
+,
+who
+<instance id="d004.s018.t006" lemma="know" pos="v">know</instance>
+the
+<instance id="d004.s018.t007" lemma="language" pos="n">language</instance>
+,
+to
+<instance id="d004.s018.t008" lemma="build" pos="v">build</instance>
+a
+<instance id="d004.s018.t009" lemma="team" pos="n">team</instance>
+,
+the
+<instance id="d004.s018.t010" lemma="availability" pos="n">availability</instance>
+of
+<instance id="d004.s018.t011" lemma="compiler" pos="n">compilers</instance>
+for
+that
+<instance id="d004.s018.t012" lemma="language" pos="n">language</instance>
+,
+and
+the
+<instance id="d004.s018.t013" lemma="efficiency" pos="n">efficiency</instance>
+with
+which
+<instance id="d004.s018.t014" lemma="program" pos="n">programs</instance>
+<instance id="d004.s018.t015" lemma="write" pos="v">written</instance>
+in
+a
+<instance id="d004.s018.t016" lemma="given" pos="a">given</instance>
+<instance id="d004.s018.t017" lemma="language" pos="n">language</instance>
+<instance id="d004.s018.t018" lemma="execute" pos="v">execute</instance>
+.
+</sentence>
+<sentence id="d004.s019">
+<instance id="d004.s019.t001" lemma="History" pos="n">History</instance>
+of
+<instance id="d004.s019.t002" lemma="programming" pos="n">programming</instance>
+</sentence>
+<sentence id="d004.s020">
+The
+<instance id="d004.s020.t001" lemma="earliest" pos="a">earliest</instance>
+programmable
+<instance id="d004.s020.t002" lemma="machine" pos="n">machine</instance>
+(
+that
+is
+,
+a
+<instance id="d004.s020.t003" lemma="machine" pos="n">machine</instance>
+that
+can
+<instance id="d004.s020.t004" lemma="adjust" pos="v">adjust</instance>
+its
+<instance id="d004.s020.t005" lemma="capability" pos="n">capabilities</instance>
+<instance id="d004.s020.t006" lemma="base" pos="v">based</instance>
+upon
+<instance id="d004.s020.t007" lemma="change" pos="v">changing</instance>
+its
+"
+<instance id="d004.s020.t008" lemma="program" pos="n">program</instance>
+"
+)
+can
+be
+<instance id="d004.s020.t009" lemma="say" pos="v">said</instance>
+to
+<instance id="d004.s020.t010" lemma="be" pos="v">be</instance>
+the
+<instance id="d004.s020.t011" lemma="Jacquard_Loom" pos="n">Jacquard Loom</instance>
+,
+which
+was
+<instance id="d004.s020.t012" lemma="develop" pos="v">developed</instance>
+in
+1801
+.
+</sentence>
+<sentence id="d004.s021">
+The
+<instance id="d004.s021.t001" lemma="machine" pos="n">machine</instance>
+<instance id="d004.s021.t002" lemma="use" pos="v">used</instance>
+a
+<instance id="d004.s021.t003" lemma="series" pos="n">series</instance>
+of
+<instance id="d004.s021.t004" lemma="pasteboard" pos="n">pasteboard</instance>
+<instance id="d004.s021.t005" lemma="card" pos="n">cards</instance>
+with
+<instance id="d004.s021.t006" lemma="hole" pos="n">holes</instance>
+<instance id="d004.s021.t007" lemma="punch" pos="v">punched</instance>
+in
+them
+.
+</sentence>
+<sentence id="d004.s022">
+The
+<instance id="d004.s022.t001" lemma="hole" pos="n">hole</instance>
+<instance id="d004.s022.t002" lemma="pattern" pos="n">pattern</instance>
+<instance id="d004.s022.t003" lemma="represent" pos="v">represented</instance>
+the
+<instance id="d004.s022.t004" lemma="pattern" pos="n">pattern</instance>
+that
+the
+<instance id="d004.s022.t005" lemma="loom" pos="n">loom</instance>
+had
+to
+<instance id="d004.s022.t006" lemma="follow" pos="v">follow</instance>
+in
+<instance id="d004.s022.t007" lemma="weave" pos="v">weaving</instance>
+<instance id="d004.s022.t008" lemma="cloth" pos="n">cloth</instance>
+.
+</sentence>
+<sentence id="d004.s023">
+The
+<instance id="d004.s023.t001" lemma="loom" pos="n">loom</instance>
+could
+<instance id="d004.s023.t002" lemma="produce" pos="v">produce</instance>
+<instance id="d004.s023.t003" lemma="entirely" pos="r">entirely</instance>
+<instance id="d004.s023.t004" lemma="different" pos="a">different</instance>
+<instance id="d004.s023.t005" lemma="weave" pos="n">weaves</instance>
+<instance id="d004.s023.t006" lemma="use" pos="v">using</instance>
+<instance id="d004.s023.t007" lemma="different" pos="a">different</instance>
+<instance id="d004.s023.t008" lemma="set" pos="n">sets</instance>
+of
+<instance id="d004.s023.t009" lemma="card" pos="n">cards</instance>
+.
+</sentence>
+<sentence id="d004.s024">
+This
+<instance id="d004.s024.t001" lemma="innovation" pos="n">innovation</instance>
+was
+<instance id="d004.s024.t002" lemma="later" pos="r">later</instance>
+<instance id="d004.s024.t003" lemma="refine" pos="v">refined</instance>
+by
+Herman
+Hollerith
+of
+IBM
+in
+the
+<instance id="d004.s024.t004" lemma="development" pos="n">development</instance>
+of
+the
+<instance id="d004.s024.t005" lemma="famous" pos="a">famous</instance>
+IBM
+<instance id="d004.s024.t006" lemma="punch_card" pos="n">punch card</instance>
+.
+</sentence>
+<sentence id="d004.s025">
+These
+were
+<instance id="d004.s025.t001" lemma="use" pos="v">used</instance>
+with
+a
+<instance id="d004.s025.t002" lemma="variety" pos="n">variety</instance>
+of
+<instance id="d004.s025.t003" lemma="machine" pos="n">machines</instance>
+<instance id="d004.s025.t004" lemma="call" pos="v">called</instance>
+<instance id="d004.s025.t005" lemma="unit" pos="n">unit</instance>
+<instance id="d004.s025.t006" lemma="record" pos="n">record</instance>
+<instance id="d004.s025.t007" lemma="equipment" pos="n">equipment</instance>
+to
+<instance id="d004.s025.t008" lemma="perform" pos="v">perform</instance>
+<instance id="d004.s025.t009" lemma="data_processing" pos="n">data processing</instance>
+<instance id="d004.s025.t010" lemma="task" pos="n">tasks</instance>
+.
+</sentence>
+<sentence id="d004.s026">
+The
+<instance id="d004.s026.t001" lemma="unit" pos="n">unit</instance>
+<instance id="d004.s026.t002" lemma="record" pos="n">record</instance>
+<instance id="d004.s026.t003" lemma="equipment" pos="n">equipment</instance>
+were
+<instance id="d004.s026.t004" lemma="program" pos="v">programmed</instance>
+by
+<instance id="d004.s026.t005" lemma="change" pos="v">changing</instance>
+the
+<instance id="d004.s026.t006" lemma="wiring" pos="n">wiring</instance>
+of
+<instance id="d004.s026.t007" lemma="plugboard" pos="n">plugboards</instance>
+.
+</sentence>
+<sentence id="d004.s027">
+<instance id="d004.s027.t001" lemma="Early" pos="a">Early</instance>
+<instance id="d004.s027.t002" lemma="computer" pos="n">computers</instance>
+<instance id="d004.s027.t003" lemma="use" pos="v">used</instance>
+<instance id="d004.s027.t004" lemma="similar" pos="a">similar</instance>
+<instance id="d004.s027.t005" lemma="programming" pos="n">programming</instance>
+<instance id="d004.s027.t006" lemma="method" pos="n">methods</instance>
+.
+</sentence>
+<sentence id="d004.s028">
+The
+<instance id="d004.s028.t001" lemma="invention" pos="n">invention</instance>
+of
+the
+Von
+Neumann
+<instance id="d004.s028.t002" lemma="architecture" pos="n">architecture</instance>
+<instance id="d004.s028.t003" lemma="allow" pos="v">allowed</instance>
+<instance id="d004.s028.t004" lemma="program" pos="n">programs</instance>
+to
+be
+<instance id="d004.s028.t005" lemma="store" pos="v">stored</instance>
+in
+<instance id="d004.s028.t006" lemma="computer" pos="n">computer</instance>
+<instance id="d004.s028.t007" lemma="memory" pos="n">memory</instance>
+.
+</sentence>
+<sentence id="d004.s029">
+<instance id="d004.s029.t001" lemma="Early" pos="a">Early</instance>
+<instance id="d004.s029.t002" lemma="program" pos="n">programs</instance>
+had
+to
+be
+<instance id="d004.s029.t003" lemma="painstakingly" pos="r">painstakingly</instance>
+<instance id="d004.s029.t004" lemma="craft" pos="v">crafted</instance>
+<instance id="d004.s029.t005" lemma="use" pos="v">using</instance>
+the
+<instance id="d004.s029.t006" lemma="instruction" pos="n">instructions</instance>
+of
+the
+<instance id="d004.s029.t007" lemma="particular" pos="a">particular</instance>
+<instance id="d004.s029.t008" lemma="machine" pos="n">machine</instance>
+,
+<instance id="d004.s029.t009" lemma="often" pos="r">often</instance>
+in
+<instance id="d004.s029.t010" lemma="binary" pos="a">binary</instance>
+<instance id="d004.s029.t011" lemma="notation" pos="n">notation</instance>
+.
+</sentence>
+<sentence id="d004.s030">
+Every
+<instance id="d004.s030.t001" lemma="model" pos="n">model</instance>
+of
+<instance id="d004.s030.t002" lemma="computer" pos="n">computer</instance>
+would
+<instance id="d004.s030.t003" lemma="be" pos="v">be</instance>
+<instance id="d004.s030.t004" lemma="likely" pos="a">likely</instance>
+to
+<instance id="d004.s030.t005" lemma="need" pos="v">need</instance>
+<instance id="d004.s030.t006" lemma="different" pos="a">different</instance>
+<instance id="d004.s030.t007" lemma="instruction" pos="n">instructions</instance>
+to
+<instance id="d004.s030.t008" lemma="do" pos="v">do</instance>
+the
+same
+<instance id="d004.s030.t009" lemma="task" pos="n">task</instance>
+.
+</sentence>
+<sentence id="d004.s031">
+<instance id="d004.s031.t001" lemma="Later" pos="r">Later</instance>
+<instance id="d004.s031.t002" lemma="assembly_language" pos="n">assembly languages</instance>
+were
+<instance id="d004.s031.t003" lemma="develop" pos="v">developed</instance>
+that
+<instance id="d004.s031.t004" lemma="let" pos="v">let</instance>
+the
+<instance id="d004.s031.t005" lemma="programmer" pos="n">programmer</instance>
+<instance id="d004.s031.t006" lemma="specify" pos="v">specify</instance>
+each
+<instance id="d004.s031.t007" lemma="instruction" pos="n">instruction</instance>
+in
+a
+<instance id="d004.s031.t008" lemma="text" pos="n">text</instance>
+<instance id="d004.s031.t009" lemma="format" pos="n">format</instance>
+,
+<instance id="d004.s031.t010" lemma="enter" pos="v">entering</instance>
+<instance id="d004.s031.t011" lemma="abbreviation" pos="n">abbreviations</instance>
+for
+each
+<instance id="d004.s031.t012" lemma="operation" pos="n">operation</instance>
+<instance id="d004.s031.t013" lemma="code" pos="n">code</instance>
+<instance id="d004.s031.t014" lemma="instead" pos="r">instead</instance>
+of
+a
+<instance id="d004.s031.t015" lemma="number" pos="n">number</instance>
+and
+<instance id="d004.s031.t016" lemma="specify" pos="v">specifying</instance>
+<instance id="d004.s031.t017" lemma="address" pos="n">addresses</instance>
+in
+<instance id="d004.s031.t018" lemma="symbolic" pos="a">symbolic</instance>
+<instance id="d004.s031.t019" lemma="form" pos="n">form</instance>
+(
+e
+.
+g
+.
+ADD
+X
+,
+TOTAL
+)
+.
+</sentence>
+<sentence id="d004.s032">
+In
+1954
+Fortran
+,
+the
+<instance id="d004.s032.t001" lemma="first" pos="a">first</instance>
+<instance id="d004.s032.t002" lemma="higher" pos="a">higher</instance>
+<instance id="d004.s032.t003" lemma="level" pos="n">level</instance>
+<instance id="d004.s032.t004" lemma="programming" pos="n">programming</instance>
+<instance id="d004.s032.t005" lemma="language" pos="n">language</instance>
+,
+was
+<instance id="d004.s032.t006" lemma="invent" pos="v">invented</instance>
+.
+</sentence>
+<sentence id="d004.s033">
+This
+<instance id="d004.s033.t001" lemma="allow" pos="v">allowed</instance>
+<instance id="d004.s033.t002" lemma="programmer" pos="n">programmers</instance>
+to
+<instance id="d004.s033.t003" lemma="specify" pos="v">specify</instance>
+<instance id="d004.s033.t004" lemma="calculation" pos="n">calculations</instance>
+by
+<instance id="d004.s033.t005" lemma="enter" pos="v">entering</instance>
+a
+<instance id="d004.s033.t006" lemma="formula" pos="n">formula</instance>
+<instance id="d004.s033.t007" lemma="directly" pos="r">directly</instance>
+(
+e
+.
+g
+.
+Y
+=
+X*2
++
+5*X
++
+9
+)
+.
+</sentence>
+<sentence id="d004.s034">
+The
+<instance id="d004.s034.t001" lemma="program" pos="n">program</instance>
+<instance id="d004.s034.t002" lemma="text" pos="n">text</instance>
+,
+or
+source
+,
+was
+<instance id="d004.s034.t003" lemma="convert" pos="v">converted</instance>
+into
+<instance id="d004.s034.t004" lemma="machine" pos="n">machine</instance>
+<instance id="d004.s034.t005" lemma="instruction" pos="n">instructions</instance>
+<instance id="d004.s034.t006" lemma="use" pos="v">using</instance>
+a
+<instance id="d004.s034.t007" lemma="special" pos="a">special</instance>
+<instance id="d004.s034.t008" lemma="program" pos="n">program</instance>
+<instance id="d004.s034.t009" lemma="call" pos="v">called</instance>
+a
+<instance id="d004.s034.t010" lemma="compiler" pos="n">compiler</instance>
+.
+</sentence>
+<sentence id="d004.s035">
+Many
+<instance id="d004.s035.t001" lemma="other" pos="a">other</instance>
+<instance id="d004.s035.t002" lemma="language" pos="n">languages</instance>
+were
+<instance id="d004.s035.t003" lemma="develop" pos="v">developed</instance>
+,
+including
+ones
+for
+<instance id="d004.s035.t004" lemma="commercial" pos="a">commercial</instance>
+<instance id="d004.s035.t005" lemma="programming" pos="n">programming</instance>
+,
+such
+as
+COBOL
+.
+</sentence>
+<sentence id="d004.s036">
+<instance id="d004.s036.t001" lemma="Program" pos="n">Programs</instance>
+were
+<instance id="d004.s036.t002" lemma="mostly" pos="r">mostly</instance>
+<instance id="d004.s036.t003" lemma="still" pos="r">still</instance>
+<instance id="d004.s036.t004" lemma="enter" pos="v">entered</instance>
+<instance id="d004.s036.t005" lemma="use" pos="v">using</instance>
+<instance id="d004.s036.t006" lemma="punch_card" pos="n">punch cards</instance>
+or
+<instance id="d004.s036.t007" lemma="paper_tape" pos="n">paper tape</instance>
+.
+</sentence>
+<sentence id="d004.s037">
+(
+<instance id="d004.s037.t001" lemma="See" pos="v">See</instance>
+<instance id="d004.s037.t002" lemma="computer" pos="n">computer</instance>
+<instance id="d004.s037.t003" lemma="programming" pos="n">programming</instance>
+in
+the
+<instance id="d004.s037.t004" lemma="punch_card" pos="n">punch card</instance>
+<instance id="d004.s037.t005" lemma="era" pos="n">era</instance>
+)
+.
+</sentence>
+<sentence id="d004.s038">
+In
+the
+mid-1970s
+,
+<instance id="d004.s038.t001" lemma="mass" pos="a">mass</instance>
+<instance id="d004.s038.t002" lemma="storage" pos="n">storage</instance>
+<instance id="d004.s038.t003" lemma="device" pos="n">devices</instance>
+and
+<instance id="d004.s038.t004" lemma="computer" pos="n">computer</instance>
+<instance id="d004.s038.t005" lemma="terminal" pos="n">terminals</instance>
+<instance id="d004.s038.t006" lemma="become" pos="v">became</instance>
+<instance id="d004.s038.t007" lemma="inexpensive" pos="a">inexpensive</instance>
+<instance id="d004.s038.t008" lemma="enough" pos="r">enough</instance>
+<instance id="d004.s038.t009" lemma="so" pos="r">so</instance>
+<instance id="d004.s038.t010" lemma="program" pos="n">programs</instance>
+could
+be
+<instance id="d004.s038.t011" lemma="create" pos="v">created</instance>
+by
+<instance id="d004.s038.t012" lemma="typing" pos="n">typing</instance>
+<instance id="d004.s038.t013" lemma="directly" pos="r">directly</instance>
+into
+the
+<instance id="d004.s038.t014" lemma="computer" pos="n">computers</instance>
+.
+</sentence>
+<sentence id="d004.s039">
+<instance id="d004.s039.t001" lemma="Text" pos="n">Text</instance>
+<instance id="d004.s039.t002" lemma="editor" pos="n">editors</instance>
+were
+<instance id="d004.s039.t003" lemma="develop" pos="v">developed</instance>
+that
+<instance id="d004.s039.t004" lemma="allow" pos="v">allowed</instance>
+<instance id="d004.s039.t005" lemma="change" pos="n">changes</instance>
+and
+<instance id="d004.s039.t006" lemma="correction" pos="n">corrections</instance>
+to
+be
+<instance id="d004.s039.t007" lemma="make" pos="v">made</instance>
+much
+more
+<instance id="d004.s039.t008" lemma="easily" pos="r">easily</instance>
+than
+with
+<instance id="d004.s039.t009" lemma="punch_card" pos="n">punch cards</instance>
+.
+</sentence>
+<sentence id="d004.s040">
+As
+<instance id="d004.s040.t001" lemma="time" pos="n">time</instance>
+has
+<instance id="d004.s040.t002" lemma="progress" pos="v">progressed</instance>
+<instance id="d004.s040.t003" lemma="computer" pos="n">computers</instance>
+have
+<instance id="d004.s040.t004" lemma="make" pos="v">made</instance>
+<instance id="d004.s040.t005" lemma="giant" pos="a">giant</instance>
+<instance id="d004.s040.t006" lemma="leap" pos="n">leaps</instance>
+in
+the
+<instance id="d004.s040.t007" lemma="area" pos="n">area</instance>
+of
+<instance id="d004.s040.t008" lemma="processing" pos="n">processing</instance>
+<instance id="d004.s040.t009" lemma="power" pos="n">power</instance>
+.
+</sentence>
+<sentence id="d004.s041">
+This
+has
+<instance id="d004.s041.t001" lemma="bring_about" pos="v">brought about</instance>
+<instance id="d004.s041.t002" lemma="new" pos="a">newer</instance>
+<instance id="d004.s041.t003" lemma="programming" pos="n">programming</instance>
+<instance id="d004.s041.t004" lemma="language" pos="n">languages</instance>
+that
+<instance id="d004.s041.t005" lemma="be" pos="v">are</instance>
+<instance id="d004.s041.t006" lemma="more" pos="r">more</instance>
+<instance id="d004.s041.t007" lemma="abstracted" pos="a">abstracted</instance>
+from
+the
+<instance id="d004.s041.t008" lemma="underlying" pos="a">underlying</instance>
+<instance id="d004.s041.t009" lemma="hardware" pos="n">hardware</instance>
+.
+</sentence>
+<sentence id="d004.s042">
+Although
+these
+more
+<instance id="d004.s042.t001" lemma="abstracted" pos="a">abstracted</instance>
+<instance id="d004.s042.t002" lemma="language" pos="n">languages</instance>
+<instance id="d004.s042.t003" lemma="require" pos="v">require</instance>
+<instance id="d004.s042.t004" lemma="additional" pos="a">additional</instance>
+<instance id="d004.s042.t005" lemma="overhead" pos="n">overhead</instance>
+,
+in
+most
+<instance id="d004.s042.t006" lemma="case" pos="n">cases</instance>
+the
+<instance id="d004.s042.t007" lemma="huge" pos="a">huge</instance>
+<instance id="d004.s042.t008" lemma="increase" pos="n">increase</instance>
+in
+<instance id="d004.s042.t009" lemma="speed" pos="n">speed</instance>
+of
+<instance id="d004.s042.t010" lemma="modern" pos="a">modern</instance>
+<instance id="d004.s042.t011" lemma="computer" pos="n">computers</instance>
+has
+<instance id="d004.s042.t012" lemma="bring_about" pos="v">brought about</instance>
+little
+<instance id="d004.s042.t013" lemma="performance" pos="n">performance</instance>
+<instance id="d004.s042.t014" lemma="decrease" pos="n">decrease</instance>
+<instance id="d004.s042.t015" lemma="compare" pos="v">compared</instance>
+to
+<instance id="d004.s042.t016" lemma="earlier" pos="a">earlier</instance>
+<instance id="d004.s042.t017" lemma="counterpart" pos="n">counterparts</instance>
+.
+</sentence>
+<sentence id="d004.s043">
+The
+<instance id="d004.s043.t001" lemma="benefit" pos="n">benefits</instance>
+of
+these
+more
+<instance id="d004.s043.t002" lemma="abstracted" pos="a">abstracted</instance>
+<instance id="d004.s043.t003" lemma="language" pos="n">languages</instance>
+<instance id="d004.s043.t004" lemma="be" pos="v">is</instance>
+that
+they
+<instance id="d004.s043.t005" lemma="allow" pos="v">allow</instance>
+both
+an
+<instance id="d004.s043.t006" lemma="easy" pos="a">easier</instance>
+<instance id="d004.s043.t007" lemma="learning" pos="n">learning</instance>
+<instance id="d004.s043.t008" lemma="curve" pos="n">curve</instance>
+for
+<instance id="d004.s043.t009" lemma="people" pos="n">people</instance>
+less
+<instance id="d004.s043.t010" lemma="familiar_with" pos="a">familiar with</instance>
+the
+<instance id="d004.s043.t011" lemma="older" pos="a">older</instance>
+lower-level
+<instance id="d004.s043.t012" lemma="programming" pos="n">programming</instance>
+<instance id="d004.s043.t013" lemma="language" pos="n">languages</instance>
+,
+and
+they
+<instance id="d004.s043.t014" lemma="also" pos="r">also</instance>
+<instance id="d004.s043.t015" lemma="allow" pos="v">allow</instance>
+a
+more
+<instance id="d004.s043.t016" lemma="experienced" pos="a">experienced</instance>
+<instance id="d004.s043.t017" lemma="programmer" pos="n">programmer</instance>
+to
+<instance id="d004.s043.t018" lemma="develop" pos="v">develop</instance>
+<instance id="d004.s043.t019" lemma="simple" pos="a">simple</instance>
+<instance id="d004.s043.t020" lemma="application" pos="n">applications</instance>
+<instance id="d004.s043.t021" lemma="quickly" pos="r">quickly</instance>
+.
+</sentence>
+<sentence id="d004.s044">
+Despite
+these
+<instance id="d004.s044.t001" lemma="benefit" pos="n">benefits</instance>
+,
+<instance id="d004.s044.t002" lemma="large" pos="a">large</instance>
+<instance id="d004.s044.t003" lemma="complicated" pos="a">complicated</instance>
+<instance id="d004.s044.t004" lemma="program" pos="n">programs</instance>
+,
+and
+<instance id="d004.s044.t005" lemma="program" pos="n">programs</instance>
+that
+<instance id="d004.s044.t006" lemma="be" pos="v">are</instance>
+more
+<instance id="d004.s044.t007" lemma="dependent_on" pos="a">dependent on</instance>
+<instance id="d004.s044.t008" lemma="speed" pos="n">speed</instance>
+<instance id="d004.s044.t009" lemma="still" pos="r">still</instance>
+<instance id="d004.s044.t010" lemma="require" pos="v">require</instance>
+the
+<instance id="d004.s044.t011" lemma="fast" pos="a">faster</instance>
+and
+<instance id="d004.s044.t012" lemma="relatively" pos="r">relatively</instance>
+lower-level
+<instance id="d004.s044.t013" lemma="language" pos="n">languages</instance>
+with
+<instance id="d004.s044.t014" lemma="today" pos="n">todays</instance>
+<instance id="d004.s044.t015" lemma="hardware" pos="n">hardware</instance>
+.
+</sentence>
+<sentence id="d004.s045">
+(
+The
+same
+<instance id="d004.s045.t001" lemma="concern" pos="n">concerns</instance>
+were
+<instance id="d004.s045.t002" lemma="raise" pos="v">raised</instance>
+about
+the
+<instance id="d004.s045.t003" lemma="original" pos="a">original</instance>
+Fortran
+<instance id="d004.s045.t004" lemma="language" pos="n">language</instance>
+.
+)
+</sentence>
+<sentence id="d004.s046">
+Throughout
+the
+<instance id="d004.s046.t001" lemma="second" pos="a">second</instance>
+<instance id="d004.s046.t002" lemma="half" pos="n">half</instance>
+of
+the
+<instance id="d004.s046.t003" lemma="twentieth" pos="a">twentieth</instance>
+<instance id="d004.s046.t004" lemma="century" pos="n">century</instance>
+,
+<instance id="d004.s046.t005" lemma="programming" pos="n">programming</instance>
+<instance id="d004.s046.t006" lemma="be" pos="v">was</instance>
+an
+<instance id="d004.s046.t007" lemma="attractive" pos="a">attractive</instance>
+<instance id="d004.s046.t008" lemma="career" pos="n">career</instance>
+in
+most
+<instance id="d004.s046.t009" lemma="developed" pos="a">developed</instance>
+<instance id="d004.s046.t010" lemma="country" pos="n">countries</instance>
+.
+</sentence>
+<sentence id="d004.s047">
+Some
+<instance id="d004.s047.t001" lemma="form" pos="n">forms</instance>
+of
+<instance id="d004.s047.t002" lemma="programming" pos="n">programming</instance>
+have
+<instance id="d004.s047.t003" lemma="be" pos="v">been</instance>
+<instance id="d004.s047.t004" lemma="increasingly" pos="r">increasingly</instance>
+<instance id="d004.s047.t005" lemma="subject" pos="a">subject</instance>
+to
+offshore
+outsourcing
+(
+<instance id="d004.s047.t006" lemma="import" pos="v">importing</instance>
+<instance id="d004.s047.t007" lemma="software" pos="n">software</instance>
+and
+<instance id="d004.s047.t008" lemma="service" pos="n">services</instance>
+from
+<instance id="d004.s047.t009" lemma="other" pos="a">other</instance>
+<instance id="d004.s047.t010" lemma="country" pos="n">countries</instance>
+,
+<instance id="d004.s047.t011" lemma="usually" pos="r">usually</instance>
+at
+a
+<instance id="d004.s047.t012" lemma="low" pos="a">lower</instance>
+<instance id="d004.s047.t013" lemma="wage" pos="n">wage</instance>
+)
+,
+<instance id="d004.s047.t014" lemma="make" pos="v">making</instance>
+<instance id="d004.s047.t015" lemma="programming" pos="n">programming</instance>
+<instance id="d004.s047.t016" lemma="career" pos="n">career</instance>
+<instance id="d004.s047.t017" lemma="decision" pos="n">decisions</instance>
+in
+<instance id="d004.s047.t018" lemma="developed" pos="a">developed</instance>
+<instance id="d004.s047.t019" lemma="country" pos="n">countries</instance>
+more
+<instance id="d004.s047.t020" lemma="complicated" pos="a">complicated</instance>
+,
+while
+<instance id="d004.s047.t021" lemma="increase" pos="v">increasing</instance>
+<instance id="d004.s047.t022" lemma="economic" pos="a">economic</instance>
+<instance id="d004.s047.t023" lemma="opportunity" pos="n">opportunities</instance>
+in
+less
+<instance id="d004.s047.t024" lemma="developed" pos="a">developed</instance>
+<instance id="d004.s047.t025" lemma="area" pos="n">areas</instance>
+.
+</sentence>
+<sentence id="d004.s048">
+It
+is
+<instance id="d004.s048.t001" lemma="unclear" pos="a">unclear</instance>
+how
+<instance id="d004.s048.t002" lemma="far" pos="r">far</instance>
+this
+<instance id="d004.s048.t003" lemma="trend" pos="n">trend</instance>
+will
+<instance id="d004.s048.t004" lemma="continue" pos="v">continue</instance>
+and
+how
+<instance id="d004.s048.t005" lemma="deeply" pos="r">deeply</instance>
+it
+will
+<instance id="d004.s048.t006" lemma="impact" pos="v">impact</instance>
+<instance id="d004.s048.t007" lemma="programmer" pos="n">programmer</instance>
+<instance id="d004.s048.t008" lemma="wage" pos="n">wages</instance>
+and
+<instance id="d004.s048.t009" lemma="opportunity" pos="n">opportunities</instance>
+.
+</sentence>
+<sentence id="d004.s049">
+Despite
+the
+"
+outsourcing
+<instance id="d004.s049.t001" lemma="trend" pos="n">trend</instance>
+"
+it
+can
+be
+<instance id="d004.s049.t002" lemma="argue" pos="v">argued</instance>
+that
+some
+of
+the
+<instance id="d004.s049.t003" lemma="rich" pos="a">richest</instance>
+<instance id="d004.s049.t004" lemma="person" pos="n">persons</instance>
+on
+the
+<instance id="d004.s049.t005" lemma="globe" pos="n">globe</instance>
+<instance id="d004.s049.t006" lemma="be" pos="v">are</instance>
+<instance id="d004.s049.t007" lemma="programmer" pos="n">programmers</instance>
+by
+<instance id="d004.s049.t008" lemma="profession" pos="n">profession</instance>
+.
+</sentence>
+<sentence id="d004.s050">
+<instance id="d004.s050.t001" lemma="Example" pos="n">Examples</instance>
+:
+Bill
+Gates
+(
+Microsoft
+)
+,
+Larry
+Ellison
+(
+Oracle
+)
+,
+Larry
+Page
+(
+Google
+)
+,
+Hasso
+Plattner
+(
+SAP
+)
+<instance id="d004.s050.t002" lemma="and_so_on" pos="r">and so on</instance>
+.
+</sentence>
+<sentence id="d004.s051">
+<instance id="d004.s051.t001" lemma="Programming" pos="n">Programming</instance>
+<instance id="d004.s051.t002" lemma="be" pos="v">is</instance>
+<instance id="d004.s051.t003" lemma="clearly" pos="r">clearly</instance>
+a
+leading-edge
+<instance id="d004.s051.t004" lemma="craftsmanship" pos="n">craftsmanship</instance>
+that
+<instance id="d004.s051.t005" lemma="continue" pos="v">continues</instance>
+to
+<instance id="d004.s051.t006" lemma="reward" pos="v">reward</instance>
+its
+<instance id="d004.s051.t007" lemma="practitioner" pos="n">practitioners</instance>
+both
+in
+<instance id="d004.s051.t008" lemma="country" pos="n">countries</instance>
+such
+as
+India
+and
+<instance id="d004.s051.t009" lemma="developed" pos="a">developed</instance>
+<instance id="d004.s051.t010" lemma="country" pos="n">countries</instance>
+like
+the
+USA
+or
+Germany
+.
+</sentence>
+<sentence id="d004.s052">
+<instance id="d004.s052.t001" lemma="Modern" pos="a">Modern</instance>
+<instance id="d004.s052.t002" lemma="Programming" pos="n">Programming</instance>
+</sentence>
+<sentence id="d004.s053">
+<instance id="d004.s053.t001" lemma="Methodology" pos="n">Methodologies</instance>
+</sentence>
+<sentence id="d004.s054">
+The
+<instance id="d004.s054.t001" lemma="first" pos="a">first</instance>
+<instance id="d004.s054.t002" lemma="step" pos="n">step</instance>
+in
+every
+<instance id="d004.s054.t003" lemma="software" pos="n">software</instance>
+<instance id="d004.s054.t004" lemma="development" pos="n">development</instance>
+<instance id="d004.s054.t005" lemma="project" pos="n">project</instance>
+should
+<instance id="d004.s054.t006" lemma="be" pos="v">be</instance>
+<instance id="d004.s054.t007" lemma="requirement" pos="n">requirements</instance>
+<instance id="d004.s054.t008" lemma="analysis" pos="n">analysis</instance>
+,
+<instance id="d004.s054.t009" lemma="follow" pos="v">followed</instance>
+by
+modeling
+,
+<instance id="d004.s054.t010" lemma="implementation" pos="n">implementation</instance>
+and
+<instance id="d004.s054.t011" lemma="failure" pos="n">failure</instance>
+<instance id="d004.s054.t012" lemma="elimination" pos="n">elimination</instance>
+(
+debugging
+)
+.
+</sentence>
+<sentence id="d004.s055">
+There
+<instance id="d004.s055.t001" lemma="exist" pos="v">exist</instance>
+<instance id="d004.s055.t002" lemma="a_lot" pos="r">a lot</instance>
+of
+differing
+<instance id="d004.s055.t003" lemma="approach" pos="n">approaches</instance>
+for
+each
+of
+those
+<instance id="d004.s055.t004" lemma="task" pos="n">tasks</instance>
+;
+with
+the
+most
+<instance id="d004.s055.t005" lemma="popular" pos="a">popular</instance>
+modeling
+<instance id="d004.s055.t006" lemma="technique" pos="n">technique</instance>
+<instance id="d004.s055.t007" lemma="be" pos="v">being</instance>
+Object-Oriented
+<instance id="d004.s055.t008" lemma="Analysis" pos="n">Analysis</instance>
+and
+<instance id="d004.s055.t009" lemma="Design" pos="n">Design</instance>
+(
+OOAD
+)
+and
+Model-Driven
+<instance id="d004.s055.t010" lemma="Architecture" pos="n">Architecture</instance>
+(
+MDA
+)
+.
+</sentence>
+<sentence id="d004.s056">
+The
+Unified
+Modeling
+language
+(
+UML
+)
+<instance id="d004.s056.t001" lemma="be" pos="v">is</instance>
+a
+<instance id="d004.s056.t002" lemma="notation" pos="n">notation</instance>
+<instance id="d004.s056.t003" lemma="use" pos="v">used</instance>
+for
+OOAD
+.
+</sentence>
+<sentence id="d004.s057">
+A
+<instance id="d004.s057.t001" lemma="similar" pos="a">similar</instance>
+<instance id="d004.s057.t002" lemma="technique" pos="n">technique</instance>
+<instance id="d004.s057.t003" lemma="use" pos="v">used</instance>
+for
+<instance id="d004.s057.t004" lemma="database" pos="n">database</instance>
+<instance id="d004.s057.t005" lemma="design" pos="n">design</instance>
+<instance id="d004.s057.t006" lemma="be" pos="v">is</instance>
+Entity-Relationship
+Modeling
+(
+ER
+Modeling
+)
+.
+</sentence>
+<sentence id="d004.s058">
+<instance id="d004.s058.t001" lemma="Implementation" pos="n">Implementation</instance>
+<instance id="d004.s058.t002" lemma="technique" pos="n">techniques</instance>
+<instance id="d004.s058.t003" lemma="include" pos="v">include</instance>
+imperative
+<instance id="d004.s058.t004" lemma="language" pos="n">languages</instance>
+(
+object-oriented
+or
+<instance id="d004.s058.t005" lemma="procedural" pos="a">procedural</instance>
+)
+,
+<instance id="d004.s058.t006" lemma="functional" pos="a">functional</instance>
+<instance id="d004.s058.t007" lemma="language" pos="n">languages</instance>
+and
+<instance id="d004.s058.t008" lemma="logic" pos="n">logic</instance>
+<instance id="d004.s058.t009" lemma="language" pos="n">languages</instance>
+.
+</sentence>
+<sentence id="d004.s059">
+Debugging
+is
+<instance id="d004.s059.t001" lemma="most" pos="r">most</instance>
+<instance id="d004.s059.t002" lemma="often" pos="r">often</instance>
+<instance id="d004.s059.t003" lemma="do" pos="v">done</instance>
+with
+IDEs
+like
+Visual
+Studio
+,
+and
+Eclipse
+.
+</sentence>
+<sentence id="d004.s060">
+<instance id="d004.s060.t001" lemma="Separate" pos="a">Separate</instance>
+<instance id="d004.s060.t002" lemma="debugger" pos="n">debuggers</instance>
+like
+gdb
+are
+<instance id="d004.s060.t003" lemma="also" pos="r">also</instance>
+<instance id="d004.s060.t004" lemma="use" pos="v">used</instance>
+.
+</sentence>
+<sentence id="d004.s061">
+<instance id="d004.s061.t001" lemma="Modern" pos="a">Modern</instance>
+<instance id="d004.s061.t002" lemma="Language" pos="n">Languages</instance>
+</sentence>
+<sentence id="d004.s062">
+The
+most
+<instance id="d004.s062.t001" lemma="popular" pos="a">popular</instance>
+<instance id="d004.s062.t002" lemma="programming" pos="n">programming</instance>
+<instance id="d004.s062.t003" lemma="language" pos="n">languages</instance>
+in
+the
+21st
+<instance id="d004.s062.t004" lemma="century" pos="n">century</instance>
+<instance id="d004.s062.t005" lemma="be" pos="v">are</instance>
+C
+,
+C++
+,
+C
+sharp
+,
+Cobol
+,
+Fortran
+,
+Java
+,
+PHP
+and
+Python
+.
+</sentence>
+<sentence id="d004.s063">
+Many
+<instance id="d004.s063.t001" lemma="language" pos="n">languages</instance>
+have
+<instance id="d004.s063.t002" lemma="evolve" pos="v">evolved</instance>
+from
+C
+,
+such
+as
+C++
+,
+,
+and
+Java
+.
+</sentence>
+<sentence id="d004.s064">
+Java
+,
+and
+Python
+<instance id="d004.s064.t001" lemma="be" pos="v">are</instance>
+<instance id="d004.s064.t002" lemma="popular" pos="a">popular</instance>
+because
+<instance id="d004.s064.t003" lemma="program" pos="n">programs</instance>
+<instance id="d004.s064.t004" lemma="write" pos="v">written</instance>
+in
+them
+are
+<instance id="d004.s064.t005" lemma="execute" pos="v">executed</instance>
+in
+a
+<instance id="d004.s064.t006" lemma="virtual" pos="a">virtual</instance>
+<instance id="d004.s064.t007" lemma="machine" pos="n">machine</instance>
+,
+<instance id="d004.s064.t008" lemma="avoid" pos="v">avoiding</instance>
+many
+of
+the
+<instance id="d004.s064.t009" lemma="problem" pos="n">problems</instance>
+of
+lower-level
+<instance id="d004.s064.t010" lemma="language" pos="n">languages</instance>
+such
+as
+C
+,
+C++
+or
+<instance id="d004.s064.t011" lemma="Assembler" pos="n">Assembler</instance>
+,
+such
+as
+<instance id="d004.s064.t012" lemma="buffer" pos="n">buffer</instance>
+overruns
+and
+<instance id="d004.s064.t013" lemma="invalid" pos="a">invalid</instance>
+<instance id="d004.s064.t014" lemma="pointer" pos="n">pointers</instance>
+.
+</sentence>
+<sentence id="d004.s065">
+<instance id="d004.s065.t001" lemma="However" pos="r">However</instance>
+,
+most
+<instance id="d004.s065.t002" lemma="PC" pos="n">PC</instance>
+<instance id="d004.s065.t003" lemma="desktop" pos="n">desktop</instance>
+<instance id="d004.s065.t004" lemma="application" pos="n">applications</instance>
+such
+as
+<instance id="d004.s065.t005" lemma="word_processor" pos="n">word processors</instance>
+or
+<instance id="d004.s065.t006" lemma="image" pos="n">image</instance>
+<instance id="d004.s065.t007" lemma="manipulation" pos="n">manipulation</instance>
+<instance id="d004.s065.t008" lemma="program" pos="n">programs</instance>
+are
+<instance id="d004.s065.t009" lemma="write" pos="v">written</instance>
+in
+more
+runtime
+and
+<instance id="d004.s065.t010" lemma="memory" pos="n">memory</instance>
+<instance id="d004.s065.t011" lemma="efficient" pos="a">efficient</instance>
+<instance id="d004.s065.t012" lemma="language" pos="n">languages</instance>
+like
+C
+,
+C++
+,
+and
+Delphi
+.
+</sentence>
+<sentence id="d004.s066">
+<instance id="d004.s066.t001" lemma="Operating_system" pos="n">Operating systems</instance>
+are
+<instance id="d004.s066.t002" lemma="almost" pos="r">almost</instance>
+<instance id="d004.s066.t003" lemma="exclusively" pos="r">exclusively</instance>
+<instance id="d004.s066.t004" lemma="write" pos="v">written</instance>
+in
+<instance id="d004.s066.t005" lemma="low-level" pos="a">low-level</instance>
+<instance id="d004.s066.t006" lemma="programming" pos="n">programming</instance>
+<instance id="d004.s066.t007" lemma="language" pos="n">languages</instance>
+like
+C
+,
+C++
+,
+or
+<instance id="d004.s066.t008" lemma="Assembler" pos="n">Assembler</instance>
+,
+since
+<instance id="d004.s066.t009" lemma="speed" pos="n">speed</instance>
+<instance id="d004.s066.t010" lemma="be" pos="v">is</instance>
+<instance id="d004.s066.t011" lemma="necessary" pos="a">necessary</instance>
+in
+<instance id="d004.s066.t012" lemma="component" pos="n">components</instance>
+like
+<instance id="d004.s066.t013" lemma="context" pos="n">context</instance>
+<instance id="d004.s066.t014" lemma="switching" pos="n">switching</instance>
+,
+<instance id="d004.s066.t015" lemma="process" pos="n">process</instance>
+and
+<instance id="d004.s066.t016" lemma="thread" pos="n">thread</instance>
+<instance id="d004.s066.t017" lemma="management" pos="n">management</instance>
+,
+and
+<instance id="d004.s066.t018" lemma="memory" pos="n">memory</instance>
+<instance id="d004.s066.t019" lemma="management" pos="n">management</instance>
+.
+</sentence>
+<sentence id="d004.s067">
+<instance id="d004.s067.t001" lemma="Scientific" pos="a">Scientific</instance>
+<instance id="d004.s067.t002" lemma="application" pos="n">applications</instance>
+are
+<instance id="d004.s067.t003" lemma="often" pos="r">often</instance>
+<instance id="d004.s067.t004" lemma="implement" pos="v">implemented</instance>
+in
+Fortran
+because
+<instance id="d004.s067.t005" lemma="very" pos="r">very</instance>
+<instance id="d004.s067.t006" lemma="efficient" pos="a">efficient</instance>
+<instance id="d004.s067.t007" lemma="optimization" pos="n">optimization</instance>
+(
+<instance id="d004.s067.t008" lemma="use" pos="v">using</instance>
+optimizing
+<instance id="d004.s067.t009" lemma="Compiler" pos="n">Compilers</instance>
+)
+<instance id="d004.s067.t010" lemma="be" pos="v">is</instance>
+<instance id="d004.s067.t011" lemma="possible" pos="a">possible</instance>
+for
+<instance id="d004.s067.t012" lemma="arithmetic" pos="n">arithmetic</instance>
+.
+</sentence>
+<sentence id="d004.s068">
+Cobol
+<instance id="d004.s068.t001" lemma="be" pos="v">is</instance>
+<instance id="d004.s068.t002" lemma="still" pos="r">still</instance>
+<instance id="d004.s068.t003" lemma="very" pos="r">very</instance>
+<instance id="d004.s068.t004" lemma="strong" pos="a">strong</instance>
+in
+the
+<instance id="d004.s068.t005" lemma="corporate" pos="a">corporate</instance>
+<instance id="d004.s068.t006" lemma="data" pos="n">data</instance>
+<instance id="d004.s068.t007" lemma="center" pos="n">center</instance>
+,
+<instance id="d004.s068.t008" lemma="mainly" pos="r">mainly</instance>
+on
+<instance id="d004.s068.t009" lemma="large" pos="a">large</instance>
+<instance id="d004.s068.t010" lemma="Mainframe" pos="n">Mainframe</instance>
+<instance id="d004.s068.t011" lemma="computer" pos="n">computers</instance>
+.
+</sentence>
+<sentence id="d004.s069">
+PHP
+and
+Java
+<instance id="d004.s069.t001" lemma="excel" pos="v">excel</instance>
+in
+database-oriented
+<instance id="d004.s069.t002" lemma="application" pos="n">applications</instance>
+which
+are
+<instance id="d004.s069.t003" lemma="often" pos="r">often</instance>
+<instance id="d004.s069.t004" lemma="deliver" pos="v">delivered</instance>
+over
+the
+<instance id="d004.s069.t005" lemma="internet" pos="n">internet</instance>
+or
+<instance id="d004.s069.t006" lemma="corporate" pos="a">corporate</instance>
+<instance id="d004.s069.t007" lemma="intranet" pos="n">intranets</instance>
+.
+</sentence>
+<sentence id="d004.s070">
+Python
+,
+while
+<instance id="d004.s070.t001" lemma="be" pos="v">being</instance>
+a
+<instance id="d004.s070.t002" lemma="general-purpose" pos="a">general-purpose</instance>
+<instance id="d004.s070.t003" lemma="programming" pos="n">programming</instance>
+<instance id="d004.s070.t004" lemma="language" pos="n">language</instance>
+,
+is
+<instance id="d004.s070.t005" lemma="mostly" pos="r">mostly</instance>
+<instance id="d004.s070.t006" lemma="use" pos="v">used</instance>
+in
+<instance id="d004.s070.t007" lemma="system" pos="n">system</instance>
+<instance id="d004.s070.t008" lemma="administration" pos="n">administration</instance>
+and
+<instance id="d004.s070.t009" lemma="web" pos="n">web</instance>
+<instance id="d004.s070.t010" lemma="programming" pos="n">programming</instance>
+.
+</sentence>
+<sentence id="d004.s071">
+Debugging
+</sentence>
+<sentence id="d004.s072">
+Debugging
+<instance id="d004.s072.t001" lemma="be" pos="v">is</instance>
+a
+<instance id="d004.s072.t002" lemma="very" pos="r">very</instance>
+<instance id="d004.s072.t003" lemma="important" pos="a">important</instance>
+<instance id="d004.s072.t004" lemma="task" pos="n">task</instance>
+for
+every
+<instance id="d004.s072.t005" lemma="programmer" pos="n">programmer</instance>
+,
+because
+an
+<instance id="d004.s072.t006" lemma="erroneous" pos="a">erroneous</instance>
+<instance id="d004.s072.t007" lemma="program" pos="n">program</instance>
+<instance id="d004.s072.t008" lemma="be" pos="v">is</instance>
+<instance id="d004.s072.t009" lemma="often" pos="r">often</instance>
+<instance id="d004.s072.t010" lemma="useless" pos="a">useless</instance>
+.
+</sentence>
+<sentence id="d004.s073">
+<instance id="d004.s073.t001" lemma="Language" pos="n">Languages</instance>
+like
+C++
+and
+<instance id="d004.s073.t002" lemma="Assembler" pos="n">Assembler</instance>
+<instance id="d004.s073.t003" lemma="be" pos="v">are</instance>
+<instance id="d004.s073.t004" lemma="very" pos="r">very</instance>
+<instance id="d004.s073.t005" lemma="challenging" pos="a">challenging</instance>
+<instance id="d004.s073.t006" lemma="even" pos="r">even</instance>
+to
+<instance id="d004.s073.t007" lemma="expert" pos="a">expert</instance>
+<instance id="d004.s073.t008" lemma="programmer" pos="n">programmers</instance>
+because
+of
+<instance id="d004.s073.t009" lemma="failure" pos="n">failure</instance>
+<instance id="d004.s073.t010" lemma="mode" pos="n">modes</instance>
+like
+<instance id="d004.s073.t011" lemma="Buffer" pos="n">Buffer</instance>
+overruns
+,
+<instance id="d004.s073.t012" lemma="bad" pos="a">bad</instance>
+<instance id="d004.s073.t013" lemma="pointer" pos="n">pointers</instance>
+or
+uninitialized
+<instance id="d004.s073.t014" lemma="memory" pos="n">memory</instance>
+.
+</sentence>
+<sentence id="d004.s074">
+A
+<instance id="d004.s074.t001" lemma="buffer" pos="n">buffer</instance>
+overrun
+can
+<instance id="d004.s074.t002" lemma="damage" pos="v">damage</instance>
+<instance id="d004.s074.t003" lemma="adjacent" pos="a">adjacent</instance>
+<instance id="d004.s074.t004" lemma="memory" pos="n">memory</instance>
+<instance id="d004.s074.t005" lemma="region" pos="n">regions</instance>
+and
+<instance id="d004.s074.t006" lemma="cause" pos="v">cause</instance>
+a
+<instance id="d004.s074.t007" lemma="failure" pos="n">failure</instance>
+in
+a
+<instance id="d004.s074.t008" lemma="totally" pos="r">totally</instance>
+<instance id="d004.s074.t009" lemma="different" pos="a">different</instance>
+<instance id="d004.s074.t010" lemma="program" pos="n">program</instance>
+<instance id="d004.s074.t011" lemma="line" pos="n">line</instance>
+.
+</sentence>
+<sentence id="d004.s075">
+Because
+of
+those
+<instance id="d004.s075.t001" lemma="memory" pos="n">memory</instance>
+<instance id="d004.s075.t002" lemma="issue" pos="n">issues</instance>
+<instance id="d004.s075.t003" lemma="tool" pos="n">tools</instance>
+like
+Valgrind
+,
+Purify
+or
+Boundschecker
+<instance id="d004.s075.t004" lemma="be" pos="v">are</instance>
+<instance id="d004.s075.t005" lemma="virtually" pos="r">virtually</instance>
+a
+<instance id="d004.s075.t006" lemma="necessity" pos="n">necessity</instance>
+for
+<instance id="d004.s075.t007" lemma="modern" pos="a">modern</instance>
+<instance id="d004.s075.t008" lemma="software" pos="n">software</instance>
+<instance id="d004.s075.t009" lemma="development" pos="n">development</instance>
+in
+the
+C++
+<instance id="d004.s075.t010" lemma="language" pos="n">language</instance>
+.
+</sentence>
+<sentence id="d004.s076">
+<instance id="d004.s076.t001" lemma="Language" pos="n">Languages</instance>
+such
+as
+Java
+,
+PHP
+and
+Python
+<instance id="d004.s076.t002" lemma="protect" pos="v">protect</instance>
+the
+<instance id="d004.s076.t003" lemma="programmer" pos="n">programmer</instance>
+from
+most
+of
+these
+runtime
+<instance id="d004.s076.t004" lemma="failure" pos="n">failure</instance>
+<instance id="d004.s076.t005" lemma="mode" pos="n">modes</instance>
+,
+but
+this
+<instance id="d004.s076.t006" lemma="come" pos="v">comes</instance>
+at
+the
+<instance id="d004.s076.t007" lemma="price" pos="n">price</instance>
+of
+a
+<instance id="d004.s076.t008" lemma="dramatically" pos="r">dramatically</instance>
+<instance id="d004.s076.t009" lemma="low" pos="a">lower</instance>
+<instance id="d004.s076.t010" lemma="execution" pos="n">execution</instance>
+<instance id="d004.s076.t011" lemma="speed" pos="n">speed</instance>
+of
+the
+<instance id="d004.s076.t012" lemma="resulting" pos="a">resulting</instance>
+<instance id="d004.s076.t013" lemma="program" pos="n">program</instance>
+.
+</sentence>
+</text>
+<text id="d005">
+<sentence id="d005.s001">
+MASACCIO
+</sentence>
+<sentence id="d005.s002">
+It
+must
+have
+<instance id="d005.s002.t001" lemma="be" pos="v">been</instance>
+about
+the
+same
+<instance id="d005.s002.t002" lemma="time" pos="n">time</instance>
+when
+Fra
+Angelico
+was
+<instance id="d005.s002.t003" lemma="cover" pos="v">covering</instance>
+the
+<instance id="d005.s002.t004" lemma="wall" pos="n">walls</instance>
+of
+San
+Marco
+with
+his
+<instance id="d005.s002.t005" lemma="angel" pos="n">angel</instance>
+<instance id="d005.s002.t006" lemma="picture" pos="n">pictures</instance>
+,
+that
+a
+<instance id="d005.s002.t007" lemma="very" pos="r">very</instance>
+<instance id="d005.s002.t008" lemma="different" pos="a">different</instance>
+<instance id="d005.s002.t009" lemma="kind" pos="n">kind</instance>
+of
+<instance id="d005.s002.t010" lemma="painter" pos="n">painter</instance>
+was
+<instance id="d005.s002.t011" lemma="work" pos="v">working</instance>
+in
+the
+Carmine
+<instance id="d005.s002.t012" lemma="church" pos="n">church</instance>
+in
+Florence
+.
+</sentence>
+<sentence id="d005.s003">
+This
+<instance id="d005.s003.t001" lemma="be" pos="v">was</instance>
+no
+<instance id="d005.s003.t002" lemma="gentle" pos="a">gentle</instance>
+,
+<instance id="d005.s003.t003" lemma="refined" pos="a">refined</instance>
+<instance id="d005.s003.t004" lemma="monk" pos="n">monk</instance>
+,
+but
+<instance id="d005.s003.t005" lemma="just" pos="r">just</instance>
+an
+<instance id="d005.s003.t006" lemma="ordinary" pos="a">ordinary</instance>
+<instance id="d005.s003.t007" lemma="man" pos="n">man</instance>
+of
+the 
+<instance id="d005.s003.t008" lemma="world" pos="n">world</instance>
+an
+<instance id="d005.s003.t009" lemma="awkward" pos="a">awkward</instance>
+,
+<instance id="d005.s003.t010" lemma="good-natured" pos="a">good-natured</instance>
+<instance id="d005.s003.t011" lemma="person" pos="n">person</instance>
+,
+who
+,
+as
+long
+as
+he
+had
+<instance id="d005.s003.t012" lemma="picture" pos="n">pictures</instance>
+to
+<instance id="d005.s003.t013" lemma="paint" pos="v">paint</instance>
+,
+<instance id="d005.s003.t014" lemma="care" pos="v">cared</instance>
+for
+<instance id="d005.s003.t015" lemma="little" pos="a">little</instance>
+<instance id="d005.s003.t016" lemma="else" pos="r">else</instance>
+.
+</sentence>
+<sentence id="d005.s004">
+Why
+,
+he
+would
+<instance id="d005.s004.t001" lemma="even" pos="r">even</instance>
+<instance id="d005.s004.t002" lemma="forget" pos="v">forget</instance>
+to
+<instance id="d005.s004.t003" lemma="ask" pos="v">ask</instance>
+for
+<instance id="d005.s004.t004" lemma="payment" pos="n">payment</instance>
+when
+his
+<instance id="d005.s004.t005" lemma="work" pos="n">work</instance>
+was
+<instance id="d005.s004.t006" lemma="do" pos="v">done</instance>
+;
+and
+as
+to
+<instance id="d005.s004.t007" lemma="take_care" pos="v">taking care</instance>
+of
+his
+<instance id="d005.s004.t008" lemma="clothes" pos="n">clothes</instance>
+,
+or
+<instance id="d005.s004.t009" lemma="try" pos="v">trying</instance>
+to
+<instance id="d005.s004.t010" lemma="keep" pos="v">keep</instance>
+himself
+<instance id="d005.s004.t011" lemma="tidy" pos="a">tidy</instance>
+,
+that
+<instance id="d005.s004.t012" lemma="be" pos="v">was</instance>
+a
+<instance id="d005.s004.t013" lemma="thing" pos="n">thing</instance>
+he
+<instance id="d005.s004.t014" lemma="never" pos="r">never</instance>
+<instance id="d005.s004.t015" lemma="think_of" pos="v">thought of</instance>
+!
+</sentence>
+<sentence id="d005.s005">
+What
+<instance id="d005.s005.t001" lemma="trouble" pos="n">trouble</instance>
+his
+<instance id="d005.s005.t002" lemma="mother" pos="n">mother</instance>
+must
+have
+<instance id="d005.s005.t003" lemma="have" pos="v">had</instance>
+with
+him
+when
+he
+<instance id="d005.s005.t004" lemma="be" pos="v">was</instance>
+a
+<instance id="d005.s005.t005" lemma="boy" pos="n">boy</instance>
+!
+</sentence>
+<sentence id="d005.s006">
+It
+was
+no
+use
+<instance id="d005.s006.t001" lemma="send" pos="v">sending</instance>
+him
+on
+an
+<instance id="d005.s006.t002" lemma="errand" pos="n">errand</instance>
+,
+he
+would
+<instance id="d005.s006.t003" lemma="forget" pos="v">forget</instance>
+it
+<instance id="d005.s006.t004" lemma="before" pos="r">before</instance>
+he
+had
+<instance id="d005.s006.t005" lemma="go" pos="v">gone</instance>
+a
+<instance id="d005.s006.t006" lemma="hundred" pos="n">hundred</instance>
+<instance id="d005.s006.t007" lemma="yard" pos="n">yards</instance>
+,
+and
+he
+<instance id="d005.s006.t008" lemma="be" pos="v">was</instance>
+<instance id="d005.s006.t009" lemma="so" pos="r">so</instance>
+<instance id="d005.s006.t010" lemma="careless" pos="a">careless</instance>
+and
+<instance id="d005.s006.t011" lemma="untidy" pos="a">untidy</instance>
+that
+it
+was
+<instance id="d005.s006.t012" lemma="enough" pos="r">enough</instance>
+to
+<instance id="d005.s006.t013" lemma="make" pos="v">make</instance>
+any
+one
+<instance id="d005.s006.t014" lemma="lose" pos="v">lose</instance>
+<instance id="d005.s006.t015" lemma="patience" pos="n">patience</instance>
+with
+him
+.
+</sentence>
+<sentence id="d005.s007">
+But
+<instance id="d005.s007.t001" lemma="only" pos="r">only</instance>
+<instance id="d005.s007.t002" lemma="let" pos="v">let</instance>
+him
+<instance id="d005.s007.t003" lemma="have" pos="v">have</instance>
+a
+<instance id="d005.s007.t004" lemma="pencil" pos="n">pencil</instance>
+and
+a
+<instance id="d005.s007.t005" lemma="smooth" pos="a">smooth</instance>
+<instance id="d005.s007.t006" lemma="surface" pos="n">surface</instance>
+on
+which
+to
+<instance id="d005.s007.t007" lemma="draw" pos="v">draw</instance>
+,
+and
+he
+<instance id="d005.s007.t008" lemma="be" pos="v">was</instance>
+a
+<instance id="d005.s007.t009" lemma="different" pos="a">different</instance>
+<instance id="d005.s007.t010" lemma="boy" pos="n">boy</instance>
+.
+</sentence>
+<sentence id="d005.s008">
+It
+is
+<instance id="d005.s008.t001" lemma="say" pos="v">said</instance>
+that
+<instance id="d005.s008.t002" lemma="even" pos="r">even</instance>
+<instance id="d005.s008.t003" lemma="now" pos="r">now</instance>
+,
+in
+the
+<instance id="d005.s008.t004" lemma="little" pos="a">little</instance>
+<instance id="d005.s008.t005" lemma="town" pos="n">town</instance>
+of
+Castello
+San
+Giovanni
+,
+some
+<instance id="d005.s008.t006" lemma="eighteen" pos="a">eighteen</instance>
+<instance id="d005.s008.t007" lemma="mile" pos="n">miles</instance>
+from
+Florence
+,
+where
+Tommaso
+was
+<instance id="d005.s008.t008" lemma="bear" pos="v">born</instance>
+,
+there
+<instance id="d005.s008.t009" lemma="be" pos="v">are</instance>
+<instance id="d005.s008.t010" lemma="still" pos="r">still</instance>
+some
+<instance id="d005.s008.t011" lemma="wonderfully" pos="r">wonderfully</instance>
+<instance id="d005.s008.t012" lemma="good" pos="a">good</instance>
+<instance id="d005.s008.t013" lemma="figure" pos="n">figures</instance>
+to
+be
+<instance id="d005.s008.t014" lemma="see" pos="v">seen</instance>
+,
+<instance id="d005.s008.t015" lemma="draw" pos="v">drawn</instance>
+by
+him
+when
+he
+<instance id="d005.s008.t016" lemma="be" pos="v">was</instance>
+<instance id="d005.s008.t017" lemma="quite" pos="r">quite</instance>
+a
+<instance id="d005.s008.t018" lemma="little" pos="a">little</instance>
+<instance id="d005.s008.t019" lemma="boy" pos="n">boy</instance>
+.
+</sentence>
+<sentence id="d005.s009">
+<instance id="d005.s009.t001" lemma="Certainly" pos="r">Certainly</instance>
+there
+<instance id="d005.s009.t002" lemma="be" pos="v">was</instance>
+no
+<instance id="d005.s009.t003" lemma="carelessness" pos="n">carelessness</instance>
+and
+nothing
+<instance id="d005.s009.t004" lemma="untidy" pos="a">untidy</instance>
+about
+his
+<instance id="d005.s009.t005" lemma="work" pos="n">work</instance>
+.
+</sentence>
+<sentence id="d005.s010">
+As
+the
+<instance id="d005.s010.t001" lemma="boy" pos="n">boy</instance>
+<instance id="d005.s010.t002" lemma="grow" pos="v">grew</instance>
+<instance id="d005.s010.t003" lemma="older" pos="a">older</instance>
+all
+his
+<instance id="d005.s010.t004" lemma="longing" pos="n">longings</instance>
+would
+<instance id="d005.s010.t005" lemma="turn" pos="v">turn</instance>
+towards
+Florence
+,
+the
+<instance id="d005.s010.t006" lemma="beautiful" pos="a">beautiful</instance>
+<instance id="d005.s010.t007" lemma="city" pos="n">city</instance>
+where
+there
+<instance id="d005.s010.t008" lemma="be" pos="v">was</instance>
+everything
+to
+<instance id="d005.s010.t009" lemma="learn" pos="v">learn</instance>
+and
+to
+<instance id="d005.s010.t010" lemma="see" pos="v">see</instance>
+,
+and
+<instance id="d005.s010.t011" lemma="so" pos="r">so</instance>
+he
+was
+<instance id="d005.s010.t012" lemma="send" pos="v">sent</instance>
+to
+<instance id="d005.s010.t013" lemma="become" pos="v">become</instance>
+a
+<instance id="d005.s010.t014" lemma="pupil" pos="n">pupil</instance>
+in
+the
+<instance id="d005.s010.t015" lemma="studio" pos="n">studio</instance>
+of
+Masolino
+,
+a
+<instance id="d005.s010.t016" lemma="great" pos="a">great</instance>
+<instance id="d005.s010.t017" lemma="Florentine" pos="a">Florentine</instance>
+<instance id="d005.s010.t018" lemma="painter" pos="n">painter</instance>
+.
+</sentence>
+<sentence id="d005.s011">
+But
+though
+his
+<instance id="d005.s011.t001" lemma="drawing" pos="n">drawings</instance>
+<instance id="d005.s011.t002" lemma="improve" pos="v">improved</instance>
+,
+his
+<instance id="d005.s011.t003" lemma="careless" pos="a">careless</instance>
+<instance id="d005.s011.t004" lemma="habit" pos="n">habits</instance>
+<instance id="d005.s011.t005" lemma="continue" pos="v">continued</instance>
+the
+same
+.
+</sentence>
+<sentence id="d005.s012">
+`
+There
+<instance id="d005.s012.t001" lemma="go" pos="v">goes</instance>
+Tommaso
+the
+<instance id="d005.s012.t002" lemma="painter" pos="n">painter</instance>
+,
+'
+the
+<instance id="d005.s012.t003" lemma="people" pos="n">people</instance>
+would
+<instance id="d005.s012.t004" lemma="say" pos="v">say</instance>
+,
+<instance id="d005.s012.t005" lemma="watch" pos="v">watching</instance>
+the
+<instance id="d005.s012.t006" lemma="big" pos="a">big</instance>
+<instance id="d005.s012.t007" lemma="awkward" pos="a">awkward</instance>
+<instance id="d005.s012.t008" lemma="figure" pos="n">figure</instance>
+<instance id="d005.s012.t009" lemma="pass_through" pos="v">passing through</instance>
+the
+<instance id="d005.s012.t010" lemma="street" pos="n">streets</instance>
+on
+his
+<instance id="d005.s012.t011" lemma="way" pos="n">way</instance>
+to
+<instance id="d005.s012.t012" lemma="work" pos="v">work</instance>
+.
+</sentence>
+<sentence id="d005.s013">
+`
+<instance id="d005.s013.t001" lemma="Truly" pos="r">Truly</instance>
+he
+<instance id="d005.s013.t002" lemma="pay" pos="v">pays</instance>
+but
+<instance id="d005.s013.t003" lemma="little" pos="a">little</instance>
+<instance id="d005.s013.t004" lemma="heed" pos="n">heed</instance>
+to
+his
+<instance id="d005.s013.t005" lemma="appearance" pos="n">appearance</instance>
+.
+</sentence>
+<sentence id="d005.s014">
+<instance id="d005.s014.t001" lemma="Look" pos="v">Look</instance>
+but
+at
+his
+<instance id="d005.s014.t002" lemma="untidy" pos="a">untidy</instance>
+<instance id="d005.s014.t003" lemma="hair" pos="n">hair</instance>
+and
+the
+<instance id="d005.s014.t004" lemma="hole" pos="n">holes</instance>
+in
+his
+<instance id="d005.s014.t005" lemma="boot" pos="n">boots</instance>
+.
+'
+</sentence>
+<sentence id="d005.s015">
+`
+Ay
+,
+<instance id="d005.s015.t001" lemma="indeed" pos="r">indeed</instance>
+!
+'
+another
+would
+<instance id="d005.s015.t002" lemma="answer" pos="v">answer</instance>
+;
+</sentence>
+<sentence id="d005.s016">
+`
+and
+<instance id="d005.s016.t001" lemma="yet" pos="r">yet</instance>
+it
+is
+<instance id="d005.s016.t002" lemma="say" pos="v">said</instance>
+if
+<instance id="d005.s016.t003" lemma="only" pos="r">only</instance>
+<instance id="d005.s016.t004" lemma="people" pos="n">people</instance>
+<instance id="d005.s016.t005" lemma="pay" pos="v">paid</instance>
+him
+all
+they
+<instance id="d005.s016.t006" lemma="owe" pos="v">owed</instance>
+he
+would
+<instance id="d005.s016.t007" lemma="have" pos="v">have</instance>
+<instance id="d005.s016.t008" lemma="gold" pos="n">gold</instance>
+<instance id="d005.s016.t009" lemma="enough" pos="r">enough</instance>
+and
+to
+<instance id="d005.s016.t010" lemma="spare" pos="v">spare</instance>
+.
+</sentence>
+<sentence id="d005.s017">
+But
+what
+<instance id="d005.s017.t001" lemma="care" pos="v">cares</instance>
+he
+so
+long
+as
+he
+<instance id="d005.s017.t002" lemma="have" pos="v">has</instance>
+his
+<instance id="d005.s017.t003" lemma="paint" pos="n">paints</instance>
+and
+<instance id="d005.s017.t004" lemma="brush" pos="n">brushes</instance>
+?
+</sentence>
+<sentence id="d005.s018">
+``
+Masaccio
+''
+would
+<instance id="d005.s018.t001" lemma="be" pos="v">be</instance>
+a
+<instance id="d005.s018.t002" lemma="fit" pos="a">fitter</instance>
+<instance id="d005.s018.t003" lemma="name" pos="n">name</instance>
+for
+him
+than
+Tommaso
+.
+'
+</sentence>
+<sentence id="d005.s019">
+<instance id="d005.s019.t001" lemma="So" pos="r">So</instance>
+the
+<instance id="d005.s019.t002" lemma="name" pos="n">name</instance>
+Masaccio
+,
+or
+Ugly
+Tom
+,
+<instance id="d005.s019.t003" lemma="come" pos="v">came</instance>
+to
+<instance id="d005.s019.t004" lemma="be" pos="v">be</instance>
+that
+by
+which
+the
+<instance id="d005.s019.t005" lemma="big" pos="a">big</instance>
+<instance id="d005.s019.t006" lemma="awkward" pos="a">awkward</instance>
+<instance id="d005.s019.t007" lemma="painter" pos="n">painter</instance>
+was
+<instance id="d005.s019.t008" lemma="know" pos="v">known</instance>
+.
+</sentence>
+<sentence id="d005.s020">
+But
+no
+one
+<instance id="d005.s020.t001" lemma="think_of" pos="v">thinks of</instance>
+the
+<instance id="d005.s020.t002" lemma="unkind" pos="a">unkind</instance>
+<instance id="d005.s020.t003" lemma="meaning" pos="n">meaning</instance>
+of
+the
+<instance id="d005.s020.t004" lemma="nickname" pos="n">nickname</instance>
+<instance id="d005.s020.t005" lemma="now" pos="r">now</instance>
+,
+for
+Masaccio
+is
+<instance id="d005.s020.t006" lemma="honour" pos="v">honoured</instance>
+as
+<instance id="d005.s020.t007" lemma="one" pos="a">one</instance>
+of
+the
+<instance id="d005.s020.t008" lemma="great" pos="a">great</instance>
+<instance id="d005.s020.t009" lemma="name" pos="n">names</instance>
+in
+the
+<instance id="d005.s020.t010" lemma="history" pos="n">history</instance>
+of
+<instance id="d005.s020.t011" lemma="Art" pos="n">Art</instance>
+.
+</sentence>
+<sentence id="d005.s021">
+This
+<instance id="d005.s021.t001" lemma="painter" pos="n">painter</instance>
+,
+<instance id="d005.s021.t002" lemma="careless" pos="a">careless</instance>
+of
+many
+<instance id="d005.s021.t003" lemma="thing" pos="n">things</instance>
+,
+<instance id="d005.s021.t004" lemma="care" pos="v">cared</instance>
+with
+all
+his
+<instance id="d005.s021.t005" lemma="heart_and_soul" pos="n">heart and soul</instance>
+for
+the
+<instance id="d005.s021.t006" lemma="work" pos="n">work</instance>
+he
+had
+<instance id="d005.s021.t007" lemma="choose" pos="v">chosen</instance>
+to
+<instance id="d005.s021.t008" lemma="do" pos="v">do</instance>
+.
+</sentence>
+<sentence id="d005.s022">
+It
+<instance id="d005.s022.t001" lemma="seem" pos="v">seemed</instance>
+to
+him
+that
+<instance id="d005.s022.t002" lemma="painter" pos="n">painters</instance>
+had
+<instance id="d005.s022.t003" lemma="always" pos="r">always</instance>
+<instance id="d005.s022.t004" lemma="fail" pos="v">failed</instance>
+to
+<instance id="d005.s022.t005" lemma="make" pos="v">make</instance>
+their
+<instance id="d005.s022.t006" lemma="picture" pos="n">pictures</instance>
+like
+<instance id="d005.s022.t007" lemma="living" pos="a">living</instance>
+<instance id="d005.s022.t008" lemma="thing" pos="n">things</instance>
+.
+</sentence>
+<sentence id="d005.s023">
+The
+<instance id="d005.s023.t001" lemma="picture" pos="n">pictures</instance>
+they
+<instance id="d005.s023.t002" lemma="paint" pos="v">painted</instance>
+<instance id="d005.s023.t003" lemma="be" pos="v">were</instance>
+<instance id="d005.s023.t004" lemma="flat" pos="a">flat</instance>
+,
+not
+round
+as
+a
+<instance id="d005.s023.t005" lemma="figure" pos="n">figure</instance>
+should
+<instance id="d005.s023.t006" lemma="be" pos="v">be</instance>
+,
+and
+<instance id="d005.s023.t007" lemma="very" pos="r">very</instance>
+<instance id="d005.s023.t008" lemma="often" pos="r">often</instance>
+the
+<instance id="d005.s023.t009" lemma="foot" pos="n">feet</instance>
+did
+not
+<instance id="d005.s023.t010" lemma="look" pos="v">look</instance>
+as
+if
+they
+were
+<instance id="d005.s023.t011" lemma="stand" pos="v">standing</instance>
+on
+the
+<instance id="d005.s023.t012" lemma="ground" pos="n">ground</instance>
+<instance id="d005.s023.t013" lemma="at_all" pos="r">at all</instance>
+,
+but
+<instance id="d005.s023.t014" lemma="point" pos="v">pointed</instance>
+<instance id="d005.s023.t015" lemma="downwards" pos="r">downwards</instance>
+as
+if
+they
+were
+<instance id="d005.s023.t016" lemma="hang" pos="v">hanging</instance>
+in
+the
+<instance id="d005.s023.t017" lemma="air" pos="n">air</instance>
+.
+</sentence>
+<sentence id="d005.s024">
+<instance id="d005.s024.t001" lemma="So" pos="r">So</instance>
+he
+<instance id="d005.s024.t002" lemma="work" pos="v">worked</instance>
+with
+<instance id="d005.s024.t003" lemma="light" pos="n">light</instance>
+and
+<instance id="d005.s024.t004" lemma="shadow" pos="n">shadow</instance>
+and
+<instance id="d005.s024.t005" lemma="careful" pos="a">careful</instance>
+<instance id="d005.s024.t006" lemma="drawing" pos="n">drawing</instance>
+until
+the
+<instance id="d005.s024.t007" lemma="figure" pos="n">figures</instance>
+he
+<instance id="d005.s024.t008" lemma="draw" pos="v">drew</instance>
+<instance id="d005.s024.t009" lemma="look" pos="v">looked</instance>
+rounded
+<instance id="d005.s024.t010" lemma="instead" pos="r">instead</instance>
+of
+<instance id="d005.s024.t011" lemma="flat" pos="a">flat</instance>
+,
+and
+their
+<instance id="d005.s024.t012" lemma="foot" pos="n">feet</instance>
+were
+<instance id="d005.s024.t013" lemma="plant" pos="v">planted</instance>
+<instance id="d005.s024.t014" lemma="firmly" pos="r">firmly</instance>
+on
+the
+<instance id="d005.s024.t015" lemma="ground" pos="n">ground</instance>
+.
+</sentence>
+<sentence id="d005.s025">
+His
+<instance id="d005.s025.t001" lemma="model" pos="n">models</instance>
+were
+<instance id="d005.s025.t002" lemma="take" pos="v">taken</instance>
+from
+the
+<instance id="d005.s025.t003" lemma="ordinary" pos="a">ordinary</instance>
+<instance id="d005.s025.t004" lemma="Florentine" pos="a">Florentine</instance>
+<instance id="d005.s025.t005" lemma="youth" pos="n">youths</instance>
+whom
+he
+<instance id="d005.s025.t006" lemma="see" pos="v">saw</instance>
+<instance id="d005.s025.t007" lemma="daily" pos="r">daily</instance>
+in
+the
+<instance id="d005.s025.t008" lemma="studio" pos="n">studio</instance>
+,
+but
+he
+<instance id="d005.s025.t009" lemma="draw" pos="v">drew</instance>
+them
+as
+no
+one
+had
+<instance id="d005.s025.t010" lemma="draw" pos="v">drawn</instance>
+<instance id="d005.s025.t011" lemma="figure" pos="n">figures</instance>
+<instance id="d005.s025.t012" lemma="before" pos="r">before</instance>
+.
+</sentence>
+<sentence id="d005.s026">
+The
+<instance id="d005.s026.t001" lemma="building" pos="n">buildings</instance>
+,
+<instance id="d005.s026.t002" lemma="too" pos="r">too</instance>
+,
+he
+<instance id="d005.s026.t003" lemma="make" pos="v">made</instance>
+to
+<instance id="d005.s026.t004" lemma="look_like" pos="v">look like</instance>
+<instance id="d005.s026.t005" lemma="real" pos="a">real</instance>
+<instance id="d005.s026.t006" lemma="house" pos="n">houses</instance>
+<instance id="d005.s026.t007" lemma="lead" pos="v">leading</instance>
+<instance id="d005.s026.t008" lemma="away" pos="r">away</instance>
+into
+the
+<instance id="d005.s026.t009" lemma="distance" pos="n">distance</instance>
+,
+and
+not
+<instance id="d005.s026.t010" lemma="just" pos="r">just</instance>
+like
+a
+<instance id="d005.s026.t011" lemma="flat" pos="a">flat</instance>
+<instance id="d005.s026.t012" lemma="picture" pos="n">picture</instance>
+.
+</sentence>
+<sentence id="d005.s027">
+He
+<instance id="d005.s027.t001" lemma="paint" pos="v">painted</instance>
+many
+<instance id="d005.s027.t002" lemma="fresco" pos="n">frescoes</instance>
+both
+in
+Florence
+and
+Rome
+,
+this
+Ugly
+Tom
+,
+but
+at
+the
+<instance id="d005.s027.t003" lemma="time" pos="n">time</instance>
+the
+<instance id="d005.s027.t004" lemma="people" pos="n">people</instance>
+did
+not
+<instance id="d005.s027.t005" lemma="pay" pos="v">pay</instance>
+him
+much
+<instance id="d005.s027.t006" lemma="honour" pos="n">honour</instance>
+,
+for
+they
+<instance id="d005.s027.t007" lemma="think" pos="v">thought</instance>
+him
+<instance id="d005.s027.t008" lemma="just" pos="r">just</instance>
+a
+<instance id="d005.s027.t009" lemma="great" pos="a">great</instance>
+<instance id="d005.s027.t010" lemma="awkward" pos="a">awkward</instance>
+<instance id="d005.s027.t011" lemma="fellow" pos="n">fellow</instance>
+with
+his
+<instance id="d005.s027.t012" lemma="head" pos="n">head</instance>
+<instance id="d005.s027.t013" lemma="always" pos="r">always</instance>
+in
+the
+<instance id="d005.s027.t014" lemma="cloud" pos="n">clouds</instance>
+.
+</sentence>
+<sentence id="d005.s028">
+<instance id="d005.s028.t001" lemma="Perhaps" pos="r">Perhaps</instance>
+if
+he
+had
+<instance id="d005.s028.t002" lemma="live" pos="v">lived</instance>
+<instance id="d005.s028.t003" lemma="longer" pos="r">longer</instance>
+<instance id="d005.s028.t004" lemma="fame" pos="n">fame</instance>
+and
+<instance id="d005.s028.t005" lemma="wealth" pos="n">wealth</instance>
+would
+have
+<instance id="d005.s028.t006" lemma="come" pos="v">come</instance>
+to
+him
+,
+but
+he
+<instance id="d005.s028.t007" lemma="die" pos="v">died</instance>
+when
+he
+<instance id="d005.s028.t008" lemma="be" pos="v">was</instance>
+<instance id="d005.s028.t009" lemma="still" pos="r">still</instance>
+a
+<instance id="d005.s028.t010" lemma="young_man" pos="n">young man</instance>
+,
+and
+<instance id="d005.s028.t011" lemma="only" pos="r">only</instance>
+a
+few
+<instance id="d005.s028.t012" lemma="realise" pos="v">realised</instance>
+how
+<instance id="d005.s028.t013" lemma="great" pos="a">great</instance>
+he
+<instance id="d005.s028.t014" lemma="be" pos="v">was</instance>
+.
+</sentence>
+<sentence id="d005.s029">
+But
+in
+after
+<instance id="d005.s029.t001" lemma="year" pos="n">years</instance>
+,
+<instance id="d005.s029.t002" lemma="one_by_one" pos="r">one by one</instance>
+,
+all
+the
+<instance id="d005.s029.t003" lemma="great" pos="a">great</instance>
+<instance id="d005.s029.t004" lemma="artist" pos="n">artists</instance>
+would
+<instance id="d005.s029.t005" lemma="come" pos="v">come</instance>
+to
+that
+<instance id="d005.s029.t006" lemma="little" pos="a">little</instance>
+<instance id="d005.s029.t007" lemma="chapel" pos="n">chapel</instance>
+of
+the
+Carmine
+<instance id="d005.s029.t008" lemma="there" pos="r">there</instance>
+to
+<instance id="d005.s029.t009" lemma="learn" pos="v">learn</instance>
+their
+<instance id="d005.s029.t010" lemma="first" pos="a">first</instance>
+<instance id="d005.s029.t011" lemma="lesson" pos="n">lessons</instance>
+from
+those
+<instance id="d005.s029.t012" lemma="lifelike" pos="a">life-like</instance>
+<instance id="d005.s029.t013" lemma="figure" pos="n">figures</instance>
+.
+</sentence>
+<sentence id="d005.s030">
+<instance id="d005.s030.t001" lemma="Especially" pos="r">Especially</instance>
+they
+would
+<instance id="d005.s030.t002" lemma="stand" pos="v">stand</instance>
+before
+the
+<instance id="d005.s030.t003" lemma="fresco" pos="n">fresco</instance>
+which
+<instance id="d005.s030.t004" lemma="show" pos="v">shows</instance>
+St
+.
+Peter
+<instance id="d005.s030.t005" lemma="baptize" pos="v">baptizing</instance>
+a
+<instance id="d005.s030.t006" lemma="crowd" pos="n">crowd</instance>
+of
+<instance id="d005.s030.t007" lemma="people" pos="n">people</instance>
+.
+</sentence>
+<sentence id="d005.s031">
+And
+in
+that
+<instance id="d005.s031.t001" lemma="fresco" pos="n">fresco</instance>
+they
+would
+<instance id="d005.s031.t002" lemma="study" pos="v">study</instance>
+<instance id="d005.s031.t003" lemma="more_than" pos="a">more than</instance>
+all
+the
+<instance id="d005.s031.t004" lemma="figure" pos="n">figure</instance>
+of
+a
+<instance id="d005.s031.t005" lemma="boy" pos="n">boy</instance>
+who
+has
+<instance id="d005.s031.t006" lemma="just" pos="r">just</instance>
+<instance id="d005.s031.t007" lemma="come" pos="v">come</instance>
+out
+of
+the
+<instance id="d005.s031.t008" lemma="water" pos="n">water</instance>
+,
+<instance id="d005.s031.t009" lemma="shiver" pos="v">shivering</instance>
+with
+<instance id="d005.s031.t010" lemma="cold" pos="n">cold</instance>
+,
+the
+most
+<instance id="d005.s031.t011" lemma="natural" pos="a">natural</instance>
+<instance id="d005.s031.t012" lemma="figure" pos="n">figure</instance>
+that
+had
+<instance id="d005.s031.t013" lemma="ever" pos="r">ever</instance>
+been
+<instance id="d005.s031.t014" lemma="paint" pos="v">painted</instance>
+up
+to
+that
+<instance id="d005.s031.t015" lemma="time" pos="n">time</instance>
+.
+</sentence>
+<sentence id="d005.s032">
+All
+<instance id="d005.s032.t001" lemma="thing" pos="n">things</instance>
+must
+be
+<instance id="d005.s032.t002" lemma="learn" pos="v">learnt</instance>
+<instance id="d005.s032.t003" lemma="little_by_little" pos="r">little by little</instance>
+,
+and
+each
+<instance id="d005.s032.t004" lemma="new" pos="a">new</instance>
+<instance id="d005.s032.t005" lemma="thing" pos="n">thing</instance>
+we
+<instance id="d005.s032.t006" lemma="know" pos="v">know</instance>
+<instance id="d005.s032.t007" lemma="be" pos="v">is</instance>
+a
+<instance id="d005.s032.t008" lemma="step" pos="n">step</instance>
+<instance id="d005.s032.t009" lemma="onwards" pos="r">onwards</instance>
+.
+</sentence>
+<sentence id="d005.s033">
+<instance id="d005.s033.t001" lemma="So" pos="r">So</instance>
+this
+<instance id="d005.s033.t002" lemma="figure" pos="n">figure</instance>
+of
+the
+<instance id="d005.s033.t003" lemma="shivering" pos="a">shivering</instance>
+<instance id="d005.s033.t004" lemma="boy" pos="n">boy</instance>
+<instance id="d005.s033.t005" lemma="mark" pos="v">marks</instance>
+a
+<instance id="d005.s033.t006" lemma="higher" pos="a">higher</instance>
+<instance id="d005.s033.t007" lemma="step" pos="n">step</instance>
+of
+the
+<instance id="d005.s033.t008" lemma="golden" pos="a">golden</instance>
+<instance id="d005.s033.t009" lemma="ladder" pos="n">ladder</instance>
+of
+<instance id="d005.s033.t010" lemma="Art" pos="n">Art</instance>
+than
+any
+that
+had
+been
+<instance id="d005.s033.t011" lemma="touch" pos="v">touched</instance>
+<instance id="d005.s033.t012" lemma="before" pos="r">before</instance>
+.
+</sentence>
+<sentence id="d005.s034">
+And
+this
+<instance id="d005.s034.t001" lemma="alone" pos="r">alone</instance>
+would
+have
+<instance id="d005.s034.t002" lemma="make" pos="v">made</instance>
+the
+<instance id="d005.s034.t003" lemma="name" pos="n">name</instance>
+of
+Masaccio
+<instance id="d005.s034.t004" lemma="worthy" pos="a">worthy</instance>
+to
+be
+<instance id="d005.s034.t005" lemma="place" pos="v">placed</instance>
+upon
+the
+<instance id="d005.s034.t006" lemma="list" pos="n">list</instance>
+of
+<instance id="d005.s034.t007" lemma="world" pos="n">world</instance>
+'s
+<instance id="d005.s034.t008" lemma="great" pos="a">great</instance>
+<instance id="d005.s034.t009" lemma="painter" pos="n">painters</instance>
+.
+</sentence>
+</text>
+</corpus>

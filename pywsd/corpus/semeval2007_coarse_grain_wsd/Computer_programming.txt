@@ -1,0 +1,90 @@
+Computer programming
+
+Computer programming (often shortened to programming or coding) is the process of writing, testing, and maintaining the source code of computer programs. 
+The source code is written in a programming language. 
+This code may be a modification of existing source or something completely new. 
+The process of writing source code requires expertise in many different subjects, including knowledge of the application domain and algorithms to implement the desired behavior. 
+Within software engineering, programming (the implementation) is regarded as one phase in a software development process.
+In some specialist applications or extreme situations a program may be written or modified (known as patching) by directly storing the numeric values of the machine code instructions to be executed into memory.
+There is an ongoing debate on the extent to which the writing of programs is an art, a craft or an engineering discipline.[1]
+Another ongoing debate is the extent to which the programming language used in writing programs affects the form that the final program takes. 
+This debate is analogous to that surrounding the Sapir Whorf hypothesis in linguistics.
+
+Programmers
+
+Computer programmers are those who write computer software. 
+Their job usually involves: Requirements analysis, Specification, Software architecture, Coding, Compilation, Software testing, Documentation, Integration, Maintenance.
+
+Programming languages
+ 
+Different programming languages support different styles of programming (called programming paradigms). 
+The choice of language used may be an individual's choice or may be dictated by company policy. 
+Ideally the programming language best suited for the task at hand will be selected. 
+Trade-offs from this ideal involve finding enough programmers, who know the language, to build a team, the availability of compilers for that language, and the efficiency with which programs written in a given language execute.
+
+History of programming
+
+The earliest programmable machine (that is, a machine that can adjust its capabilities based upon changing its "program") can be said to be the Jacquard Loom, which was developed in 1801. 
+The machine used a series of pasteboard cards with holes punched in them. 
+The hole pattern represented the pattern that the loom had to follow in weaving cloth. 
+The loom could produce entirely different weaves using different sets of cards. 
+This innovation was later refined by Herman Hollerith of IBM in the development of the famous IBM punch card. 
+These were used with a variety of machines called unit record equipment to perform data processing tasks. 
+The unit record equipment were programmed by changing the wiring of plug-boards. 
+Early computers used similar programming methods.
+The invention of the Von Neumann architecture allowed programs to be stored in computer memory. 
+Early programs had to be painstakingly crafted using the instructions of the particular machine, often in binary notation. 
+Every model of computer would be likely to need different instructions to do the same task. 
+Later assembly languages were developed that let the programmer specify each instruction in a text format, entering abbreviations for each operation code instead of a number and specifying addresses in symbolic form (e.g. ADD X, TOTAL). 
+In 1954 Fortran, the first higher level programming language, was invented. 
+This allowed programmers to specify calculations by entering a formula directly (e.g. Y = X*2 + 5*X + 9). 
+The program text, or source, was converted into machine instructions using a special program called a compiler. 
+Many other languages were developed, including ones for commercial programming, such as COBOL. 
+Programs were mostly still entered using punch cards or paper tape. 
+(See computer programming in the punch card era). 
+In the mid-1970s, mass storage devices and computer terminals became inexpensive enough so programs could be created by typing directly into the computers. 
+Text editors were developed that allowed changes and corrections to be made much more easily than with punch cards.
+As time has progressed computers have made giant leaps in the area of processing power. 
+This has brought about newer programming languages that are more abstracted from the underlying hardware. 
+Although these more abstracted languages require additional overhead, in most cases the huge increase in speed of modern computers has brought about little performance decrease compared to earlier counterparts. 
+The benefits of these more abstracted languages is that they allow both an easier learning curve for people less familiar with the older lower-level programming languages, and they also allow a more experienced programmer to develop simple applications quickly. 
+Despite these benefits, large complicated programs, and programs that are more dependent on speed still require the faster and relatively lower-level languages with todays hardware. 
+(The same concerns were raised about the original Fortran language.)
+Throughout the second half of the twentieth century, programming was an attractive career in most developed countries. 
+Some forms of programming have been increasingly subject to offshore outsourcing (importing software and services from other countries, usually at a lower wage), making programming career decisions in developed countries more complicated, while increasing economic opportunities in less developed areas. 
+It is unclear how far this trend will continue and how deeply it will impact programmer wages and opportunities. 
+Despite the "outsourcing trend" it can be argued that some of the richest persons on the globe are programmers by profession. 
+Examples: Bill Gates (Microsoft), Larry Ellison (Oracle), Larry Page (Google), Hasso Plattner (SAP) and so on. 
+Programming is clearly a leading-edge craftsmanship that continues to reward its practitioners both in countries such as India and developed countries like the USA or Germany.
+
+Modern Programming
+
+Methodologies
+
+The first step in every software development project should be requirements analysis, followed by modeling, implementation and failure elimination (debugging). 
+There exist a lot of differing approaches for each of those tasks; with the most popular modeling technique being Object-Oriented Analysis and Design (OOAD) and Model-Driven Architecture (MDA). 
+The Unified Modeling language (UML) is a notation used for OOAD. 
+A similar technique used for database design is Entity-Relationship Modeling (ER Modeling). 
+Implementation techniques include imperative languages (object-oriented or procedural), functional languages and logic languages. 
+Debugging is most often done with IDEs like Visual Studio, and Eclipse. 
+Separate debuggers like gdb are also used.
+
+Modern Languages
+
+The most popular programming languages in the 21st century are C, C++, C#, Cobol, Fortran, Java, PHP and Python. 
+Many languages have evolved from C, such as C++, C#, and Java. 
+Java, C# and Python are popular because programs written in them are executed in a virtual machine, avoiding many of the problems of lower-level languages such as C, C++ or Assembler, such as buffer overruns and invalid pointers. 
+However, most PC desktop applications such as word processors or image manipulation programs are written in more runtime and memory efficient languages like C, C++, and Delphi. 
+Operating systems are almost exclusively written in low-level programming languages like C, C++, or Assembler, since speed is necessary in components like context switching, process and thread management, and memory management. 
+Scientific applications are often implemented in Fortran because very efficient optimization (using optimizing Compilers) is possible for arithmetic. 
+Cobol is still very strong in the corporate data center, mainly on large Mainframe computers. 
+PHP and Java excel in database-oriented applications which are often delivered over the internet or corporate intranets. 
+Python, while being a general purpose programming language, is mostly used in system administration and web programming.
+
+Debugging
+
+Debugging is a very important task for every programmer, because an erroneous program is often useless. 
+Languages like C++ and Assembler are very challenging even to expert programmers because of failure modes like Buffer overruns, bad pointers or uninitialized memory. 
+A buffer overrun can damage adjacent memory regions and cause a failure in a totally different program line. 
+Because of those memory issues tools like Valgrind, Purify or Boundschecker are virtually a necessity for modern software development in the C++ language. 
+Languages such as Java, PHP and Python protect the programmer from most of these runtime failure modes, but this comes at the price of a dramatically lower execution speed of the resulting program. 
