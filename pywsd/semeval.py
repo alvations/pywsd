@@ -13,16 +13,19 @@ class SemEval2007_Coarse_WSD:
     USAGE:
     
     >>> coarse_wsd = SemEval2007_Coarse_WSD()
-    >>> for inst, sent, docs in coarse_wsd:
+    >>> for inst, ans, sent, doc in coarse_wsd:
     ...     print inst
     ...     print inst.id, inst.lemma, inst.word
+    ...     print ans.sensekey
     ...     break
     instance(id=u'd001.s001.t001', lemma=u'editorial', word=u'editorial')
     d001.s001.t001 editorial editorial
+    [u'editorial%1:10:00::']
     """
     def __init__(self):
         self.path = 'corpus/semeval2007_coarse_grain_wsd/'
         self.test_file = self.path + 'eng-coarse-all-words.xml'
+        self.test_ans = self.path + 'dataset21.test.key'
         
     def fileids(self):
         """ Returns files from SemEval2007 Coarse-grain All-words WSD task. """
@@ -37,12 +40,30 @@ class SemEval2007_Coarse_WSD:
             for line in fin:
                 yield line.strip()
 
+    def get_answers(self):
+        """
+        Returns a {(key,value), ...} dictionary of {(instance_id,Answer),...)}
+        """
+        inst2ans = {}
+        Answer = namedtuple('answer', 'sensekey, lemma, pos')
+        with io.open(self.test_ans, 'r') as fin:
+            for line in fin:
+                line, _, lemma = line.strip().rpartition(' !! ')
+                lemma, pos = lemma[6:].split('#')
+                textid, _, line = line.partition(' ')
+                instid, _, line = line.partition(' ')
+                sensekey = line.split()
+                inst2ans[instid] = Answer(sensekey, lemma, pos)
+        return inst2ans
+
     def test_instances(self):
         """
         Returns the test instances from SemEval2007 Coarse-grain WSD task.
         """
         Instance = namedtuple('instance', 'id, lemma, word')
         test_file = io.open(self.test_file, 'r').read()
+        inst2ans = self.get_answers()
+        
         for text in bsoup(test_file).findAll('text'):
             textid = text['id']
             document = " ".join([remove_tags(i) for i in str(text).split('\n') 
@@ -55,8 +76,8 @@ class SemEval2007_Coarse_WSD:
                     lemma = instance['lemma']
                     word = instance.text
                     inst = Instance(instid, lemma, word)
-                    yield inst, unicode(sentence), unicode(document) 
+                    yield inst, inst2ans[instid], unicode(sentence), unicode(document)
     
     def __iter__(self):
         """ Iterator function, duck-type of test_instances() """
-        self.test_instances()
+        return self.test_instances()
