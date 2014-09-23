@@ -4,7 +4,7 @@ import os, io
 from collections import namedtuple
 
 from BeautifulSoup import BeautifulSoup as bsoup
-from utils import remove_tags
+from utils import remove_tags, semcor_to_synset
 
 class SemEval2007_Coarse_WSD:
     """
@@ -53,6 +53,8 @@ class SemEval2007_Coarse_WSD:
                 textid, _, line = line.partition(' ')
                 instid, _, line = line.partition(' ')
                 sensekey = line.split()
+                # What to do if there is no synset to convert to...
+                # synsetkey = [semcor_to_synset(i) for i in sensekey]
                 inst2ans[instid] = Answer(sensekey, lemma, pos)
         return inst2ans
 
