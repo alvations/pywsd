@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!ELEMENT corpus (text+)>
+<!ATTLIST corpus lang CDATA #REQUIRED>
+
+<!ELEMENT text (sentence+)>
+<!ATTLIST text id ID #REQUIRED>
+
+<!ELEMENT sentence (#PCDATA | instance)*>
+<!ATTLIST sentence id ID #REQUIRED>
+
+<!ELEMENT instance (#PCDATA)>
+<!ATTLIST instance id ID #REQUIRED>
+<!ATTLIST instance lemma CDATA #REQUIRED>
+<!ATTLIST instance pos (a|n|v|r) #REQUIRED>
