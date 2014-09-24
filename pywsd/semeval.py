@@ -43,6 +43,11 @@ class SemEval2007_Coarse_WSD:
     def get_answers(self):
         """
         Returns a {(key,value), ...} dictionary of {(instance_id,Answer),...)}
+        >>> coarse_wsd = SemEval2007_Coarse_WSD()
+        >>> inst2ans = coarse_wsd.get_answers()
+        >>> for inst in inst2ans:
+        ...    print inst, inst2ans[inst
+        ...    break
         """
         inst2ans = {}
         Answer = namedtuple('answer', 'sensekey, lemma, pos')
@@ -61,6 +66,13 @@ class SemEval2007_Coarse_WSD:
     def test_instances(self):
         """
         Returns the test instances from SemEval2007 Coarse-grain WSD task.
+        
+        >>> coarse_wsd = SemEval2007_Coarse_WSD()
+        >>> inst2ans = coarse_wsd.get_answers()
+        >>> for inst in inst2ans:
+        ...    print inst, inst2ans[inst]
+        ...    break
+        d004.s073.t013 answer(sensekey=[u'pointer%1:06:01::', u'pointer%1:06:00::', u'pointer%1:10:00::'], lemma=u'pointer', pos=u'n')
         """
         Instance = namedtuple('instance', 'id, lemma, word')
         test_file = io.open(self.test_file, 'r').read()
@@ -83,3 +95,4 @@ class SemEval2007_Coarse_WSD:
     def __iter__(self):
         """ Iterator function, duck-type of test_instances() """
         return self.test_instances()
+
