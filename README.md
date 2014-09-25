@@ -60,6 +60,9 @@ a financial institution that accepts deposits and channels the money into lendin
 Change Log
 =====
 
+**25.10.14**:
+* Added corpus readers for SemEval-2007 coarse-grain WSD data and SemCor
+
 **29.05.14** (user request):
 * Automatically lemmatize `ambiguous_word` parameter because without it being a lemma, `wn.synsets(ambiguous_word)` breaks the system.
 
