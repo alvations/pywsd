@@ -25,7 +25,7 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
 
 * **Graph based Models** (in wishlist)
   * Babelfly (Moro et al. 2014)
-  * 
+  * UKB (Agirre and Soroa, 2009)
 
 * **Baselines**
   * Random sense
@@ -122,4 +122,7 @@ Joint Conference on Artificial Intelligence, pages 805–810, Acapulco.
 * Zhi Zhong and Hwee Tou Ng. 2010. It makes sense: a wide-coverage word sense disambiguation system for free text. In Proceedings of the ACL 2010 System Demonstrations (ACLDemos '10). Association for Computational Linguistics, Stroudsburg, PA, USA, 78-83.
 
 * Steven Bird, Ewan Klein, and Edward Loper. 2009. Natural Language Processing with Python (1st ed.). O'Reilly Media, Inc..
+
+* Eneko Agirre and Aitor Soroa. 2009. Personalizing PageRank for Word Sense Disambiguation. Proceedings of the 12th conference of the European chapter of the Association for Computational Linguistics (EACL-2009). Athens, Greece. 
+
 
