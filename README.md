@@ -8,19 +8,25 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
   * Adapted/Extended Lesk (Banerjee and Pederson, 2002/2003)
   * Simple Lesk (with definition, example(s) and hyper+hyponyms)
   * Cosine Lesk (use cosines to calculate overlaps instead of using raw counts)
-  * Enhanced Lesk (Basile et al. 2014) (in progress...)
+  * Enhanced Lesk (Basile et al. 2014) (in wishlist)
+  
 * **Maximizing Similarity** (see also, http://goo.gl/MG8ZpE)
   * Path similarity (Wu-Palmer, 1994; Leacock and Chodorow, 1998)
   * Information Content (Resnik, 1995; Jiang and Corath, 1997; Lin, 1998)
+  
 * **Supervised WSD** (in progress)
   * SVM WSD (Lee, Ng and Chia 2004)
   * It Makes Sense (IMS) (Zhong and Ng, 2010) 
+ 
 * **Vector Space Models** (in progress)
   * LSI/LSA
   * Topic Models, LDA (Li et al. 2012)
   * NMF
+
 * **Graph based Models** (in wishlist)
   * Babelfly (Moro et al. 2014)
+  * 
+
 * **Baselines**
   * Random sense
   * First NLTK sense
