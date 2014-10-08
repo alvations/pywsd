@@ -11,7 +11,7 @@ Instance = namedtuple('instance', 'id, term, context_sent, context_para')
 
 class SemCorpus:
     def __init__(self):
-        self.path = 'corpus/semcor3.0_naf/'
+        self.path = 'data/semcor3.0_naf/'
     
     
     def fileids(self, flatten=True):

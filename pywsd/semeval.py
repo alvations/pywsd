@@ -23,7 +23,7 @@ class SemEval2007_Coarse_WSD:
     [u'editorial%1:10:00::']
     """
     def __init__(self):
-        self.path = 'corpus/semeval2007_coarse_grain_wsd/'
+        self.path = 'data/semeval2007_coarse_grain_wsd/'
         self.test_file = self.path + 'eng-coarse-all-words.xml'
         self.test_ans = self.path + 'dataset21.test.key'
         
