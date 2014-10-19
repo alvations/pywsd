@@ -81,3 +81,5 @@ class SVMTrainer(object):
  
         # Lagrange multipliers
         return np.ravel(solution['x'])
+    
+# test test
