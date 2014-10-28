@@ -8,7 +8,7 @@ from utils import remove_tags, semcor_to_synset
 
 Instance = namedtuple('instance', 'id, lemma, word')
 Term = namedtuple('term', 'id, pos, lemma, sense, type')
-Word = namedtuple('word', 'id, text, offset, sentid, paraid, term')
+Word = namedtuple('word', 'id, text, sentid, paraid, term')
 Answer = namedtuple('answer', 'sensekey, lemma, pos')
 
 #Instance = namedtuple('instance', 'id, term, context_sent, context_para')
@@ -127,10 +127,6 @@ class SemEval2007_Coarse_WSD:
                 word = instance.text
                 instances[instid] = Instance(instid, lemma, word)
             
-        
-            Term = namedtuple('term', 'id, pos, lemma, sense, type')
-            Word = namedtuple('word', 'id, text, offset, sentid, paraid, term')
-            
             tokens = []
             for i in sent: # Iterates through BeautifulSoup object.
                 if str(i).startswith('<instance'): # BeautifulSoup.Tag
@@ -143,7 +139,7 @@ class SemEval2007_Coarse_WSD:
                                        'coarse-grain WSD, see term.sense', 
                                        sentid, textid, term))
                 else: # if BeautifulSoup.NavigableString
-                    tokens+=[Word(None, w, None, sentid, textid, None) 
+                    tokens+=[Word(None, w, sentid, textid, None) 
                              for w in i.split()]
             yield tokens
     

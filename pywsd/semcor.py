@@ -9,7 +9,7 @@ from utils import remove_tags, semcor_to_synset, offset_to_synset
 
 Instance = namedtuple('instance', 'id, term, context_sent, context_para')
 Term = namedtuple('term', 'id, pos, lemma, sense, type')
-Word = namedtuple('word', 'id, text, offset, sentid, paraid, term')
+Word = namedtuple('word', 'id, text, sentid, paraid, term')
 
 class SemCorpus:
     def __init__(self, path='data/semcor3.0_naf/'):
@@ -66,8 +66,7 @@ class SemCorpus:
                     #       are punctuation.
                     term=Term(id=wordid, pos=u'PUNCT', lemma=None, 
                               sense=None, type=u'punct')                    
-                w = Word(wordid, word.text, word.get('offset'), 
-                         sentid, paraid, term)
+                w = Word(wordid, word.text, sentid, paraid, term)
                 wordid2meta[wordid] = w
                 sentences[sentid].append(wordid)
                 paragraphs[paraid].append(sentid)
