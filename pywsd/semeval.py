@@ -6,6 +6,14 @@ from collections import namedtuple
 from BeautifulSoup import BeautifulSoup as bsoup
 from utils import remove_tags, semcor_to_synset
 
+Instance = namedtuple('instance', 'id, lemma, word')
+Term = namedtuple('term', 'id, pos, lemma, sense, type')
+Word = namedtuple('word', 'id, text, offset, sentid, paraid, term')
+Answer = namedtuple('answer', 'sensekey, lemma, pos')
+
+#Instance = namedtuple('instance', 'id, term, context_sent, context_para')
+#Term = namedtuple('term', 'id, pos, lemma, sense, type')
+
 class SemEval2007_Coarse_WSD:
     """
     Object to load data from SemEval-2007 Coarse-grain all-words WSD task.
@@ -22,8 +30,8 @@ class SemEval2007_Coarse_WSD:
     d001.s001.t001 editorial editorial
     [u'editorial%1:10:00::']
     """
-    def __init__(self):
-        self.path = 'data/semeval2007_coarse_grain_wsd/'
+    def __init__(self, path='data/semeval2007_coarse_grain_wsd/'):
+        self.path = path
         self.test_file = self.path + 'eng-coarse-all-words.xml'
         self.test_ans = self.path + 'dataset21.test.key'
         
@@ -50,7 +58,7 @@ class SemEval2007_Coarse_WSD:
         ...    break
         """
         inst2ans = {}
-        Answer = namedtuple('answer', 'sensekey, lemma, pos')
+        
         with io.open(self.test_ans, 'r') as fin:
             for line in fin:
                 line, _, lemma = line.strip().rpartition(' !! ')
@@ -62,7 +70,21 @@ class SemEval2007_Coarse_WSD:
                 # synsetkey = [semcor_to_synset(i) for i in sensekey]
                 inst2ans[instid] = Answer(sensekey, lemma, pos)
         return inst2ans
-
+    
+    def yield_sentences(self):
+        test_file = io.open(self.test_file, 'r').read()
+        inst2ans = self.get_answers()        
+        for text in bsoup(test_file).findAll('text'):
+            if not text:
+                continue
+            textid = text['id']
+            context_doc = " ".join([remove_tags(i) for i in 
+                                    str(text).split('\n') if remove_tags(i)])
+            for sent in text.findAll('sentence'):
+                context_sent =  " ".join([remove_tags(i) for i in 
+                                      str(sent).split('\n') if remove_tags(i)])
+                yield sent, context_sent, context_doc, inst2ans, textid
+                
     def test_instances(self):
         """
         Returns the test instances from SemEval2007 Coarse-grain WSD task.
@@ -74,25 +96,59 @@ class SemEval2007_Coarse_WSD:
         ...    break
         d004.s073.t013 answer(sensekey=[u'pointer%1:06:01::', u'pointer%1:06:00::', u'pointer%1:10:00::'], lemma=u'pointer', pos=u'n')
         """
-        Instance = namedtuple('instance', 'id, lemma, word')
-        test_file = io.open(self.test_file, 'r').read()
-        inst2ans = self.get_answers()
+        for sent, context_sent, context_doc, inst2ans, textid in self.yield_sentences():
+            for instance in sent.findAll('instance'):
+                instid = instance['id']
+                lemma = instance['lemma']
+                word = instance.text
+                inst = Instance(instid, lemma, word)
+                yield inst, inst2ans[instid], 
+                unicode(context_sent), unicode(context_doc)
+
+    def sentences(self):
+        """
+        Returns the instances by sentences, and yields a list of tokens,
+        similar to the pywsd.semcor.sentences.
         
-        for text in bsoup(test_file).findAll('text'):
-            textid = text['id']
-            document = " ".join([remove_tags(i) for i in str(text).split('\n') 
-                                 if remove_tags(i)])
-            for sent in text.findAll('sentence'):
-                sentence =  " ".join([remove_tags(i) for i in 
-                                      str(sent).split('\n') if remove_tags(i)])
-                for instance in sent.findAll('instance'):
-                    instid = instance['id']
-                    lemma = instance['lemma']
-                    word = instance.text
-                    inst = Instance(instid, lemma, word)
-                    yield inst, inst2ans[instid], unicode(sentence), unicode(document)
+        >>> coarse_wsd = SemEval2007_Coarse_WSD()
+        >>> for sent in coarse_wsd.sentences():
+        >>>     for token in sent:
+        >>>         print token
+        >>>         break
+        >>>     break
+        word(id=None, text=u'Your', offset=None, sentid=0, paraid=u'd001', term=None)
+        """
+        for sentid, ys in enumerate(self.yield_sentences()):
+            sent, context_sent, context_doc, inst2ans, textid = ys
+            instances = {}
+            for instance in sent.findAll('instance'):
+                instid = instance['id']
+                lemma = instance['lemma']
+                word = instance.text
+                instances[instid] = Instance(instid, lemma, word)
+            
+        
+            Term = namedtuple('term', 'id, pos, lemma, sense, type')
+            Word = namedtuple('word', 'id, text, offset, sentid, paraid, term')
+            
+            tokens = []
+            for i in sent: # Iterates through BeautifulSoup object.
+                if str(i).startswith('<instance'): # BeautifulSoup.Tag
+                    instid = sent.find('instance')['id']
+                    inst = instances[instid]
+                    answer = inst2ans[instid]
+                    term = Term(instid, answer.pos, inst.lemma, answer.sensekey, 
+                                type='open')
+                    tokens.append(Word(instid, inst.word, 
+                                       'coarse-grain WSD, see term.sense', 
+                                       sentid, textid, term))
+                else: # if BeautifulSoup.NavigableString
+                    tokens+=[Word(None, w, None, sentid, textid, None) 
+                             for w in i.split()]
+            yield tokens
     
     def __iter__(self):
         """ Iterator function, duck-type of test_instances() """
-        return self.test_instances()
+        return self.sentences()
+
 

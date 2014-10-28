@@ -43,6 +43,3 @@ def semcor_to_offset(sensekey):
     offset = '%08d-%s' % (synset.offset, synset.pos)
     return offset
 
-
-
-
