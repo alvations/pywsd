@@ -117,7 +117,7 @@ def original_lesk(context_sentence, ambiguous_word, dictionary=None):
     if not dictionary:
         dictionary = {}
         for ss in wn.synsets(ambiguous_word):
-            try: ss_definition = ss.denfinition().split()
+            try: ss_definition = ss.definition().split()
             except: ss_definition = ss.definition.split()
             dictionary[ss] = ss_definition
     best_sense = compare_overlaps_greedy(context_sentence.split(), dictionary)
