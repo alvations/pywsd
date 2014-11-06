@@ -136,10 +136,10 @@ def simple_signature(ambiguous_word, pos=None, stem=True, \
     for ss in wn.synsets(ambiguous_word):
         # If POS is specified.
         try:
-            if pos and str(ss.pos()) == pos:
+            if pos and str(ss.pos()) != pos:
                 continue
         except:
-            if pos and str(ss.pos) == pos:
+            if pos and str(ss.pos) != pos:
                 continue
         
         signature = []
