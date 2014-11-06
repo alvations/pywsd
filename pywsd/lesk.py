@@ -113,9 +113,13 @@ def original_lesk(context_sentence, ambiguous_word, dictionary=None):
     sense of each word. See http://goo.gl/8TB15wb
     """
     ambiguous_word = lemmatize(ambiguous_word)
+    # If dictionary is not provided, use the WN defintion.
     if not dictionary:
-        dictionary = {ss:ss.definition.split() for ss \
-                      in wn.synsets(ambiguous_word)}
+        dictionary = {}
+        for ss in wn.synsets(ambiguous_word):
+            try: ss_definition = ss.denfinition().split()
+            except: ss_definition = ss.definition.split()
+            dictionary[ss] = ss_definition
     best_sense = compare_overlaps_greedy(context_sentence.split(), dictionary)
     return best_sense    
 
