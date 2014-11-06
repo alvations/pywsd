@@ -132,11 +132,12 @@ def simple_signature(ambiguous_word, pos=None, stem=True, \
     for ss in wn.synsets(ambiguous_word):
         # If POS is specified.
         try:
-            if pos and str(ss.pos()) is not pos:
+            if pos and str(ss.pos()) == pos:
                 continue
         except:
-            if pos and str(ss.pos) is not pos:
+            if pos and str(ss.pos) == pos:
                 continue
+        
         signature = []
         # Includes definition.
         try: signature+= ss.definition().split()
@@ -160,6 +161,7 @@ def simple_signature(ambiguous_word, pos=None, stem=True, \
         if stem == True: 
             signature = [porter.stem(i) for i in signature]
         synsets_signatures[ss] = signature
+    
     return synsets_signatures
 
 def simple_lesk(context_sentence, ambiguous_word, \
@@ -207,8 +209,9 @@ def adapted_lesk(context_sentence, ambiguous_word, \
         except:
             signature = list([j for j in chain(*[i.lemma_names for i in \
                       related_senses]) if j not in stopwords.words('english')])
+   
     # Matching exact words causes sparsity, so optional matching for stems.
-    if stem == True: 
+    if stem == True:
         signature = [porter.stem(i) for i in signature]
     ss_sign[ss]+=signature
   
