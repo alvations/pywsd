@@ -3,4 +3,6 @@
 import lesk
 import baseline
 import similarity
-import corpus
+
+import semcor
+import semeval

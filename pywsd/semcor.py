@@ -30,6 +30,7 @@ class SemCorpus:
         Reads a single SemCor file in NLP Annotation Format (NAF).
         """
         with io.open(filename, 'r') as fin:
+            print filename
             xml = fin.read() # What happen if IOError: [Errno 5] Input/output error?? WTF is Errno5 !!@$!%#@^$& ???!!!!@#$!%@
             text = bsoup(xml).find('text')
             terms = bsoup(xml).find('terms')

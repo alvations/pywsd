@@ -8,7 +8,7 @@ semcor = SemCorpus('pywsd/data/semcor3.0_naf')
 for filename, sentence in semcor:
     context_sent_str = [i.text for i in sentence]
     context_sent_pos = [i.term.pos for i in sentence]
-    print sentence
+    #print sentence
 
 
 ######################################################################
