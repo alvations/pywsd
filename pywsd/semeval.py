@@ -11,8 +11,6 @@ Term = namedtuple('term', 'id, pos, lemma, sense, type')
 Word = namedtuple('word', 'id, text, sentid, paraid, term')
 Answer = namedtuple('answer', 'sensekey, lemma, pos')
 
-#Instance = namedtuple('instance', 'id, term, context_sent, context_para')
-#Term = namedtuple('term', 'id, pos, lemma, sense, type')
 
 class SemEval2007_Coarse_WSD:
     """
@@ -136,11 +134,10 @@ class SemEval2007_Coarse_WSD:
                     term = Term(instid, answer.pos, inst.lemma, answer.sensekey, 
                                 type='open')
                     tokens.append(Word(instid, inst.word, 
-                                       'coarse-grain WSD, see term.sense', 
                                        sentid, textid, term))
                 else: # if BeautifulSoup.NavigableString
                     tokens+=[Word(None, w, sentid, textid, None) 
-                             for w in i.split()]
+                             for w in i.split()] 
             yield tokens
     
     def __iter__(self):
