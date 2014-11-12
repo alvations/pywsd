@@ -1,4 +1,10 @@
 #!/usr/bin/env python -*- coding: utf-8 -*-
+#
+# Python Word Sense Disambiguation (pyWSD)
+#
+# Copyright (C) 2014 alvations
+# URL:
+# For license information, see LICENSE.md
 
 bank_sents = ['I went to the bank to deposit my money',
 'The river bank was full of dead fishes']
