@@ -1,6 +1,6 @@
 #!/usr/bin/env python -*- coding: utf-8 -*-
 #
-# Python Word Sense Disambiguation (pyWSD)
+# Python Word Sense Disambiguation (pyWSD): WSD by maximizing similarity
 #
 # Copyright (C) 2014 alvations
 # URL:
