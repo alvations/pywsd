@@ -1,4 +1,10 @@
 #!/usr/bin/python -*- coding: utf-8 -*-
+#
+# Python Word Sense Disambiguation (pyWSD): Merlin tests
+#
+# Copyright (C) 2014 alvations
+# URL:
+# For license information, see LICENSE.md
 
 from merlin import SimpleDataSet 
 

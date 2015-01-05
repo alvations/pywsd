@@ -1,11 +1,17 @@
 #!/usr/bin/python -*- coding: utf-8 -*-
-
-import numpy as np
+#
+# Merlin - Almost Pure Python Machine Learning Library: Simple Data Set
+#
+# Copyright (C) 2014-2015 alvations
+# URL:
+# For license information, see LICENSE.md
 
 """
 This class generates a 2D dataset with two classes, "positive" and "negative".
 Each class follows a Gaussian distribution.
 """
+
+import numpy as np
 
 class SimpleDataSet:
     """ 

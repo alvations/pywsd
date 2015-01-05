@@ -1,4 +1,11 @@
 #!/usr/bin/python -*- coding: utf-8 -*-
+#
+# Merlin - Almost Pure Python Machine Learning Library: SVM Classifier
+#
+# Copyright (C) 2014-2015 alvations
+# URL:
+# For license information, see LICENSE.md
+
 
 import numpy as np
 from linear_classifier import LinearClassifier
