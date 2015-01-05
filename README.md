@@ -34,7 +34,7 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
 
 (**NOTE**: requires `NLTK`, goto http://nltk.org/install.html. Also, note that as of 30.10.13, NLTK has changed `Synset` object properties to methods, see http://goo.gl/hO79KO)
 
-As a bonus, `pyWSD` comes with an almost pure python implementations of several classification algorithms within the `Merlin` machine learning library, see https://github.com/alvations/pywsd/tree/master/merlin
+As a bonus, `pyWSD` comes with an almost native python implementations of several classification algorithms within the `Merlin` machine learning library, see https://github.com/alvations/pywsd/tree/master/merlin
 
 
 ***
