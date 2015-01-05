@@ -1,6 +1,6 @@
 #!/usr/bin/python -*- coding: utf-8 -*-
 #
-# Merlin - Almost Pure Python Machine Learning Library: Simple Data Set
+# Merlin - Almost Native Python Machine Learning Library: Simple Data Set
 #
 # Copyright (C) 2014-2015 alvations
 # URL:

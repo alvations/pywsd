@@ -1,7 +1,7 @@
 merlin
 ======
 
-Almost pure python implementations of supervised machine learning algorithms, includes:
+Almost native python implementations of supervised machine learning algorithms, includes:
 
 - MIRA
 - Naive Bayes (Gaussian/Multinomial)

@@ -1,6 +1,6 @@
 #!/usr/bin/python -*- coding: utf-8 -*-
 #
-# Merlin - Almost Pure Python Machine Learning Library: Naive Bayes Classifer
+# Merlin - Almost Native Python Machine Learning Library: Naive Bayes Classifer
 #
 # Copyright (C) 2014-2015 alvations
 # URL:
