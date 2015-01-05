@@ -2,7 +2,7 @@
 #
 # Python Word Sense Disambiguation (pyWSD): SemEval REader API
 #
-# Copyright (C) 2014 alvations
+# Copyright (C) 2014-2015 alvations
 # URL:
 # For license information, see LICENSE.md
 
