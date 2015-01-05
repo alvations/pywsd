@@ -15,5 +15,5 @@ setup(
     description='Python WSD',
     long_description='Python Implementations of Word Sense Disambiguation (WSD) technologies',
     license="MIT",
-    install_requires = ['nltk']
+    install_requires = ['nltk', 'numpy']
 )
