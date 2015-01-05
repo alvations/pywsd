@@ -2,6 +2,10 @@
 Change Log
 =====
 
+**05.01.15**:
+* Removed old `svm.py`.
+* Added Merlin Machine Learning library to support SVM. 
+
 **06.11.14**:
 * Fixed bugs in original_lesk() and POS checks in simple_lesk()
 
