@@ -12,5 +12,8 @@ setup(
     name='pywsd',
     version='0.1',
     packages=['pywsd',],
+    description='Python WSD',
     long_description='Python Implementations of Word Sense Disambiguation (WSD) technologies',
+    license="MIT",
+    install_requires = ['nltk']
 )
