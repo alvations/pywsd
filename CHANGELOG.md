@@ -4,6 +4,7 @@ Change Log
 
 **14.01.15**
 * Added all-words WSD functionality
+* Added disambiguate() for all-words WSD
 
 **05.01.15**:
 * Removed old `svm.py`.
