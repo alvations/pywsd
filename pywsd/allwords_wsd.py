@@ -8,7 +8,7 @@
 
 from string import punctuation
 
-from nltk import word_tokenize
+from nltk import word_tokenize, pos_tag
 from nltk.corpus import wordnet as wn
 from nltk.corpus import stopwords
 
@@ -28,26 +28,31 @@ stopwords = stopwords.words('english') + list(punctuation)
 
 def disambiguate(sentence, algorithm=simple_lesk, 
                  context_is_lemmatized=False, similarity_option='path',
-                 prefersNone=False):
+                 keepLemma=False, prefersNone=False):
     tagged_sentence = []
     # Pre-lemmatize the sentnece before WSD
     if not context_is_lemmatized:
-        sentence = " ".join(lemmatize(w) for w in word_tokenize(sentence.lower()))
-    for word in sentence.split():
-        if word not in stopwords: # Checks if it is a content word 
+        lemma_sentence = " ".join(lemmatize(w) for w in word_tokenize(sentence.lower()))
+    else:
+        lemma_sentence = sentence
+    for word, lemma in zip(sentence.split(), lemma_sentence.split()):
+        if lemma not in stopwords: # Checks if it is a content word 
             try:
-                wn.synsets(word)[0]
+                wn.synsets(lemma)[0]
                 if algorithm == original_lesk: # Note: Original doesn't care about lemmas
-                    synset = algorithm(sentence, word)
+                    synset = algorithm(lemma_sentence, lemma)
                 elif algorithm == max_similarity:                    
-                    synset = algorithm(sentence, word, option=similarity_option)
+                    synset = algorithm(lemma_sentence, lemma, option=similarity_option)
                 else:
-                    synset = algorithm(sentence, word, context_is_lemmatized=True)
+                    synset = algorithm(lemma_sentence, lemma, context_is_lemmatized=True)
             except: # In case the content word is not in WordNet
                 synset = '#NOT_IN_WN#'
         else:
             synset = '#STOPWORD/PUNCTUATION#'
-        tagged_sentence.append((word, synset))
+        if keepLemma:
+            tagged_sentence.append((word, lemma, synset))
+        else:
+            tagged_sentence.append((word, synset))
     # Change #NOT_IN_WN# and #STOPWORD/PUNCTUATION# into None.
     if prefersNone:
         tagged_sentence = [(word, None) if str(tag).startswith('#') 

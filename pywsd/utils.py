@@ -77,7 +77,7 @@ def stem(word, option="wnlemma")
     return porter.stem(word)
 '''
 
-def lemmatize(ambiguous_word, neverstem=False):
+def lemmatize(ambiguous_word, pos=None, neverstem=False):
     """
     Tries to convert a surface word into lemma, and if lemmatize word is not in
     wordnet then try and convert surface word into its stem.
@@ -85,7 +85,10 @@ def lemmatize(ambiguous_word, neverstem=False):
     This is to handle the case where users input a surface word as an ambiguous 
     word and the surface word is a not a lemma.
     """
-    lemma = wnl.lemmatize(ambiguous_word)
+    if pos:
+        lemma = wnl.lemmatize(ambiguous_word, pos=pos)
+    else:
+        lemma = wnl.lemmatize(ambiguous_word)
     stem = porter.stem(ambiguous_word)
     # Ensure that ambiguous word is a lemma.
     if not wn.synsets(lemma):
