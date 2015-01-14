@@ -50,4 +50,19 @@ for sentence in brown.sents()[0:1]:
     print disambiguate(sentence, max_similarity, similarity_option='res')
     print disambiguate(sentence, max_similarity, similarity_option='jcn')
     print disambiguate(sentence, max_similarity, similarity_option='lin')
+    
+''' 
+# TODO: do proper doctests...
+
+# Lemma options and None when no Synset.
+>>> disambiguate('I went to the bank to deposit my money')
+[('I', '#STOPWORD/PUNCTUATION#'), ('went', Synset('go.v.28')), ('to', '#STOPWORD/PUNCTUATION#'), ('the', '#STOPWORD/PUNCTUATION#'), ('bank', Synset('depository_financial_institution.n.01')), ('to', '#STOPWORD/PUNCTUATION#'), ('deposit', Synset('deposit.n.04')), ('my', '#STOPWORD/PUNCTUATION#'), ('money', Synset('money.n.03'))]
+>>> disambiguate('I went to the bank to deposit my money', prefersNone=True, keepLemmas=True)
+[('I', 'i', None), ('went', 'went', Synset('go.v.28')), ('to', 'to', None), ('the', 'the', None), ('bank', 'bank', Synset('depository_financial_institution.n.01')), ('to', 'to', None), ('deposit', 'deposit', Synset('deposit.n.04')), ('my', 'my', None), ('money', 'money', Synset('money.n.03'))]
+# Using alternative algorithms.
+>>> disambiguate('I went to the bank to deposit my money', algorithm=cosine_lesk, prefersNone=True)
+[('I', None), ('went', Synset('travel.v.01')), ('to', None), ('the', None), ('bank', Synset('bank.v.05')), ('to', None), ('deposit', Synset('down_payment.n.01')), ('my', None), ('money', Synset('money.n.01'))]
+>>> disambiguate('I went to the bank to deposit my money', algorithm=maxsim, similarity_option='wup', prefersNone=True)
+[('I', None), ('went', Synset('sound.v.02')), ('to', None), ('the', None), ('bank', Synset('deposit.v.02')), ('to', None), ('deposit', Synset('deposit.v.02')), ('my', None), ('money', Synset('money.n.01'))]
+'''
  
