@@ -14,6 +14,8 @@ from nltk.corpus import wordnet as wn
 from nltk.corpus import wordnet_ic as wnic
 from nltk.tokenize import word_tokenize
 
+from utils import lemmatize
+
 def similarity_by_path(sense1, sense2, option="path"):
     """ Returns maximum path similarity between two senses. """
     if option.lower() in ["path", "path_similarity"]: # Path similaritys
@@ -72,13 +74,16 @@ def sim(sense1, sense2, option="path"):
         return similarity_by_infocontent(sense1, sense2, option)
 
 def max_similarity(context_sentence, ambiguous_word, option="path", 
-                   pos=None, best=True):
+                   lemma=True, pos=None, best=True):
     """
     Perform WSD by maximizing the sum of maximum similarity between possible 
     synsets of all words in the context sentence and the possible synsets of the 
     ambiguous words (see http://goo.gl/XMq2BI):
     {argmax}_{synset(a)}(\sum_{i}^{n}{{max}_{synset(i)}(sim(i,a))}
     """
+    ambiguous_word = lemmatize(ambiguous_word)
+    if lemmatize:
+        context_sentence = [lemmatize(w) for w in word_tokenize(context_sentence)]
     result = {}
     for i in wn.synsets(ambiguous_word):
         try:
@@ -86,9 +91,9 @@ def max_similarity(context_sentence, ambiguous_word, option="path",
                 continue
         except:
             if pos and pos != str(i.pos):
-                continue
+                continue 
         result[i] = sum(max([sim(i,k,option) for k in wn.synsets(j)]+[0]) \
-                        for j in word_tokenize(context_sentence))
+                        for j in context_sentence)
     
     if option in ["res","resnik"]: # lower score = more similar
         result = sorted([(v,k) for k,v in result.items()])

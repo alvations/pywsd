@@ -10,54 +10,11 @@ import string
 from itertools import chain
 
 from nltk.corpus import wordnet as wn
-from nltk.stem import PorterStemmer, WordNetLemmatizer
 from nltk.corpus import stopwords
 from nltk import word_tokenize, pos_tag
 
 from cosine import cosine_similarity as cos_sim
-
-porter = PorterStemmer()
-wnl = WordNetLemmatizer()
-
-'''
-#TODO: various tokenizers.
-from nltk import word_tokenize
-def tokenize(sentence, option="split"):
-  if option == "split": # Simply splits by whitespaces.
-    return sentence.split()
-  if option == "word_tokenize": # Uses NLTK word_tokenize().
-    return word_tokenize(sentence)
-'''
-
-'''
-#TODO: various stem / lemmatizers.
-from nltk.stem import WordNetLemmatizer
-wnl = WordNetLemmatizer()
-def stem(word, option="wnlemma")
-  if option == "wnlemma":
-    return wnl.lemmatize(word)
-  if option == "porter":
-    return porter.stem(word)
-'''
-
-def lemmatize(ambiguous_word):
-    """
-    Tries to convert a surface word into lemma, and if lemmatize word is not in
-    wordnet then try and convert surface word into its stem.
-    
-    This is to handle the case where users input a surface word as an ambiguous 
-    word and the surface word is a not a lemma.
-    """
-    lemma = wnl.lemmatize(ambiguous_word)
-    stem = porter.stem(ambiguous_word)
-    # Ensure that ambiguous word is a lemma.
-    if not wn.synsets(lemma):
-        if not wn.synsets(stem):
-            return ambiguous_word
-        else:
-            return stem
-    else:
-     return lemma
+from utils import lemmatize, porter
 
 def get_pos_of_ambiguous_word(context_sentence, ambiguous_word):
     return {tok.lower():pos for tok, pos in 
@@ -126,7 +83,7 @@ def original_lesk(context_sentence, ambiguous_word, dictionary=None):
     best_sense = compare_overlaps_greedy(context_sentence.split(), dictionary)
     return best_sense    
 
-def simple_signature(ambiguous_word, pos=None, stem=True, \
+def simple_signature(ambiguous_word, pos=None, lemma=True, stem=False, \
                      hyperhypo=True, stop=True):
     """ 
     Returns a synsets_signatures dictionary that includes signature words of a 
@@ -163,7 +120,10 @@ def simple_signature(ambiguous_word, pos=None, stem=True, \
                                              in ss.hypernyms()+ss.hyponyms()]))
         # Optional: removes stopwords.
         if stop == True:
-            signature = [i for i in signature if i not in stopwords.words('english')]    
+            signature = [i for i in signature if i not in stopwords.words('english')]
+        # Lemmatized context is preferred over stemmed context
+        if lemma == True:
+            signature = [lemmatize(i) for i in signature]
         # Matching exact words causes sparsity, so optional matching for stems.
         if stem == True: 
             signature = [porter.stem(i) for i in signature]
@@ -172,7 +132,7 @@ def simple_signature(ambiguous_word, pos=None, stem=True, \
     return synsets_signatures
 
 def simple_lesk(context_sentence, ambiguous_word, \
-                pos=None, stem=True, hyperhypo=True, \
+                pos=None, lemma=True, stem=False, hyperhypo=True, \
                 nbest=False, keepscore=False, normalizescore=False):
     """
     Simple Lesk is somewhere in between using more than the 
@@ -182,16 +142,16 @@ def simple_lesk(context_sentence, ambiguous_word, \
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word) 
     # Get the signatures for each synset.
-    ss_sign = simple_signature(ambiguous_word, pos, stem, hyperhypo)
+    ss_sign = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
     # Disambiguate the sense in context.
-    context_sentence = [porter.stem(i) for i in context_sentence.split()]
+    context_sentence = [lemmatize(i) for i in context_sentence.split()]
     best_sense = compare_overlaps(context_sentence, ss_sign, \
                                     nbest=nbest, keepscore=keepscore, \
                                     normalizescore=normalizescore)  
     return best_sense
 
 def adapted_lesk(context_sentence, ambiguous_word, \
-                pos=None, stem=True, hyperhypo=True, stop=True, \
+                pos=None, lemma=True, stem=True, hyperhypo=True, stop=True, \
                 nbest=False, keepscore=False, normalizescore=False):
     """
     This function is the implementation of the Adapted Lesk algorithm, 
@@ -203,7 +163,7 @@ def adapted_lesk(context_sentence, ambiguous_word, \
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word)
     # Get the signatures for each synset.
-    ss_sign = simple_signature(ambiguous_word, pos, stem, hyperhypo)
+    ss_sign = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
     for ss in ss_sign:
         related_senses = list(set(ss.member_holonyms() + ss.member_meronyms() + 
                                  ss.part_meronyms() + ss.part_holonyms() + 
@@ -216,28 +176,29 @@ def adapted_lesk(context_sentence, ambiguous_word, \
         except:
             signature = list([j for j in chain(*[i.lemma_names for i in \
                       related_senses]) if j not in stopwords.words('english')])
-   
+    # Lemmatized context is preferred over stemmed context
+    if lemma == True:
+        signature = [lemmatize(i) for i in signature]
     # Matching exact words causes sparsity, so optional matching for stems.
     if stem == True:
         signature = [porter.stem(i) for i in signature]
     ss_sign[ss]+=signature
   
     # Disambiguate the sense in context.
-    context_sentence = [porter.stem(i) for i in context_sentence.split()]
+    context_sentence = [lemmatize(i) for i in context_sentence.split()]
     best_sense = compare_overlaps(context_sentence, ss_sign, \
                                     nbest=nbest, keepscore=keepscore, \
                                     normalizescore=normalizescore)
     return best_sense
 
-def cosine_lesk(context_sentence, ambiguous_word, stem=False, stop=True, \
+def cosine_lesk(context_sentence, ambiguous_word, \
+                lemma=True, stem=False, stop=True, \
                 nbest=False):
     """ 
     In line with vector space models, we can use cosine to calculate overlaps
     instead of using raw overlap counts. Essentially, the idea of using 
     signatures (aka 'sense paraphrases') is lesk-like.
     """
-    
-    
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word)
     synsets_signatures = simple_signature(ambiguous_word, stem=stem, stop=stop)
@@ -252,6 +213,9 @@ def cosine_lesk(context_sentence, ambiguous_word, stem=False, stop=True, \
         # Optional: remove stopwords.
         if stop:
             signature = [i for i in signature if i not in stopwords.words('english')]
+        # Optional: Lemmatize the tokens.
+        if lemma == True:
+            signature = [lemmatize(i) for i in signature]
         # Optional: stem the tokens.
         if stem:
             signature = [porter.stem(i) for i in signature]

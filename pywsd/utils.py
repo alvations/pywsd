@@ -7,6 +7,7 @@
 # For license information, see LICENSE.md
 
 from nltk.corpus import wordnet as wn
+from nltk.stem import PorterStemmer, WordNetLemmatizer
 
 def remove_tags(text):
   """ Removes <tags> in angled brackets from text. """
@@ -49,3 +50,50 @@ def semcor_to_offset(sensekey):
     offset = '%08d-%s' % (synset.offset, synset.pos)
     return offset
 
+
+
+
+porter = PorterStemmer()
+wnl = WordNetLemmatizer()
+
+'''
+#TODO: various tokenizers.
+from nltk import word_tokenize
+def tokenize(sentence, option="split"):
+  if option == "split": # Simply splits by whitespaces.
+    return sentence.split()
+  if option == "word_tokenize": # Uses NLTK word_tokenize().
+    return word_tokenize(sentence)
+'''
+
+'''
+#TODO: various stem / lemmatizers.
+from nltk.stem import WordNetLemmatizer
+wnl = WordNetLemmatizer()
+def stem(word, option="wnlemma")
+  if option == "wnlemma":
+    return wnl.lemmatize(word)
+  if option == "porter":
+    return porter.stem(word)
+'''
+
+def lemmatize(ambiguous_word, neverstem=False):
+    """
+    Tries to convert a surface word into lemma, and if lemmatize word is not in
+    wordnet then try and convert surface word into its stem.
+    
+    This is to handle the case where users input a surface word as an ambiguous 
+    word and the surface word is a not a lemma.
+    """
+    lemma = wnl.lemmatize(ambiguous_word)
+    stem = porter.stem(ambiguous_word)
+    # Ensure that ambiguous word is a lemma.
+    if not wn.synsets(lemma):
+        if neverstem:
+            return ambiguous_word
+        if not wn.synsets(stem):
+            return ambiguous_word
+        else:
+            return stem
+    else:
+     return lemma
