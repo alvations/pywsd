@@ -57,14 +57,12 @@ Synset('depository_financial_institution.n.01')
 a financial institution that accepts deposits and channels the money into lending activities
 ```
 
-For all-words WSD (see details, try:
+For all-words WSD, try:
 ```
 >>> from pywsd import disambiguate
 >>> from pywsd.similarity import max_similarity as maxsim
->>>
 >>> disambiguate('I went to the bank to deposit my money', prefersNone=True)
 [('I', None), ('went', Synset('go.v.28')), ('to', None), ('the', None), ('bank', Synset('depository_financial_institution.n.01')), ('to', None), ('deposit', Synset('deposit.n.04')), ('my', None), ('money', Synset('money.n.03'))]
->>>
 >>> disambiguate('I went to the bank to deposit my money', algorithm=maxsim, similarity_option='wup', prefersNone=True)
 [('I', None), ('went', Synset('sound.v.02')), ('to', None), ('the', None), ('bank', Synset('deposit.v.02')), ('to', None), ('deposit', Synset('deposit.v.02')), ('my', None), ('money', Synset('money.n.01'))]
 ```
