@@ -97,3 +97,8 @@ def lemmatize(ambiguous_word, neverstem=False):
             return stem
     else:
      return lemma
+ 
+# To check default parameters of simple_lesk()
+## a = inspect.getargspec(simple_lesk)
+## print zip(a.args[-len(a.defaults):],a.defaults)
+

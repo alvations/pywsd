@@ -133,7 +133,7 @@ def simple_signature(ambiguous_word, pos=None, lemma=True, stem=False, \
 
 def simple_lesk(context_sentence, ambiguous_word, \
                 pos=None, lemma=True, stem=False, hyperhypo=True, \
-                context_is_lemmatized=False, \
+                stop=True, context_is_lemmatized=False, \
                 nbest=False, keepscore=False, normalizescore=False):
     """
     Simple Lesk is somewhere in between using more than the 
@@ -155,8 +155,8 @@ def simple_lesk(context_sentence, ambiguous_word, \
     return best_sense
 
 def adapted_lesk(context_sentence, ambiguous_word, \
-                pos=None, lemma=True, stem=True, hyperhypo=True, stop=True, \
-                context_is_lemmatized=False, \
+                pos=None, lemma=True, stem=True, hyperhypo=True, \
+                stop=True, context_is_lemmatized=False, \
                 nbest=False, keepscore=False, normalizescore=False):
     """
     This function is the implementation of the Adapted Lesk algorithm, 
@@ -200,8 +200,9 @@ def adapted_lesk(context_sentence, ambiguous_word, \
     return best_sense
 
 def cosine_lesk(context_sentence, ambiguous_word, \
-                lemma=True, stem=False, stop=True, \
-                context_is_lemmatized=False, nbest=False):
+                pos=None, lemma=True, stem=True, hyperhypo=True, \
+                stop=True, context_is_lemmatized=False, \
+                nbest=False):
     """ 
     In line with vector space models, we can use cosine to calculate overlaps
     instead of using raw overlap counts. Essentially, the idea of using 
@@ -209,9 +210,10 @@ def cosine_lesk(context_sentence, ambiguous_word, \
     """
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word)
-    synsets_signatures = simple_signature(ambiguous_word, stem=stem, stop=stop)
+    synsets_signatures = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
+    
     if context_is_lemmatized:
-        context_sentence = context_sentence.split()
+        context_sentence = " ".join(context_sentence.split())
     else:
         context_sentence = " ".join([lemmatize(i) for i in context_sentence.split()])
     

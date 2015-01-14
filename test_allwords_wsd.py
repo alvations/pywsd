@@ -6,46 +6,48 @@
 # URL:
 # For license information, see LICENSE.md
 
-import inspect
 from string import punctuation
 
 from nltk import word_tokenize
 from nltk.corpus import wordnet as wn
 from nltk.corpus import brown, stopwords
-from pywsd.lesk import simple_lesk
+
+
+from pywsd.lesk import simple_lesk, original_lesk, cosine_lesk, adapted_lesk
+from pywsd.similarity import max_similarity
 from pywsd.utils import lemmatize
+from pywsd.allwords_wsd import disambiguate
 
-"""
-This is an example of how one would use pywsd for a 
-all-words full text WSD.
+print "======== TESTING all-words lesk ===========\n"
+for sentence in brown.sents()[:10]:
+    # Retrieves a tokenized text from brown corpus.
+    sentence = " ".join(sentence)
+    # Annotate the full sentence.
+    print disambiguate(sentence, simple_lesk)
+    print disambiguate(sentence, original_lesk)
+    print disambiguate(sentence, adapted_lesk)
+    print disambiguate(sentence, cosine_lesk)
+    print
+print
 
-This would involve:
-
-Step 1: First tokenize your text such that each token is separated by whitespace
-Step 2: Iterates through the tokens and only disambiguate the content words.
-"""
-
-
-stopwords = stopwords.words('english') + list(punctuation)
-
-# To check default parameters of simple_lesk()
-## a = inspect.getargspec(simple_lesk)
-## print zip(a.args[-len(a.defaults):],a.defaults)
-
-
+print "======== TESTING all-words path maxsim ===========\n"
+print "This is going to take some time, have some coffee...\n"
 for sentence in brown.sents()[0:1]:
-    # Step 1: Retrieves a tokenized text from brown corpus.
-    sentence = " ".join(sentence).lower()
-    sentence = " ".join(lemmatize(w) for w in word_tokenize(sentence))
-    # Step 2: Iterates through the tokens that are content words.
-    for word in sentence.split():
-        if word not in stopwords:
-            # Checks if content word is in 
-            try:
-                wn.synsets(word)[0]
-                synset = simple_lesk(sentence, word, context_is_lemmatized=True)
-            except:
-                synset = '#NOT_IN_WN#'
-        else:
-            synset = '#STOPWORD/PUNCTUATION#'
-        print(word, synset)
+    # Retrieves a tokenized text from brown corpus.
+    sentence = " ".join(sentence)
+    # Annotate the full sentence.
+    print disambiguate(sentence, max_similarity, similarity_option='path')
+    print disambiguate(sentence, max_similarity, similarity_option='wup')
+print
+
+print "======== TESTING all-words info content maxsim ==========="
+print "===This is going to take some time, have some coffee...===\n"
+for sentence in brown.sents()[0:1]:
+    # Retrieves a tokenized text from brown corpus.
+    sentence = " ".join(sentence)
+    # Annotate the full sentence.
+    print disambiguate(sentence, max_similarity, similarity_option='lch')
+    print disambiguate(sentence, max_similarity, similarity_option='res')
+    print disambiguate(sentence, max_similarity, similarity_option='jcn')
+    print disambiguate(sentence, max_similarity, similarity_option='lin')
+    
