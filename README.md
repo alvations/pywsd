@@ -55,7 +55,15 @@ $ python
 Synset('depository_financial_institution.n.01')
 >>> print answer.definition()
 a financial institution that accepts deposits and channels the money into lending activities
+```
 
+For all-words WSD, try:
+```
+>>> from pywsd.allwords_wsd import disambiguate
+>>> disambiguate('I went to the bank to deposit my money')
+[('i', '#STOPWORD/PUNCTUATION#'), ('went', Synset('go.v.28')), ('to', '#STOPWORD/PUNCTUATION#'), ('the', '#STOPWORD/PUNCTUATION#'), ('bank', Synset('depository_financial_institution.n.01')), ('to', '#STOPWORD/PUNCTUATION#'), ('deposit', Synset('deposit.n.04')), ('my', '#STOPWORD/PUNCTUATION#'), ('money', Synset('money.n.03'))]
+>>> disambiguate('I went to the bank to deposit my money', prefersNone=True)
+[('i', None), ('went', Synset('go.v.28')), ('to', None), ('the', None), ('bank', Synset('depository_financial_institution.n.01')), ('to', None), ('deposit', Synset('deposit.n.04')), ('my', None), ('money', Synset('money.n.03'))]
 ```
 
 ***
