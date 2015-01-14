@@ -74,7 +74,7 @@ def sim(sense1, sense2, option="path"):
         return similarity_by_infocontent(sense1, sense2, option)
 
 def max_similarity(context_sentence, ambiguous_word, option="path", 
-                   lemma=True, pos=None, best=True):
+                   lemma=True, context_is_lemmatized=False, pos=None, best=True):
     """
     Perform WSD by maximizing the sum of maximum similarity between possible 
     synsets of all words in the context sentence and the possible synsets of the 
@@ -82,7 +82,9 @@ def max_similarity(context_sentence, ambiguous_word, option="path",
     {argmax}_{synset(a)}(\sum_{i}^{n}{{max}_{synset(i)}(sim(i,a))}
     """
     ambiguous_word = lemmatize(ambiguous_word)
-    if lemmatize:
+    if context_is_lemmatized:
+        context_sentence = word_tokenize(context_sentence)
+    else:
         context_sentence = [lemmatize(w) for w in word_tokenize(context_sentence)]
     result = {}
     for i in wn.synsets(ambiguous_word):

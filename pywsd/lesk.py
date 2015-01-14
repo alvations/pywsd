@@ -133,6 +133,7 @@ def simple_signature(ambiguous_word, pos=None, lemma=True, stem=False, \
 
 def simple_lesk(context_sentence, ambiguous_word, \
                 pos=None, lemma=True, stem=False, hyperhypo=True, \
+                context_is_lemmatized=False, \
                 nbest=False, keepscore=False, normalizescore=False):
     """
     Simple Lesk is somewhere in between using more than the 
@@ -144,7 +145,10 @@ def simple_lesk(context_sentence, ambiguous_word, \
     # Get the signatures for each synset.
     ss_sign = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
     # Disambiguate the sense in context.
-    context_sentence = [lemmatize(i) for i in context_sentence.split()]
+    if context_is_lemmatized:
+        context_sentence = context_sentence.split()
+    else:
+        context_sentence = [lemmatize(i) for i in context_sentence.split()]
     best_sense = compare_overlaps(context_sentence, ss_sign, \
                                     nbest=nbest, keepscore=keepscore, \
                                     normalizescore=normalizescore)  
@@ -152,6 +156,7 @@ def simple_lesk(context_sentence, ambiguous_word, \
 
 def adapted_lesk(context_sentence, ambiguous_word, \
                 pos=None, lemma=True, stem=True, hyperhypo=True, stop=True, \
+                context_is_lemmatized=False, \
                 nbest=False, keepscore=False, normalizescore=False):
     """
     This function is the implementation of the Adapted Lesk algorithm, 
@@ -185,7 +190,10 @@ def adapted_lesk(context_sentence, ambiguous_word, \
     ss_sign[ss]+=signature
   
     # Disambiguate the sense in context.
-    context_sentence = [lemmatize(i) for i in context_sentence.split()]
+    if context_is_lemmatized:
+        context_sentence = context_sentence.split()
+    else:
+        context_sentence = [lemmatize(i) for i in context_sentence.split()]
     best_sense = compare_overlaps(context_sentence, ss_sign, \
                                     nbest=nbest, keepscore=keepscore, \
                                     normalizescore=normalizescore)
@@ -193,7 +201,7 @@ def adapted_lesk(context_sentence, ambiguous_word, \
 
 def cosine_lesk(context_sentence, ambiguous_word, \
                 lemma=True, stem=False, stop=True, \
-                nbest=False):
+                context_is_lemmatized=False, nbest=False):
     """ 
     In line with vector space models, we can use cosine to calculate overlaps
     instead of using raw overlap counts. Essentially, the idea of using 
@@ -202,6 +210,10 @@ def cosine_lesk(context_sentence, ambiguous_word, \
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word)
     synsets_signatures = simple_signature(ambiguous_word, stem=stem, stop=stop)
+    if context_is_lemmatized:
+        context_sentence = context_sentence.split()
+    else:
+        context_sentence = " ".join([lemmatize(i) for i in context_sentence.split()])
     
     scores = []
     for ss, signature in synsets_signatures.items():
