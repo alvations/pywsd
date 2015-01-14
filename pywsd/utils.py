@@ -8,6 +8,7 @@
 
 from nltk.corpus import wordnet as wn
 from nltk.stem import PorterStemmer, WordNetLemmatizer
+from nltk import pos_tag, word_tokenize
 
 def remove_tags(text):
   """ Removes <tags> in angled brackets from text. """
@@ -105,3 +106,16 @@ def lemmatize(ambiguous_word, pos=None, neverstem=False):
 ## a = inspect.getargspec(simple_lesk)
 ## print zip(a.args[-len(a.defaults):],a.defaults)
 
+
+def penn2morphy(penntag):
+    morphy_tag = {'NN':wn.NOUN, 'JJ':wn.ADJ,
+                  'VB':wn.VERB, 'RB':wn.ADV}
+    try:
+        return morphy_tag[penntag[:2]]
+    except:
+        return ''
+
+def lemmatize_sentence(sentence, neverstem=False):
+    return [lemmatize(word, pos=penn2morphy(pos)) 
+            for word, pos in pos_tag(word_tokenize(sentence.lower()))]
+    

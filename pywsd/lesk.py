@@ -14,7 +14,7 @@ from nltk.corpus import stopwords
 from nltk import word_tokenize, pos_tag
 
 from cosine import cosine_similarity as cos_sim
-from utils import lemmatize, porter
+from utils import lemmatize, porter, lemmatize_sentence
 
 def get_pos_of_ambiguous_word(context_sentence, ambiguous_word):
     return {tok.lower():pos for tok, pos in 
@@ -148,7 +148,7 @@ def simple_lesk(context_sentence, ambiguous_word, \
     if context_is_lemmatized:
         context_sentence = context_sentence.split()
     else:
-        context_sentence = [lemmatize(i) for i in context_sentence.split()]
+        context_sentence = lemmatize_sentence(sentence)
     best_sense = compare_overlaps(context_sentence, ss_sign, \
                                     nbest=nbest, keepscore=keepscore, \
                                     normalizescore=normalizescore)  
@@ -193,7 +193,7 @@ def adapted_lesk(context_sentence, ambiguous_word, \
     if context_is_lemmatized:
         context_sentence = context_sentence.split()
     else:
-        context_sentence = [lemmatize(i) for i in context_sentence.split()]
+        context_sentence = lemmatize_sentence(sentence)
     best_sense = compare_overlaps(context_sentence, ss_sign, \
                                     nbest=nbest, keepscore=keepscore, \
                                     normalizescore=normalizescore)
@@ -215,7 +215,7 @@ def cosine_lesk(context_sentence, ambiguous_word, \
     if context_is_lemmatized:
         context_sentence = " ".join(context_sentence.split())
     else:
-        context_sentence = " ".join([lemmatize(i) for i in context_sentence.split()])
+        context_sentence = " ".join(lemmatize_sentence(sentence))
     
     scores = []
     for ss, signature in synsets_signatures.items():

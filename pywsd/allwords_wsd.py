@@ -14,7 +14,7 @@ from nltk.corpus import stopwords
 
 from lesk import simple_lesk, original_lesk
 from similarity import max_similarity
-from utils import lemmatize
+from utils import lemmatize, lemmatize_sentence
 
 """
 This is a module for all-words full text WSD 
@@ -32,7 +32,7 @@ def disambiguate(sentence, algorithm=simple_lesk,
     tagged_sentence = []
     # Pre-lemmatize the sentnece before WSD
     if not context_is_lemmatized:
-        lemma_sentence = " ".join(lemmatize(w) for w in word_tokenize(sentence.lower()))
+        lemma_sentence = " ".join(lemmatize_sentence(sentence))
     else:
         lemma_sentence = sentence
     for word, lemma in zip(sentence.split(), lemma_sentence.split()):
