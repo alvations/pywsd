@@ -23,9 +23,9 @@ for sentence in brown.sents()[:10]:
     # Retrieves a tokenized text from brown corpus.
     sentence = " ".join(sentence)
     # Annotate the full sentence.
-    print disambiguate(sentence, simple_lesk)
     print disambiguate(sentence, original_lesk)
-    print disambiguate(sentence, adapted_lesk, keepLemma=True)
+    print disambiguate(sentence, simple_lesk, prefersNone=True, keepLemmas=True)
+    print disambiguate(sentence, adapted_lesk, keepLemmas=True)
     print disambiguate(sentence, cosine_lesk, prefersNone=True)
     print
 print

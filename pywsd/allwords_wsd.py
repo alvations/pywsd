@@ -28,7 +28,7 @@ stopwords = stopwords.words('english') + list(punctuation)
 
 def disambiguate(sentence, algorithm=simple_lesk, 
                  context_is_lemmatized=False, similarity_option='path',
-                 keepLemma=False, prefersNone=False):
+                 keepLemmas=False, prefersNone=False):
     tagged_sentence = []
     # Pre-lemmatize the sentnece before WSD
     if not context_is_lemmatized:
@@ -49,13 +49,16 @@ def disambiguate(sentence, algorithm=simple_lesk,
                 synset = '#NOT_IN_WN#'
         else:
             synset = '#STOPWORD/PUNCTUATION#'
-        if keepLemma:
+        if keepLemmas:
             tagged_sentence.append((word, lemma, synset))
         else:
             tagged_sentence.append((word, synset))
     # Change #NOT_IN_WN# and #STOPWORD/PUNCTUATION# into None.
-    if prefersNone:
+    if prefersNone and not keepLemmas:
         tagged_sentence = [(word, None) if str(tag).startswith('#') 
                            else (word, tag) for word, tag in tagged_sentence]
+    if prefersNone and keepLemmas:
+        tagged_sentence = [(word, lemma, None) if str(tag).startswith('#') 
+                           else (word, lemma, tag) for word, lemma, tag in tagged_sentence]
     return tagged_sentence
     
