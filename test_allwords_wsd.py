@@ -23,8 +23,9 @@ for sentence in brown.sents()[:10]:
     # Retrieves a tokenized text from brown corpus.
     sentence = " ".join(sentence)
     # Annotate the full sentence.
-    print disambiguate(sentence, original_lesk)
     print disambiguate(sentence, simple_lesk, prefersNone=True, keepLemmas=True)
+'''
+    print disambiguate(sentence, original_lesk)
     print disambiguate(sentence, adapted_lesk, keepLemmas=True)
     print disambiguate(sentence, cosine_lesk, prefersNone=True)
     print
@@ -50,7 +51,8 @@ for sentence in brown.sents()[0:1]:
     print disambiguate(sentence, max_similarity, similarity_option='res')
     print disambiguate(sentence, max_similarity, similarity_option='jcn')
     print disambiguate(sentence, max_similarity, similarity_option='lin')
-    
+'''
+ 
 ''' 
 # TODO: do proper doctests...
 

@@ -115,7 +115,13 @@ def penn2morphy(penntag):
     except:
         return ''
 
-def lemmatize_sentence(sentence, neverstem=False):
-    return [lemmatize(word, pos=penn2morphy(pos)) 
-            for word, pos in pos_tag(word_tokenize(sentence.lower()))]
-    
+def lemmatize_sentence(sentence, neverstem=False, keepWordPOS=False):
+    words, lemmas, poss = [], [], []
+    for word, pos in pos_tag(word_tokenize(sentence)):
+        pos = penn2morphy(pos)
+        lemmas.append(lemmatize(word.lower(), pos,neverstem=neverstem))
+        poss.append(pos)
+        words.append(word)
+    if keepWordPOS:
+        return words, lemmas, [None if i == '' else i for i in poss]
+    return lemmas

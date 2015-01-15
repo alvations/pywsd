@@ -32,19 +32,20 @@ def disambiguate(sentence, algorithm=simple_lesk,
     tagged_sentence = []
     # Pre-lemmatize the sentnece before WSD
     if not context_is_lemmatized:
-        lemma_sentence = " ".join(lemmatize_sentence(sentence))
+        surface_words, lemmas, morphy_poss = lemmatize_sentence(sentence, keepWordPOS=True)
+        lemma_sentence = " ".join(lemmas)
     else:
-        lemma_sentence = sentence
-    for word, lemma in zip(sentence.split(), lemma_sentence.split()):
+        lemma_sentence = sentence # TODO: Miss out on POS specification, how to resolve?
+    for word, lemma, pos in zip(surface_words, lemmas, morphy_poss):
         if lemma not in stopwords: # Checks if it is a content word 
             try:
                 wn.synsets(lemma)[0]
                 if algorithm == original_lesk: # Note: Original doesn't care about lemmas
                     synset = algorithm(lemma_sentence, lemma)
                 elif algorithm == max_similarity:                    
-                    synset = algorithm(lemma_sentence, lemma, option=similarity_option)
+                    synset = algorithm(lemma_sentence, lemma, pos=pos, option=similarity_option)
                 else:
-                    synset = algorithm(lemma_sentence, lemma, context_is_lemmatized=True)
+                    synset = algorithm(lemma_sentence, lemma, pos=pos, context_is_lemmatized=True)
             except: # In case the content word is not in WordNet
                 synset = '#NOT_IN_WN#'
         else:
