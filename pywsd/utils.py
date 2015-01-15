@@ -107,13 +107,13 @@ def lemmatize(ambiguous_word, pos=None, neverstem=False):
 ## print zip(a.args[-len(a.defaults):],a.defaults)
 
 
-def penn2morphy(penntag):
+def penn2morphy(penntag, returnNone=False):
     morphy_tag = {'NN':wn.NOUN, 'JJ':wn.ADJ,
                   'VB':wn.VERB, 'RB':wn.ADV}
     try:
         return morphy_tag[penntag[:2]]
     except:
-        return ''
+        return None if returnNone else ''
 
 def lemmatize_sentence(sentence, neverstem=False, keepWordPOS=False):
     words, lemmas, poss = [], [], []

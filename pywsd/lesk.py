@@ -148,7 +148,7 @@ def simple_lesk(context_sentence, ambiguous_word, \
     if context_is_lemmatized:
         context_sentence = context_sentence.split()
     else:
-        context_sentence = lemmatize_sentence(sentence)
+        context_sentence = lemmatize_sentence(context_sentence)
     best_sense = compare_overlaps(context_sentence, ss_sign, \
                                     nbest=nbest, keepscore=keepscore, \
                                     normalizescore=normalizescore)  
