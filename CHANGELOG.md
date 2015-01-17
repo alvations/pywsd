@@ -2,6 +2,9 @@
 Change Log
 =====
 
+**17.01.15**
+* Official pyWSD version 1.0 announced. 
+
 **14.01.15**
 * Added all-words WSD functionality
 * Added disambiguate() for all-words WSD
