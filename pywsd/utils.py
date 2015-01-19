@@ -53,32 +53,11 @@ def semcor_to_offset(sensekey):
 
 
 
-
 porter = PorterStemmer()
 wnl = WordNetLemmatizer()
 
-'''
-#TODO: various tokenizers.
-from nltk import word_tokenize
-def tokenize(sentence, option="split"):
-  if option == "split": # Simply splits by whitespaces.
-    return sentence.split()
-  if option == "word_tokenize": # Uses NLTK word_tokenize().
-    return word_tokenize(sentence)
-'''
-
-'''
-#TODO: various stem / lemmatizers.
-from nltk.stem import WordNetLemmatizer
-wnl = WordNetLemmatizer()
-def stem(word, option="wnlemma")
-  if option == "wnlemma":
-    return wnl.lemmatize(word)
-  if option == "porter":
-    return porter.stem(word)
-'''
-
-def lemmatize(ambiguous_word, pos=None, neverstem=False):
+def lemmatize(ambiguous_word, pos=None, neverstem=False, 
+              lemmatizer=wnl, stemmer=porter):
     """
     Tries to convert a surface word into lemma, and if lemmatize word is not in
     wordnet then try and convert surface word into its stem.
@@ -87,10 +66,10 @@ def lemmatize(ambiguous_word, pos=None, neverstem=False):
     word and the surface word is a not a lemma.
     """
     if pos:
-        lemma = wnl.lemmatize(ambiguous_word, pos=pos)
+        lemma = lemmatizer.lemmatize(ambiguous_word, pos=pos)
     else:
-        lemma = wnl.lemmatize(ambiguous_word)
-    stem = porter.stem(ambiguous_word)
+        lemma = lemmatizer.lemmatize(ambiguous_word)
+    stem = stemmer.stem(ambiguous_word)
     # Ensure that ambiguous word is a lemma.
     if not wn.synsets(lemma):
         if neverstem:
@@ -102,10 +81,6 @@ def lemmatize(ambiguous_word, pos=None, neverstem=False):
     else:
      return lemma
  
-# To check default parameters of simple_lesk()
-## a = inspect.getargspec(simple_lesk)
-## print zip(a.args[-len(a.defaults):],a.defaults)
-
 
 def penn2morphy(penntag, returnNone=False):
     morphy_tag = {'NN':wn.NOUN, 'JJ':wn.ADJ,
@@ -115,13 +90,20 @@ def penn2morphy(penntag, returnNone=False):
     except:
         return None if returnNone else ''
 
-def lemmatize_sentence(sentence, neverstem=False, keepWordPOS=False):
+def lemmatize_sentence(sentence, neverstem=False, keepWordPOS=False, 
+                       tokenizer=word_tokenize, postagger=pos_tag, 
+                       lemmatizer=wnl, stemmer=porter):
     words, lemmas, poss = [], [], []
-    for word, pos in pos_tag(word_tokenize(sentence)):
+    for word, pos in postagger(tokenizer(sentence)):
         pos = penn2morphy(pos)
-        lemmas.append(lemmatize(word.lower(), pos,neverstem=neverstem))
+        lemmas.append(lemmatize(word.lower(), pos, neverstem,
+                                lemmatizer, stemmer))
         poss.append(pos)
         words.append(word)
     if keepWordPOS:
         return words, lemmas, [None if i == '' else i for i in poss]
     return lemmas
+
+# To check default parameters of simple_lesk()
+## a = inspect.getargspec(simple_lesk)
+## print zip(a.args[-len(a.defaults):],a.defaults)
