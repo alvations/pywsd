@@ -193,7 +193,7 @@ def adapted_lesk(context_sentence, ambiguous_word, \
     if context_is_lemmatized:
         context_sentence = context_sentence.split()
     else:
-        context_sentence = lemmatize_sentence(sentence)
+        context_sentence = lemmatize_sentence(context_sentence)
     best_sense = compare_overlaps(context_sentence, ss_sign, \
                                     nbest=nbest, keepscore=keepscore, \
                                     normalizescore=normalizescore)
@@ -215,7 +215,7 @@ def cosine_lesk(context_sentence, ambiguous_word, \
     if context_is_lemmatized:
         context_sentence = " ".join(context_sentence.split())
     else:
-        context_sentence = " ".join(lemmatize_sentence(sentence))
+        context_sentence = " ".join(lemmatize_sentence(context_sentence))
     
     scores = []
     for ss, signature in synsets_signatures.items():
