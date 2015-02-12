@@ -28,7 +28,7 @@ stopwords = stopwords.words('english') + list(punctuation)
 
 def disambiguate(sentence, algorithm=simple_lesk, 
                  context_is_lemmatized=False, similarity_option='path',
-                 keepLemmas=False, prefersNone=False):
+                 keepLemmas=False, prefersNone=True):
     tagged_sentence = []
     # Pre-lemmatize the sentnece before WSD
     if not context_is_lemmatized:

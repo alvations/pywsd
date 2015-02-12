@@ -61,9 +61,9 @@ For all-words WSD, try:
 ```
 >>> from pywsd import disambiguate
 >>> from pywsd.similarity import max_similarity as maxsim
->>> disambiguate('I went to the bank to deposit my money', prefersNone=True)
+>>> disambiguate('I went to the bank to deposit my money')
 [('I', None), ('went', Synset('run_low.v.01')), ('to', None), ('the', None), ('bank', Synset('depository_financial_institution.n.01')), ('to', None), ('deposit', Synset('deposit.v.02')), ('my', None), ('money', Synset('money.n.03'))]
->>> disambiguate('I went to the bank to deposit my money', algorithm=maxsim, similarity_option='wup', prefersNone=True, keepLemmas=True)
+>>> disambiguate('I went to the bank to deposit my money', algorithm=maxsim, similarity_option='wup', keepLemmas=True)
 [('I', 'i', None), ('went', u'go', Synset('sound.v.02')), ('to', 'to', None), ('the', 'the', None), ('bank', 'bank', Synset('bank.n.06')), ('to', 'to', None), ('deposit', 'deposit', Synset('deposit.v.02')), ('my', 'my', None), ('money', 'money', Synset('money.n.01'))]
 ```
 

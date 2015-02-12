@@ -6,6 +6,7 @@
 # URL:
 # For license information, see LICENSE.md
 
+'''
 from pywsd.semcor import SemCorpus
 
 semcor = SemCorpus('pywsd/data/semcor3.0_naf')
@@ -25,3 +26,12 @@ coarse_wsd = SemEval2007_Coarse_WSD('pywsd/data/semeval2007_coarse_grain_wsd/')
 
 for sentence in coarse_wsd:
     print sentence
+'''
+
+from pywsd.semcor import SemCorpus
+
+semcor = SemCorpus('pywsd/data/semcor3.0_naf')
+
+for filename, sentence in semcor:
+    for word in sentence:
+        print word.text, word.term.sense, word.term.lemma

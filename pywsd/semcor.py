@@ -103,7 +103,7 @@ class SemCorpus:
              
             yield Instance(instid, term, context_sent, context_para)
     
-    def sentences(self, filename):
+    def sentences(self, filename, wordLemmaSense=False):
         """
         Access the corpus by sentences.
         
@@ -118,10 +118,16 @@ class SemCorpus:
         word(id=0, text=u'The', offset=u'0', sentid=1, paraid=1, term=term(id=0, pos=u'DT', lemma=u'the', sense=None, type=u'open'))
         """
         wordid2meta, termid2sense, sents, paras = self.read_file(filename)
-        for sentid in sents:
-            words = [wordid2meta[w] for w in sents[sentid]] 
-            yield words
-            
+        if wordLemmaSense:
+            sent = []
+            for w in sents[sentid]:
+                print w
+                
+        else:
+            for sentid in sents:
+                sent = [wordid2meta[w] for w in sents[sentid]] 
+                yield sent
+                
     def __iter__(self):
         """
         # USAGE:
