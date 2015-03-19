@@ -11,15 +11,14 @@ import random
 random.seed(0)
 
 def random_sense(ambiguous_word, pos=None):
-    """ Returns a ramdom sense. """
+    """ Returns a random sense. """
     if pos is None:
         return random.choice(wn.synsets(ambiguous_word))
     else:
         return random.choice(wn.synsets(ambiguous_word, pos))
 
-
 def first_sense(ambiguous_word, pos=None):
-    """ Returns the first sense."""
+    """ Returns the first sense. """
     if pos is None:
         return wn.synsets(ambiguous_word)[0]
     else:
