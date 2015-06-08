@@ -38,13 +38,14 @@ import cPickle as pickle
 semcor = _SemCorpus('pywsd/data/semcor3.0_naf')
 Word = namedtuple('Word', 'text, sense, lemma, pos, paraid, sentid, wordid')
 
-semcor_corpus = defaultdict(list)
+semcor_corpus = defaultdict(defaultdict(list))
 for filename, sentence in semcor:
     filename = filename.replace('pywsd/data/semcor3.0_naf/', '')
-    print filename
+    corpus, _, filename = filename.partition('/')
+    print corpus, filename
     sent = [Word(word.text, word.term.sense, word.term.lemma, word.term.pos, 
                  word.paraid, word.sentid, word.id) for word in sentence]
-    semcor_corpus[filename].append(sent)
+    semcor_corpus[corpus][filename].append(sent)
     
 
 with io.open('semcor-wn30.pk', 'wb') as fin:

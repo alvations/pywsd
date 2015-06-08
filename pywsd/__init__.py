@@ -10,7 +10,8 @@ import lesk
 import baseline
 import similarity
 
-import semcor
-import semeval
+#import semcor
+#import semeval
 
 from allwords_wsd import disambiguate
+
