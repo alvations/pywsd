@@ -10,13 +10,19 @@ from nltk.corpus import wordnet as wn
 import random
 random.seed(0)
 
-def random_sense(ambiguous_word):
-    """ Returns a ramdom sense. """
-    return random.choice(wn.synsets(ambiguous_word))
+def random_sense(ambiguous_word, pos=None):
+    """ Returns a random sense. """
+    if pos is None:
+        return random.choice(wn.synsets(ambiguous_word))
+    else:
+        return random.choice(wn.synsets(ambiguous_word, pos))
 
-def first_sense(ambiguous_word):
-    """ Returns the first sense."""
-    return wn.synsets(ambiguous_word)[0]
+def first_sense(ambiguous_word, pos=None):
+    """ Returns the first sense. """
+    if pos is None:
+        return wn.synsets(ambiguous_word)[0]
+    else:
+        return wn.synsets(ambiguous_word, pos)[0]
 
 def max_lemma_count(ambiguous_word):
     """ 
