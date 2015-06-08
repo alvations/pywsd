@@ -28,10 +28,24 @@ for sentence in coarse_wsd:
     print sentence
 '''
 
-from pywsd.semcor import SemCorpus
 
-semcor = SemCorpus('pywsd/data/semcor3.0_naf')
+from collections import defaultdict, namedtuple
+from pywsd.semcor_preprocessor import _SemCorpus
 
+import io
+import cPickle as pickle
+
+semcor = _SemCorpus('pywsd/data/semcor3.0_naf')
+Word = namedtuple('Word', 'text, sense, lemma, pos, paraid, sentid, wordid')
+
+semcor_corpus = defaultdict(list)
 for filename, sentence in semcor:
-    for word in sentence:
-        print word.text, word.term.sense, word.term.lemma
+    filename = filename.replace('pywsd/data/semcor3.0_naf/', '')
+    print filename
+    sent = [Word(word.text, word.term.sense, word.term.lemma, word.term.pos, 
+                 word.paraid, word.sentid, word.id) for word in sentence]
+    semcor_corpus[filename].append(sent)
+    
+
+with io.open('semcor-wn30.pk', 'wb') as fin:
+    pickle.dump(semcor_corpus, fin)
