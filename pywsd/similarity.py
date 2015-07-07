@@ -83,7 +83,7 @@ def max_similarity(context_sentence, ambiguous_word, option="path",
     """
     ambiguous_word = lemmatize(ambiguous_word)
     # If ambiguous word not in WordNet return None
-    if not wn.synsets(ambiguous_words):
+    if not wn.synsets(ambiguous_word):
         return None
     if context_is_lemmatized:
         context_sentence = word_tokenize(context_sentence)

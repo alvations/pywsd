@@ -140,7 +140,7 @@ def simple_lesk(context_sentence, ambiguous_word, \
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word) 
     # If ambiguous word not in WordNet return None
-    if not wn.synsets(ambiguous_words):
+    if not wn.synsets(ambiguous_word):
         return None
     # Get the signatures for each synset.
     ss_sign = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
@@ -168,7 +168,7 @@ def adapted_lesk(context_sentence, ambiguous_word, \
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word)
     # If ambiguous word not in WordNet return None
-    if not wn.synsets(ambiguous_words):
+    if not wn.synsets(ambiguous_word):
         return None
     # Get the signatures for each synset.
     ss_sign = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
@@ -223,7 +223,7 @@ def cosine_lesk(context_sentence, ambiguous_word, \
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word)
     # If ambiguous word not in WordNet return None
-    if not wn.synsets(ambiguous_words):
+    if not wn.synsets(ambiguous_word):
         return None
     synsets_signatures = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
     
