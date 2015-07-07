@@ -17,8 +17,6 @@ SS_PARAMETERS_TYPE_MAP = {'definition':str, 'lemma_names':list,
                          'member_meronyms':list, 'substance_meronyms': list,
                          'part_meronyms':list, 'similar_tos':list}
 
-
-
 def remove_tags(text):
   """ Removes <tags> in angled brackets from text. """
   import re
@@ -114,10 +112,17 @@ def lemmatize_sentence(sentence, neverstem=False, keepWordPOS=False,
     return lemmas
 
 def synset_properties(synset, parameter):
+    """
+    Making from NLTK's WordNet Synset's properties to function. 
+    Note: This is for compatibility with NLTK 2.x 
+    """
     return_type = SS_PARAMETERS_TYPE_MAP[parameter]
     func = 'synset.' + parameter
     return eval(func) if isinstance(eval(func), return_type) else eval(func)()
-    
+
+def has_synset(word):
+    """" Returns a list of synsets a word after lemmatization """
+    return wn.synsets(lemmatize(word, neverstem=True))
 
 # To check default parameters of simple_lesk()
 ## a = inspect.getargspec(simple_lesk)
