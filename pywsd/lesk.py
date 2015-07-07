@@ -14,18 +14,17 @@ from nltk.corpus import stopwords
 from nltk import word_tokenize, pos_tag
 
 from cosine import cosine_similarity as cos_sim
-from utils import lemmatize, porter, lemmatize_sentence
+from utils import lemmatize, porter, lemmatize_sentence, synset_properties
 
-def get_pos_of_ambiguous_word(context_sentence, ambiguous_word):
-    return {tok.lower():pos for tok, pos in 
-            pos_tag(word_tokenize(context_sentence))}[ambiguous_word][0].lower()
+EN_STOPWORDS = stopwords.words('english')
 
 def compare_overlaps_greedy(context, synsets_signatures):
     """
     Calculate overlaps between the context sentence and the synset_signature
     and returns the synset with the highest overlap.
     
-    Note: Greedy algorithm only keeps the best sense, see http://goo.gl/OWSfOZ
+    Note: Greedy algorithm only keeps the best sense, 
+    see https://en.wikipedia.org/wiki/Greedy_algorithm
     
     Only used by original_lesk(). Keeping greedy algorithm for documentary sake, 
     because original_lesks is greedy.
@@ -70,11 +69,10 @@ def original_lesk(context_sentence, ambiguous_word, dictionary=None):
     """
     This function is the implementation of the original Lesk algorithm (1986).
     It requires a dictionary which contains the definition of the different
-    sense of each word. See http://goo.gl/8TB15wb
+    sense of each word. See http://dl.acm.org/citation.cfm?id=318728
     """
     ambiguous_word = lemmatize(ambiguous_word)
-    # If dictionary is not provided, use the WN defintion.
-    if not dictionary:
+    if not dictionary: # If dictionary is not provided, use the WN defintion.
         dictionary = {}
         for ss in wn.synsets(ambiguous_word):
             try: ss_definition = ss.definition().split()
@@ -94,41 +92,41 @@ def simple_signature(ambiguous_word, pos=None, lemma=True, stem=False, \
     """
     synsets_signatures = {}
     for ss in wn.synsets(ambiguous_word):
-        # If POS is specified.
-        try:
+        try: # If POS is specified.
             if pos and str(ss.pos()) != pos:
                 continue
         except:
             if pos and str(ss.pos) != pos:
                 continue
-        
         signature = []
         # Includes definition.
-        try: signature+= ss.definition().split()
-        except: signature+= ss.definition.split()
+        ss_definition = synset_properties(ss, 'definition')
+        signature+=ss_definition
         # Includes examples
-        try: signature+= list(chain(*[i.split() for i in ss.examples()]))
-        except: signature+= list(chain(*[i.split() for i in ss.examples]))
+        ss_examples = synset_properties(ss, 'examples')
+        signature+=list(chain(*[i.split() for i in ss_examples]))
         # Includes lemma_names.
-        try: signature+= ss.lemma_names()
-        except: signature+= ss.lemma_names
+        ss_lemma_names = synset_properties(ss, 'lemma_names')
+        signature+= ss_lemma_names
+        
         # Optional: includes lemma_names of hypernyms and hyponyms.
         if hyperhypo == True:
-            try: signature+= list(chain(*[i.lemma_names() for i \
-                                          in ss.hypernyms()+ss.hyponyms()]))
-            except: signature+= list(chain(*[i.lemma_names for i \
-                                             in ss.hypernyms()+ss.hyponyms()]))
+            ss_hyponyms = synset_properties(ss, 'hyponyms')
+            ss_hypernyms = synset_properties(ss, 'hypernyms')
+            ss_hypohypernyms = ss_hypernyms+ss_hyponyms
+            signature+= list(chain(*[i.lemma_names() for i in ss_hypohypernyms]))
+        
         # Optional: removes stopwords.
-        if stop == True:
-            signature = [i for i in signature if i not in stopwords.words('english')]
-        # Lemmatized context is preferred over stemmed context
-        if lemma == True:
+        if stop == True: 
+            signature = [i for i in signature if i not in EN_STOPWORDS]
+        # Lemmatized context is preferred over stemmed context.
+        if lemma == True: 
             signature = [lemmatize(i) for i in signature]
-        # Matching exact words causes sparsity, so optional matching for stems.
+        # Matching exact words may cause sparsity, so optional matching for stems.
         if stem == True: 
             signature = [porter.stem(i) for i in signature]
         synsets_signatures[ss] = signature
-    
+        
     return synsets_signatures
 
 def simple_lesk(context_sentence, ambiguous_word, \
@@ -170,23 +168,32 @@ def adapted_lesk(context_sentence, ambiguous_word, \
     # Get the signatures for each synset.
     ss_sign = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
     for ss in ss_sign:
-        related_senses = list(set(ss.member_holonyms() + ss.member_meronyms() + 
-                                 ss.part_meronyms() + ss.part_holonyms() + 
-                                 ss.similar_tos() + ss.substance_holonyms() + 
-                                 ss.substance_meronyms()))
+        # Includes holonyms.
+        ss_mem_holonyms = synset_properties(ss, 'member_holonyms')
+        ss_part_holonyms = synset_properties(ss, 'part_holonyms')
+        ss_sub_holonyms = synset_properties(ss, 'substance_holonyms')
+        # Includes meronyms.
+        ss_mem_meronyms = synset_properties(ss, 'member_meronyms')
+        ss_part_meronyms = synset_properties(ss, 'part_meronyms')
+        ss_sub_meronyms = synset_properties(ss, 'substance_meronyms')
+        # Includes similar_tos
+        ss_simto = synset_properties(ss, 'similar_tos')
+        
+        related_senses = list(set(ss_mem_holonyms+ss_part_holonyms+ 
+                                  ss_sub_holonyms+ss_mem_meronyms+ 
+                                  ss_part_meronyms+ss_sub_meronyms+ ss_simto))
     
-        try:
-            signature = list([j for j in chain(*[i.lemma_names() for i in \
-                      related_senses]) if j not in stopwords.words('english')])
-        except:
-            signature = list([j for j in chain(*[i.lemma_names for i in \
-                      related_senses]) if j not in stopwords.words('english')])
+        signature = list([j for j in chain(*[synset_properties(i, 'lemma_names') 
+                                             for i in related_senses]) 
+                          if j not in EN_STOPWORDS])
+        
     # Lemmatized context is preferred over stemmed context
     if lemma == True:
         signature = [lemmatize(i) for i in signature]
     # Matching exact words causes sparsity, so optional matching for stems.
     if stem == True:
         signature = [porter.stem(i) for i in signature]
+    # Adds the extended signature to the simple signatures.
     ss_sign[ss]+=signature
   
     # Disambiguate the sense in context.
@@ -226,7 +233,7 @@ def cosine_lesk(context_sentence, ambiguous_word, \
                      if i not in string.punctuation]
         # Optional: remove stopwords.
         if stop:
-            signature = [i for i in signature if i not in stopwords.words('english')]
+            signature = [i for i in signature if i not in EN_STOPWORDS]
         # Optional: Lemmatize the tokens.
         if lemma == True:
             signature = [lemmatize(i) for i in signature]

@@ -10,6 +10,15 @@ from nltk.corpus import wordnet as wn
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 from nltk import pos_tag, word_tokenize
 
+SS_PARAMETERS_TYPE_MAP = {'definition':str, 'lemma_names':list, 
+                          'examples':list,  'hypernyms':list,
+                         'hyponyms': list, 'member_holonyms':list,
+                         'part_holonyms':list, 'substance_holonyms':list,
+                         'member_meronyms':list, 'substance_meronyms': list,
+                         'part_meronyms':list, 'similar_tos':list}
+
+
+
 def remove_tags(text):
   """ Removes <tags> in angled brackets from text. """
   import re
@@ -103,6 +112,12 @@ def lemmatize_sentence(sentence, neverstem=False, keepWordPOS=False,
     if keepWordPOS:
         return words, lemmas, [None if i == '' else i for i in poss]
     return lemmas
+
+def synset_properties(synset, parameter):
+    return_type = SS_PARAMETERS_TYPE_MAP[parameter]
+    func = 'synset.' + parameter
+    return eval(func) if isinstance(eval(func), return_type) else eval(func)()
+    
 
 # To check default parameters of simple_lesk()
 ## a = inspect.getargspec(simple_lesk)
