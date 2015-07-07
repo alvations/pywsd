@@ -75,8 +75,7 @@ def original_lesk(context_sentence, ambiguous_word, dictionary=None):
     if not dictionary: # If dictionary is not provided, use the WN defintion.
         dictionary = {}
         for ss in wn.synsets(ambiguous_word):
-            try: ss_definition = ss.definition().split()
-            except: ss_definition = ss.definition.split()
+            ss_definition = synset_properties(ss, 'definition')
             dictionary[ss] = ss_definition
     best_sense = compare_overlaps_greedy(context_sentence.split(), dictionary)
     return best_sense    
@@ -140,6 +139,9 @@ def simple_lesk(context_sentence, ambiguous_word, \
     """
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word) 
+    # If ambiguous word not in WordNet return None
+    if not wn.synsets(ambiguous_words):
+        return None
     # Get the signatures for each synset.
     ss_sign = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
     # Disambiguate the sense in context.
@@ -165,6 +167,9 @@ def adapted_lesk(context_sentence, ambiguous_word, \
     """
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word)
+    # If ambiguous word not in WordNet return None
+    if not wn.synsets(ambiguous_words):
+        return None
     # Get the signatures for each synset.
     ss_sign = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
     for ss in ss_sign:
@@ -217,6 +222,9 @@ def cosine_lesk(context_sentence, ambiguous_word, \
     """
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word)
+    # If ambiguous word not in WordNet return None
+    if not wn.synsets(ambiguous_words):
+        return None
     synsets_signatures = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
     
     if context_is_lemmatized:
