@@ -50,11 +50,11 @@ $ python
 >>> from pywsd.lesk import simple_lesk
 >>> sent = 'I went to the bank to deposit my money'
 >>> ambiguous = 'bank'
->>> answer = simple_lesk(sent, ambiguous)
+>>> answer = simple_lesk(sent, ambiguous, pos='n')
 >>> print answer
-Synset('depository_financial_institution.n.01')
+Synset('bank.n.09')
 >>> print answer.definition()
-a financial institution that accepts deposits and channels the money into lending activities
+u'a building in which the business of banking transacted
 ```
 
 For all-words WSD, try:
