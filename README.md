@@ -36,16 +36,19 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
 
 As a bonus, `pyWSD` comes with an almost native python implementations of several classification algorithms within the `Merlin` machine learning library, see https://github.com/alvations/pywsd/tree/master/merlin
 
+Install
+====
 
-***
+```
+pip install nltk
+python -m nltk.downloader 'averaged_perceptron_tagger'
+pip install pywsd
+```
+
 Usage
 =====
 
 ```
-$ git clone https://github.com/alvations/pywsd.git 
-$ cd pywsd
-$ ls
-pywsd  README.md  test_wsd.py
 $ python
 >>> from pywsd.lesk import simple_lesk
 >>> sent = 'I went to the bank to deposit my money'
