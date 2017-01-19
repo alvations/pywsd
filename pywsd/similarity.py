@@ -14,7 +14,7 @@ from nltk.corpus import wordnet as wn
 from nltk.corpus import wordnet_ic as wnic
 from nltk.tokenize import word_tokenize
 
-from utils import lemmatize
+from pywsd.utils import lemmatize
 
 def similarity_by_path(sense1, sense2, option="path"):
     """ Returns maximum path similarity between two senses. """

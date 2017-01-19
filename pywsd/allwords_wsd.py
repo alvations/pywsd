@@ -12,9 +12,9 @@ from nltk import word_tokenize, pos_tag
 from nltk.corpus import wordnet as wn
 from nltk.corpus import stopwords
 
-from lesk import simple_lesk, original_lesk
-from similarity import max_similarity
-from utils import lemmatize, lemmatize_sentence
+from pywsd.lesk import simple_lesk, original_lesk
+from pywsd.similarity import max_similarity
+from pywsd.utils import lemmatize, lemmatize_sentence
 
 """
 This is a module for all-words full text WSD

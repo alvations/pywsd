@@ -13,8 +13,8 @@ from nltk.corpus import wordnet as wn
 from nltk.corpus import stopwords
 from nltk import word_tokenize, pos_tag
 
-from cosine import cosine_similarity as cos_sim
-from utils import lemmatize, porter, lemmatize_sentence, synset_properties
+from pywsd.cosine import cosine_similarity as cos_sim
+from pywsd.utils import lemmatize, porter, lemmatize_sentence, synset_properties
 
 EN_STOPWORDS = stopwords.words('english')
 

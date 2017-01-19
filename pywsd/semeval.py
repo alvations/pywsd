@@ -10,7 +10,7 @@ import os, io
 from collections import namedtuple
 
 from BeautifulSoup import BeautifulSoup as bsoup
-from utils import remove_tags, semcor_to_synset
+from pywsd.utils import remove_tags, semcor_to_synset
 
 Instance = namedtuple('instance', 'id, lemma, word')
 Term = namedtuple('term', 'id, pos, lemma, sense, type')
