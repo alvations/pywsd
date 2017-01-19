@@ -2,7 +2,7 @@
 #
 # Python Word Sense Disambiguation (pyWSD): Misc utility functions
 #
-# Copyright (C) 2014-2015 alvations
+# Copyright (C) 2014-2017 alvations
 # URL:
 # For license information, see LICENSE.md
 
@@ -10,7 +10,7 @@ from nltk.corpus import wordnet as wn
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 from nltk import pos_tag, word_tokenize
 
-SS_PARAMETERS_TYPE_MAP = {'definition':str, 'lemma_names':list, 
+SS_PARAMETERS_TYPE_MAP = {'definition':str, 'lemma_names':list,
                           'examples':list,  'hypernyms':list,
                          'hyponyms': list, 'member_holonyms':list,
                          'part_holonyms':list, 'substance_holonyms':list,
@@ -23,10 +23,10 @@ def remove_tags(text):
   tags = {i:" " for i in re.findall("(<[^>\n]*>)",text.strip())}
   no_tag_text = reduce(lambda x, kv:x.replace(*kv), tags.iteritems(), text)
   return " ".join(no_tag_text.split())
-  
+
 def offset_to_synset(offset):
-    """ 
-    Look up a synset given offset-pos 
+    """
+    Look up a synset given offset-pos
     (Thanks for @FBond, see http://moin.delph-in.net/SemCor)
     >>> synset = offset_to_synset('02614387-v')
     >>> print '%08d-%s' % (synset.offset, synset.pos)
@@ -63,13 +63,13 @@ def semcor_to_offset(sensekey):
 porter = PorterStemmer()
 wnl = WordNetLemmatizer()
 
-def lemmatize(ambiguous_word, pos=None, neverstem=False, 
+def lemmatize(ambiguous_word, pos=None, neverstem=False,
               lemmatizer=wnl, stemmer=porter):
     """
     Tries to convert a surface word into lemma, and if lemmatize word is not in
     wordnet then try and convert surface word into its stem.
-    
-    This is to handle the case where users input a surface word as an ambiguous 
+
+    This is to handle the case where users input a surface word as an ambiguous
     word and the surface word is a not a lemma.
     """
     if pos:
@@ -87,7 +87,7 @@ def lemmatize(ambiguous_word, pos=None, neverstem=False,
             return stem
     else:
      return lemma
- 
+
 
 def penn2morphy(penntag, returnNone=False):
     morphy_tag = {'NN':wn.NOUN, 'JJ':wn.ADJ,
@@ -97,8 +97,8 @@ def penn2morphy(penntag, returnNone=False):
     except:
         return None if returnNone else ''
 
-def lemmatize_sentence(sentence, neverstem=False, keepWordPOS=False, 
-                       tokenizer=word_tokenize, postagger=pos_tag, 
+def lemmatize_sentence(sentence, neverstem=False, keepWordPOS=False,
+                       tokenizer=word_tokenize, postagger=pos_tag,
                        lemmatizer=wnl, stemmer=porter):
     words, lemmas, poss = [], [], []
     for word, pos in postagger(tokenizer(sentence)):
@@ -113,8 +113,8 @@ def lemmatize_sentence(sentence, neverstem=False, keepWordPOS=False,
 
 def synset_properties(synset, parameter):
     """
-    Making from NLTK's WordNet Synset's properties to function. 
-    Note: This is for compatibility with NLTK 2.x 
+    Making from NLTK's WordNet Synset's properties to function.
+    Note: This is for compatibility with NLTK 2.x
     """
     return_type = SS_PARAMETERS_TYPE_MAP[parameter]
     func = 'synset.' + parameter

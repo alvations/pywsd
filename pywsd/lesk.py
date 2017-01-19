@@ -2,7 +2,7 @@
 #
 # Python Word Sense Disambiguation (pyWSD)
 #
-# Copyright (C) 2014-2015 alvations
+# Copyright (C) 2014-2017 alvations
 # URL:
 # For license information, see LICENSE.md
 
@@ -22,11 +22,11 @@ def compare_overlaps_greedy(context, synsets_signatures):
     """
     Calculate overlaps between the context sentence and the synset_signature
     and returns the synset with the highest overlap.
-    
-    Note: Greedy algorithm only keeps the best sense, 
+
+    Note: Greedy algorithm only keeps the best sense,
     see https://en.wikipedia.org/wiki/Greedy_algorithm
-    
-    Only used by original_lesk(). Keeping greedy algorithm for documentary sake, 
+
+    Only used by original_lesk(). Keeping greedy algorithm for documentary sake,
     because original_lesks is greedy.
     """
     max_overlaps = 0; lesk_sense = None
@@ -34,12 +34,12 @@ def compare_overlaps_greedy(context, synsets_signatures):
         overlaps = set(synsets_signatures[ss]).intersection(context)
         if len(overlaps) > max_overlaps:
             lesk_sense = ss
-            max_overlaps = len(overlaps)    
+            max_overlaps = len(overlaps)
     return lesk_sense
 
 def compare_overlaps(context, synsets_signatures, \
                      nbest=False, keepscore=False, normalizescore=False):
-    """ 
+    """
     Calculates overlaps between the context sentence and the synset_signture
     and returns a ranked list of synsets from highest overlap to lowest.
     """
@@ -47,19 +47,19 @@ def compare_overlaps(context, synsets_signatures, \
     for ss in synsets_signatures:
         overlaps = set(synsets_signatures[ss]).intersection(context)
         overlaplen_synsets.append((len(overlaps), ss))
-    
+
     # Rank synsets from highest to lowest overlap.
     ranked_synsets = sorted(overlaplen_synsets, reverse=True)
-    
-    # Normalize scores such that it's between 0 to 1. 
+
+    # Normalize scores such that it's between 0 to 1.
     if normalizescore:
         total = float(sum(i[0] for i in ranked_synsets))
         ranked_synsets = [(i/total,j) for i,j in ranked_synsets]
-      
+
     if not keepscore: # Returns a list of ranked synsets without scores
         ranked_synsets = [i[1] for i in sorted(overlaplen_synsets, \
                                                reverse=True)]
-      
+
     if nbest: # Returns a ranked list of synsets.
         return ranked_synsets
     else: # Returns only the best sense.
@@ -78,12 +78,12 @@ def original_lesk(context_sentence, ambiguous_word, dictionary=None):
             ss_definition = synset_properties(ss, 'definition')
             dictionary[ss] = ss_definition
     best_sense = compare_overlaps_greedy(context_sentence.split(), dictionary)
-    return best_sense    
+    return best_sense
 
 def simple_signature(ambiguous_word, pos=None, lemma=True, stem=False, \
                      hyperhypo=True, stop=True):
-    """ 
-    Returns a synsets_signatures dictionary that includes signature words of a 
+    """
+    Returns a synsets_signatures dictionary that includes signature words of a
     sense from its:
     (i)   definition
     (ii)  example sentences
@@ -107,25 +107,25 @@ def simple_signature(ambiguous_word, pos=None, lemma=True, stem=False, \
         # Includes lemma_names.
         ss_lemma_names = synset_properties(ss, 'lemma_names')
         signature+= ss_lemma_names
-        
+
         # Optional: includes lemma_names of hypernyms and hyponyms.
         if hyperhypo == True:
             ss_hyponyms = synset_properties(ss, 'hyponyms')
             ss_hypernyms = synset_properties(ss, 'hypernyms')
             ss_hypohypernyms = ss_hypernyms+ss_hyponyms
             signature+= list(chain(*[i.lemma_names() for i in ss_hypohypernyms]))
-        
+
         # Optional: removes stopwords.
-        if stop == True: 
+        if stop == True:
             signature = [i for i in signature if i not in EN_STOPWORDS]
         # Lemmatized context is preferred over stemmed context.
-        if lemma == True: 
+        if lemma == True:
             signature = [lemmatize(i) for i in signature]
         # Matching exact words may cause sparsity, so optional matching for stems.
-        if stem == True: 
+        if stem == True:
             signature = [porter.stem(i) for i in signature]
         synsets_signatures[ss] = signature
-        
+
     return synsets_signatures
 
 def simple_lesk(context_sentence, ambiguous_word, \
@@ -133,12 +133,12 @@ def simple_lesk(context_sentence, ambiguous_word, \
                 stop=True, context_is_lemmatized=False, \
                 nbest=False, keepscore=False, normalizescore=False):
     """
-    Simple Lesk is somewhere in between using more than the 
-    original Lesk algorithm (1986) and using less signature 
+    Simple Lesk is somewhere in between using more than the
+    original Lesk algorithm (1986) and using less signature
     words than adapted Lesk (Banerjee and Pederson, 2002)
     """
     # Ensure that ambiguous word is a lemma.
-    ambiguous_word = lemmatize(ambiguous_word) 
+    ambiguous_word = lemmatize(ambiguous_word)
     # If ambiguous word not in WordNet return None
     if not wn.synsets(ambiguous_word):
         return None
@@ -151,7 +151,7 @@ def simple_lesk(context_sentence, ambiguous_word, \
         context_sentence = lemmatize_sentence(context_sentence)
     best_sense = compare_overlaps(context_sentence, ss_sign, \
                                     nbest=nbest, keepscore=keepscore, \
-                                    normalizescore=normalizescore)  
+                                    normalizescore=normalizescore)
     return best_sense
 
 def adapted_lesk(context_sentence, ambiguous_word, \
@@ -159,10 +159,10 @@ def adapted_lesk(context_sentence, ambiguous_word, \
                 stop=True, context_is_lemmatized=False, \
                 nbest=False, keepscore=False, normalizescore=False):
     """
-    This function is the implementation of the Adapted Lesk algorithm, 
-    described in Banerjee and Pederson (2002). It makes use of the lexical 
-    items from semantically related senses within the wordnet 
-    hierarchies and to generate more lexical items for each sense. 
+    This function is the implementation of the Adapted Lesk algorithm,
+    described in Banerjee and Pederson (2002). It makes use of the lexical
+    items from semantically related senses within the wordnet
+    hierarchies and to generate more lexical items for each sense.
     see www.d.umn.edu/~tpederse/Pubs/cicling2002-b.pdf‎
     """
     # Ensure that ambiguous word is a lemma.
@@ -183,15 +183,15 @@ def adapted_lesk(context_sentence, ambiguous_word, \
         ss_sub_meronyms = synset_properties(ss, 'substance_meronyms')
         # Includes similar_tos
         ss_simto = synset_properties(ss, 'similar_tos')
-        
-        related_senses = list(set(ss_mem_holonyms+ss_part_holonyms+ 
-                                  ss_sub_holonyms+ss_mem_meronyms+ 
+
+        related_senses = list(set(ss_mem_holonyms+ss_part_holonyms+
+                                  ss_sub_holonyms+ss_mem_meronyms+
                                   ss_part_meronyms+ss_sub_meronyms+ ss_simto))
-    
-        signature = list([j for j in chain(*[synset_properties(i, 'lemma_names') 
-                                             for i in related_senses]) 
+
+        signature = list([j for j in chain(*[synset_properties(i, 'lemma_names')
+                                             for i in related_senses])
                           if j not in EN_STOPWORDS])
-        
+
     # Lemmatized context is preferred over stemmed context
     if lemma == True:
         signature = [lemmatize(i) for i in signature]
@@ -200,7 +200,7 @@ def adapted_lesk(context_sentence, ambiguous_word, \
         signature = [porter.stem(i) for i in signature]
     # Adds the extended signature to the simple signatures.
     ss_sign[ss]+=signature
-  
+
     # Disambiguate the sense in context.
     if context_is_lemmatized:
         context_sentence = context_sentence.split()
@@ -215,9 +215,9 @@ def cosine_lesk(context_sentence, ambiguous_word, \
                 pos=None, lemma=True, stem=True, hyperhypo=True, \
                 stop=True, context_is_lemmatized=False, \
                 nbest=False):
-    """ 
+    """
     In line with vector space models, we can use cosine to calculate overlaps
-    instead of using raw overlap counts. Essentially, the idea of using 
+    instead of using raw overlap counts. Essentially, the idea of using
     signatures (aka 'sense paraphrases') is lesk-like.
     """
     # Ensure that ambiguous word is a lemma.
@@ -226,12 +226,12 @@ def cosine_lesk(context_sentence, ambiguous_word, \
     if not wn.synsets(ambiguous_word):
         return None
     synsets_signatures = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
-    
+
     if context_is_lemmatized:
         context_sentence = " ".join(context_sentence.split())
     else:
         context_sentence = " ".join(lemmatize_sentence(context_sentence))
-    
+
     scores = []
     for ss, signature in synsets_signatures.items():
         # Lowercase and replace "_" with spaces.
@@ -249,9 +249,8 @@ def cosine_lesk(context_sentence, ambiguous_word, \
         if stem:
             signature = [porter.stem(i) for i in signature]
         scores.append((cos_sim(context_sentence, " ".join(signature)), ss))
-        
+
         if not nbest:
             return sorted(scores, reverse=True)[0][1]
         else:
             return [(j,i) for i,j in sorted(scores, reverse=True)]
-

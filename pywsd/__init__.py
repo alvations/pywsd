@@ -2,16 +2,15 @@
 #
 # Python Word Sense Disambiguation (pyWSD)
 #
-# Copyright (C) 2014-2015 alvations
+# Copyright (C) 2014-2017 alvations
 # URL:
 # For license information, see LICENSE.md
 
-import lesk
-import baseline
-import similarity
+import pywsd.lesk
+import pywsd.baseline
+import pywsd.similarity
 
 #import semcor
 #import semeval
 
-from allwords_wsd import disambiguate
-
+from pywsd.allwords_wsd import disambiguate
