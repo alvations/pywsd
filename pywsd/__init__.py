@@ -6,6 +6,8 @@
 # URL:
 # For license information, see LICENSE.md
 
+from __future__ import absolute_import
+
 import pywsd.lesk
 import pywsd.baseline
 import pywsd.similarity
