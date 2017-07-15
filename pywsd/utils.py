@@ -12,17 +12,17 @@ from nltk import pos_tag, word_tokenize
 
 SS_PARAMETERS_TYPE_MAP = {'definition':str, 'lemma_names':list,
                           'examples':list,  'hypernyms':list,
-                         'hyponyms': list, 'member_holonyms':list,
-                         'part_holonyms':list, 'substance_holonyms':list,
-                         'member_meronyms':list, 'substance_meronyms': list,
-                         'part_meronyms':list, 'similar_tos':list}
+                          'hyponyms': list, 'member_holonyms':list,
+                          'part_holonyms':list, 'substance_holonyms':list,
+                          'member_meronyms':list, 'substance_meronyms': list,
+                          'part_meronyms':list, 'similar_tos':list}
 
 def remove_tags(text):
-  """ Removes <tags> in angled brackets from text. """
-  import re
-  tags = {i:" " for i in re.findall("(<[^>\n]*>)",text.strip())}
-  no_tag_text = reduce(lambda x, kv:x.replace(*kv), tags.iteritems(), text)
-  return " ".join(no_tag_text.split())
+    """ Removes <tags> in angled brackets from text. """
+    import re
+    tags = {i:" " for i in re.findall("(<[^>\n]*>)",text.strip())}
+    no_tag_text = reduce(lambda x, kv:x.replace(*kv), tags.iteritems(), text)
+    return " ".join(no_tag_text.split())
 
 def offset_to_synset(offset):
     """
@@ -86,7 +86,7 @@ def lemmatize(ambiguous_word, pos=None, neverstem=False,
         else:
             return stem
     else:
-     return lemma
+        return lemma
 
 
 def penn2morphy(penntag, returnNone=False):

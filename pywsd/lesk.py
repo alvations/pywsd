@@ -16,7 +16,41 @@ from nltk import word_tokenize, pos_tag
 from pywsd.cosine import cosine_similarity as cos_sim
 from pywsd.utils import lemmatize, porter, lemmatize_sentence, synset_properties
 
-EN_STOPWORDS = stopwords.words('english')
+EN_STOPWORDS = stopwords.words('english') + list(string.punctuation)
+
+def signatures(ambiguous_word, pos=None,
+               hyperhypo=True, adapted=False,
+               remove_stopwords=True, to_lemmatize=True):
+    # Ensure that the POS is supported.
+    pos = pos if pos in ['a', 'r', 's', 'n', 'v', None] else None
+    # Holds the synset->signature dictionary.
+    synsets_signatures = {}
+    for ss in wn.synsets(ambiguous_word, pos=pos):
+        signature = []
+        # Adds the definition, example sentences and lemma_names.
+        signature += word_tokenize(ss.definition())
+        signature += chain(*[word_tokenize(eg) for eg in ss.examples()])
+        signature += ss.lemma_names()
+        # Optional: includes lemma_names of hyper-/hyponyms.
+        if hyperhypo:
+            hyperhypo = set(ss.hyponyms() + ss.hypernyms() + ss.instance_hyponyms() + ss.instance_hypernyms())
+            signature += set(chain(*[i.lemma_names() for i in hyperhypo]))
+        # Optional: Includes signatures from related senses as in Adapted Lesk.
+        if adapted:
+            # Includes lemma_names from holonyms, meronyms and similar_tos
+            related_senses = set(ss.member_holonyms() + ss.part_holonyms() + ss.substance_holonyms() +
+                                 ss.member_meronyms() + ss.part_meronyms() + ss.substance_meronyms() +
+                                 ss.similar_tos())
+            signature += set(chain(*[i.lemma_names() for i in related_senses]))
+        # Optional: removes stopwords.
+        if remove_stopwords:
+            signature = [i for i in signature if i not in EN_STOPWORDS]
+        # Lemmatized context is preferred over stemmed context.
+        if to_lemmatize:
+            signature = [lemmatize(i) for i in signature]
+        synsets_signatures[ss] = signature
+    return synsets_signatures
+
 
 def compare_overlaps_greedy(context, synsets_signatures):
     """
