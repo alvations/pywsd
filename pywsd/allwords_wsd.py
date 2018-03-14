@@ -28,7 +28,7 @@ stopwords = stopwords.words('english') + list(punctuation)
 
 def disambiguate(sentence, algorithm=simple_lesk,
                  context_is_lemmatized=False, similarity_option='path',
-                 keepLemmas=False, prefersNone=True):
+                 keepLemmas=False, prefersNone=True, from_cache=True):
     tagged_sentence = []
     # Pre-lemmatize the sentnece before WSD
     if not context_is_lemmatized:
@@ -41,11 +41,12 @@ def disambiguate(sentence, algorithm=simple_lesk,
             try:
                 wn.synsets(lemma)[0]
                 if algorithm == original_lesk: # Note: Original doesn't care about lemmas
-                    synset = algorithm(lemma_sentence, lemma)
+                    synset = algorithm(lemma_sentence, lemma, from_cache=from_cache)
                 elif algorithm == max_similarity:
                     synset = algorithm(lemma_sentence, lemma, pos=pos, option=similarity_option)
                 else:
-                    synset = algorithm(lemma_sentence, lemma, pos=pos, context_is_lemmatized=True)
+                    synset = algorithm(lemma_sentence, lemma, pos=pos, context_is_lemmatized=True,
+                                       from_cache=from_cache)
             except: # In case the content word is not in WordNet
                 synset = '#NOT_IN_WN#'
         else:
