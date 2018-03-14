@@ -40,9 +40,9 @@ Install
 ====
 
 ```
-pip install nltk
-python -m nltk.downloader 'averaged_perceptron_tagger'
-pip install pywsd
+pip install -U nltk
+python -m nltk.downloader 'popular'
+pip install -U pywsd
 ```
 
 Usage
