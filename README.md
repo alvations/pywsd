@@ -4,15 +4,12 @@ pywsd
 Python Implementations of Word Sense Disambiguation (WSD) technologies:
 
 * **Lesk algorithms**
-
-| Algorithm  | Citations | Status | Comment | 
-|:--|:--|:--|:--|
-| Original Lesk | (Lesk, 1986) | `pywsd.lesk.original_lesk` | - |
-| Adapted/Extended Lesk |  (Banerjee and Pederson, 2002/2003) | `pywsd.lesk.adapted_lesk` | - |
-| Simple Lesk | (Tan, 2014) | `pywsd.lesk.simple_lesk` | Uses definitions, examples, lemma_names|
-| Cosine Lesk | (Tan, 2014) | `pywsd.lesk.cosine_lesk` | use cosines to calculate overlaps instead of using raw counts|
-| Enhanced Lesk | (Basile et al. 2014) | (in wishlist) | - |
-
+  * Original Lesk (Lesk, 1986)
+  * Adapted/Extended Lesk (Banerjee and Pederson, 2002/2003)
+  * Simple Lesk (with definition, example(s) and hyper+hyponyms)
+  * Cosine Lesk (use cosines to calculate overlaps instead of using raw counts)
+  * Enhanced Lesk (Basile et al. 2014) (in wishlist)
+  
 * **Maximizing Similarity** (see also, http://goo.gl/MG8ZpE)
 
   * Path similarity (Wu-Palmer, 1994; Leacock and Chodorow, 1998)
@@ -140,6 +137,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 ***
+
+<!--
+| Algorithm  | Citations | Status | Comment | 
+|:--|:--|:--|:--|
+| Original Lesk | (Lesk, 1986) | `pywsd.lesk.original_lesk` | - |
+| Adapted/Extended Lesk |  (Banerjee and Pederson, 2002/2003) | `pywsd.lesk.adapted_lesk` | - |
+| Simple Lesk | (Tan, 2014) | `pywsd.lesk.simple_lesk` | Uses definitions, examples, lemma_names|
+| Cosine Lesk | (Tan, 2014) | `pywsd.lesk.cosine_lesk` | use cosines to calculate overlaps instead of using raw counts|
+| Enhanced Lesk | (Basile et al. 2014) | (in wishlist) | - |
+
+-->
+
 References
 =========
 
