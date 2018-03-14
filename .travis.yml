@@ -1,14 +1,27 @@
-sudo: false
+
 language: python
-python:
-  - "2.7"
-  - "3.3"
-  - "3.4"
-  - "3.5"  
-  - "3.5-dev" # 3.5 development branch
-  - "nightly" # currently points to 3.6-dev
-# command to install dependencies  
+
+sudo: false
+dist: trusty
+
+
+cache:
+  apt: true
+  directories:
+  - $HOME/.cache/pip
+  - $HOME/.ccache
+  - $HOME/.pip-cache
+
+matrix:
+  include:
+    - python: '2.7'
+      env: TOXENV="py27-linux"
+
+    - python: '3.6'
+      env: TOXENV="py36-linux"
+
 install:
   - pip install -r requirements.txt
-  - python setup.py install
-script: nosetests
+  - pip install tox
+
+script: tox -vv
