@@ -57,7 +57,7 @@ $ python
 >>> print answer
 Synset('depository_financial_institution.n.01')
 >>> print answer.definition()
-'a building in which the business of banking transacted'
+'a financial institution that accepts deposits and channels the money into lending activities'
 ```
 
 For all-words WSD, try:
