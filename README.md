@@ -9,7 +9,7 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
   * Simple Lesk (with definition, example(s) and hyper+hyponyms)
   * Cosine Lesk (use cosines to calculate overlaps instead of using raw counts)
   * Enhanced Lesk (Basile et al. 2014) (in wishlist)
-  
+
 * **Maximizing Similarity** (see also, http://goo.gl/MG8ZpE)
 
   * Path similarity (Wu-Palmer, 1994; Leacock and Chodorow, 1998)
@@ -33,9 +33,11 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
   * First NLTK sense
   * Highest lemma counts
 
+<!--
 (**NOTE**: requires `NLTK`, goto http://nltk.org/install.html. Also, note that as of 30.10.13, NLTK has changed `Synset` object properties to methods, see http://goo.gl/hO79KO)
 
 As a bonus, `pyWSD` comes with an almost native python implementations of several classification algorithms within the `Merlin` machine learning library, see https://github.com/alvations/pywsd/tree/master/merlin
+-->
 
 Install
 ====
@@ -139,7 +141,7 @@ THE SOFTWARE.
 ***
 
 <!--
-| Algorithm  | Citations | Status | Comment | 
+| Algorithm  | Citations | Status | Comment |
 |:--|:--|:--|:--|
 | Original Lesk | (Lesk, 1986) | `pywsd.lesk.original_lesk` | - |
 | Adapted/Extended Lesk |  (Banerjee and Pederson, 2002/2003) | `pywsd.lesk.adapted_lesk` | - |
