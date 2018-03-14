@@ -23,5 +23,6 @@ matrix:
 install:
   - pip install -r requirements.txt
   - pip install tox
+  - python -m nltk.downloader popular
 
 script: tox -vv
