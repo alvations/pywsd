@@ -82,10 +82,13 @@ def signatures(ambiguous_word, pos=None, hyperhypo=True, adapted=False,
     # Holds the synset->signature dictionary.
     ss_sign = {}
     for ss in wn.synsets(ambiguous_word, pos):
-        ss_sign[ss] = synset_signatures(ss, hyperhypo=True, adapted=False,
-                                        remove_stopwords=True, to_lemmatize=True,
-                                        remove_numbers=True, lowercase=True,
-                                        original_lesk=False)
+        ss_sign[ss] = synset_signatures(ss, hyperhypo=hyperhypo,
+                                        adapted=adapted,
+                                        remove_stopwords=remove_stopwords,
+                                        to_lemmatize=to_lemmatize,
+                                        remove_numbers=remove_numbers,
+                                        lowercase=lowercase,
+                                        original_lesk=original_lesk)
 
     # Matching exact words may cause sparsity, so optional matching for stems.
     # Not advisible to use thus left out of the synsets_signatures()
@@ -208,8 +211,8 @@ def adapted_lesk(context_sentence, ambiguous_word,
         return None
     # Get the signatures for each synset.
     ss_sign = signatures(ambiguous_word, pos=pos, hyperhypo=hyperhypo, adapted=True,
-                            remove_stopwords=stop, to_lemmatize=lemma,
-                            remove_numbers=True, lowercase=True, to_stem=stem)
+                         remove_stopwords=stop, to_lemmatize=lemma,
+                         remove_numbers=True, lowercase=True, to_stem=stem)
 
     # Disambiguate the sense in context.
     context_sentence = context_sentence.split() if context_is_lemmatized else lemmatize_sentence(context_sentence)
