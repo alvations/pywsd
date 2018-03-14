@@ -8,14 +8,14 @@
 
 from nltk.corpus import wordnet as wn
 import random
-random.seed(0)
+custom_random = random.Random(0)
 
 def random_sense(ambiguous_word, pos=None):
     """ Returns a random sense. """
     if pos is None:
-        return random.choice(wn.synsets(ambiguous_word))
+        return custom_random.choice(wn.synsets(ambiguous_word))
     else:
-        return random.choice(wn.synsets(ambiguous_word, pos))
+        return custom_random.choice(wn.synsets(ambiguous_word, pos))
 
 def first_sense(ambiguous_word, pos=None):
     """ Returns the first sense. """
