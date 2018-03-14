@@ -243,7 +243,6 @@ def cosine_lesk(context_sentence, ambiguous_word, \
     if not wn.synsets(ambiguous_word):
         return None
     ss_sign = simple_signatures(ambiguous_word, pos, lemma, stem, hyperhypo, stop)
-
     if context_is_lemmatized:
         context_sentence = " ".join(context_sentence.split())
     else:
@@ -253,21 +252,11 @@ def cosine_lesk(context_sentence, ambiguous_word, \
     for ss, signature in ss_sign.items():
         # Lowercase and replace "_" with spaces.
         signature = " ".join(map(str, signature)).lower().replace("_", " ")
-        # Removes punctuation.
-        signature = [i for i in word_tokenize(signature) \
-                     if i not in string.punctuation]
-        # Optional: remove stopwords.
-        if stop:
-            signature = [i for i in signature if i not in EN_STOPWORDS]
-        # Optional: Lemmatize the tokens.
-        if lemma == True:
-            signature = [lemmatize(i) for i in signature]
-        # Optional: stem the tokens.
-        if stem:
-            signature = [porter.stem(i) for i in signature]
-        scores.append((cos_sim(context_sentence, " ".join(signature)), ss))
+        scores.append((cos_sim(context_sentence, signature), ss))
 
-        if not nbest:
-            return sorted(scores, reverse=True)[0][1]
-        else:
-            return [(j,i) for i,j in sorted(scores, reverse=True)]
+    scores = sorted(scores, reverse=True)
+    if not nbest:
+
+        return scores[0][1]
+    else:
+        return [(j,i) for i,j in sorted(scores, reverse=True)]
