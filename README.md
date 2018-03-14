@@ -48,7 +48,7 @@ pip install -U pywsd
 Usage
 =====
 
-```
+```python
 $ python
 >>> from pywsd.lesk import simple_lesk
 >>> sent = 'I went to the bank to deposit my money'
@@ -61,13 +61,33 @@ Synset('depository_financial_institution.n.01')
 ```
 
 For all-words WSD, try:
-```
+
+```python
 >>> from pywsd import disambiguate
 >>> from pywsd.similarity import max_similarity as maxsim
 >>> disambiguate('I went to the bank to deposit my money')
 [('I', None), ('went', Synset('run_low.v.01')), ('to', None), ('the', None), ('bank', Synset('depository_financial_institution.n.01')), ('to', None), ('deposit', Synset('deposit.v.02')), ('my', None), ('money', Synset('money.n.03'))]
 >>> disambiguate('I went to the bank to deposit my money', algorithm=maxsim, similarity_option='wup', keepLemmas=True)
 [('I', 'i', None), ('went', u'go', Synset('sound.v.02')), ('to', 'to', None), ('the', 'the', None), ('bank', 'bank', Synset('bank.n.06')), ('to', 'to', None), ('deposit', 'deposit', Synset('deposit.v.02')), ('my', 'my', None), ('money', 'money', Synset('money.n.01'))]
+```
+
+To read pre-computed signatures per synset:
+
+```python
+>>> from pywsd.lesk import cached_signatures
+>>> cached_signatures['dog.n.01']['simple']
+set([u'canid', u'belgian_griffon', u'breed', u'barker', ... , u'genus', u'newfoundland'])
+>>> cached_signatures['dog.n.01']['adapted']
+set([u'canid', u'belgian_griffon', u'breed', u'leonberg', ... , u'newfoundland', u'pack'])
+
+>>> from nltk.corpus import wordnet as wn
+>>> wn.synsets('dog')[0]
+Synset('dog.n.01')
+>>> dog = wn.synsets('dog')[0]
+>>> dog.name()
+u'dog.n.01'
+>>> cached_signatures[dog.name()]['simple']
+set([u'canid', u'belgian_griffon', u'breed', u'barker', ... , u'genus', u'newfoundland'])
 ```
 
 ***
