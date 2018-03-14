@@ -9,15 +9,15 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
   * Simple Lesk (with definition, example(s) and hyper+hyponyms)
   * Cosine Lesk (use cosines to calculate overlaps instead of using raw counts)
   * Enhanced Lesk (Basile et al. 2014) (in wishlist)
-  
+
 * **Maximizing Similarity** (see also, http://goo.gl/MG8ZpE)
   * Path similarity (Wu-Palmer, 1994; Leacock and Chodorow, 1998)
   * Information Content (Resnik, 1995; Jiang and Corath, 1997; Lin, 1998)
-  
+
 * **Supervised WSD** (in progress)
   * SVM WSD (Lee, Ng and Chia 2004)
-  * It Makes Sense (IMS) (Zhong and Ng, 2010) 
- 
+  * It Makes Sense (IMS) (Zhong and Ng, 2010)
+
 * **Vector Space Models** (in progress)
   * LSI/LSA
   * Topic Models, LDA (Li et al. 2012)
@@ -30,7 +30,7 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
 * **Baselines**
   * Random sense
   * First NLTK sense
-  * Highest lemma counts 
+  * Highest lemma counts
 
 (**NOTE**: requires `NLTK`, goto http://nltk.org/install.html. Also, note that as of 30.10.13, NLTK has changed `Synset` object properties to methods, see http://goo.gl/hO79KO)
 
@@ -55,9 +55,9 @@ $ python
 >>> ambiguous = 'bank'
 >>> answer = simple_lesk(sent, ambiguous, pos='n')
 >>> print answer
-Synset('bank.n.09')
+Synset('depository_financial_institution.n.01')
 >>> print answer.definition()
-u'a building in which the business of banking transacted
+'a building in which the business of banking transacted'
 ```
 
 For all-words WSD, try:
@@ -142,6 +142,4 @@ Joint Conference on Artificial Intelligence, pages 805–810, Acapulco.
 
 * Steven Bird, Ewan Klein, and Edward Loper. 2009. Natural Language Processing with Python (1st ed.). O'Reilly Media, Inc..
 
-* Eneko Agirre and Aitor Soroa. 2009. Personalizing PageRank for Word Sense Disambiguation. Proceedings of the 12th conference of the European chapter of the Association for Computational Linguistics (EACL-2009). Athens, Greece. 
-
-
+* Eneko Agirre and Aitor Soroa. 2009. Personalizing PageRank for Word Sense Disambiguation. Proceedings of the 12th conference of the European chapter of the Association for Computational Linguistics (EACL-2009). Athens, Greece.
