@@ -22,7 +22,7 @@ from pywsd.utils import lemmatize, porter, lemmatize_sentence, synset_properties
 
 pywsd_stopwords = [u"'s", u"``", u"`"]
 EN_STOPWORDS = set(stopwords.words('english') + list(string.punctuation) + pywsd_stopwords)
-signatures_picklefile = os.path.dirname(os.path.abspath(__file__)) + '/data/signatures.pkl'
+signatures_picklefile = os.path.dirname(os.path.abspath(__file__)) + '/data/signatures/signatures.pkl'
 cached_signatures = pd.read_pickle(signatures_picklefile)
 
 def synset_signatures_from_cache(ss, hyperhypo=True, adapted=False, original_lesk=False):
