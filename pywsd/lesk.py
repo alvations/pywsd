@@ -85,7 +85,7 @@ def synset_signatures(ss, hyperhypo=True, adapted=False,
 
 def signatures(ambiguous_word, pos=None, hyperhypo=True, adapted=False,
                remove_stopwords=True, to_lemmatize=True, remove_numbers=True,
-               lowercase=True, to_stem=False, original_lesk=False):
+               lowercase=True, to_stem=False, original_lesk=False, from_cache=True):
     """
     :param ambiguous_word: The ambiguous word.
     :type ambiguous_word: str
@@ -102,7 +102,7 @@ def signatures(ambiguous_word, pos=None, hyperhypo=True, adapted=False,
                                         remove_numbers=remove_numbers,
                                         lowercase=lowercase,
                                         original_lesk=original_lesk,
-                                        from_cache=True)
+                                        from_cache=from_cache)
 
     # Matching exact words may cause sparsity, so optional matching for stems.
     # Not advisible to use thus left out of the synsets_signatures()
@@ -158,7 +158,7 @@ def compare_overlaps(context, synsets_signatures,
     return ranked_synsets if nbest else ranked_synsets[0]
 
 
-def original_lesk(context_sentence, ambiguous_word, dictionary=None):
+def original_lesk(context_sentence, ambiguous_word, dictionary=None, from_cache=True):
     """
     This function is the implementation of the original Lesk algorithm (1986).
     It requires a dictionary which contains the definition of the different
@@ -166,13 +166,13 @@ def original_lesk(context_sentence, ambiguous_word, dictionary=None):
     """
     ambiguous_word = lemmatize(ambiguous_word)
     if not dictionary: # If dictionary is not provided, use the WN defintion.
-        dictionary = signatures(ambiguous_word, original_lesk=True)
+        dictionary = signatures(ambiguous_word, original_lesk=True, from_cache=from_cache)
     best_sense = compare_overlaps_greedy(context_sentence.split(), dictionary)
     return best_sense
 
 
 def simple_signatures(ambiguous_word, pos=None, lemma=True, stem=False,
-                     hyperhypo=True, stop=True):
+                     hyperhypo=True, stop=True, from_cache=True):
     """
     Returns a synsets_signatures dictionary that includes signature words of a
     sense from its:
@@ -182,13 +182,15 @@ def simple_signatures(ambiguous_word, pos=None, lemma=True, stem=False,
     """
     synsets_signatures = signatures(ambiguous_word, pos=pos, hyperhypo=hyperhypo,
                             remove_stopwords=stop, to_lemmatize=lemma,
-                            remove_numbers=True, lowercase=True, to_stem=stem)
+                            remove_numbers=True, lowercase=True, to_stem=stem,
+                            from_cache=from_cache)
     return synsets_signatures
 
 def simple_lesk(context_sentence, ambiguous_word,
                 pos=None, lemma=True, stem=False, hyperhypo=True,
                 stop=True, context_is_lemmatized=False,
-                nbest=False, keepscore=False, normalizescore=False):
+                nbest=False, keepscore=False, normalizescore=False,
+                from_cache=True):
     """
     Simple Lesk is somewhere in between using more than the
     original Lesk algorithm (1986) and using less signature
@@ -200,7 +202,8 @@ def simple_lesk(context_sentence, ambiguous_word,
     if not wn.synsets(ambiguous_word):
         return None
     # Get the signatures for each synset.
-    ss_sign = simple_signatures(ambiguous_word, pos, lemma, stem, hyperhypo, stop)
+    ss_sign = simple_signatures(ambiguous_word, pos, lemma, stem, hyperhypo, stop,
+                                from_cache=from_cache)
     # Disambiguate the sense in context.
     context_sentence = context_sentence.split() if context_is_lemmatized else lemmatize_sentence(context_sentence)
     return compare_overlaps(context_sentence, ss_sign, nbest=nbest,
@@ -210,7 +213,8 @@ def simple_lesk(context_sentence, ambiguous_word,
 def adapted_lesk(context_sentence, ambiguous_word,
                 pos=None, lemma=True, stem=False, hyperhypo=True,
                 stop=True, context_is_lemmatized=False,
-                nbest=False, keepscore=False, normalizescore=False):
+                nbest=False, keepscore=False, normalizescore=False,
+                from_cache=True):
     """
     This function is the implementation of the Adapted Lesk algorithm,
     described in Banerjee and Pederson (2002). It makes use of the lexical
@@ -226,7 +230,8 @@ def adapted_lesk(context_sentence, ambiguous_word,
     # Get the signatures for each synset.
     ss_sign = signatures(ambiguous_word, pos=pos, hyperhypo=hyperhypo, adapted=True,
                          remove_stopwords=stop, to_lemmatize=lemma,
-                         remove_numbers=True, lowercase=True, to_stem=stem)
+                         remove_numbers=True, lowercase=True, to_stem=stem,
+                         from_cache=from_cache)
 
     # Disambiguate the sense in context.
     context_sentence = context_sentence.split() if context_is_lemmatized else lemmatize_sentence(context_sentence)
@@ -237,7 +242,7 @@ def adapted_lesk(context_sentence, ambiguous_word,
 def cosine_lesk(context_sentence, ambiguous_word,
                 pos=None, lemma=True, stem=True, hyperhypo=True,
                 stop=True, context_is_lemmatized=False,
-                nbest=False):
+                nbest=False, from_cache=True):
     """
     In line with vector space models, we can use cosine to calculate overlaps
     instead of using raw overlap counts. Essentially, the idea of using
@@ -248,7 +253,8 @@ def cosine_lesk(context_sentence, ambiguous_word,
     # If ambiguous word not in WordNet return None
     if not wn.synsets(ambiguous_word):
         return None
-    ss_sign = simple_signatures(ambiguous_word, pos, lemma, stem, hyperhypo, stop)
+    ss_sign = simple_signatures(ambiguous_word, pos, lemma, stem, hyperhypo, stop,
+                                from_cache=from_cache)
     if context_is_lemmatized:
         context_sentence = " ".join(context_sentence.split())
     else:
