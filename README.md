@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/alvations/pywsd.svg?branch=master)](https://travis-ci.org/alvations/pywsd)
-[![PyPI version fury.io](https://badge.fury.io/py/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 
 pywsd
 =====
