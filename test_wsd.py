@@ -105,7 +105,7 @@ print "#TESTING cosine_lesk() with nbest results..."
 print "Context:", bank_sents[0]
 answer = cosine_lesk(bank_sents[0],'bank', nbest=True)
 print "Senses ranked by #overlaps:", answer
-best_sense = answer[0][0]
+best_sense = answer[0][1]
 definition = best_sense.definition()
 print "Definition:", definition
 print
