@@ -67,7 +67,7 @@ def synset_signatures(ss, hyperhypo=True, adapted=False,
                      if not (remove_numbers and s.isdigit())
                      ]
     # Keep only the unique bag-of-words
-    return signature
+    return set(signature)
 
 
 def signatures(ambiguous_word, pos=None, hyperhypo=True, adapted=False,
@@ -115,7 +115,7 @@ def compare_overlaps_greedy(context, synsets_signatures):
     return lesk_sense
 
 
-def compare_overlaps(context, synsets_signatures, \
+def compare_overlaps(context, synsets_signatures,
                      nbest=False, keepscore=False, normalizescore=False):
     """
     Calculates overlaps between the context sentence and the synset_signture
@@ -135,8 +135,7 @@ def compare_overlaps(context, synsets_signatures, \
         ranked_synsets = [(i/total,j) for i,j in ranked_synsets]
 
     if not keepscore: # Returns a list of ranked synsets without scores
-        ranked_synsets = [i[1] for i in sorted(overlaplen_synsets, \
-                                               reverse=True)]
+        ranked_synsets = [i[1] for i in sorted(overlaplen_synsets, reverse=True)]
 
     # Returns a ranked list of synsets otherwise only the best sense.
     return ranked_synsets if nbest else ranked_synsets[0]
@@ -155,7 +154,7 @@ def original_lesk(context_sentence, ambiguous_word, dictionary=None):
     return best_sense
 
 
-def simple_signatures(ambiguous_word, pos=None, lemma=True, stem=False, \
+def simple_signatures(ambiguous_word, pos=None, lemma=True, stem=False,
                      hyperhypo=True, stop=True):
     """
     Returns a synsets_signatures dictionary that includes signature words of a
@@ -169,9 +168,9 @@ def simple_signatures(ambiguous_word, pos=None, lemma=True, stem=False, \
                             remove_numbers=True, lowercase=True, to_stem=stem)
     return synsets_signatures
 
-def simple_lesk(context_sentence, ambiguous_word, \
-                pos=None, lemma=True, stem=False, hyperhypo=True, \
-                stop=True, context_is_lemmatized=False, \
+def simple_lesk(context_sentence, ambiguous_word,
+                pos=None, lemma=True, stem=False, hyperhypo=True,
+                stop=True, context_is_lemmatized=False,
                 nbest=False, keepscore=False, normalizescore=False):
     """
     Simple Lesk is somewhere in between using more than the
@@ -191,9 +190,9 @@ def simple_lesk(context_sentence, ambiguous_word, \
                             keepscore=keepscore, normalizescore=normalizescore)
 
 
-def adapted_lesk(context_sentence, ambiguous_word, \
-                pos=None, lemma=True, stem=False, hyperhypo=True, \
-                stop=True, context_is_lemmatized=False, \
+def adapted_lesk(context_sentence, ambiguous_word,
+                pos=None, lemma=True, stem=False, hyperhypo=True,
+                stop=True, context_is_lemmatized=False,
                 nbest=False, keepscore=False, normalizescore=False):
     """
     This function is the implementation of the Adapted Lesk algorithm,
@@ -218,9 +217,9 @@ def adapted_lesk(context_sentence, ambiguous_word, \
                             keepscore=keepscore, normalizescore=normalizescore)
 
 
-def cosine_lesk(context_sentence, ambiguous_word, \
-                pos=None, lemma=True, stem=True, hyperhypo=True, \
-                stop=True, context_is_lemmatized=False, \
+def cosine_lesk(context_sentence, ambiguous_word,
+                pos=None, lemma=True, stem=True, hyperhypo=True,
+                stop=True, context_is_lemmatized=False,
                 nbest=False):
     """
     In line with vector space models, we can use cosine to calculate overlaps
