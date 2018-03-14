@@ -1,4 +1,5 @@
-#!/usr/bin/env python -*- coding: utf-8 -*-
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
 #
 # Python Word Sense Disambiguation (pyWSD)
 #
@@ -17,11 +18,11 @@ from nltk import word_tokenize, pos_tag
 from pywsd.cosine import cosine_similarity as cos_sim
 from pywsd.utils import lemmatize, porter, lemmatize_sentence, synset_properties
 
-pywsd_stopwords = ["'s", "``", "`"]
+pywsd_stopwords = [u"'s", u"``", u"`"]
 EN_STOPWORDS = set(stopwords.words('english') + list(string.punctuation) + pywsd_stopwords)
 
 
-def synset_signatures(ss, pos=None, hyperhypo=True, adapted=False,
+def synset_signatures(ss, hyperhypo=True, adapted=False,
                       remove_stopwords=True, to_lemmatize=True, remove_numbers=True,
                       lowercase=True, original_lesk=False):
     """
@@ -53,13 +54,14 @@ def synset_signatures(ss, pos=None, hyperhypo=True, adapted=False,
                              ss.similar_tos())
         signature += set(chain(*[i.lemma_names() for i in related_senses]))
 
+    # Lowercase.
+    signature = set(s.lower() for s in signature) if lowercase else signature
     # Removes stopwords.
-    if remove_stopwords:
-        signature = set(signature).difference(EN_STOPWORDS)
+    signature = set(signature).difference(EN_STOPWORDS) if remove_stopwords else signature
 
     # Lemmatized context is preferred over stemmed context.
     if to_lemmatize:
-        signature = [lemmatize(s.lower()) if lowercase else lemmatize(s) # Lowercasing checks here.
+        signature = [lemmatize(s) if lowercase else lemmatize(s) # Lowercasing checks here.
                      for s in signature
                      # We only throw away if both remove_numbers and s is a digit are true.
                      if not (remove_numbers and s.isdigit())
@@ -70,7 +72,7 @@ def synset_signatures(ss, pos=None, hyperhypo=True, adapted=False,
 
 def signatures(ambiguous_word, pos=None, hyperhypo=True, adapted=False,
                remove_stopwords=True, to_lemmatize=True, remove_numbers=True,
-               lowercase=True, original_lesk=False):
+               lowercase=True, to_stem=False, original_lesk=False):
     """
     :param ambiguous_word: The ambiguous word.
     :type ambiguous_word: str
@@ -78,20 +80,24 @@ def signatures(ambiguous_word, pos=None, hyperhypo=True, adapted=False,
     # Ensure that the POS is supported.
     pos = pos if pos in ['a', 'r', 's', 'n', 'v', None] else None
     # Holds the synset->signature dictionary.
-    synsets_signatures = {}
-    for ss in wn.synsets(ambiguous_word):
-        synsets_signatures[ss] = synset_signatures(ss, pos=None,
-                                    hyperhypo=True, adapted=False,
-                                    remove_stopwords=True, to_lemmatize=True,
-                                    remove_numbers=True, lowercase=True,
-                                    original_lesk=False)
+    ss_sign = {}
+    for ss in wn.synsets(ambiguous_word, pos):
+        ss_sign[ss] = synset_signatures(ss, hyperhypo=True, adapted=False,
+                                        remove_stopwords=True, to_lemmatize=True,
+                                        remove_numbers=True, lowercase=True,
+                                        original_lesk=False)
 
-    return synsets_signatures
+    # Matching exact words may cause sparsity, so optional matching for stems.
+    # Not advisible to use thus left out of the synsets_signatures()
+    if to_stem == True:
+        ss_sign = {ss:[porter.stem(s) for s in signature]
+                   for ss, signature in ss_sign.items()}
+    return ss_sign
 
 
 def compare_overlaps_greedy(context, synsets_signatures):
     """
-    Calculate overlaps between the context sentence and the synset_signature
+    Calculate overlaps between the context sentence and the synset_signatures
     and returns the synset with the highest overlap.
 
     Note: Greedy algorithm only keeps the best sense,
@@ -146,15 +152,12 @@ def original_lesk(context_sentence, ambiguous_word, dictionary=None):
     """
     ambiguous_word = lemmatize(ambiguous_word)
     if not dictionary: # If dictionary is not provided, use the WN defintion.
-        dictionary = {}
-        for ss in wn.synsets(ambiguous_word):
-            ss_definition = synset_properties(ss, 'definition')
-            dictionary[ss] = ss_definition
+        dictionary = signatures(ambiguous_word, original_lesk=True)
     best_sense = compare_overlaps_greedy(context_sentence.split(), dictionary)
     return best_sense
 
 
-def simple_signature(ambiguous_word, pos=None, lemma=True, stem=False, \
+def simple_signatures(ambiguous_word, pos=None, lemma=True, stem=False, \
                      hyperhypo=True, stop=True):
     """
     Returns a synsets_signatures dictionary that includes signature words of a
@@ -163,43 +166,9 @@ def simple_signature(ambiguous_word, pos=None, lemma=True, stem=False, \
     (ii)  example sentences
     (iii) hypernyms and hyponyms
     """
-    synsets_signatures = {}
-    for ss in wn.synsets(ambiguous_word):
-        try: # If POS is specified.
-            if pos and str(ss.pos()) != pos:
-                continue
-        except:
-            if pos and str(ss.pos) != pos:
-                continue
-        signature = []
-        # Includes definition.
-        ss_definition = synset_properties(ss, 'definition')
-        signature+=ss_definition
-        # Includes examples
-        ss_examples = synset_properties(ss, 'examples')
-        signature+=list(chain(*[i.split() for i in ss_examples]))
-        # Includes lemma_names.
-        ss_lemma_names = synset_properties(ss, 'lemma_names')
-        signature+= ss_lemma_names
-
-        # Optional: includes lemma_names of hypernyms and hyponyms.
-        if hyperhypo == True:
-            ss_hyponyms = synset_properties(ss, 'hyponyms')
-            ss_hypernyms = synset_properties(ss, 'hypernyms')
-            ss_hypohypernyms = ss_hypernyms+ss_hyponyms
-            signature+= list(chain(*[i.lemma_names() for i in ss_hypohypernyms]))
-
-        # Optional: removes stopwords.
-        if stop == True:
-            signature = [i for i in signature if i not in EN_STOPWORDS]
-        # Lemmatized context is preferred over stemmed context.
-        if lemma == True:
-            signature = [lemmatize(i) for i in signature]
-        # Matching exact words may cause sparsity, so optional matching for stems.
-        if stem == True:
-            signature = [porter.stem(i) for i in signature]
-        synsets_signatures[ss] = signature
-
+    synsets_signatures = signatures(ambiguous_word, pos=pos, hyperhypo=hyperhypo,
+                            remove_stopwords=stop, to_lemmatize=lemma,
+                            remove_numbers=True, lowercase=True, to_stem=stem)
     return synsets_signatures
 
 def simple_lesk(context_sentence, ambiguous_word, \
@@ -212,12 +181,12 @@ def simple_lesk(context_sentence, ambiguous_word, \
     words than adapted Lesk (Banerjee and Pederson, 2002)
     """
     # Ensure that ambiguous word is a lemma.
-    ambiguous_word = lemmatize(ambiguous_word)
+    ambiguous_word = lemmatize(ambiguous_word, pos=pos)
     # If ambiguous word not in WordNet return None
     if not wn.synsets(ambiguous_word):
         return None
     # Get the signatures for each synset.
-    ss_sign = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
+    ss_sign = simple_signatures(ambiguous_word, pos, lemma, stem, hyperhypo, stop)
     # Disambiguate the sense in context.
     if context_is_lemmatized:
         context_sentence = context_sentence.split()
@@ -229,7 +198,7 @@ def simple_lesk(context_sentence, ambiguous_word, \
     return best_sense
 
 def adapted_lesk(context_sentence, ambiguous_word, \
-                pos=None, lemma=True, stem=True, hyperhypo=True, \
+                pos=None, lemma=True, stem=False, hyperhypo=True, \
                 stop=True, context_is_lemmatized=False, \
                 nbest=False, keepscore=False, normalizescore=False):
     """
@@ -245,35 +214,9 @@ def adapted_lesk(context_sentence, ambiguous_word, \
     if not wn.synsets(ambiguous_word):
         return None
     # Get the signatures for each synset.
-    ss_sign = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
-    for ss in ss_sign:
-        # Includes holonyms.
-        ss_mem_holonyms = synset_properties(ss, 'member_holonyms')
-        ss_part_holonyms = synset_properties(ss, 'part_holonyms')
-        ss_sub_holonyms = synset_properties(ss, 'substance_holonyms')
-        # Includes meronyms.
-        ss_mem_meronyms = synset_properties(ss, 'member_meronyms')
-        ss_part_meronyms = synset_properties(ss, 'part_meronyms')
-        ss_sub_meronyms = synset_properties(ss, 'substance_meronyms')
-        # Includes similar_tos
-        ss_simto = synset_properties(ss, 'similar_tos')
-
-        related_senses = list(set(ss_mem_holonyms+ss_part_holonyms+
-                                  ss_sub_holonyms+ss_mem_meronyms+
-                                  ss_part_meronyms+ss_sub_meronyms+ ss_simto))
-
-        signature = list([j for j in chain(*[synset_properties(i, 'lemma_names')
-                                             for i in related_senses])
-                          if j not in EN_STOPWORDS])
-
-    # Lemmatized context is preferred over stemmed context
-    if lemma == True:
-        signature = [lemmatize(i) for i in signature]
-    # Matching exact words causes sparsity, so optional matching for stems.
-    if stem == True:
-        signature = [porter.stem(i) for i in signature]
-    # Adds the extended signature to the simple signatures.
-    ss_sign[ss]+=signature
+    ss_sign = signatures(ambiguous_word, pos=pos, hyperhypo=hyperhypo, adapted=True,
+                            remove_stopwords=stop, to_lemmatize=lemma,
+                            remove_numbers=True, lowercase=True, to_stem=stem)
 
     # Disambiguate the sense in context.
     if context_is_lemmatized:
@@ -281,8 +224,8 @@ def adapted_lesk(context_sentence, ambiguous_word, \
     else:
         context_sentence = lemmatize_sentence(context_sentence)
     best_sense = compare_overlaps(context_sentence, ss_sign, \
-                                    nbest=nbest, keepscore=keepscore, \
-                                    normalizescore=normalizescore)
+                                  nbest=nbest, keepscore=keepscore, \
+                                  normalizescore=normalizescore)
     return best_sense
 
 def cosine_lesk(context_sentence, ambiguous_word, \
@@ -299,7 +242,7 @@ def cosine_lesk(context_sentence, ambiguous_word, \
     # If ambiguous word not in WordNet return None
     if not wn.synsets(ambiguous_word):
         return None
-    synsets_signatures = simple_signature(ambiguous_word, pos, lemma, stem, hyperhypo)
+    ss_sign = simple_signatures(ambiguous_word, pos, lemma, stem, hyperhypo, stop)
 
     if context_is_lemmatized:
         context_sentence = " ".join(context_sentence.split())
@@ -307,7 +250,7 @@ def cosine_lesk(context_sentence, ambiguous_word, \
         context_sentence = " ".join(lemmatize_sentence(context_sentence))
 
     scores = []
-    for ss, signature in synsets_signatures.items():
+    for ss, signature in ss_sign.items():
         # Lowercase and replace "_" with spaces.
         signature = " ".join(map(str, signature)).lower().replace("_", " ")
         # Removes punctuation.
