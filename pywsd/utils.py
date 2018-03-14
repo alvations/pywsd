@@ -1,21 +1,26 @@
-#!/usr/bin/env python -*- coding: utf-8 -*-
-#
+# !/usr/bin/env python
+# -*- coding: utf-8 -*-
 # Python Word Sense Disambiguation (pyWSD): Misc utility functions
-#
-# Copyright (C) 2014-2017 alvations
-# URL:
+# Copyright (C) 2014-2018 alvations
 # For license information, see LICENSE.md
 
 from nltk.corpus import wordnet as wn
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 from nltk import pos_tag, word_tokenize
 
-SS_PARAMETERS_TYPE_MAP = {'definition':str, 'lemma_names':list,
-                          'examples':list,  'hypernyms':list,
-                          'hyponyms': list, 'member_holonyms':list,
-                          'part_holonyms':list, 'substance_holonyms':list,
-                          'member_meronyms':list, 'substance_meronyms': list,
-                          'part_meronyms':list, 'similar_tos':list}
+SS_PARAMETERS_TYPE_MAP = {'definition':str,
+                          'lemma_names':list, # list(str)
+                          'examples':list,
+                          'hypernyms':list,
+                          'hyponyms': list,
+                          'member_holonyms':list,
+                          'part_holonyms':list,
+                          'substance_holonyms':list,
+                          'member_meronyms':list,
+                          'substance_meronyms': list,
+                          'part_meronyms':list,
+                          'similar_tos':list
+                          }
 
 def remove_tags(text):
     """ Removes <tags> in angled brackets from text. """
@@ -72,10 +77,10 @@ def lemmatize(ambiguous_word, pos=None, neverstem=False,
     This is to handle the case where users input a surface word as an ambiguous
     word and the surface word is a not a lemma.
     """
-    if pos:
-        lemma = lemmatizer.lemmatize(ambiguous_word, pos=pos)
-    else:
-        lemma = lemmatizer.lemmatize(ambiguous_word)
+    # Try to be a little smarter and use most frequent POS.
+    pos = pos if pos else penn2morphy(pos_tag([ambiguous_word])[0][1],
+                                     default_to_noun=True)
+    lemma = lemmatizer.lemmatize(ambiguous_word, pos=pos)
     stem = stemmer.stem(ambiguous_word)
     # Ensure that ambiguous word is a lemma.
     if not wn.synsets(lemma):
@@ -89,13 +94,18 @@ def lemmatize(ambiguous_word, pos=None, neverstem=False,
         return lemma
 
 
-def penn2morphy(penntag, returnNone=False):
+def penn2morphy(penntag, returnNone=False, default_to_noun=False):
     morphy_tag = {'NN':wn.NOUN, 'JJ':wn.ADJ,
                   'VB':wn.VERB, 'RB':wn.ADV}
     try:
         return morphy_tag[penntag[:2]]
     except:
-        return None if returnNone else ''
+        if returnNone:
+            return None
+        elif default_to_noun:
+            return 'n'
+        else:
+            return ''
 
 def lemmatize_sentence(sentence, neverstem=False, keepWordPOS=False,
                        tokenizer=word_tokenize, postagger=pos_tag,
@@ -121,7 +131,7 @@ def synset_properties(synset, parameter):
     return eval(func) if isinstance(eval(func), return_type) else eval(func)()
 
 def has_synset(word):
-    """" Returns a list of synsets a word after lemmatization """
+    """" Returns a list of synsets a word after lemmatization. """
     return wn.synsets(lemmatize(word, neverstem=True))
 
 # To check default parameters of simple_lesk()

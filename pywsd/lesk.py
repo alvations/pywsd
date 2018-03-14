@@ -2,7 +2,7 @@
 #
 # Python Word Sense Disambiguation (pyWSD)
 #
-# Copyright (C) 2014-2017 alvations
+# Copyright (C) 2014-2018 alvations
 # URL:
 # For license information, see LICENSE.md
 
@@ -16,39 +16,67 @@ from nltk import word_tokenize, pos_tag
 from pywsd.cosine import cosine_similarity as cos_sim
 from pywsd.utils import lemmatize, porter, lemmatize_sentence, synset_properties
 
-EN_STOPWORDS = stopwords.words('english') + list(string.punctuation)
+pywsd_stopwords = ["'s", "``", "`"]
+EN_STOPWORDS = set(stopwords.words('english') + list(string.punctuation) + pywsd_stopwords)
 
-def signatures(ambiguous_word, pos=None,
-               hyperhypo=True, adapted=False,
-               remove_stopwords=True, to_lemmatize=True):
+
+def signatures(ambiguous_word, pos=None, hyperhypo=True, adapted=False,
+               remove_stopwords=True, to_lemmatize=True, remove_numbers=True,
+               lowercase=True, original_lesk=False):
+    """
+    :param ambiguous_word:
+    :type ambiguous_word:
+
+    """
     # Ensure that the POS is supported.
     pos = pos if pos in ['a', 'r', 's', 'n', 'v', None] else None
     # Holds the synset->signature dictionary.
     synsets_signatures = {}
+
+    # Collects the signatures from WordNet.
     for ss in wn.synsets(ambiguous_word, pos=pos):
         signature = []
         # Adds the definition, example sentences and lemma_names.
         signature += word_tokenize(ss.definition())
+        # If the original lesk signature is requested.
+        # Skip the other signatures.
+        if original_lesk:
+            synsets_signatures[ss] = signature
+            continue
+        # Adds the examples and lemma names.
         signature += chain(*[word_tokenize(eg) for eg in ss.examples()])
         signature += ss.lemma_names()
-        # Optional: includes lemma_names of hyper-/hyponyms.
+
+        # Includes lemma_names of hyper-/hyponyms.
         if hyperhypo:
-            hyperhypo = set(ss.hyponyms() + ss.hypernyms() + ss.instance_hyponyms() + ss.instance_hypernyms())
-            signature += set(chain(*[i.lemma_names() for i in hyperhypo]))
-        # Optional: Includes signatures from related senses as in Adapted Lesk.
+            hyperhyponyms = set(ss.hyponyms() + ss.hypernyms() + ss.instance_hyponyms() + ss.instance_hypernyms())
+            signature += set(chain(*[i.lemma_names() for i in hyperhyponyms]))
+
+        # Includes signatures from related senses as in Adapted Lesk.
         if adapted:
             # Includes lemma_names from holonyms, meronyms and similar_tos
-            related_senses = set(ss.member_holonyms() + ss.part_holonyms() + ss.substance_holonyms() +
-                                 ss.member_meronyms() + ss.part_meronyms() + ss.substance_meronyms() +
+            related_senses = set(ss.member_holonyms() + ss.part_holonyms() + ss.substance_holonyms() + \
+                                 ss.member_meronyms() + ss.part_meronyms() + ss.substance_meronyms() + \
                                  ss.similar_tos())
             signature += set(chain(*[i.lemma_names() for i in related_senses]))
-        # Optional: removes stopwords.
+
+        # Keep only the unique bag-of-words
+        synsets_signatures[ss] = set(signature)
+
+    # Process the signatures as requested.
+    for ss, signature in synsets_signatures.items():
+        # Removes stopwords.
         if remove_stopwords:
-            signature = [i for i in signature if i not in EN_STOPWORDS]
+            signature = signature.difference(EN_STOPWORDS)
         # Lemmatized context is preferred over stemmed context.
         if to_lemmatize:
-            signature = [lemmatize(i) for i in signature]
+            signature = [lemmatize(s.lower()) if lowercase else lemmatize(s) # Lowercasing checks here.
+                         for s in signature
+                         # We only throw away if both remove_numbers and s is a digit are true.
+                         if not (remove_numbers and s.isdigit())
+                         ]
         synsets_signatures[ss] = signature
+
     return synsets_signatures
 
 
@@ -70,6 +98,7 @@ def compare_overlaps_greedy(context, synsets_signatures):
             lesk_sense = ss
             max_overlaps = len(overlaps)
     return lesk_sense
+
 
 def compare_overlaps(context, synsets_signatures, \
                      nbest=False, keepscore=False, normalizescore=False):
@@ -99,6 +128,7 @@ def compare_overlaps(context, synsets_signatures, \
     else: # Returns only the best sense.
         return ranked_synsets[0]
 
+
 def original_lesk(context_sentence, ambiguous_word, dictionary=None):
     """
     This function is the implementation of the original Lesk algorithm (1986).
@@ -113,6 +143,7 @@ def original_lesk(context_sentence, ambiguous_word, dictionary=None):
             dictionary[ss] = ss_definition
     best_sense = compare_overlaps_greedy(context_sentence.split(), dictionary)
     return best_sense
+
 
 def simple_signature(ambiguous_word, pos=None, lemma=True, stem=False, \
                      hyperhypo=True, stop=True):
