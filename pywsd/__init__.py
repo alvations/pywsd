@@ -13,7 +13,7 @@ import time
 
 
 # Warm up the library.
-print('Warming up PyWSD (takes ~10 secs)...', end=' ', file=sys.stderr, flush=True)
+print('Warming up PyWSD (takes ~10 secs)...', end=' ', file=sys.stderr)
 start = time.time()
 
 import pywsd.lesk
