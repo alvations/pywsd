@@ -13,7 +13,8 @@ from itertools import chain
 
 from nltk.corpus import wordnet as wn
 from nltk.corpus import stopwords
-from nltk import word_tokenize, pos_tag
+
+from pywsd.utils import word_tokenize
 
 from pywsd.cosine import cosine_similarity as cos_sim
 from pywsd.utils import lemmatize, porter, lemmatize_sentence, synset_properties
@@ -35,7 +36,6 @@ def synset_signatures(ss, hyperhypo=True, adapted=False,
     signature += word_tokenize(ss.definition())
     # If the original lesk signature is requested, skip the other signatures.
     if original_lesk:
-        synsets_signatures[ss] = signature
         return set(signature)
     # Adds the examples and lemma names.
     signature += chain(*[word_tokenize(eg) for eg in ss.examples()])
