@@ -138,10 +138,8 @@ def compare_overlaps(context, synsets_signatures, \
         ranked_synsets = [i[1] for i in sorted(overlaplen_synsets, \
                                                reverse=True)]
 
-    if nbest: # Returns a ranked list of synsets.
-        return ranked_synsets
-    else: # Returns only the best sense.
-        return ranked_synsets[0]
+    # Returns a ranked list of synsets otherwise only the best sense.
+    return ranked_synsets if nbest else ranked_synsets[0]
 
 
 def original_lesk(context_sentence, ambiguous_word, dictionary=None):
@@ -188,14 +186,10 @@ def simple_lesk(context_sentence, ambiguous_word, \
     # Get the signatures for each synset.
     ss_sign = simple_signatures(ambiguous_word, pos, lemma, stem, hyperhypo, stop)
     # Disambiguate the sense in context.
-    if context_is_lemmatized:
-        context_sentence = context_sentence.split()
-    else:
-        context_sentence = lemmatize_sentence(context_sentence)
-    best_sense = compare_overlaps(context_sentence, ss_sign, \
-                                    nbest=nbest, keepscore=keepscore, \
-                                    normalizescore=normalizescore)
-    return best_sense
+    context_sentence = context_sentence.split() if context_is_lemmatized else lemmatize_sentence(context_sentence)
+    return compare_overlaps(context_sentence, ss_sign, nbest=nbest,
+                            keepscore=keepscore, normalizescore=normalizescore)
+
 
 def adapted_lesk(context_sentence, ambiguous_word, \
                 pos=None, lemma=True, stem=False, hyperhypo=True, \
@@ -219,14 +213,10 @@ def adapted_lesk(context_sentence, ambiguous_word, \
                             remove_numbers=True, lowercase=True, to_stem=stem)
 
     # Disambiguate the sense in context.
-    if context_is_lemmatized:
-        context_sentence = context_sentence.split()
-    else:
-        context_sentence = lemmatize_sentence(context_sentence)
-    best_sense = compare_overlaps(context_sentence, ss_sign, \
-                                  nbest=nbest, keepscore=keepscore, \
-                                  normalizescore=normalizescore)
-    return best_sense
+    context_sentence = context_sentence.split() if context_is_lemmatized else lemmatize_sentence(context_sentence)
+    return compare_overlaps(context_sentence, ss_sign, nbest=nbest,
+                            keepscore=keepscore, normalizescore=normalizescore)
+
 
 def cosine_lesk(context_sentence, ambiguous_word, \
                 pos=None, lemma=True, stem=True, hyperhypo=True, \
@@ -255,8 +245,4 @@ def cosine_lesk(context_sentence, ambiguous_word, \
         scores.append((cos_sim(context_sentence, signature), ss))
 
     scores = sorted(scores, reverse=True)
-    if not nbest:
-
-        return scores[0][1]
-    else:
-        return [(j,i) for i,j in sorted(scores, reverse=True)]
+    return scores if nbest else scores[0][1]
