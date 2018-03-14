@@ -18,4 +18,4 @@ Disambiguating 100 brown sentences took 0.7550220489501953 secs
 Disambiguating 10 brown sentences took 22.26057481765747 secs
 ```
 
-**Note:** 2.226 / (0.75 / 100) = 284.83
+**Note:** ((22.26057481765747 / 10) * 100) / 0.7550220489501953 = 294.8334402764691
