@@ -7,29 +7,42 @@
 # URL:
 # For license information, see LICENSE.md
 
+import os
 import string
-import pickle
 from itertools import chain
+
+import pandas as pd
 
 from nltk.corpus import wordnet as wn
 from nltk.corpus import stopwords
 
 from pywsd.utils import word_tokenize
-
 from pywsd.cosine import cosine_similarity as cos_sim
 from pywsd.utils import lemmatize, porter, lemmatize_sentence, synset_properties
 
 pywsd_stopwords = [u"'s", u"``", u"`"]
 EN_STOPWORDS = set(stopwords.words('english') + list(string.punctuation) + pywsd_stopwords)
+signatures_picklefile = os.path.dirname(os.path.abspath(__file__)) + '/data/signatures.pkl'
+cached_signatures = pd.read_pickle(signatures_picklefile)
 
+def synset_signatures_from_cache(ss, hyperhypo=True, adapted=False, original_lesk=False):
+    if original_lesk:
+        signature_type = 'original'
+    elif adapted:
+        signature_type = 'adapted'
+    else:
+        signature_type = 'simple'
+    return cached_signatures[ss.name()][signature_type]
 
 def synset_signatures(ss, hyperhypo=True, adapted=False,
                       remove_stopwords=True, to_lemmatize=True, remove_numbers=True,
-                      lowercase=True, original_lesk=False):
+                      lowercase=True, original_lesk=False, from_cache=True):
     """
     :param ss: A WordNet synset.
     :type ss: nltk.corpus.wordnet.Synset
     """
+    if from_cache:
+        return synset_signatures_from_cache(ss, hyperhypo, adapted, original_lesk)
     # Collects the signatures from WordNet.
     signature = []
     # Adds the definition, example sentences and lemma_names.
@@ -88,7 +101,8 @@ def signatures(ambiguous_word, pos=None, hyperhypo=True, adapted=False,
                                         to_lemmatize=to_lemmatize,
                                         remove_numbers=remove_numbers,
                                         lowercase=lowercase,
-                                        original_lesk=original_lesk)
+                                        original_lesk=original_lesk,
+                                        from_cache=True)
 
     # Matching exact words may cause sparsity, so optional matching for stems.
     # Not advisible to use thus left out of the synsets_signatures()

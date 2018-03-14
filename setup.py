@@ -10,11 +10,12 @@ from distutils.core import setup
 
 setup(
     name='pywsd',
-    version='1.1.2',
+    version='1.1.3',
     packages=['pywsd',],
     description='Python WSD',
     long_description='Python Implementations of Word Sense Disambiguation (WSD) technologies',
     url = 'https://github.com/alvations/pywsd',
+    package_data={'pywsd': ['data/signatures/*.pkl']},
     license="MIT",
-    install_requires = ['nltk', 'numpy']
+    install_requires = ['nltk', 'numpy', 'pandas']
 )
