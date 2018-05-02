@@ -9,6 +9,9 @@
 import re, math
 from collections import Counter
 
+import numpy as np
+
+
 def cosine_similarity(sent1, sent2): #
     """
     Calculates cosine between 2 sentences/documents.
@@ -36,3 +39,6 @@ def cosine_similarity(sent1, sent2): #
     vector2 = text_to_vector(sent2)
     cosine = get_cosine(vector1, vector2)
     return cosine
+
+def np_cosine_similarity(v1, v2):
+    return np.dot(v1, v2)/(numpy.linalg.norm(v1)*numpy.linalg.norm(v2))

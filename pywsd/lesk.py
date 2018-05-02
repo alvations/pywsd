@@ -18,6 +18,8 @@ from nltk.corpus import stopwords
 
 from pywsd.utils import word_tokenize
 from pywsd.cosine import cosine_similarity as cos_sim
+from pywsd.cosine import np_cosine_similarity as np_cos_sim
+from pywsd.embeddings import embed, embedded_definitions
 from pywsd.utils import lemmatize, porter, lemmatize_sentence, synset_properties
 
 pywsd_stopwords = [u"'s", u"``", u"`"]
@@ -268,3 +270,42 @@ def cosine_lesk(context_sentence, ambiguous_word,
 
     scores = sorted(scores, reverse=True)
     return scores if nbest else scores[0][1]
+
+
+def embedding_lesk(context_sentence, ambiguous_word, pos=None, nbest=False):
+    """
+    I'm not exactly sure whether this work. But it's a good idea to try out.
+    """
+    # Ensure that ambiguous word is a lemma.
+    ambiguous_word = lemmatize(ambiguous_word)
+    # If ambiguous word not in WordNet return None
+    if not wn.synsets(ambiguous_word):
+        return None
+
+    sentence_embedding = embed(context_sentence)
+
+    scores = []
+    for ss in wn.synsets(ambiguous_word):
+        ss_idx = str(ss.offset()).zfill(8) + '-' + ss.pos()
+        score = np_cos_sim(embedded_definitions[ss_idx], sentence_embedding)
+        scores.append((score, ss))
+    
+    scores = sorted(scores, reverse=True)
+    return scores if nbest else scores[0][1]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#

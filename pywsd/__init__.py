@@ -22,7 +22,6 @@ import pywsd.similarity
 
 #import semcor
 #import semeval
-
 from pywsd.allwords_wsd import disambiguate
 
 pywsd.lesk.simple_lesk('This is a foo bar sentence', 'bar')
