@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/alvations/pywsd.svg?branch=master)](https://travis-ci.org/alvations/pywsd)
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Falvations%2Fpywsd.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Falvations%2Fpywsd?ref=badge_shield)
 
 pywsd
 =====
@@ -156,3 +157,7 @@ Joint Conference on Artificial Intelligence, pages 805–810, Acapulco.
 * Steven Bird, Ewan Klein, and Edward Loper. 2009. Natural Language Processing with Python (1st ed.). O'Reilly Media, Inc..
 
 * Eneko Agirre and Aitor Soroa. 2009. Personalizing PageRank for Word Sense Disambiguation. Proceedings of the 12th conference of the European chapter of the Association for Computational Linguistics (EACL-2009). Athens, Greece.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Falvations%2Fpywsd.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Falvations%2Fpywsd?ref=badge_large)
