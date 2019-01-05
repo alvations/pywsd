@@ -16,16 +16,28 @@ from nltk.tokenize import word_tokenize
 
 from pywsd.utils import lemmatize
 
-def similarity_by_path(sense1, sense2, option="path"):
-    """ Returns maximum path similarity between two senses. """
+def similarity_by_path(sense1, sense2, option="path", no_path_value=0):
+    """
+    Returns maximum path similarity between two senses.
+    If no path is found between the two senses, returns no_path_value.
+    """
     if option.lower() in ["path", "path_similarity"]: # Path similaritys
-        return max(wn.path_similarity(sense1,sense2),
-                   wn.path_similarity(sense1,sense2))
+        sim_dir1= wn.path_similarity(sense1,sense2)
+        sim_dir2= wn.path_similarity(sense2,sense1)
+        if sim_dir1 is None and sim_dir2 is None:
+            return no_path_value
+        elif sim_dir1 is None:
+            return sim_dir2
+        elif sim_dir2 is None:
+            return sim_dir1
+        else:
+            return max(sim_dir2,sim_dir1)
     elif option.lower() in ["wup", "wupa", "wu-palmer", "wu-palmer"]: # Wu-Palmer
-        return wn.wup_similarity(sense1, sense2)
+        wup_sim = wn.wup_similarity(sense1, sense2)
+        return  wup_sim if wup_sim is not None else no_path_value
     elif option.lower() in ['lch', "leacock-chordorow"]: # Leacock-Chodorow
         if sense1.pos != sense2.pos: # lch can't do diff POS
-            return 0
+            return no_path_value
         return wn.lch_similarity(sense1, sense2)
 
 def similarity_by_infocontent(sense1, sense2, option):
