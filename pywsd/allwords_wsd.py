@@ -9,7 +9,6 @@
 from string import punctuation
 
 from nltk import word_tokenize, pos_tag
-from nltk.corpus import wordnet as wn
 from nltk.corpus import stopwords
 
 from pywsd.lesk import simple_lesk, original_lesk

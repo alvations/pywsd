@@ -6,7 +6,6 @@
 # URL:
 # For license information, see LICENSE.md
 
-from nltk.corpus import wordnet as wn
 import random
 custom_random = random.Random(0)
 

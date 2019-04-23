@@ -11,6 +11,9 @@ from __future__ import absolute_import, print_function
 import sys
 import time
 
+from wn import WordNet
+
+__builtins__['wn'] = WordNet()
 
 # Warm up the library.
 print('Warming up PyWSD (takes ~10 secs)...', end=' ', file=sys.stderr, flush=True)

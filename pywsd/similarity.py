@@ -10,7 +10,7 @@
 WSD by maximizing similarity.
 """
 
-from nltk.corpus import wordnet as wn
+
 from nltk.corpus import wordnet_ic as wnic
 from nltk.tokenize import word_tokenize
 

@@ -9,10 +9,10 @@
 from string import punctuation
 
 from nltk import word_tokenize
-from nltk.corpus import wordnet as wn
+
 from nltk.corpus import brown, stopwords
 
-
+from pywsd import wn
 from pywsd.lesk import simple_lesk, original_lesk, cosine_lesk, adapted_lesk
 from pywsd.similarity import max_similarity
 from pywsd.utils import lemmatize
@@ -51,8 +51,8 @@ for sentence in brown.sents()[0:1]:
     print disambiguate(sentence, max_similarity, similarity_option='jcn')
     print disambiguate(sentence, max_similarity, similarity_option='lin')
 
- 
-''' 
+
+'''
 # TODO: do proper doctests...
 
 # Lemma options and None when no Synset.
@@ -66,4 +66,3 @@ for sentence in brown.sents()[0:1]:
 >>> disambiguate('I went to the bank to deposit my money', algorithm=maxsim, similarity_option='wup', prefersNone=True)
 [('I', None), ('went', Synset('sound.v.02')), ('to', None), ('the', None), ('bank', Synset('deposit.v.02')), ('to', None), ('deposit', Synset('deposit.v.02')), ('my', None), ('money', Synset('money.n.01'))]
 '''
- 

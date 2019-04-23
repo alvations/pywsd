@@ -13,7 +13,6 @@ from itertools import chain
 
 import pandas as pd
 
-from nltk.corpus import wordnet as wn
 from nltk.corpus import stopwords
 
 from pywsd.utils import word_tokenize

@@ -4,7 +4,6 @@
 # Copyright (C) 2014-2018 alvations
 # For license information, see LICENSE.md
 
-from nltk.corpus import wordnet as wn
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 from nltk import pos_tag
 
@@ -114,8 +113,7 @@ def lemmatize(ambiguous_word, pos=None, neverstem=False,
 
 
 def penn2morphy(penntag, returnNone=False, default_to_noun=False):
-    morphy_tag = {'NN':wn.NOUN, 'JJ':wn.ADJ,
-                  'VB':wn.VERB, 'RB':wn.ADV}
+    morphy_tag = {'NN':'n', 'JJ':'a', 'VB':'v', 'RB':'r'}
     try:
         return morphy_tag[penntag[:2]]
     except:
