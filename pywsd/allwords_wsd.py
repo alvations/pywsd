@@ -2,7 +2,7 @@
 #
 # Python Word Sense Disambiguation (pyWSD): all-words WSD
 #
-# Copyright (C) 2014-2017 alvations
+# Copyright (C) 2014-2020 alvations
 # URL:
 # For license information, see LICENSE.md
 

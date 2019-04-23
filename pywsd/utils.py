@@ -1,7 +1,7 @@
 # !/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Python Word Sense Disambiguation (pyWSD): Misc utility functions
-# Copyright (C) 2014-2018 alvations
+# Copyright (C) 2014-2020 alvations
 # For license information, see LICENSE.md
 
 from nltk.stem import PorterStemmer, WordNetLemmatizer
