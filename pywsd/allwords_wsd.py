@@ -8,11 +8,13 @@
 
 from string import punctuation
 
-from nltk import word_tokenize, pos_tag
+
+from nltk import pos_tag
 from nltk.corpus import stopwords
 
 from pywsd.lesk import simple_lesk, original_lesk
 from pywsd.similarity import max_similarity
+from pywsd.tokenize import word_tokenize
 from pywsd.utils import lemmatize, lemmatize_sentence
 
 """

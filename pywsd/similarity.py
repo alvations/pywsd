@@ -12,7 +12,7 @@ WSD by maximizing similarity.
 
 
 from nltk.corpus import wordnet_ic as wnic
-from nltk.tokenize import word_tokenize
+from pywsd.tokenize import word_tokenize
 
 from pywsd.utils import lemmatize
 
