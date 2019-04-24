@@ -25,12 +25,14 @@ SS_PARAMETERS_TYPE_MAP = {'definition':str,
                           'similar_tos':list
                           }
 
-def remove_tags(text):
+
+def remove_tags(text: str) -> str:
     """ Removes <tags> in angled brackets from text. """
-    import re
+
     tags = {i:" " for i in re.findall("(<[^>\n]*>)",text.strip())}
     no_tag_text = reduce(lambda x, kv:x.replace(*kv), tags.iteritems(), text)
     return " ".join(no_tag_text.split())
+
 
 def offset_to_synset(offset):
     """
@@ -42,7 +44,9 @@ def offset_to_synset(offset):
     02614387-v
     Synset('live.v.02') lead a certain kind of life; live in a certain style
     """
+
     return wn._synset_from_pos_and_offset(str(offset[-1:]), int(offset[:8]))
+
 
 def semcor_to_synset(sensekey):
     """
@@ -54,7 +58,9 @@ def semcor_to_synset(sensekey):
     02614387-v
     Synset('live.v.02') lead a certain kind of life; live in a certain style
     """
+
     return wn.lemma_from_key(sensekey).synset
+
 
 def semcor_to_offset(sensekey):
     """
@@ -62,17 +68,18 @@ def semcor_to_offset(sensekey):
     >>> print semcor_to_offset('live%2:42:06::')
     02614387-v
     """
+
     synset = wn.lemma_from_key(sensekey).synset
     offset = '%08d-%s' % (synset.offset, synset.pos)
     return offset
 
 
-
 porter = PorterStemmer()
 wnl = WordNetLemmatizer()
 
-def lemmatize(ambiguous_word, pos=None, neverstem=False,
-              lemmatizer=wnl, stemmer=porter):
+
+def lemmatize(ambiguous_word: str, pos: str = None, neverstem=False,
+              lemmatizer=wnl, stemmer=porter) -> str:
     """
     Tries to convert a surface word into lemma, and if lemmatize word is not in
     wordnet then try and convert surface word into its stem.
@@ -80,6 +87,7 @@ def lemmatize(ambiguous_word, pos=None, neverstem=False,
     This is to handle the case where users input a surface word as an ambiguous
     word and the surface word is a not a lemma.
     """
+
     # Try to be a little smarter and use most frequent POS.
     pos = pos if pos else penn2morphy(pos_tag([ambiguous_word])[0][1],
                                      default_to_noun=True)
@@ -97,7 +105,10 @@ def lemmatize(ambiguous_word, pos=None, neverstem=False,
         return lemma
 
 
-def penn2morphy(penntag, returnNone=False, default_to_noun=False):
+def penn2morphy(penntag, returnNone=False, default_to_noun=False) -> str:
+    """
+    Converts tags from Penn format (input: single string) to Morphy.
+    """
     morphy_tag = {'NN':'n', 'JJ':'a', 'VB':'v', 'RB':'r'}
     try:
         return morphy_tag[penntag[:2]]
@@ -109,9 +120,11 @@ def penn2morphy(penntag, returnNone=False, default_to_noun=False):
         else:
             return ''
 
-def lemmatize_sentence(sentence, neverstem=False, keepWordPOS=False,
+
+def lemmatize_sentence(sentence: str, neverstem=False, keepWordPOS=False,
                        tokenizer=word_tokenize, postagger=pos_tag,
-                       lemmatizer=wnl, stemmer=porter):
+                       lemmatizer=wnl, stemmer=porter) -> list:
+
     words, lemmas, poss = [], [], []
     for word, pos in postagger(tokenizer(sentence)):
         pos = penn2morphy(pos)
@@ -119,21 +132,26 @@ def lemmatize_sentence(sentence, neverstem=False, keepWordPOS=False,
                                 lemmatizer, stemmer))
         poss.append(pos)
         words.append(word)
+
     if keepWordPOS:
         return words, lemmas, [None if i == '' else i for i in poss]
+
     return lemmas
 
-def synset_properties(synset, parameter):
+def synset_properties(synset: "wn.Synset", parameter: str):
     """
     Making from NLTK's WordNet Synset's properties to function.
     Note: This is for compatibility with NLTK 2.x
     """
+
     return_type = SS_PARAMETERS_TYPE_MAP[parameter]
     func = 'synset.' + parameter
+
     return eval(func) if isinstance(eval(func), return_type) else eval(func)()
 
-def has_synset(word):
-    """" Returns a list of synsets a word after lemmatization. """
+def has_synset(word: str) -> list:
+    """" Returns a list of synsets of a word after lemmatization. """
+
     return wn.synsets(lemmatize(word, neverstem=True))
 
 # To check default parameters of simple_lesk()

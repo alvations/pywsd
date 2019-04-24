@@ -24,7 +24,8 @@ EN_STOPWORDS = set(stopwords.words('english') + list(string.punctuation) + pywsd
 signatures_picklefile = os.path.dirname(os.path.abspath(__file__)) + '/data/signatures/signatures.pkl'
 cached_signatures = pd.read_pickle(signatures_picklefile)
 
-def synset_signatures_from_cache(ss, hyperhypo=True, adapted=False, original_lesk=False):
+def synset_signatures_from_cache(ss: "nltk.corpus.wordnet.Synset", hyperhypo = True,
+                                adapted = False, original_lesk = False):
     if original_lesk:
         signature_type = 'original'
     elif adapted:
@@ -33,22 +34,29 @@ def synset_signatures_from_cache(ss, hyperhypo=True, adapted=False, original_les
         signature_type = 'simple'
     return cached_signatures[ss.name()][signature_type]
 
-def synset_signatures(ss, hyperhypo=True, adapted=False,
+
+def synset_signatures(ss: "wn.Synset", hyperhypo=True, adapted=False,
                       remove_stopwords=True, to_lemmatize=True, remove_numbers=True,
-                      lowercase=True, original_lesk=False, from_cache=True):
+                      lowercase=True, original_lesk=False, from_cache=True) -> set:
     """
-    :param ss: A WordNet synset.
-    :type ss: nltk.corpus.wordnet.Synset
+    Takes a Synset and returns its signature words.
+
+    :param ss: An instance of wn.Synset.
+    :return: A set of signature strings
     """
     if from_cache:
         return synset_signatures_from_cache(ss, hyperhypo, adapted, original_lesk)
+
     # Collects the signatures from WordNet.
     signature = []
+
     # Adds the definition, example sentences and lemma_names.
     signature += word_tokenize(ss.definition())
+
     # If the original lesk signature is requested, skip the other signatures.
     if original_lesk:
         return set(signature)
+
     # Adds the examples and lemma names.
     signature += chain(*[word_tokenize(eg) for eg in ss.examples()])
     signature += ss.lemma_names()
@@ -68,6 +76,7 @@ def synset_signatures(ss, hyperhypo=True, adapted=False,
 
     # Lowercase.
     signature = set(s.lower() for s in signature) if lowercase else signature
+
     # Removes stopwords.
     signature = set(signature).difference(EN_STOPWORDS) if remove_stopwords else signature
 
@@ -76,19 +85,24 @@ def synset_signatures(ss, hyperhypo=True, adapted=False,
         signature = [lemmatize(s) if lowercase else lemmatize(s) # Lowercasing checks here.
                      for s in signature
                      # We only throw away if both remove_numbers and s is a digit are true.
-                     if not (remove_numbers and s.isdigit())
-                     ]
+                     if not (remove_numbers and s.isdigit())]
+
     # Keep only the unique bag-of-words
     return set(signature)
 
 
-def signatures(ambiguous_word, pos=None, hyperhypo=True, adapted=False,
+def signatures(ambiguous_word: str, pos: str = None, hyperhypo=True, adapted=False,
                remove_stopwords=True, to_lemmatize=True, remove_numbers=True,
-               lowercase=True, to_stem=False, original_lesk=False, from_cache=True):
+               lowercase=True, to_stem=False, original_lesk=False, from_cache=True) -> dict:
     """
-    :param ambiguous_word: The ambiguous word.
-    :type ambiguous_word: str
+    Takes an ambiguous word and optionally its Part-Of-Speech and returns
+    a dictionary where keys are the synsets and values are sets of signatures.
+
+    :param ambiguous_word: String, a single word.
+    :param pos: String, one of 'a', 'r', 's', 'n', 'v', or None.
+    :return: dict(synset:{signatures}).
     """
+
     # Ensure that the POS is supported.
     pos = pos if pos in ['a', 'r', 's', 'n', 'v', None] else None
 
@@ -113,10 +127,11 @@ def signatures(ambiguous_word, pos=None, hyperhypo=True, adapted=False,
     if to_stem == True:
         ss_sign = {ss:[porter.stem(s) for s in signature]
                    for ss, signature in ss_sign.items()}
+
     return ss_sign
 
 
-def compare_overlaps_greedy(context, synsets_signatures):
+def compare_overlaps_greedy(context: list, synsets_signatures: dict) -> "wn.Synset":
     """
     Calculate overlaps between the context sentence and the synset_signatures
     and returns the synset with the highest overlap.
@@ -126,22 +141,33 @@ def compare_overlaps_greedy(context, synsets_signatures):
 
     Only used by original_lesk(). Keeping greedy algorithm for documentary sake,
     because original_lesks is greedy.
+
+    :param context: List of strings, tokenized sentence or document.
+    :param synsets_signatures: dict of Synsets and the set of their corresponding signatures.
+    :return: The Synset with the highest number of overlaps with its signatures.
     """
+
     max_overlaps = 0; lesk_sense = None
     for ss in synsets_signatures:
         overlaps = set(synsets_signatures[ss]).intersection(context)
         if len(overlaps) > max_overlaps:
             lesk_sense = ss
             max_overlaps = len(overlaps)
+
     return lesk_sense
 
 
-def compare_overlaps(context, synsets_signatures,
-                     nbest=False, keepscore=False, normalizescore=False):
+def compare_overlaps(context: list, synsets_signatures: dict,
+                     nbest=False, keepscore=False, normalizescore=False) -> "wn.Synset":
     """
     Calculates overlaps between the context sentence and the synset_signture
     and returns a ranked list of synsets from highest overlap to lowest.
+
+    :param context: List of strings, tokenized sentence or document.
+    :param synsets_signatures: dict of Synsets and the set of their corresponding signatures.
+    :return: The Synset with the highest number of overlaps with its signatures.
     """
+
     overlaplen_synsets = [] # a tuple of (len(overlap), synset).
     for ss in synsets_signatures:
         overlaps = set(synsets_signatures[ss]).intersection(context)
@@ -162,27 +188,37 @@ def compare_overlaps(context, synsets_signatures,
     return ranked_synsets if nbest else ranked_synsets[0]
 
 
-def original_lesk(context_sentence, ambiguous_word, dictionary=None, from_cache=True):
+def original_lesk(context_sentence: str, ambiguous_word: str, dictionary=None, from_cache=True) -> "wn.Synset":
     """
     This function is the implementation of the original Lesk algorithm (1986).
     It requires a dictionary which contains the definition of the different
     sense of each word. See http://dl.acm.org/citation.cfm?id=318728
+
+    :param context_sentence: String, sentence or document.
+    :param ambiguous_word: String, a single word.
+    :return: A Synset for the estimated best sense.
     """
+
     ambiguous_word = lemmatize(ambiguous_word)
     if not dictionary: # If dictionary is not provided, use the WN defintion.
         dictionary = signatures(ambiguous_word, original_lesk=True, from_cache=from_cache)
     best_sense = compare_overlaps_greedy(context_sentence.split(), dictionary)
+
     return best_sense
 
 
-def simple_signatures(ambiguous_word, pos=None, lemma=True, stem=False,
-                     hyperhypo=True, stop=True, from_cache=True):
+def simple_signatures(ambiguous_word: str, pos: str = None, lemma=True, stem=False,
+                     hyperhypo=True, stop=True, from_cache=True) -> dict:
     """
     Returns a synsets_signatures dictionary that includes signature words of a
     sense from its:
     (i)   definition
     (ii)  example sentences
     (iii) hypernyms and hyponyms
+
+    :param ambiguous_word: String, a single word.
+    :param pos: String, one of 'a', 'r', 's', 'n', 'v', or None.
+    :return: dict(synset:{signatures})
     """
     synsets_signatures = signatures(ambiguous_word, pos=pos, hyperhypo=hyperhypo,
                             remove_stopwords=stop, to_lemmatize=lemma,
@@ -190,15 +226,20 @@ def simple_signatures(ambiguous_word, pos=None, lemma=True, stem=False,
                             from_cache=from_cache)
     return synsets_signatures
 
-def simple_lesk(context_sentence, ambiguous_word,
-                pos=None, lemma=True, stem=False, hyperhypo=True,
+def simple_lesk(context_sentence: str, ambiguous_word: str,
+                pos: str = None, lemma=True, stem=False, hyperhypo=True,
                 stop=True, context_is_lemmatized=False,
                 nbest=False, keepscore=False, normalizescore=False,
-                from_cache=True):
+                from_cache=True) -> "wn.Synset":
     """
     Simple Lesk is somewhere in between using more than the
     original Lesk algorithm (1986) and using less signature
     words than adapted Lesk (Banerjee and Pederson, 2002)
+
+    :param context_sentence: String, sentence or document.
+    :param ambiguous_word: String, a single word.
+    :param pos: String, one of 'a', 'r', 's', 'n', 'v', or None.
+    :return: A Synset for the estimated best sense.
     """
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word, pos=pos)
@@ -214,18 +255,24 @@ def simple_lesk(context_sentence, ambiguous_word,
                             keepscore=keepscore, normalizescore=normalizescore)
 
 
-def adapted_lesk(context_sentence, ambiguous_word,
-                pos=None, lemma=True, stem=False, hyperhypo=True,
+def adapted_lesk(context_sentence: str, ambiguous_word: str,
+                pos: str = None, lemma=True, stem=False, hyperhypo=True,
                 stop=True, context_is_lemmatized=False,
                 nbest=False, keepscore=False, normalizescore=False,
-                from_cache=True):
+                from_cache=True) -> "wn.Synset":
     """
     This function is the implementation of the Adapted Lesk algorithm,
     described in Banerjee and Pederson (2002). It makes use of the lexical
     items from semantically related senses within the wordnet
     hierarchies and to generate more lexical items for each sense.
     see www.d.umn.edu/~tpederse/Pubs/cicling2002-b.pdf‎
+
+    :param context_sentence: String, sentence or document.
+    :param ambiguous_word: String, a single word.
+    :param pos: String, one of 'a', 'r', 's', 'n', 'v', or None.
+    :return: A Synset for the estimated best sense.
     """
+
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word)
     # If ambiguous word not in WordNet return None
@@ -243,17 +290,24 @@ def adapted_lesk(context_sentence, ambiguous_word,
                             keepscore=keepscore, normalizescore=normalizescore)
 
 
-def cosine_lesk(context_sentence, ambiguous_word,
-                pos=None, lemma=True, stem=True, hyperhypo=True,
+def cosine_lesk(context_sentence: str, ambiguous_word: str,
+                pos: str = None, lemma=True, stem=True, hyperhypo=True,
                 stop=True, context_is_lemmatized=False,
-                nbest=False, from_cache=True):
+                nbest=False, from_cache=True) -> "wn.Synset":
     """
     In line with vector space models, we can use cosine to calculate overlaps
     instead of using raw overlap counts. Essentially, the idea of using
     signatures (aka 'sense paraphrases') is lesk-like.
+
+    :param context_sentence: String, sentence or document.
+    :param ambiguous_word: String, a single word.
+    :param pos: String, one of 'a', 'r', 's', 'n', 'v', or None.
+    :return: A Synset for the estimated best sense.
     """
+
     # Ensure that ambiguous word is a lemma.
     ambiguous_word = lemmatize(ambiguous_word)
+
     # If ambiguous word not in WordNet return None
     if not wn.synsets(ambiguous_word):
         return None
