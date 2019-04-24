@@ -14,7 +14,7 @@ Python Implementations of Word Sense Disambiguation (WSD) technologies:
   * Cosine Lesk (use cosines to calculate overlaps instead of using raw counts)
   <!-- * Enhanced Lesk (Basile et al. 2014) (in wishlist) -->
 
-* **Maximizing Similarity** (see also, http://goo.gl/MG8ZpE)
+* **Maximizing Similarity** (see also, [Pedersen et al. (2003)](http://www.d.umn.edu/~tpederse/Pubs/max-sem-relate.pdf))
 
   * Path similarity (Wu-Palmer, 1994; Leacock and Chodorow, 1998)
   * Information Content (Resnik, 1995; Jiang and Corath, 1997; Lin, 1998)
