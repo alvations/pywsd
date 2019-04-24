@@ -23,7 +23,7 @@ def first_sense(ambiguous_word, pos=None):
     else:
         return wn.synsets(ambiguous_word, pos)[0]
 
-def max_lemma_count(ambiguous_word):
+def max_lemma_count(ambiguous_word, pos=None):
     """
     Returns the sense with the highest lemma_name count.
     The max_lemma_count() can be treated as a rough gauge for the
@@ -31,6 +31,6 @@ def max_lemma_count(ambiguous_word):
     NOTE: The lemma counts are from the Brown Corpus
     """
     sense2lemmacounts = {}
-    for i in wn.synsets(ambiguous_word):
+    for i in wn.synsets(ambiguous_word, pos=None):
         sense2lemmacounts[i] = sum(j.count() for j in i.lemmas())
     return max(sense2lemmacounts, key=sense2lemmacounts.get)
