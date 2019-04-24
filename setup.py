@@ -17,5 +17,5 @@ setup(
     url = 'https://github.com/alvations/pywsd',
     package_data={'pywsd': ['data/signatures/*.pkl',]},
     license="MIT",
-    install_requires = ['nltk', 'numpy', 'pandas']
+    install_requires = ['nltk', 'numpy', 'pandas', 'wn', 'six']
 )

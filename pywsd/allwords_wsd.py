@@ -8,11 +8,13 @@
 
 from string import punctuation
 
-from nltk import word_tokenize, pos_tag
+
+from nltk import pos_tag
 from nltk.corpus import stopwords
 
 from pywsd.lesk import simple_lesk, original_lesk
 from pywsd.similarity import max_similarity
+from pywsd.tokenize import word_tokenize
 from pywsd.utils import lemmatize, lemmatize_sentence
 
 """
@@ -37,8 +39,7 @@ def disambiguate(sentence, algorithm=simple_lesk,
         lemma_sentence = sentence # TODO: Miss out on POS specification, how to resolve?
     for word, lemma, pos in zip(surface_words, lemmas, morphy_poss):
         if lemma not in stopwords: # Checks if it is a content word
-            try:
-                wn.synsets(lemma)[0]
+            if wn.synsets(lemma):
                 if algorithm == original_lesk: # Note: Original doesn't care about lemmas
                     synset = algorithm(lemma_sentence, lemma, from_cache=from_cache)
                 elif algorithm == max_similarity:
@@ -46,7 +47,7 @@ def disambiguate(sentence, algorithm=simple_lesk,
                 else:
                     synset = algorithm(lemma_sentence, lemma, pos=pos, context_is_lemmatized=True,
                                        from_cache=from_cache)
-            except: # In case the content word is not in WordNet
+            else: # In case the content word is not in WordNet.
                 synset = '#NOT_IN_WN#'
         else:
             synset = '#STOPWORD/PUNCTUATION#'

@@ -15,7 +15,7 @@ import pandas as pd
 
 from nltk.corpus import stopwords
 
-from pywsd.utils import word_tokenize
+from pywsd.tokenize import word_tokenize
 from pywsd.cosine import cosine_similarity as cos_sim
 from pywsd.utils import lemmatize, porter, lemmatize_sentence, synset_properties
 
