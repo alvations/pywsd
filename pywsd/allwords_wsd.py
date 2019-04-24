@@ -29,11 +29,13 @@ stopwords = stopwords.words('english') + list(punctuation)
 
 def disambiguate(sentence, algorithm=simple_lesk,
                  context_is_lemmatized=False, similarity_option='path',
-                 keepLemmas=False, prefersNone=True, from_cache=True):
+                 keepLemmas=False, prefersNone=True, from_cache=True,
+                 tokenizer=word_tokenize):
+
     tagged_sentence = []
     # Pre-lemmatize the sentnece before WSD
     if not context_is_lemmatized:
-        surface_words, lemmas, morphy_poss = lemmatize_sentence(sentence, keepWordPOS=True)
+        surface_words, lemmas, morphy_poss = lemmatize_sentence(sentence, keepWordPOS=True, tokenizer=tokenizer)
         lemma_sentence = " ".join(lemmas)
     else:
         lemma_sentence = sentence # TODO: Miss out on POS specification, how to resolve?
