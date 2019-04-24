@@ -91,6 +91,11 @@ def signatures(ambiguous_word, pos=None, hyperhypo=True, adapted=False,
     """
     # Ensure that the POS is supported.
     pos = pos if pos in ['a', 'r', 's', 'n', 'v', None] else None
+
+    # If the POS specified isn't found but other POS is in wordnet.
+    if not wn.synsets(ambiguous_word, pos) and wn.synsets(ambiguous_word):
+        pos = None
+
     # Holds the synset->signature dictionary.
     ss_sign = {}
     for ss in wn.synsets(ambiguous_word, pos):

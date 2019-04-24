@@ -10,8 +10,6 @@
 WSD by maximizing similarity.
 """
 
-#from nltk.corpus import wordnet as wn
-#from nltk.corpus import wordnet_ic as wnic
 from wn.info import WordNetInformationContent as WordNetIC
 
 from pywsd.tokenize import word_tokenize
@@ -31,6 +29,7 @@ def similarity_by_path(sense1, sense2, option="path"):
     elif option.lower() in ['lch', "leacock-chordorow"]: # Leacock-Chodorow
         if sense1.pos != sense2.pos: # lch can't do diff POS
             return 0
+        print(sense1, sense2)
         return wn.lch_similarity(sense1, sense2, if_none_return=0)
 
 def similarity_by_infocontent(sense1, sense2, option):
@@ -38,32 +37,21 @@ def similarity_by_infocontent(sense1, sense2, option):
     if sense1.pos != sense2.pos: # infocontent sim can't do diff POS.
         return 0
 
-    info_contents = ['ic-bnc-add1.dat', 'ic-bnc-resnik-add1.dat',
-                     'ic-bnc-resnik.dat', 'ic-bnc.dat',
-
-                     'ic-brown-add1.dat', 'ic-brown-resnik-add1.dat',
-                     'ic-brown-resnik.dat', 'ic-brown.dat',
-
-                     'ic-semcor-add1.dat', 'ic-semcor.dat',
-
-                     'ic-semcorraw-add1.dat', 'ic-semcorraw-resnik-add1.dat',
-                     'ic-semcorraw-resnik.dat', 'ic-semcorraw.dat',
-
-                     'ic-shaks-add1.dat', 'ic-shaks-resnik.dat',
-                     'ic-shaks-resnink-add1.dat', 'ic-shaks.dat',
-
-                     'ic-treebank-add1.dat', 'ic-treebank-resnik-add1.dat',
-                     'ic-treebank-resnik.dat', 'ic-treebank.dat']
-
     if option in ['res', 'resnik']:
+        if sense1.pos not in wnic_bnc_resnik_add1.ic:
+            return 0
         return wn.res_similarity(sense1, sense2, wnic_bnc_resnik_add1)
     #return min(wn.res_similarity(sense1, sense2, wnic.ic(ic)) \
     #             for ic in info_contents)
 
     elif option in ['jcn', "jiang-conrath"]:
+        if sense1.pos not in wnic_bnc_add1.ic:
+            return 0
         return wn.jcn_similarity(sense1, sense2, wnic_bnc_add1)
 
     elif option in ['lin']:
+        if sense1.pos not in wnic_bnc_add1.ic:
+            return 0
         return wn.lin_similarity(sense1, sense2, wnic_bnc_add1)
 
 def sim(sense1, sense2, option="path"):
@@ -107,6 +95,7 @@ def max_similarity(context_sentence, ambiguous_word, option="path",
         result = sorted([(v,k) for k,v in result.items()])
     else: # higher score = more similar
         result = sorted([(v,k) for k,v in result.items()],reverse=True)
+    print(ambiguous_word, wn.synsets(ambiguous_word), result)
     if best: return result[0][1];
     return result
 

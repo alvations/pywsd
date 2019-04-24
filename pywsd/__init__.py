@@ -15,6 +15,8 @@ from wn import WordNet
 
 __builtins__['wn'] = WordNet()
 
+__version__ = '1.2.0'
+
 # Warm up the library.
 print('Warming up PyWSD (takes ~10 secs)...', end=' ', file=sys.stderr, flush=True)
 start = time.time()
