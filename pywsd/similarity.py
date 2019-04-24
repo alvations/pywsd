@@ -36,7 +36,6 @@ def similarity_by_path(sense1: "wn.Synset", sense2: "wn.Synset", option: str = "
     elif option.lower() in ['lch', "leacock-chordorow"]: # Leacock-Chodorow
         if sense1.pos != sense2.pos: # lch can't do diff POS
             return 0
-        print(sense1, sense2)
         return wn.lch_similarity(sense1, sense2, if_none_return=0)
 
 
