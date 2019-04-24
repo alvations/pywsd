@@ -28,7 +28,7 @@ for sentence in brown.sents()[:100]:
     # Uses POS info when WSD-ing.
     _, poss = zip(*pos_tag(word_tokenize(sentence)))
     tagged_sent =  disambiguate(sentence, prefersNone=True, keepLemmas=True)
-    
+
     for word_lemma_semtag, pos in zip(tagged_sent, poss):
         word, lemma, semtag = word_lemma_semtag
         if semtag is not None:
