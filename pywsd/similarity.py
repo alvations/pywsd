@@ -71,7 +71,7 @@ def max_similarity(context_sentence, ambiguous_word, option="path",
     """
     Perform WSD by maximizing the sum of maximum similarity between possible
     synsets of all words in the context sentence and the possible synsets of the
-    ambiguous words (see http://goo.gl/XMq2BI):
+    ambiguous words (see https://ibin.co/4gG9zUlejUUA.png):
     {argmax}_{synset(a)}(\sum_{i}^{n}{{max}_{synset(i)}(sim(i,a))}
     """
     ambiguous_word = lemmatize(ambiguous_word)
@@ -98,11 +98,3 @@ def max_similarity(context_sentence, ambiguous_word, option="path",
     print(ambiguous_word, wn.synsets(ambiguous_word), result)
     if best: return result[0][1];
     return result
-
-'''
-bank_sents = ['I went to the bank to deposit my money',
-'The river bank was full of dead fishes']
-ans = max_similarity(bank_sents[0], 'bank', pos="n", option="res")
-print ans
-print ans[0][1].definition
-'''
