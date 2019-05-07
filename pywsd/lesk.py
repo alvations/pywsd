@@ -8,19 +8,15 @@
 # For license information, see LICENSE.md
 
 import os
-import string
 from itertools import chain
 
 import pandas as pd
 
-from nltk.corpus import stopwords
-
 from pywsd.tokenize import word_tokenize
 from pywsd.cosine import cosine_similarity as cos_sim
+from pywsd.stopwords import stopwords as EN_STOPWORDS
 from pywsd.utils import lemmatize, porter, lemmatize_sentence, synset_properties
 
-pywsd_stopwords = [u"'s", u"``", u"`"]
-EN_STOPWORDS = set(stopwords.words('english') + list(string.punctuation) + pywsd_stopwords)
 signatures_picklefile = os.path.dirname(os.path.abspath(__file__)) + '/data/signatures/signatures.pkl'
 cached_signatures = pd.read_pickle(signatures_picklefile)
 

@@ -12,6 +12,7 @@ from nltk import pos_tag
 
 from pywsd.lesk import simple_lesk, original_lesk
 from pywsd.similarity import max_similarity
+from pywsd.stopwords import stopwords
 from pywsd.tokenize import word_tokenize
 from pywsd.utils import lemmatize, lemmatize_sentence
 
@@ -22,8 +23,6 @@ This would involve:
 Step 1: First tokenize your text such that each token is separated by whitespace
 Step 2: Iterates through the tokens and only disambiguate the content words.
 """
-
-stopwords = stopwords.words('english') + list(punctuation)
 
 def disambiguate(sentence, algorithm=simple_lesk,
                  context_is_lemmatized=False, similarity_option='path',
