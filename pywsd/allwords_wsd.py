@@ -8,9 +8,7 @@
 
 from string import punctuation
 
-
 from nltk import pos_tag
-from nltk.corpus import stopwords
 
 from pywsd.lesk import simple_lesk, original_lesk
 from pywsd.similarity import max_similarity
