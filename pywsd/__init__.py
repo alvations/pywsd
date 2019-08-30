@@ -12,10 +12,11 @@ import sys
 import time
 
 from wn import WordNet
+from wn.constants import wordnet_30_dir
 
-__builtins__['wn'] = WordNet()
+__builtins__['wn'] = WordNet(wordnet_30_dir)
 
-__version__ = '1.2.1'
+__version__ = '1.2.2'
 
 # Warm up the library.
 print('Warming up PyWSD (takes ~10 secs)...', end=' ', file=sys.stderr, flush=True)

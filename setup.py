@@ -10,7 +10,7 @@ from distutils.core import setup
 
 setup(
     name='pywsd',
-    version='1.2.1',
+    version='1.2.2',
     packages=['pywsd'],
     description='Python WSD',
     long_description='Python Implementations of Word Sense Disambiguation (WSD) technologies',
