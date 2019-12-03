@@ -31,5 +31,5 @@ from pywsd.similarity import *
 
 from pywsd.allwords_wsd import disambiguate
 
-pywsd.lesk.simple_lesk('This is a foo bar sentence', 'bar')
+simple_lesk('This is a foo bar sentence', 'bar')
 print('took {} secs.'.format(time.time()-start), file=sys.stderr)
