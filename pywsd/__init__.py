@@ -16,15 +16,15 @@ from wn.constants import wordnet_30_dir
 
 __builtins__['wn'] = WordNet(wordnet_30_dir)
 
-__version__ = '1.2.2'
+__version__ = '1.2.4'
 
 # Warm up the library.
 print('Warming up PyWSD (takes ~10 secs)...', end=' ', file=sys.stderr, flush=True)
 start = time.time()
 
-import pywsd.lesk
-import pywsd.baseline
-import pywsd.similarity
+from pywsd.lesk import *
+from pywsd.baseline import *
+from pywsd.similarity import *
 
 #import semcor
 #import semeval
