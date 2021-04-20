@@ -12,23 +12,24 @@ import sys
 import time
 
 from wn import WordNet
+from wn.constants import wordnet_30_dir
 
-__builtins__['wn'] = WordNet()
+__builtins__['wn'] = WordNet(wordnet_30_dir)
 
-__version__ = '1.2.1'
+__version__ = '1.2.4'
 
 # Warm up the library.
 print('Warming up PyWSD (takes ~10 secs)...', end=' ', file=sys.stderr, flush=True)
 start = time.time()
 
-import pywsd.lesk
-import pywsd.baseline
-import pywsd.similarity
+from pywsd.lesk import *
+from pywsd.baseline import *
+from pywsd.similarity import *
 
 #import semcor
 #import semeval
 
 from pywsd.allwords_wsd import disambiguate
 
-pywsd.lesk.simple_lesk('This is a foo bar sentence', 'bar')
+simple_lesk('This is a foo bar sentence', 'bar')
 print('took {} secs.'.format(time.time()-start), file=sys.stderr)
