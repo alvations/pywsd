@@ -10,8 +10,8 @@ from __future__ import absolute_import, print_function
 
 import sys
 import time
-
-from wn import WordNet
+import nltk
+from nltk.corpus import wordnet as wn
 from wn.constants import wordnet_30_dir
 
 __builtins__['wn'] = WordNet(wordnet_30_dir)
