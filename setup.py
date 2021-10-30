@@ -8,12 +8,18 @@
 
 from distutils.core import setup
 
+from setuptools import setup
+with open("README.md","r") as fh:
+    long_description= fh.read()
+
+  
 setup(
     name='pywsd',
     version='1.2.4',
     packages=['pywsd'],
     description='Python WSD',
-    long_description='Python Implementations of Word Sense Disambiguation (WSD) technologies',
+    long_description= long_description,
+    long_description_content_type="text/markdown",
     url = 'https://github.com/alvations/pywsd',
     package_data={'pywsd': ['data/signatures/*.pkl',]},
     license="MIT",
