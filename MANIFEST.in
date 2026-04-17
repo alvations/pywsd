@@ -1,0 +1,4 @@
+include README.md
+include LICENSE.md
+include CHANGELOG.md
+recursive-include pywsd/data *.pkl

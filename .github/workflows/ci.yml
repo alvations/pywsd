@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install pywsd
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .[test]
+
+      - name: Cache NLTK + wn data
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/nltk_data
+            ~/.wn_data
+          key: nltk-wn-${{ runner.os }}-py${{ matrix.python-version }}-v1
+
+      - name: Download NLTK data
+        run: |
+          python -c "import nltk; [nltk.download(p, quiet=True) for p in ('punkt_tab','averaged_perceptron_tagger_eng','wordnet','brown')]"
+
+      - name: Download WordNet lexicon
+        run: |
+          python -c "import wn; wn.download('oewn:2024') if not any(l.specifier()=='oewn:2024' for l in wn.lexicons()) else None"
+
+      - name: Run tests
+        run: pytest -W error -v

@@ -10,11 +10,12 @@ from string import punctuation
 
 from nltk import pos_tag
 
+from pywsd._wordnet import wn
 from pywsd.lesk import simple_lesk, original_lesk
 from pywsd.similarity import max_similarity
 from pywsd.stopwords import stopwords
 from pywsd.tokenize import word_tokenize
-from pywsd.utils import lemmatize, lemmatize_sentence
+from pywsd.utils import lemmatize, lemmatize_sentence, penn2morphy
 
 """
 This is a module for all-words full text WSD
@@ -35,7 +36,11 @@ def disambiguate(sentence, algorithm=simple_lesk,
         surface_words, lemmas, morphy_poss = lemmatize_sentence(sentence, keepWordPOS=True, tokenizer=tokenizer)
         lemma_sentence = " ".join(lemmas)
     else:
-        lemma_sentence = sentence # TODO: Miss out on POS specification, how to resolve?
+        tokens = tokenizer(sentence)
+        surface_words = tokens
+        lemmas = tokens
+        morphy_poss = [penn2morphy(tag) or None for _, tag in pos_tag(tokens)]
+        lemma_sentence = sentence
     for word, lemma, pos in zip(surface_words, lemmas, morphy_poss):
         if lemma not in stopwords: # Checks if it is a content word
             if wn.synsets(lemma):

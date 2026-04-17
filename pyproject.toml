@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pywsd"
+version = "1.3.0"
+description = "Python Implementations of Word Sense Disambiguation (WSD) technologies."
+readme = "README.md"
+license = { file = "LICENSE.md" }
+authors = [{ name = "alvations" }]
+requires-python = ">=3.10"
+keywords = ["wsd", "wordnet", "word-sense-disambiguation", "lesk", "nlp"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = [
+    "nltk>=3.8",
+    "wn>=1.0,<2",
+]
+
+[project.optional-dependencies]
+semeval = ["beautifulsoup4>=4.10"]
+test = ["pytest>=7"]
+dev = [
+    "pytest>=7",
+    "datasets>=2.0",
+    "beautifulsoup4>=4.10",
+]
+
+[project.urls]
+Homepage = "https://github.com/alvations/pywsd"
+Issues = "https://github.com/alvations/pywsd/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["pywsd*"]
+exclude = ["tests*", "merlin*", "build*", "dist*"]
+
+[tool.setuptools.package-data]
+pywsd = ["data/*.pkl"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["error"]

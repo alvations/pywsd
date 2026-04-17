@@ -1,4 +1,5 @@
-#!/usr/bin/env python -*- coding: utf-8 -*-
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 #
 # Python Word Sense Disambiguation (pyWSD): WSD by maximizing similarity
 #
@@ -6,122 +7,96 @@
 # URL:
 # For license information, see LICENSE.md
 
-"""
-WSD by maximizing similarity.
-"""
+"""WSD by maximizing similarity."""
 
-from wn.info import WordNetInformationContent as WordNetIC
-
+from pywsd._wordnet import wn
 from pywsd.tokenize import word_tokenize
 from pywsd.utils import lemmatize
 
-wnic_bnc_resnik_add1 = WordNetIC('bnc', resnik=True, add1=True)
-wnic_bnc_add1 = WordNetIC('bnc', resnik=False, add1=True)
 
-def similarity_by_path(sense1: "wn.Synset", sense2: "wn.Synset", option: str = "path") -> float:
+def similarity_by_path(sense1, sense2, option: str = "path") -> float:
     """
     Returns maximum path similarity between two senses.
 
-    :param sense1: A synset.
-    :param sense2: A synset.
-    :param option: String, one of ('path', 'wup', 'lch').
-    :return: A float, similarity measurement.
+    :param option: One of ('path', 'wup', 'lch').
     """
-    if option.lower() in ["path", "path_similarity"]: # Path similarities.
-        return max(wn.path_similarity(sense1, sense2, if_none_return=0),
-                   wn.path_similarity(sense2, sense1, if_none_return=0))
-    elif option.lower() in ["wup", "wupa", "wu-palmer", "wu-palmer"]: # Wu-Palmer
-        return max(wn.wup_similarity(sense1, sense2, if_none_return=0),
-                   wn.wup_similarity(sense2, sense1, if_none_return=0))
-    elif option.lower() in ['lch', "leacock-chordorow"]: # Leacock-Chodorow
-        if sense1.pos != sense2.pos: # lch can't do diff POS
+    opt = option.lower()
+    if opt in ("path", "path_similarity"):
+        return wn.path_similarity(sense1, sense2)
+    if opt in ("wup", "wupa", "wu-palmer"):
+        return wn.wup_similarity(sense1, sense2)
+    if opt in ("lch", "leacock-chordorow", "leacock-chodorow"):
+        if sense1.pos != sense2.pos:
             return 0
-        return wn.lch_similarity(sense1, sense2, if_none_return=0)
+        return wn.lch_similarity(sense1, sense2)
+    raise ValueError(f"unknown path-similarity option: {option!r}")
 
 
-def similarity_by_infocontent(sense1: "wn.Synset", sense2: "wn.Synset", option: str) -> float:
+def similarity_by_infocontent(sense1, sense2, option: str) -> float:
     """
     Returns similarity scores by information content.
 
-    :param sense1: A synset.
-    :param sense2: A synset.
-    :param option: String, one of ('res', 'jcn', 'lin').
-    :return: A float, similarity measurement.
+    :param option: One of ('res', 'jcn', 'lin'). Requires an IC frequency dict
+        registered via :func:`pywsd._wordnet.set_ic`.
     """
-
-    if sense1.pos != sense2.pos: # infocontent sim can't do diff POS.
+    if sense1.pos != sense2.pos:
         return 0
-
-    if option in ['res', 'resnik']:
-        if sense1.pos not in wnic_bnc_resnik_add1.ic:
-            return 0
-        return wn.res_similarity(sense1, sense2, wnic_bnc_resnik_add1)
-    #return min(wn.res_similarity(sense1, sense2, wnic.ic(ic)) \
-    #             for ic in info_contents)
-
-    elif option in ['jcn', "jiang-conrath"]:
-        if sense1.pos not in wnic_bnc_add1.ic:
-            return 0
-        return wn.jcn_similarity(sense1, sense2, wnic_bnc_add1)
-
-    elif option in ['lin']:
-        if sense1.pos not in wnic_bnc_add1.ic:
-            return 0
-        return wn.lin_similarity(sense1, sense2, wnic_bnc_add1)
+    opt = option.lower()
+    if opt in ("res", "resnik"):
+        return wn.res_similarity(sense1, sense2)
+    if opt in ("jcn", "jiang-conrath"):
+        return wn.jcn_similarity(sense1, sense2)
+    if opt in ("lin",):
+        return wn.lin_similarity(sense1, sense2)
+    raise ValueError(f"unknown info-content option: {option!r}")
 
 
-def sim(sense1: "wn.Synset", sense2: "wn.Synset", option: str = "path") -> float:
+def sim(sense1, sense2, option: str = "path") -> float:
     """
     Calculates similarity based on user's choice.
 
-    :param sense1: A synset.
-    :param sense2: A synset.
-    :param option: String, one of ('path', 'wup', 'lch', 'res', 'jcn', 'lin').
-    :return: A float, similarity measurement.
+    :param option: One of ('path', 'wup', 'lch', 'res', 'jcn', 'lin').
     """
-    option = option.lower()
-    if option.lower() in ["path", "path_similarity",
-                        "wup", "wupa", "wu-palmer", "wu-palmer",
-                        'lch', "leacock-chordorow"]:
+    opt = option.lower()
+    if opt in ("path", "path_similarity", "wup", "wupa", "wu-palmer",
+               "lch", "leacock-chordorow", "leacock-chodorow"):
         return similarity_by_path(sense1, sense2, option)
-    elif option.lower() in ["res", "resnik",
-                          "jcn","jiang-conrath",
-                          "lin"]:
+    if opt in ("res", "resnik", "jcn", "jiang-conrath", "lin"):
         return similarity_by_infocontent(sense1, sense2, option)
+    raise ValueError(f"unknown similarity option: {option!r}")
 
 
 def max_similarity(context_sentence: str, ambiguous_word: str, option="path",
-                   lemma=True, context_is_lemmatized=False, pos=None, best=True) -> "wn.Synset":
-    """
+                   lemma=True, context_is_lemmatized=False, pos=None, best=True):
+    r"""
     Perform WSD by maximizing the sum of maximum similarity between possible
-    synsets of all words in the context sentence and the possible synsets of the
-    ambiguous words (see https://ibin.co/4gG9zUlejUUA.png):
-    {argmax}_{synset(a)}(\sum_{i}^{n}{{max}_{synset(i)}(sim(i,a))}
+    synsets of all words in the context sentence and the possible synsets of
+    the ambiguous word:
 
-    :param context_sentence: String, a sentence.
-    :param ambiguous_word: String, a single word.
-    :return: If best, returns only the best Synset, else returns a dict.
+    ``argmax_{synset(a)} sum_i max_{synset(i)} sim(i, a)``
+
+    :return: If ``best``, returns only the best Synset; else a sorted list of
+        ``(score, synset)`` tuples.
     """
     ambiguous_word = lemmatize(ambiguous_word)
-    # If ambiguous word not in WordNet return None
     if not wn.synsets(ambiguous_word):
         return None
     if context_is_lemmatized:
         context_sentence = word_tokenize(context_sentence)
     else:
         context_sentence = [lemmatize(w) for w in word_tokenize(context_sentence)]
+
     result = {}
     for i in wn.synsets(ambiguous_word, pos=pos):
-        result[i] = 0
+        total = 0.0
         for j in context_sentence:
-            _result = [0]
+            scores = [0.0]
             for k in wn.synsets(j):
-                _result.append(sim(i,k,option))
-            result[i] += max(_result)
+                scores.append(sim(i, k, option))
+            total += max(scores)
+        result[i] = total
 
-    if option in ["res","resnik"]: # lower score = more similar
-        result = sorted([(v,k) for k,v in result.items()])
-    else: # higher score = more similar
-        result = sorted([(v,k) for k,v in result.items()],reverse=True)
-
-    return result[0][1] if best else result
+    reverse = option.lower() not in ("res", "resnik")  # res: lower score = more similar
+    ranked = sorted(((v, k) for k, v in result.items()),
+                    key=lambda x: x[0], reverse=reverse)
+    return ranked[0][1] if best else ranked

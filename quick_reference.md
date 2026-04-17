@@ -1,80 +1,119 @@
-### Calculate similarity between two documents or words:
-```
-## Document similarity
->>> import pywsd
+Quick reference
+===============
 
->>> pywsd.cosine.cosine_similarity(text1, text2)
+### Similarity between synsets
 
-## Word similarity
-## Use max_similarity for unified interface, options: path, wup, lch, res, jcn, lin 
->>> law = wn.synsets("law")[0]
->>> doc = wn.synsets("document")[0]
->>> pywsd.similarity.similarity_by_path(law, doc, option="path") # same as wn.path_similarity(law, doc)
+```python
+>>> from pywsd._wordnet import wn
+>>> law = wn.synsets("law")[0]         # Synset('oewn-08458195-n')
+>>> doc = wn.synsets("document")[0]    # Synset('oewn-06481744-n')
+
+>>> from pywsd.similarity import similarity_by_path
+>>> similarity_by_path(law, doc, option="path")
 0.125
->>> pywsd.similarity.similarity_by_path(law, doc, option="wup") # same as win.wup_similarity(law, doc)
+>>> similarity_by_path(law, doc, option="wup")
 0.36363636363636365
-
-## Note to investigate, default option="path" does not work (TypeError - invalid comparison of NoneType)
->>> pywsd.similarity.max_similarity("The law is certain the law is absolute", "law", option="res")
-Synset('police.n.01')
->>> pywsd.similarity.max_similarity("The law is certain the law is absolute", "law", option="jcn")
-Synset('police.n.01')
+>>> similarity_by_path(law, doc, option="lch")    # requires same POS
+2.538973871058276
 ```
 
-### Custom word sense
-(Works by counting how often each of its synsets' lemmas appears in Brown)
+Information-content metrics (Resnik / Jiang-Conrath / Lin) are backed by the
+bundled Wikipedia IC file; nothing extra to install:
+
+```python
+>>> from pywsd.similarity import similarity_by_infocontent
+>>> similarity_by_infocontent(law, doc, option="res")
+1.8...
+>>> similarity_by_infocontent(law, doc, option="lin")
+0.3...
 ```
->>> from pywsd.baseline import max_lemma_count
+
+### Max-similarity WSD over a sentence
+
+```python
+>>> from pywsd.similarity import max_similarity
+>>> max_similarity("The law is certain the law is absolute", "law", option="res")
+Synset('oewn-...-n')
+>>> max_similarity("The law is certain the law is absolute", "law", option="path")
+Synset('oewn-...-n')
+```
+
+### Baseline: most frequent sense
+
+```python
+>>> from pywsd.baseline import max_lemma_count, first_sense
 >>> max_lemma_count("dog")
-Synset('dog.n.01')
->>> max_lemma_count("cat")
-Synset('guy.n.01')
->>> pywsd.baseline.max_lemma_count("law").definition()
+Synset('oewn-02086723-n')
+>>> max_lemma_count("law").definition()
 'the collection of rules imposed by authority'
 ```
 
-```
->>> law = pywsd.baseline.max_lemma_count("law")
->>> law
-Synset('law.n.01')
->>> pywsd.lesk.synset_signatures(law) # SYNSET --> SET # truncated output
-{'international_law', 'case_law', 'jurisprudence', 'law_of_nations', 'sharia', 
-'commercial_law', 'tax_law', 'mercantile_law', 'shariah', 'order', 
-'shariah_law', 'rule', 'allow', 'civil_law', 'securities_law', 'respect', 'law'}
+Counts come from whatever corpus the installed WordNet lexicon exposes via
+`Sense.counts()`. OEWN 2024 ships with limited per-sense counts, so results
+often match `first_sense` — that is the documented fallback.
+
+### Signatures
+
+Signatures (bag-of-words from gloss, examples, hyper/hyponyms, and for
+`adapted_lesk` also holonyms/meronyms/similar-tos) are computed on demand and
+memoised with `functools.lru_cache`:
+
+```python
+>>> from pywsd.lesk import synset_signatures, signatures
+>>> law = max_lemma_count("law")
+
+>>> synset_signatures(law)            # Synset -> set[str]
+{'administrative law', 'authority', 'rule', 'allow', 'international law', ...}
+
+>>> signatures("law")                 # str -> { Synset: set[str], ... }
+{Synset('oewn-08458195-n'): {...},
+ Synset('oewn-05884120-n'): {...},
+ ...}
 ```
 
-### Signatures and API type reference:<br>
+### Lesk family — comparison
 
-```
->>> law_sigs = pywsd.lesk.signatures("law") # returns a dict of form {wn.Synset : set}
->>> law_sigs
-{
-Synset('law.n.01'): {'international_law', 'case_law', ...},
-...,
-Synset('jurisprudence.n.01'): {'legal_philosophy', 'concerned',...}
-}
-
+```python
 >>> sent = "The law is certain the law is absolute"
+>>> from pywsd.lesk import simple_lesk, adapted_lesk, cosine_lesk
 
->>> token_sent = sent.split() # ["The", "law", ...]
->>> pywsd.lesk.compare_overlaps(token_sent, law_sigs) # List(strings), dict{Synset:set} --> Synset
-Synset('police.n.01')
->>> pywsd.lesk.compare_overlaps_greedy(sent, law_sigs) # List(strings), dict{Synset:set} --> Synset
-Synset('law.n.01')
-
->>> pywsd.lesk.cosine_lesk(sent, "law")
-Synset('law.n.01')
->>> pywsd.lesk.cosine_lesk(sent, "police")
-Synset('police.n.01')
+>>> simple_lesk(sent, "enforce")
+Synset('oewn-02565990-v')
+>>> adapted_lesk(sent, "enforce")
+Synset('oewn-02565990-v')
+>>> cosine_lesk(sent, "enforce")
+Synset('oewn-02565990-v')
 ```
 
-### Comparison of lesk disambiguation algorithms:<br>
+### All-words WSD
+
+```python
+>>> from pywsd import disambiguate
+>>> disambiguate("I went to the bank to deposit my money")
+[('I', None), ('went', Synset('oewn-02659957-v')), ('to', None), ('the', None),
+ ('bank', Synset('oewn-08437235-n')), ('to', None), ('deposit', Synset(...)),
+ ('my', None), ('money', Synset(...))]
+```
+
+### Document cosine similarity
+
+```python
+>>> from pywsd.cosine import cosine_similarity
+>>> cosine_similarity("I like cats", "I enjoy cats")
+0.666...
+```
+
+### Synset identifiers
+
+This is OEWN 2024, so synsets are identified as `oewn-<offset>-<pos>` rather
+than the old PWN 3.0 `bank.n.01` form. Use `synset.id`, `synset.lemmas()`,
+`synset.pos`, and `synset.definition()` for the human-readable surface.
+
+### Regenerate bundled IC
 
 ```
->>> pywsd.lesk.cosine_lesk(sent, "enforce")
-Synset('enforce.v.01')
->>> pywsd.lesk.adapted_lesk(sent, "enforce")
-Synset('enforce.v.02')
->>> pywsd.lesk.simple_lesk(sent, "enforce")
-Synset('enforce.v.02')
+python scripts/build_ic.py --corpus brown
+python scripts/build_ic.py --corpus wikipedia
 ```
+
+Writes `pywsd/data/ic_oewn-2024_<corpus>.pkl`.

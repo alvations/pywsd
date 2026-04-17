@@ -9,7 +9,7 @@
 import os, io
 from collections import namedtuple
 
-from BeautifulSoup import BeautifulSoup as bsoup
+from bs4 import BeautifulSoup as bsoup
 from pywsd.utils import remove_tags, semcor_to_synset
 
 Instance = namedtuple('instance', 'id, lemma, word')
@@ -106,8 +106,7 @@ class SemEval2007_Coarse_WSD:
                 lemma = instance['lemma']
                 word = instance.text
                 inst = Instance(instid, lemma, word)
-                yield inst, inst2ans[instid],
-                unicode(context_sent), unicode(context_doc)
+                yield inst, inst2ans[instid], context_sent, context_doc
 
     def sentences(self):
         """

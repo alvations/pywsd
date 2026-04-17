@@ -1,4 +1,5 @@
-#!/usr/bin/env python -*- coding: utf-8 -*-
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 #
 # Python Word Sense Disambiguation (pyWSD): Baseline WSD
 #
@@ -8,10 +9,12 @@
 
 import random
 
+from pywsd._wordnet import wn
+
 custom_random = random.Random(0)
 
 
-def random_sense(ambiguous_word: str, pos=None) -> "wn.Synset":
+def random_sense(ambiguous_word: str, pos=None):
     """
     Returns a random sense.
 
@@ -19,14 +22,10 @@ def random_sense(ambiguous_word: str, pos=None) -> "wn.Synset":
     :param pos: String, one of 'a', 'r', 's', 'n', 'v', or None.
     :return: A random Synset.
     """
-
-    if pos is None:
-        return custom_random.choice(wn.synsets(ambiguous_word))
-    else:
-        return custom_random.choice(wn.synsets(ambiguous_word, pos))
+    return custom_random.choice(wn.synsets(ambiguous_word, pos))
 
 
-def first_sense(ambiguous_word: str, pos: str = None) -> "wn.Synset":
+def first_sense(ambiguous_word: str, pos: str = None):
     """
     Returns the first sense.
 
@@ -34,24 +33,27 @@ def first_sense(ambiguous_word: str, pos: str = None) -> "wn.Synset":
     :param pos: String, one of 'a', 'r', 's', 'n', 'v', or None.
     :return: The first Synset in the wn.synsets(word) list.
     """
-
-    if pos is None:
-        return wn.synsets(ambiguous_word)[0]
-    else:
-        return wn.synsets(ambiguous_word, pos)[0]
+    return wn.synsets(ambiguous_word, pos)[0]
 
 
-def max_lemma_count(ambiguous_word: str) -> "wn.Synset":
+def _synset_freq(ss) -> int:
+    """Sum of all sense counts across corpora for the synset."""
+    return sum(sum(sense.counts()) for sense in ss.senses())
+
+
+def max_lemma_count(ambiguous_word: str):
     """
     Returns the sense with the highest lemma_name count.
-    The max_lemma_count() can be treated as a rough gauge for the
-    Most Frequent Sense (MFS), if no other sense annotated corpus is available.
-    NOTE: The lemma counts are from the Brown Corpus
 
-    :param ambiguous_word: String, a single word.
-    :return: The estimated most common Synset.
+    A rough gauge for the Most Frequent Sense (MFS) when no annotated corpus
+    is available. Counts come from whatever corpora the installed wordnet
+    lexicon exposes; if none are present this falls back to ``first_sense``.
     """
-    sense2lemmacounts = {}
-    for i in wn.synsets(ambiguous_word, pos=None):
-        sense2lemmacounts[i] = sum(j.count() for j in i.lemmas())
-    return max(sense2lemmacounts, key=sense2lemmacounts.get)
+    candidates = wn.synsets(ambiguous_word)
+    if not candidates:
+        return None
+    scored = [(_synset_freq(ss), ss) for ss in candidates]
+    best = max(scored, key=lambda x: x[0])
+    if best[0] == 0:
+        return candidates[0]
+    return best[1]
