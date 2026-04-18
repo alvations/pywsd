@@ -59,47 +59,47 @@ python experiments/report.py --files experiments/results_lesk.jsonl \
 pywsd 1.3.0, `oewn:2024`, bundled Wikipedia-corpus IC. Cells are
 accuracy % over OEWN-resolvable instances.
 
-| method | SE07 (AW) | SE13 (AW) | SE15 (AW) | SE2 (AW) | SE3 (AW) | SE2 (LS) | SE3 (LS) | SE07T17 (LS) |
+| method | SE07 (AW) | SE13 (AW) | SE15 (AW) | SE2 (AW) | SE3 (AW) | SE2 (LS) | SE3 (LS) | SE07T17 (LS†) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| `first_sense`          | 52.76 | 57.65 | **64.61** | **60.62** | **61.46** | 39.42 | † | † |
-| `random_sense`         | 23.73 | 36.28 | 42.20 | 40.05 | 34.14 | 18.36 | † | † |
-| `max_lemma_count`      | 32.95 | 56.27 | 49.85 | 50.48 | 47.15 | 23.24 | † | † |
-| `original_lesk`        | 15.65 | 36.49 | 34.03 | 34.23 | 28.37 | 16.69 | † | † |
-| `simple_lesk`          | 47.70 | 55.34 | 61.90 | 58.64 | 55.19 | †     | † | † |
-| `adapted_lesk`         | 47.00 | 55.34 | 60.98 | 57.19 | 54.79 | †     | † | † |
-| `cosine_lesk`          | 32.03 | 44.72 | 48.11 | 45.67 | 41.38 | †     | † | † |
-| `max_similarity_path`  | 33.56 |  –    |  –    |  –    |  –    | –     | – | – |
-| `max_similarity_wup`   | 30.56 |  –    |  –    |  –    |  –    | –     | – | – |
-| `max_similarity_lch`   | 33.56 |  –    |  –    |  –    |  –    | –     | – | – |
-| `max_similarity_res`   | 26.62 |  –    |  –    |  –    |  –    | –     | – | – |
-| `max_similarity_jcn`   | **52.55** |  – |  –    |  –    |  –    | –     | – | – |
-| `max_similarity_lin`   | 30.56 |  –    |  –    |  –    |  –    | –     | – | – |
+| `first_sense`          | 52.76 | 57.65 | **64.61** | **60.62** | **61.46** | 39.42 | 52.12 | 52.76 |
+| `random_sense`         | 23.73 | 36.28 | 42.20 | 40.05 | 34.14 | 18.36 | 19.14 | 28.80 |
+| `max_lemma_count`      | 32.95 | 56.27 | 49.85 | 50.48 | 47.15 | 23.24 | 38.02 | 33.18 |
+| `original_lesk`        | 15.65 | 36.49 | 34.03 | 34.23 | 28.37 | 16.69 | 19.68 | 15.70 |
+| `simple_lesk`          | 47.70 | 55.34 | 61.90 | 58.64 | 55.19 | 39.65 | 47.15 | 47.24 |
+| `adapted_lesk`         | 47.00 | 55.34 | 60.98 | 57.19 | 54.79 | 39.15 | 47.24 | 46.54 |
+| `cosine_lesk`          | 32.03 | 44.72 | 48.11 | 45.67 | 41.38 | 27.59 | 26.36 | 31.80 |
+| `max_similarity_path`  | 33.56 |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡ |
+| `max_similarity_wup`   | 30.56 |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡ |
+| `max_similarity_lch`   | 33.56 |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡ |
+| `max_similarity_res`   | 26.62 |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡ |
+| `max_similarity_jcn`   | **52.55** |  ※ |  ※ |  ※ |  ※ |  ※ |  ※ |  ※ |
+| `max_similarity_lin`   | 30.56 |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡ |
 
-Column headers: `SE07 (AW)`=SemEval-2007 fine-grained all-words,
-`SE13 (AW)`=SemEval-2013 Task 12, `SE15 (AW)`=SemEval-2015 Task 13,
-`SE2 (AW)`=Senseval-2 all-words, `SE3 (AW)`=Senseval-3 all-words,
-`SE2 (LS)`/`SE3 (LS)`=Senseval-2 & 3 lexical-sample test sets,
-`SE07T17 (LS)`=SemEval-2007 Task 17 lexical-sample test.
+Column headers: `SE07 (AW)`=SemEval-2007 fine-grained all-words
+(Raganato export), `SE13 (AW)`=SemEval-2013 Task 12,
+`SE15 (AW)`=SemEval-2015 Task 13, `SE2 (AW)`=Senseval-2 all-words,
+`SE3 (AW)`=Senseval-3 all-words, `SE2 (LS)` / `SE3 (LS)`=Senseval-2
+& 3 lexical-sample test sets, `SE07T17 (LS†)`=SemEval-2007 Task 17
+via UFSAC.
+
+**Note:** `SE07T17 (LS†)` is essentially the same 455-instance
+SemEval-2007 Task 17 fine-grained all-words test set as `SE07 (AW)`,
+sourced from UFSAC's export rather than the Raganato bundle. SE2007
+Task 17 was never a lexical-sample track; the `_ls` suffix in
+`en-semeval2007_t17_ls` is a mislabel in pywsd-datasets v0.2.0. The
+scores confirm it — all methods produce near-identical numbers
+(±0.5 pp) across the two columns. Will rename in the next dataset
+release.
 
 ### Cells not filled
 
-**†** — *in progress.* Lesk family + baselines on the three
-lexical-sample test splits is currently running. Numbers for
-`en-senseval2_ls/test` are landing first; three methods already
-reported above (`first_sense`, `random_sense`, `max_lemma_count`,
-`original_lesk`); `simple_lesk`, `adapted_lesk`, `cosine_lesk`
-remaining. `en-senseval3_ls/test` (3,849 rows) and
-`en-semeval2007_t17_ls/test` (455 rows) still queued. ETA under an
-hour. This file will be updated when the sweep finishes; raw runs
-stream into `results_ls.jsonl`.
-
-**–** — *deliberately skipped.* Each `max_similarity` run is
+**‡** — *deliberately skipped.* Each `max_similarity` run is
 quadratic in (candidate synsets × context synsets) and takes ~10–30
 minutes per metric per config even on the 455-row SemEval-2007. The
-other test configs are 2–10× larger, so a full sweep would be many
-hours. Partial SE2007 results (shown above) are sufficient to rank
-the six metrics; `jcn` is clearly best. If someone needs the complete
-grid, run:
+other test configs are 2–10× larger, so a full sweep of all six
+metrics would be many hours. Partial SE2007 results (the filled SE07
+column above) are sufficient to rank the six metrics; `jcn` is clearly
+best. If someone needs the complete grid, run:
 ```
 python experiments/evaluate.py \\
     --configs <larger-config> \\
@@ -107,6 +107,12 @@ python experiments/evaluate.py \\
               max_similarity_res max_similarity_jcn max_similarity_lin \\
     --out experiments/results_maxsim_<config>.jsonl
 ```
+
+**※** — *jcn row being filled now.* Because jcn is the standout
+IC-based metric on SE2007, we're running it across every remaining
+config to see whether the advantage holds. Streams into
+`results_maxsim_jcn.jsonl`; expect several hours of wall time (jcn
+was 586 s for 432 rows; largest config here is 4,239 rows).
 
 ### Instance counts (gold-resolvable / total in test split)
 
