@@ -72,7 +72,7 @@ accuracy % over OEWN-resolvable instances.
 | `max_similarity_wup`   | 30.56 |  –    |  –    |  –    |  –    |  –    |  –    |  – |
 | `max_similarity_lch`   | 33.56 |  –    |  –    |  –    |  –    |  –    |  –    |  – |
 | `max_similarity_res`   | 26.62 |  –    |  –    |  –    |  –    |  –    |  –    |  – |
-| `max_similarity_jcn`   | **52.55** | **57.19** | **63.42** | **59.84** | **61.24** |  – |  – |  – |
+| `max_similarity_jcn`   | **52.55** | **57.19** | **63.42** | **59.84** | **61.24** | – | – | **52.55** |
 | `max_similarity_lin`   | 30.56 |  –    |  –    |  –    |  –    |  –    |  –    |  – |
 
 Column headers: `SE07 (AW)`=SemEval-2007 fine-grained all-words
