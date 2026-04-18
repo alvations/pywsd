@@ -68,12 +68,12 @@ accuracy % over OEWN-resolvable instances.
 | `simple_lesk`          | 47.70 | 55.34 | 61.90 | 58.64 | 55.19 | †     | † | † |
 | `adapted_lesk`         | 47.00 | 55.34 | 60.98 | 57.19 | 54.79 | †     | † | † |
 | `cosine_lesk`          | 32.03 | 44.72 | 48.11 | 45.67 | 41.38 | †     | † | † |
-| `max_similarity_path`  | 33.56 |  ‡    |  ‡    |  ‡    |  ‡    | ‡     | ‡ | ‡ |
-| `max_similarity_wup`   | 30.56 |  ‡    |  ‡    |  ‡    |  ‡    | ‡     | ‡ | ‡ |
-| `max_similarity_lch`   | 33.56 |  ‡    |  ‡    |  ‡    |  ‡    | ‡     | ‡ | ‡ |
-| `max_similarity_res`   | 26.62 |  ‡    |  ‡    |  ‡    |  ‡    | ‡     | ‡ | ‡ |
-| `max_similarity_jcn`   | **52.55** |  ‡ |  ‡    |  ‡    |  ‡    | ‡     | ‡ | ‡ |
-| `max_similarity_lin`   | 30.56 |  ‡    |  ‡    |  ‡    |  ‡    | ‡     | ‡ | ‡ |
+| `max_similarity_path`  | 33.56 |  –    |  –    |  –    |  –    | –     | – | – |
+| `max_similarity_wup`   | 30.56 |  –    |  –    |  –    |  –    | –     | – | – |
+| `max_similarity_lch`   | 33.56 |  –    |  –    |  –    |  –    | –     | – | – |
+| `max_similarity_res`   | 26.62 |  –    |  –    |  –    |  –    | –     | – | – |
+| `max_similarity_jcn`   | **52.55** |  – |  –    |  –    |  –    | –     | – | – |
+| `max_similarity_lin`   | 30.56 |  –    |  –    |  –    |  –    | –     | – | – |
 
 Column headers: `SE07 (AW)`=SemEval-2007 fine-grained all-words,
 `SE13 (AW)`=SemEval-2013 Task 12, `SE15 (AW)`=SemEval-2015 Task 13,
@@ -93,7 +93,7 @@ remaining. `en-senseval3_ls/test` (3,849 rows) and
 hour. This file will be updated when the sweep finishes; raw runs
 stream into `results_ls.jsonl`.
 
-**‡** — *deliberately skipped.* Each `max_similarity` run is
+**–** — *deliberately skipped.* Each `max_similarity` run is
 quadratic in (candidate synsets × context synsets) and takes ~10–30
 minutes per metric per config even on the 455-row SemEval-2007. The
 other test configs are 2–10× larger, so a full sweep would be many
