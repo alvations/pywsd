@@ -173,6 +173,52 @@ be ~4× slower each — deferred unless someone needs them.
   bug in upstream `wn.ic.compute`). The non-trivial res/jcn/lin scores
   are the downstream validation that IC is right.
 
+### Why does jcn win over lin (and everything else IC-based)?
+
+They use the same inputs (IC of each concept + IC of their LCS) but
+different normalizations. Rewriting jcn:
+
+    jcn(c1, c2) = 1 / [ (IC(c1) − IC(lcs)) + (IC(c2) − IC(lcs)) ]
+
+The denominator is the **IC-distance from each concept to their LCS**,
+summed. jcn is the inverse of how much information has to be traversed
+to go between c1 and c2 via their LCS. lin, by contrast, is a
+**ratio** of shared-to-total IC, insensitive to the absolute
+IC-distance:
+
+    lin(c1, c2) = 2 · IC(lcs) / (IC(c1) + IC(c2))       ∈ [0, 1]
+    res(c1, c2) = IC(lcs)
+
+Three consequences for WSD ranking via `max_similarity`, which scores a
+candidate sense `c_a` of an ambiguous word by
+`Σ_{w ∈ context} max_{s ∈ synsets(w)} sim(c_a, s)`:
+
+1. **jcn is unbounded; lin is capped at 1.** When a context word's
+   synset is near-identical to a candidate, jcn returns a huge number
+   and dominates the sum — a strong "if anything in context agrees
+   with this candidate, lock it in" signal. lin maxes out at 1.0, so
+   an exact match contributes the same as a moderate match.
+2. **jcn penalizes generic LCSes quadratically.** If the LCS is
+   `entity` (IC ≈ 0), both `IC(ci) − IC(lcs)` terms stay large and
+   jcn → 0. lin's ratio is badly conditioned at the root (small
+   numerator, small denominator) and returns noise. jcn cleanly says
+   "these are far apart, don't pick this candidate."
+3. **jcn rewards matching abstraction level.** Because it's inverse
+   IC-distance, it prefers a candidate sense whose IC is close to the
+   context's typical IC. Lesk and `first_sense` have no taxonomic-
+   depth awareness at all.
+
+This matches the empirical record: Budanitsky & Hirst (2006) reported
+jcn ≥ lin ≥ res ≥ path on multiple WSD benchmarks. Our SE2007 numbers
+reproduce that ordering (52.55 > 30.56 > 26.62, with path at 33.56
+edging res because res uses `IC(lcs)` alone — collapses on a sparse
+IC estimate for OEWN, and has no depth awareness).
+
+The decisive test is whether jcn's lead **holds across configs** or
+whether it just mirrored MFS on SE2007 (where `first_sense` was 52.76
+and jcn was 52.55 — within noise). The in-flight jcn sweep on all 7
+remaining configs is that test.
+
 ## Reproducibility
 
 Results above were generated with:
