@@ -68,12 +68,12 @@ accuracy % over OEWN-resolvable instances.
 | `simple_lesk`          | 47.70 | 55.34 | 61.90 | 58.64 | 55.19 | 39.65 | 47.15 | 47.24 |
 | `adapted_lesk`         | 47.00 | 55.34 | 60.98 | 57.19 | 54.79 | 39.15 | 47.24 | 46.54 |
 | `cosine_lesk`          | 32.03 | 44.72 | 48.11 | 45.67 | 41.38 | 27.59 | 26.36 | 31.80 |
-| `max_similarity_path`  | 33.56 |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡ |
-| `max_similarity_wup`   | 30.56 |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡ |
-| `max_similarity_lch`   | 33.56 |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡ |
-| `max_similarity_res`   | 26.62 |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡ |
-| `max_similarity_jcn`   | **52.55** |  ※ |  ※ |  ※ |  ※ |  ※ |  ※ |  ※ |
-| `max_similarity_lin`   | 30.56 |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡    |  ‡ |
+| `max_similarity_path`  | 33.56 |  –    |  –    |  –    |  –    |  –    |  –    |  – |
+| `max_similarity_wup`   | 30.56 |  –    |  –    |  –    |  –    |  –    |  –    |  – |
+| `max_similarity_lch`   | 33.56 |  –    |  –    |  –    |  –    |  –    |  –    |  – |
+| `max_similarity_res`   | 26.62 |  –    |  –    |  –    |  –    |  –    |  –    |  – |
+| `max_similarity_jcn`   | **52.55** |  – |  – |  – |  – |  – |  – |  – |
+| `max_similarity_lin`   | 30.56 |  –    |  –    |  –    |  –    |  –    |  –    |  – |
 
 Column headers: `SE07 (AW)`=SemEval-2007 fine-grained all-words
 (Raganato export), `SE13 (AW)`=SemEval-2013 Task 12,
@@ -91,28 +91,33 @@ scores confirm it — all methods produce near-identical numbers
 (±0.5 pp) across the two columns. Will rename in the next dataset
 release.
 
-### Cells not filled
+### Cells not filled (`–`)
 
-**‡** — *deliberately skipped.* Each `max_similarity` run is
-quadratic in (candidate synsets × context synsets) and takes ~10–30
-minutes per metric per config even on the 455-row SemEval-2007. The
-other test configs are 2–10× larger, so a full sweep of all six
-metrics would be many hours. Partial SE2007 results (the filled SE07
-column above) are sufficient to rank the six metrics; `jcn` is clearly
-best. If someone needs the complete grid, run:
-```
-python experiments/evaluate.py \\
-    --configs <larger-config> \\
-    --methods max_similarity_path max_similarity_wup max_similarity_lch \\
-              max_similarity_res max_similarity_jcn max_similarity_lin \\
-    --out experiments/results_maxsim_<config>.jsonl
-```
+Two reasons a cell is `–`:
 
-**※** — *jcn row being filled now.* Because jcn is the standout
-IC-based metric on SE2007, we're running it across every remaining
-config to see whether the advantage holds. Streams into
-`results_maxsim_jcn.jsonl`; expect several hours of wall time (jcn
-was 586 s for 432 rows; largest config here is 4,239 rows).
+1. **The jcn row is being filled now.** Because jcn is the standout
+   IC-based metric on SE2007, we're running it across every remaining
+   config to see whether the advantage holds. Streams into
+   `results_maxsim_jcn.jsonl`; expect several hours of wall time (jcn
+   was 586 s for 432 rows; largest config here is 4,239 rows). Cells
+   will be updated as they land.
+
+2. **All other `max_similarity` cells are deliberately skipped.** Each
+   `max_similarity` run is quadratic in (candidate synsets × context
+   synsets) and takes ~10–30 minutes per metric per config even on
+   the 455-row SemEval-2007. The other test configs are 2–10× larger,
+   so a full sweep of all six metrics would be many hours. Partial
+   SE2007 results (the filled SE07 column above) are sufficient to
+   rank the six metrics; `jcn` is clearly best. If someone needs the
+   complete grid, run:
+
+   ```
+   python experiments/evaluate.py \\
+       --configs <larger-config> \\
+       --methods max_similarity_path max_similarity_wup max_similarity_lch \\
+                 max_similarity_res max_similarity_jcn max_similarity_lin \\
+       --out experiments/results_maxsim_<config>.jsonl
+   ```
 
 ### Instance counts (gold-resolvable / total in test split)
 
