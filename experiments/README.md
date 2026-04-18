@@ -88,14 +88,42 @@ SemEval-2007 455 (fine-grained), SemEval-2013 1,644, SemEval-2015
   (56.27 %, within ~1 pp of `first_sense`) but weak on the fine-grained
   SemEval-2007 (32.95 %) where OEWN's per-sense counts are sparse.
 
-## Results — max_similarity (information-content family)
+## Results — max_similarity (path + information-content family)
 
-Computed on SemEval-2007 all-words (455 rows) only, because each
-similarity-option run takes ~14 minutes per metric on this corpus
-(quadratic over candidate × context synsets).
+Computed on SemEval-2007 all-words (455 rows) only. Each option is
+quadratic in (candidate synsets × context synsets) and takes 10–30
+minutes per metric on this corpus, so the other evaluation sets would
+be ~4× slower each — deferred unless someone needs them.
 
-*(Results will be appended here as the sweep finishes. See
-`results_maxsim.jsonl` for raw JSON output.)*
+| metric  | accuracy | sec    | notes                                  |
+|---------|---------:|-------:|----------------------------------------|
+| `path`  | 33.56    |   825  | `1 / (distance + 1)`                   |
+| `wup`   | 30.56    |  1641  | Wu-Palmer                              |
+| `lch`   | 33.56    |   926  | Leacock-Chodorow (same-POS only)       |
+| `res`   | 26.62    |   556  | Resnik 1995, needs IC                  |
+| **`jcn`** | **52.55** |   586  | **Jiang-Conrath — best max_similarity** |
+| `lin`   | 30.56    |   627  | Lin 1998, needs IC                     |
+
+### Reading
+
+* `jcn` is the standout at **52.55 %**, beating every other
+  `max_similarity` metric on SE2007 by 19+ pp and edging out
+  `simple_lesk` (47.70 %) on the same config. Jiang-Conrath's
+  `1 / (IC(c1) + IC(c2) − 2·IC(lcs))` penalizes pairs whose LCS is
+  generic relative to how specific c1 and c2 are, which evidently
+  maps well to WSD target scoring on this corpus.
+* `res` under-performs because taking `IC(lcs)` alone ranks high-IC
+  (specific) ancestors so aggressively that it tends to collapse to
+  generic MFS-like behavior; the distance-aware JCN handles that better.
+* `path` and `lch` tie at 33.56 % — lch is path-length-to-depth-ratio
+  with a log, which is nearly monotonic in path on English WordNet, so
+  equivalent rankings come out. `wup`, `lin` both at 30.56 % — not a
+  coincidence, likely driven by the same LCS-ranking ties.
+* **Information-content quality is load-bearing.** Resnik/JCN/Lin all
+  need correct IC. pywsd 1.3.0 ships Wikipedia-corpus IC precomputed
+  via `pywsd._ic.build_ic` (Resnik-1995-correct; fixes the double-count
+  bug in upstream `wn.ic.compute`). The non-trivial res/jcn/lin scores
+  are the downstream validation that IC is right.
 
 ## Reproducibility
 

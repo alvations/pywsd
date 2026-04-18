@@ -1,0 +1,6 @@
+{"method": "max_similarity_path", "total": 432, "correct": 145, "accuracy": 0.33564814814814814, "skipped_nogold": 1, "errors": 22, "elapsed_sec": 825.3637299537659, "config": "en-semeval2007-aw", "split": "test"}
+{"method": "max_similarity_wup", "total": 432, "correct": 132, "accuracy": 0.3055555555555556, "skipped_nogold": 1, "errors": 22, "elapsed_sec": 1641.0478038787842, "config": "en-semeval2007-aw", "split": "test"}
+{"method": "max_similarity_lch", "total": 432, "correct": 145, "accuracy": 0.33564814814814814, "skipped_nogold": 1, "errors": 22, "elapsed_sec": 926.2738361358643, "config": "en-semeval2007-aw", "split": "test"}
+{"method": "max_similarity_res", "total": 432, "correct": 115, "accuracy": 0.2662037037037037, "skipped_nogold": 1, "errors": 22, "elapsed_sec": 556.0081579685211, "config": "en-semeval2007-aw", "split": "test"}
+{"method": "max_similarity_jcn", "total": 432, "correct": 227, "accuracy": 0.5254629629629629, "skipped_nogold": 1, "errors": 22, "elapsed_sec": 586.2763590812683, "config": "en-semeval2007-aw", "split": "test"}
+{"method": "max_similarity_lin", "total": 432, "correct": 132, "accuracy": 0.3055555555555556, "skipped_nogold": 1, "errors": 22, "elapsed_sec": 626.6079370975494, "config": "en-semeval2007-aw", "split": "test"}
