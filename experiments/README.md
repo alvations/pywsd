@@ -54,24 +54,72 @@ python experiments/report.py --files experiments/results_lesk.jsonl \
 * The `errors` column counts instances where the method raised, or
   returned `None`, or returned something without an `.id` attribute.
 
-## Results — Lesk family + baselines
+## Results — combined method × config matrix
 
-Across the 5 Raganato all-words evaluation configs (pywsd 1.3.0,
-`oewn:2024`, `wikipedia`-corpus IC).
+pywsd 1.3.0, `oewn:2024`, bundled Wikipedia-corpus IC. Cells are
+accuracy % over OEWN-resolvable instances.
 
-| method | SE2007 (AW) | SE2013 (AW) | SE2015 (AW) | Senseval-2 | Senseval-3 |
-|---|---:|---:|---:|---:|---:|
-| `first_sense`      | 52.76 | 57.65 | **64.61** | **60.62** | **61.46** |
-| `random_sense`     | 23.73 | 36.28 | 42.20 | 40.05 | 34.14 |
-| `max_lemma_count`  | 32.95 | 56.27 | 49.85 | 50.48 | 47.15 |
-| `original_lesk`    | 15.65 | 36.49 | 34.03 | 34.23 | 28.37 |
-| `simple_lesk`      | **47.70** | 55.34 | 61.90 | 58.64 | 55.19 |
-| `adapted_lesk`     | 47.00 | 55.34 | 60.98 | 57.19 | 54.79 |
-| `cosine_lesk`      | 32.03 | 44.72 | 48.11 | 45.67 | 41.38 |
+| method | SE07 (AW) | SE13 (AW) | SE15 (AW) | SE2 (AW) | SE3 (AW) | SE2 (LS) | SE3 (LS) | SE07T17 (LS) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| `first_sense`          | 52.76 | 57.65 | **64.61** | **60.62** | **61.46** | 39.42 | † | † |
+| `random_sense`         | 23.73 | 36.28 | 42.20 | 40.05 | 34.14 | 18.36 | † | † |
+| `max_lemma_count`      | 32.95 | 56.27 | 49.85 | 50.48 | 47.15 | 23.24 | † | † |
+| `original_lesk`        | 15.65 | 36.49 | 34.03 | 34.23 | 28.37 | 16.69 | † | † |
+| `simple_lesk`          | 47.70 | 55.34 | 61.90 | 58.64 | 55.19 | †     | † | † |
+| `adapted_lesk`         | 47.00 | 55.34 | 60.98 | 57.19 | 54.79 | †     | † | † |
+| `cosine_lesk`          | 32.03 | 44.72 | 48.11 | 45.67 | 41.38 | †     | † | † |
+| `max_similarity_path`  | 33.56 |  ‡    |  ‡    |  ‡    |  ‡    | ‡     | ‡ | ‡ |
+| `max_similarity_wup`   | 30.56 |  ‡    |  ‡    |  ‡    |  ‡    | ‡     | ‡ | ‡ |
+| `max_similarity_lch`   | 33.56 |  ‡    |  ‡    |  ‡    |  ‡    | ‡     | ‡ | ‡ |
+| `max_similarity_res`   | 26.62 |  ‡    |  ‡    |  ‡    |  ‡    | ‡     | ‡ | ‡ |
+| `max_similarity_jcn`   | **52.55** |  ‡ |  ‡    |  ‡    |  ‡    | ‡     | ‡ | ‡ |
+| `max_similarity_lin`   | 30.56 |  ‡    |  ‡    |  ‡    |  ‡    | ‡     | ‡ | ‡ |
 
-Cells are accuracy % (higher is better). Instance counts per config:
-SemEval-2007 455 (fine-grained), SemEval-2013 1,644, SemEval-2015
-1,022, Senseval-2 2,282, Senseval-3 1,850.
+Column headers: `SE07 (AW)`=SemEval-2007 fine-grained all-words,
+`SE13 (AW)`=SemEval-2013 Task 12, `SE15 (AW)`=SemEval-2015 Task 13,
+`SE2 (AW)`=Senseval-2 all-words, `SE3 (AW)`=Senseval-3 all-words,
+`SE2 (LS)`/`SE3 (LS)`=Senseval-2 & 3 lexical-sample test sets,
+`SE07T17 (LS)`=SemEval-2007 Task 17 lexical-sample test.
+
+### Cells not filled
+
+**†** — *in progress.* Lesk family + baselines on the three
+lexical-sample test splits is currently running. Numbers for
+`en-senseval2_ls/test` are landing first; three methods already
+reported above (`first_sense`, `random_sense`, `max_lemma_count`,
+`original_lesk`); `simple_lesk`, `adapted_lesk`, `cosine_lesk`
+remaining. `en-senseval3_ls/test` (3,849 rows) and
+`en-semeval2007_t17_ls/test` (455 rows) still queued. ETA under an
+hour. This file will be updated when the sweep finishes; raw runs
+stream into `results_ls.jsonl`.
+
+**‡** — *deliberately skipped.* Each `max_similarity` run is
+quadratic in (candidate synsets × context synsets) and takes ~10–30
+minutes per metric per config even on the 455-row SemEval-2007. The
+other test configs are 2–10× larger, so a full sweep would be many
+hours. Partial SE2007 results (shown above) are sufficient to rank
+the six metrics; `jcn` is clearly best. If someone needs the complete
+grid, run:
+```
+python experiments/evaluate.py \\
+    --configs <larger-config> \\
+    --methods max_similarity_path max_similarity_wup max_similarity_lch \\
+              max_similarity_res max_similarity_jcn max_similarity_lin \\
+    --out experiments/results_maxsim_<config>.jsonl
+```
+
+### Instance counts (gold-resolvable / total in test split)
+
+| config | n (total) | gold-resolvable | OEWN coverage |
+|---|---:|---:|---:|
+| `en-semeval2007-aw`   | 455   | 454   | 99.78 % |
+| `en-semeval2013-aw`   | 1,644 | 1,644 | 100.00 % |
+| `en-semeval2015-aw`   | 1,022 | 1,015 | 99.32 % |
+| `en-senseval2-aw`     | 2,282 | 2,269 | 99.43 % |
+| `en-senseval3-aw`     | 1,850 | 1,841 | 99.51 % |
+| `en-senseval2_ls`     | 4,239 | 3,756 | 88.61 % |
+| `en-senseval3_ls`     | 3,849 | 3,156 | 82.00 % |
+| `en-semeval2007_t17_ls` | 455 | 454   | 99.78 % |
 
 ### Reading
 
