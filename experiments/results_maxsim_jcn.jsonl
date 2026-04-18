@@ -1,0 +1,7 @@
+{"method": "max_similarity_jcn", "total": 1516, "correct": 867, "accuracy": 0.5718997361477572, "skipped_nogold": 0, "errors": 128, "elapsed_sec": 2782.989781141281, "config": "en-semeval2013-aw", "split": "test"}
+{"method": "max_similarity_jcn", "total": 954, "correct": 605, "accuracy": 0.6341719077568134, "skipped_nogold": 7, "errors": 61, "elapsed_sec": 796.6909670829773, "config": "en-semeval2015-aw", "split": "test"}
+{"method": "max_similarity_jcn", "total": 2079, "correct": 1244, "accuracy": 0.5983645983645983, "skipped_nogold": 13, "errors": 190, "elapsed_sec": 1666.3322701454163, "config": "en-senseval2-aw", "split": "test"}
+{"method": "max_similarity_jcn", "total": 1651, "correct": 1011, "accuracy": 0.6123561477892187, "skipped_nogold": 9, "errors": 190, "elapsed_sec": 1820.4558799266815, "config": "en-senseval3-aw", "split": "test"}
+{"method": "max_similarity_jcn", "total": 432, "correct": 227, "accuracy": 0.5254629629629629, "skipped_nogold": 1, "errors": 22, "elapsed_sec": 594.7487649917603, "config": "en-semeval2007_t17_ls", "split": "test"}
+{"method": "max_similarity_jcn", "total": 3425, "correct": 1295, "accuracy": 0.3781021897810219, "skipped_nogold": 483, "errors": 331, "elapsed_sec": 5923.470209121704, "config": "en-senseval2_ls", "split": "test"}
+{"method": "max_similarity_jcn", "total": 3156, "correct": 1647, "accuracy": 0.5218631178707225, "skipped_nogold": 693, "errors": 0, "elapsed_sec": 4482.805411815643, "config": "en-senseval3_ls", "split": "test"}

@@ -72,7 +72,7 @@ accuracy % over OEWN-resolvable instances.
 | `max_similarity_wup`   | 30.56 |  –    |  –    |  –    |  –    |  –    |  –    |  – |
 | `max_similarity_lch`   | 33.56 |  –    |  –    |  –    |  –    |  –    |  –    |  – |
 | `max_similarity_res`   | 26.62 |  –    |  –    |  –    |  –    |  –    |  –    |  – |
-| `max_similarity_jcn`   | **52.55** | **57.19** | **63.42** | **59.84** | **61.24** | **37.81** | – | **52.55** |
+| `max_similarity_jcn`   | **52.55** | **57.19** | **63.42** | **59.84** | **61.24** | **37.81** | **52.19** | **52.55** |
 | `max_similarity_lin`   | 30.56 |  –    |  –    |  –    |  –    |  –    |  –    |  – |
 
 Column headers: `SE07 (AW)`=SemEval-2007 fine-grained all-words
@@ -225,10 +225,38 @@ reproduce that ordering (52.55 > 30.56 > 26.62, with path at 33.56
 edging res because res uses `IC(lcs)` alone — collapses on a sparse
 IC estimate for OEWN, and has no depth awareness).
 
-The decisive test is whether jcn's lead **holds across configs** or
-whether it just mirrored MFS on SE2007 (where `first_sense` was 52.76
-and jcn was 52.55 — within noise). The in-flight jcn sweep on all 7
-remaining configs is that test.
+The decisive test was whether jcn's lead **holds across configs** or
+whether it just mirrored MFS on SE2007. The full sweep is now in, and
+the answer is clear: **jcn tracks `first_sense` within ±1.6 pp on
+every config, including the lexical-sample splits where first_sense
+drops to 39–52 %.** It never pulls ahead meaningfully and never falls
+more than 1.6 pp behind.
+
+| config | `first_sense` | `max_similarity_jcn` | Δ |
+|---|---:|---:|---:|
+| SE2007 (AW)       | 52.76 | 52.55 | −0.21 |
+| SE2013 (AW)       | 57.65 | 57.19 | −0.46 |
+| SE2015 (AW)       | 64.61 | 63.42 | −1.19 |
+| Senseval-2 (AW)   | 60.62 | 59.84 | −0.78 |
+| Senseval-3 (AW)   | 61.46 | 61.24 | −0.22 |
+| SE2007 T17 (=AW)  | 52.76 | 52.55 | −0.21 |
+| Senseval-2 (LS)   | 39.42 | 37.81 | −1.61 |
+| Senseval-3 (LS)   | 52.12 | 52.19 | **+0.07** |
+
+So jcn, a quadratic-time information-theoretic similarity over all
+candidate × context synsets, **ends up as an MFS proxy in practice.**
+This reproduces a well-known negative result in the WSD literature:
+even the best unsupervised similarity metric on WordNet can't pull
+meaningfully ahead of the first-sense heuristic when scored by
+aggregated `max_similarity` over context. The IC weighting concentrates
+on LCSes that sit near the sense-frequency hierarchy in OEWN, which is
+close to what `first_sense` already encodes.
+
+The ±1.6 pp band also suggests jcn is **stable** — it never catastrophically
+underperforms MFS, unlike Lesk variants on SemEval-2007 (15–47 % vs
+52.76). If you want a knowledge-based method that you trust to not
+embarrass you on a new domain, jcn is a reasonable pick; you just
+shouldn't expect it to beat MFS.
 
 ## Reproducibility
 
